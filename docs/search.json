@@ -2,9 +2,9 @@
   {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "title": "Example of Post With Code",
     "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "text": "We will be exploring the data and creating figures using ggplot2. Below are the packages I need to parse through the data and create plots.\n\n## for reading & writing data\nlibrary(here)\nlibrary(readr)\n## for manipulating data\nlibrary(dplyr)\nlibrary(tidyr)\nlibrary(broom)\nlibrary(ggpubr)\n## for plotting\nlibrary(ggplot2)\nlibrary(patchwork)\nlibrary(hrbrthemes)\nlibrary(tidyverse)"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -18,13 +18,20 @@
     "href": "index.html",
     "title": "Daily Bits",
     "section": "",
-    "text": "Post With Code\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\nHarlow Malloc\n\n\nFeb 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\nTristan O’Malley\n\n\nFeb 21, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Example of Post With Code\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\nCeleste Valdivia\n\n\nFeb 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\nTristan O’Malley\n\n\nFeb 21, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "This blog is a place to publish my daily bits."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#data",
+    "href": "posts/post-with-code/index.html#data",
+    "title": "Example of Post With Code",
+    "section": "Data",
+    "text": "Data\nThe data is already in a csv file format so all we need to do is read it in.\n\nStep 1: Setting the working directory\n\n## data directory\ndata_dir <- here(\"posts\", \"post-with-code\", \"data\")\n\n\n\nStep 2: Reading in the data\nThe data is already in a “tidy” format, meaning all the variables I need are already in columns.\n\n## reading in the data\ndf <- read.csv(here(data_dir, \"siscowet.csv\"))\n\n# renaming locID column to Location so that it can display this as my legend title down the line\ndf <- df %>% rename(Location = locID)\n\n\n\nStep 3: Creating an exploratory figure\nI want to simply look at the trend of fish weight against fish length.\n\n## exploratory plotting\n ggplot(data = df, aes(x = len, y = wgt)) +\n  xlab(\"Total Length (mm)\") +\n  ylab(\"Weight (g)\") +\n  geom_point()\n\n\n\n\n\n\nStep 4: Creating my expository figure\nI am interested in seeing the relationship of fish weights and lengths by the different catch locations.\nBelow I am plotting the length and weight data and color coding the points by the four locations. I also have overlapped a linear regression over my data per location with a 95% confidence interval.\n\n## plotting by locations with the addition of a linear regression line\n  ggplot(data = df, aes(x = len, y = wgt, color = Location)) +\n  theme_bw() +\n  labs(x = \"Total Length (mm)\", y = \"Weight (g)\") +\n  geom_point() +\n  geom_smooth(method=lm, se=TRUE, fullrange=FALSE, level=0.95, aes(fill =Location))"
   }
 ]

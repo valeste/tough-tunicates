@@ -2,14 +2,11 @@
 title: "Example of Post With Code"
 author: "Celeste Valdivia"
 date: "2023-02-24"
-categories: [news, code, analysis]
-image: "image.jpg"
+categories: [code, analysis]
+image: "Rplot001.png"
 ---
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Introduction
+This is an example post of the work I did for Assignment 5 for FISH 549 where I generated an exploratory and expository plot of a data set provided by the class.
 
 ## Requirements
 We will be exploring the data and creating figures using ggplot2.
@@ -37,7 +34,7 @@ The data is already in a csv file format so all we need to do is read it in.
 ### Step 1: Setting the working directory
 ```{r get_author_data}
 ## data directory
-data_dir <- here("data")
+data_dir <- here("posts", "post-with-code", "data")
 ```
 
 ### Step 2: Reading in the data
