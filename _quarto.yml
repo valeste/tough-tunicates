@@ -10,7 +10,7 @@ website:
         href: https://github.com/valeste
 format:
   html:
-    theme: cosmo
+    theme: lux
     css: styles.css
 
 editor: visual
