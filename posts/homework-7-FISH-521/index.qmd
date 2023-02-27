@@ -3,6 +3,6 @@ title: "Homework 7"
 author: "Celeste Valdivia"
 date: "2023-02-27"
 categories: [homework, bit]
-image: "Rplot001.png"
+image: "MB_ampullae copy.jpeg"
 ---
 
