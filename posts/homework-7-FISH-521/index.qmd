@@ -5,4 +5,3 @@ date: "2023-02-27"
 categories: [homework, bit]
 image: "MB_ampullae copy.jpeg"
 ---
-
