@@ -3,7 +3,7 @@ title: "Homework 7"
 author: "Celeste Valdivia"
 date: "2023-02-27"
 categories: [homework, bit]
-image: "MB_ampullae copy.jpeg"
+image: "hansen_1976.jpeg"
 toc: true
 ---
 Here I summarize key takeaways and implications from a paper that describes the establishment of the only aquatic invertebrate cell line. The author is Eder L. Hansen.
@@ -15,7 +15,7 @@ Hansen (1976) Hansen EL. A cell line from embryos of Biomphalaria glabrata Pulmo
 :::
 
 # Paper Summary
-This article describes the establishment and characteristics of the one of the only aquatic invertebrate cell line available to date. Hansen was able to derive a cell line from embryonic cells of a freshwater snail through spontaneous immortalization. Specifically, the author began cultured _Bge_ (Biomphalaria glabrata embryo) 740 primary cultures over the course of a 2-year period through an array of methods. They describe Bge primary cultures as being tolerant to a wide variety of culturing media which made it initially difficult in determining an optimum method. Furthermore, they utilized existing information to supplement the media with the appropriate organic osmolytes like galactose. However, they determined that any range of compositions of the media could work as long as it was in an appropriate osmolality and pH ranges. The medium used for the primary culture that eventually went on to become a cell line was one of a simpler composition. Furthermore, they claim that early division of primary cultures, a technique that differs from those usually employed, should be utilized for other invertebrate tissue sources. By this they simply mean the early trypsinization of the primary cultures to disassociate and passage cells was the key to the selection method which led to their cell line. 
+This article describes the establishment and characteristics of the one of the only aquatic invertebrate cell line available to date. Hansen was able to derive a cell line from embryonic cells of a freshwater snail through spontaneous immortalization. Specifically, the author began cultured Bge (Biomphalaria glabrata embryo) 740 primary cultures over the course of a 2-year period through an array of methods. They describe Bge primary cultures as being tolerant to a wide variety of culturing media which made it initially difficult in determining an optimum method. Furthermore, they utilized existing information to supplement the media with the appropriate organic osmolytes like galactose. However, they determined that any range of compositions of the media could work as long as it was in an appropriate osmolality and pH ranges. The medium used for the primary culture that eventually went on to become a cell line was one of a simpler composition. Furthermore, they claim that early division of primary cultures, a technique that differs from those usually employed, should be utilized for other invertebrate tissue sources. By this they simply mean the early trypsinization of the primary cultures to disassociate and passage cells was the key to the selection method which led to their cell line. 
 
 
 # So what?
