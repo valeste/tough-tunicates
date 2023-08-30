@@ -1,5 +1,5 @@
 ---
-title: "Daily Bits"
+title: "The Tough Tunicate "
 listing:
   contents: posts
   sort: "date desc"
