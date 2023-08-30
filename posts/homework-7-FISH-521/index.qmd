@@ -1,8 +1,8 @@
 ---
-title: "Homework 7"
+title: "First Aquatic Invertebrate Cell Line"
 author: "Celeste Valdivia"
 date: "2023-02-27"
-categories: [homework, bit]
+categories: [cool paper]
 image: "hansen_1976.jpeg"
 toc: true
 ---
