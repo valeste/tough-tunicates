@@ -2,16 +2,41 @@ project:
   type: website
   output-dir: docs
 website:
-  title: "Celeste Valdivia"
+  title: "Celeste Valdivia's Open Lab Notebook"
+  favicon: "images/Valdivia.JPG"
+  page-navigation: true
+  description: "This is my online lab notebook intended to maintain an open science workflow and a space to dig into marine invertebrate cell biology and data science!"
+  site-url: https://valeste.github.io/tough-tunicates/
+  repo-url: https://github.com/valeste/tough-tunicates
+  
   navbar:
+    logo: "images/thumbnail.png"
+    background: primary
+    foreground: light
+    search: true
     right:
-      - about.qmd
+      - text: "about"
+        file: about.qmd
       - icon: github
         href: https://github.com/valeste
+      - icon: linkedin
+        href: https://www.linkedin.com/in/celestevaldivia/
+      - icon: envelope-heart
+        href: malito:cvaldi@uw.edu
+        
+  page-footer:
+    left: "This page is built using [Quarto](https://quarto.org/)"
+
 format:
   html:
-    theme: lux
+    theme: 
+      light: sandstone
+      dark: [sandstone, theme-dark.scss]
     css: styles.css
+    page-layout: article
+    code-background: true
+    code-copy: true
+    toc: true
 
 editor: visual
 
