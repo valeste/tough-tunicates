@@ -12,4 +12,18 @@ about:
       href: https://github.com/valeste
 ---
 
-This blog is a place to publish my daily bits.
+### **Current Research**
+
+In 2022, I dually joined the [Gardell Lab](https://gardell.ds.lib.uw.edu/) at the University of Washington, Tacoma and the [Roberts Lab](https://faculty.washington.edu/sr320/) housed in the [School of Aquatic and Fishery Sciences](https://fish.uw.edu/) (SAFS) at the University of Washington, Seattle. As a graduate student researcher at SAFS, my current work is focused on identifying the constraints of *in vitro* cellular immortality in the marine invertebrate, *Botryllus schlosseri*. This project involves the implementation of procedures for systematic primary cell culture optimization across various somatic tissue types. Additionally, I am interested in the application of clastogenic stressors as a means of facilitating stress-induced cellular evolution in primary epithelial and hemocyte cultures of *B. schlosseri.* With this approach, I aim to both potentially promote spontaneous immortalization and investigate the cellular physiology of this resilient, invasive, colonial ascidian at the morphological and transcriptional levels of organization.
+
+### **Background**
+
+I graduated from the University of California, Davis in 2020 with a bachelor of science in Animal Biology where I completed a capstone project in the [Connon Lab](https://connonlab.wordpress.com/) exploring the impacts of bifenthrin, a commonly employed insecticide, on the development and behavior of the endangered Delta Smelt. Upon graduating I continued my research work in the Connon Lab for an additional two years working across various projects investigating the effects of contaminant, pathogenic, thermal, and salinity stressors on native California vertebrate species.
+
+### **Contact**
+
+**Email:** [cvaldi\@uw.edu](mailto:cvaldi@uw.edu)
+
+**Office:** School of Aquatic and Fishery Sciences, Fisheries Teaching and Research Building (FTR), Room 134
+
+**Mailing address:** School of Aquatic and Fishery Sciences, University of Washington, 1122 NE Boat Street, Room 116, Seattle, WA 98105
