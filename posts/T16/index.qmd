@@ -3,7 +3,7 @@ title: "Epithelial Isolation: Trial 16"
 author: "Celeste Valdivia"
 date: "2023-08-21"
 categories: [epithelial, primaries]
-image: "images/trial16/amp/t16_12_1dps_amp0350"
+image: "images/trial16/1dps/amp/t16_12_1dps_amp0350.tif"
 ---
 
 # General Information
@@ -43,7 +43,7 @@ August 23, 2023: 1 dps
 Colony Information At Dissection
 
 | date     | colony_id | establishment_date | sampling_location                 | days_at_uwt | stage | zooid_num | health_score |
-|---------|---------|--------:|---------------|--------:|---------|---------|---------|
+|---------|---------|--------:|---------|--------:|---------|---------|---------|
 | 08/22/23 | S081C001  |         07/26/2023 | De Moines Marina (47.44, -122.34) |          26 | A1-A2 | 28        | 7/10         |
 
 3.  **Cell Isolation Technique:**
@@ -52,9 +52,8 @@ Colony Information At Dissection
 
 4.  **Culture Medium Composition:**
 
-```{=html}
 <!-- -->
-```
+
 a.  24.5 mL Basal L-15 Media (formulated and initially filtered on 06/12/23, re-filtered after cracking container on 08/21/23) - 5 % FBS - 2% Penicillin-Streptomycin (stock = 100 U)
 
 b.  11 mL concentrated, filtered artificial seawater (stock = 75 PPT)
@@ -63,6 +62,9 @@ c.  500 uL HEPES buffer (stock = 20 mM/L)
 
 d.  50 uL Amphotericin B (stock = 250 ug/mL)
 
+```{=html}
+<!-- -->
+```
 5.  **Description of Culture Vessels and Substrates:**
 
 -   Corning 25 cm\^2 Cell Culture Flask, Canted Neck, Tissue Culture Treated, Nonpyrogenic (Cat. No. 430639).
