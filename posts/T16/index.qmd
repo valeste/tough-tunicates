@@ -3,7 +3,7 @@ title: "Epithelial Isolation: Trial 16"
 author: "Celeste Valdivia"
 date: "2023-08-21"
 categories: [epithelial, primaries]
-image: "images/trial16/1dps/amp/t16_12_1dps_amp0350.jpg"
+image: "t16_12_1dps_amp0350.jpeg"
 ---
 
 # General Information
