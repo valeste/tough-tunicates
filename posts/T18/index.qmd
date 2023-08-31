@@ -1,39 +1,35 @@
 ---
-title: "Cell Isolation Trial 16"
+title: " Cell Isolation Trial 18: Cultrex Substrates"
 author: "Celeste Valdivia"
-date: "2023-08-21"
+date: "2023-08-30"
 categories: [epithelial, ampullae, primaries]
-image: "amp.tiff"
+image: ""
 ---
-Here I both describe the procedure that occurred for epithelial tissue isolation from *Botryllus schlosseri* for trial 16 and maintain this document as a living log for further updates regarding those cultures.
+Here I both describe the procedure that occurred for epithelial tissue isolation from *Botryllus schlosseri* for trial 18 and maintain this document as a living log for further updates regarding those cultures.
 
 # General Information
 
 ## *Date and Time*
 
-August 21, 2023
+August 30, 2023
 
--   Preparation of epithelial isolation began on 08/21/23 with the quarantine period. Individual S081C001 was set in approximately 60 mL of Autoclaved Artificial Seawater - Gentamicin (0.05%).
+-   Preparation of epithelial isolation began on 08/30/23 with the quarantine period. Individual x  was set in approximately 60 mL of Autoclaved Artificial Seawater - Gentamicin (0.05%).
 
 August 22, 2023: 0 days post seeding (dps)
 
--   S081C001 was dissected for zooids on 08/22/23 at 11:30 AM until about 1 PM.
+-   S081C001 was dissected for zooids on 08/31/23 
 
--   Zooids were transferred to an aliqout of tunicate culture media (TCM) in batches of 10 for all 28 zooids.
+-   Zooids were transferred to an aliqout of tunicate culture media (TCM) in batches of 10 for all x zooids.
 
--   Zooid tissue was seeded at approximately 3 PM.
+-   Zooid tissue was seeded at approximately x PM. 10 zooids per well.
 
--   S081C001 was dissected for intact ampullae on 08/22/23 at 1 PM until about 2:30 PM.
+-   x was dissected for intact ampullae on at x PM 
 
--   Ampullae tissue was seed at approximately 3:30 PM.
+-   Ampullae tissue was seed at approximately x PM. Aiming for 20 ampullae per well.
 
--   1mL of TCM was added to both T50 cell culture flasks at about 4 PM.
+-   500 uL of TCM was added to all wells in 12-well cell culture flasks at x PM.
 
-August 23, 2023: 1 dps
 
--   Flasks were removed from biosaftey cabinet at 11:30 AM and observed at the EVOS inverted microscope.
-
--   Fungal and bacterial contamination were observed in both flasks. 100% of the media removed. Duplicate rinse with 2 mL of TCM. Replaced media with a final third dose of 2m mL TCM
 
 ## *Source and Handling of Starting Material*
 
@@ -41,11 +37,11 @@ August 23, 2023: 1 dps
 -   Upon arrival, tunicates are removed from mussel using a razor blade or kept with substrate and tied to 3'' x 2'' x 1.2 mm glass slide using cotton thread. Tunicates are immediately placed in UWT recirculating artificial seawater system (16 C, 27 PPT).
 -   Tunicates are fed every other day (MWF) a mix of commercially available phytoplankton and roti-rich.
 
-Colony Information At Dissection 08/22/23
+Colony Information At Dissection 08/31/23
 
 | colony_id | establishment_date | sampling_location    | stage | zooid_num | health_score |
 |---------|--------:|---------|--------:|---------|---------|---------|
-| S081C001  |         07/26/2023 | De Moines Marina (47.44, -122.34) |          26 | A1-A2 | 7/10         |
+|   |         // | De Moines Marina (47.44, -122.34) |           |  |         |
 
 ## *Cell Isolation Technique*
 
@@ -65,9 +61,32 @@ d.  50 uL Amphotericin B (stock = 250 ug/mL)
 
 
 ## *Description of Culture Vessels and Substrates*
+Vessel:
+- 12 well plates.
+  - Justification: To use various substrate types for the same genotype/individual.
+  
+Substrates:
+a. Cultrex Basement Membrane Extract, PathClear (Cat. No. 3432-001-01)
 
--   Corning 25 cm\^2 Cell Culture Flask, Canted Neck, Tissue Culture Treated, Nonpyrogenic (Cat. No. 430639).
--   No additional coating with substrate.
+Coating Procedure A:
+  1. Thaw Cultrex BME overnight at 2-8 °C. Refrigerator temperatures may vary, therefore it is recommended to keep BME on ice in a refrigerator during the thawing process. Thawed BME solidifies quickly at temperatures above 15 °C; when working with BME, keep it on ice to prevent untimely gelling.
+  2. Mix Cultrex BME by slowly pipetting solution up and down; be careful not to introduce air bubbles.
+  3. Dilute Cultrex BME to desired concentration in **cold** serum-free medium. A 1:100 dilution is recommended for the propagation of primary cells. Empirical determination of the optimal coating concentration for your application may be required.
+  4. Add a sufficient amount of solution to cover the entire growth surface area. A volume of 300 μL per cm2 is recommended. 
+  5. Incubate coated object at room temperature for one hour.
+  6. Aspirate coating solution and immediately plate cells. Do not allow coated surface to dry out.
+
+b. Cultrex Reduced Growth Factor Basement Membrane Extract, PathClear (Cat. No. 3433-001-01)
+
+Coating Procedure B:
+  1. Thaw Cultrex RGF BME overnight at 2-8 °C. Refrigerator temperatures may vary, therefore it is recommended to keep BME on ice in a refrigerator during the thawing process. Thawed BME solidifies quickly at the temperatures above 15 °C; when working with extract, keep it on ice to prevent untimely gelling.
+  2. Mix Cultrex RGF BME by slowly pipetting solution up and down; be careful not to introduce air bubbles.
+  3. Dilute Cultrex RGF BME to desired concentration in cold serum-free medium. A 1:100 dilution is recommended for the propagation of primary cells. Empirical determination of the optimal coating concentration for your application may be required.
+  4. Add a sufficient amount of solution to cover the entire growth surface area. A volume of 300 μL per cm2 is recommended. 
+  5. Incubate coated object at room temperature for one hour.
+  6. Aspirate coating solution and immediately plate cells. Do not allow coated surface to dry out.
+
+c. Plastic
 
 ## *Temperature and Environment*
 
@@ -280,7 +299,6 @@ following the below procedures.
 
 - Leave overnight for starvation on lab bench at room temperature.
 
-- Prepare coated plates if needed for the next day.
 
 ##### 2. Tissue Dissection
 
@@ -312,19 +330,34 @@ buds. Buds in earlier stages of development (stage A) are more embedded in the t
 - Transfer all tubes containing bud tissue to the biosaftey
 cabinet in TPS for cell seeding.
 
-##### 3. Seeding tissue and cell maintenance
+
+##### 3. Coat well plates
+a. Cultrex Basement Membrane Extract Coating Procedure:
+  1. Thaw Cultrex BME overnight at 2-8 °C. Refrigerator temperatures may vary, therefore it is recommended to keep BME on ice in a refrigerator during the thawing process. Thawed BME solidifies quickly at temperatures above 15 °C; when working with BME, keep it on ice to prevent untimely gelling.
+  2. Mix Cultrex BME by slowly pipetting solution up and down; be careful not to introduce air bubbles.
+  3. Dilute Cultrex BME to desired concentration in **cold** serum-free medium. A 1:100 dilution is recommended for the propagation of primary cells. Empirical determination of the optimal coating concentration for your application may be required.
+  4. Add a sufficient amount of solution to cover the entire growth surface area. A volume of 300 μL per cm2 is recommended. 
+  5. Incubate coated object at room temperature for one hour.
+  6. Aspirate coating solution and immediately plate cells. Do not allow coated surface to dry out.
+
+b. Cultrex Reduced Growth Factor Basement Membrane Extract Coating Procedure:
+  1. Thaw Cultrex RGF BME overnight at 2-8 °C. Refrigerator temperatures may vary, therefore it is recommended to keep BME on ice in a refrigerator during the thawing process. Thawed BME solidifies quickly at the temperatures above 15 °C; when working with extract, keep it on ice to prevent untimely gelling.
+  2. Mix Cultrex RGF BME by slowly pipetting solution up and down; be careful not to introduce air bubbles.
+  3. Dilute Cultrex RGF BME to desired concentration in cold serum-free medium. A 1:100 dilution is recommended for the propagation of primary cells. Empirical determination of the optimal coating concentration for your application may be required.
+  4. Add a sufficient amount of solution to cover the entire growth surface area. A volume of 300 μL per cm2 is recommended. 
+  5. Incubate coated object at room temperature for one hour.
+  6. Aspirate coating solution and immediately plate cells. Do not allow coated surface to dry out.
+
+##### 4. Seeding tissue and cell maintenance
 
 - In the biosaftey cabinet, use a 1000 uL pipette tip aspirate into the solution to get the buds back into suspension and transfer to plastic 60 mm petri dish.
 
 - Using the same 1000 uL pipette tip transfer buds one at a time to a fresh culturing dish. Make sure to transfer only a small amount of liquid (about a drop) per bud.
 
-- Using the same pipette tip, remove any excess liquid from the culturing dish.
+- Do not allow wells to dry out
 
-- While you repeat the above two steps with your other samples, let the dishes you previously seeded to dry for about ~5 minutes or until there is no visible liquid left.
 
-- If there is still liquid in culturing dish, use aspirator to remove any excess to make sure tissue sticks to dish.
-
-- Once all the wells are dry, add 2 mL of TCM to T25 flasks. Be sure to not touch the tip of the pipette to the wells and to have the lowest flow possible when adding in media to not agitate the tissue and have it unadhere from plate.
+- Add 0.5-1 mL of TCM to each well. Be sure to not touch the tip of the pipette to the wells and to have the lowest flow possible when adding in media to not agitate the tissue and have it unadhere from plate.
 
 - Incubate cells at 20 C 
 
