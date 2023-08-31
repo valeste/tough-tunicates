@@ -132,8 +132,13 @@ d.  50 uL Amphotericin B (stock = 250 ug/mL)
 
 15. **References and Resources:**
 
-Protocol based on: ::: callout-note \## Citation
+Protocol based on:
 
-Hansen (1976) Hansen EL. A cell line from embryos of Biomphalaria glabrata Pulmonata Establishment and characteristics. Academic Press; Cambridge: 1976. [Google Scholar](https://scholar.google.com/scholar_lookup?title=A+cell+line+from+embryos+of+Biomphalaria+glabrata+Pulmonata+Establishment+and+characteristics&author=EL+Hansen&publication_year=1976&). :::
+::: callout-note 
+## Citation
+
+Rabinowitz, C., & Rinkevich, B. (2004). In vitro delayed senescence of extirpated buds from zooids of the colonial tunicate Botryllus schlosseri. Journal of Experimental Biology, 207(9), 1523-1532. [Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C48&q=In+vitro+delayed+senescence+of+extirpated+buds+from+zooids+of+the+colonial+tunicate+Botryllus+schlosseri+&btnG=).
+
+:::
 
 # Protocol
