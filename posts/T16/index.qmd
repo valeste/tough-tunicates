@@ -66,7 +66,7 @@ d.  50 uL Amphotericin B (stock = 250 ug/mL)
 
 ## *Description of Culture Vessels and Substrates*
 
--   Corning 25 cm\^2 Cell Culture Flask, Canted Neck, Tissue Culture Treated, Nonpyrogenic (Cat. No. 430639).
+-   Corning 25 cm^2^ Cell Culture Flask, Canted Neck, Tissue Culture Treated, Nonpyrogenic (Cat. No. 430639).
 -   No additional coating with substrate.
 
 ## *Temperature and Environment*
@@ -95,6 +95,8 @@ d.  50 uL Amphotericin B (stock = 250 ug/mL)
     -   Consider testing different seeding densities to observe their effects.
 
 ## *Observations and Growth Monitoring*
+
+![ampullae](amp.jpeg)
 
     -   Regularly document your observations, including cell morphology, attachment, aggregation, or any changes in appearance.
     -   Include photographs if possible.
