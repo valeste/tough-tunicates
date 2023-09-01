@@ -193,7 +193,7 @@ Rabinowitz, C., & Rinkevich, B. (2004). In vitro delayed senescence of extirpate
 
 # Protocol
 
-Note: Any text that is italicized and bold in the protocol are steps that have deviated from previous iterations.
+Note: Any text that is ***italicized and bold*** in the protocol are steps that have deviated from previous iterations.
 
 ## Materials
 

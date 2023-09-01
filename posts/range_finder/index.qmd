@@ -1,0 +1,29 @@
+---
+title: "Preliminary in vivo NiCl2 Range Finder"
+author: "Celeste Valdivia"
+date: "2023-09-01"
+categories: [study plans, nickel chloride]
+image: "drawing.jpeg"
+---
+# Initial Schematic
+![initial design](init_prelim.jpeg)
+
+# Suggestions
+Dr. Gardell's suggested modifications to design:
+
+1. Log distribution of the concentrations.
+    
+  a. i.e. 0, 0.1, 1, 100.
+  
+2. qPCR should be left for follow up experiment with better defined (targeted) concentrations and time points. Do not snap freeze tissue for qPCR, alternatively use tissue for:
+  
+  a. Primary epithelial cell culturing to address question regarding stress-induced evolution
+    
+  b. Use for comet assay
+    
+3. Maintain a traditional LC50 design.
+  
+  a. More concentrations at one time point.
+    
+  i. Time point defined by research goals.
+    
