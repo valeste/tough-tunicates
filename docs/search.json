@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "The Tough Tunicate",
     "section": "",
-    "text": "Cell Isolation Trial 18: Cultrex Substrates\n\n\n\nepithelial\n\n\nampullae\n\n\nprimaries\n\n\n\n\n\n\n\nCeleste Valdivia\n\n\nAug 30, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCell Isolation Trial 16\n\n\n\nepithelial\n\n\nampullae\n\n\nprimaries\n\n\n\n\n\n\n\nCeleste Valdivia\n\n\nAug 21, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Aquatic Invertebrate Cell Line\n\n\n\ncool paper\n\n\n\n\n\n\n\nCeleste Valdivia\n\n\nFeb 27, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample of Post With Code\n\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\nCeleste Valdivia\n\n\nFeb 24, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Cell Isolation Trial 18: Cultrex Substrates\n\n\n\nepithelial\n\n\nampullae\n\n\nprimaries\n\n\nsubstrate\n\n\n\n\n\n\n\nCeleste Valdivia\n\n\nAug 30, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCell Isolation Trial 16\n\n\n\nepithelial\n\n\nampullae\n\n\nprimaries\n\n\n\n\n\n\n\nCeleste Valdivia\n\n\nAug 21, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Aquatic Invertebrate Cell Line\n\n\n\ncool paper\n\n\n\n\n\n\n\nCeleste Valdivia\n\n\nFeb 27, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample of Post With Code\n\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\nCeleste Valdivia\n\n\nFeb 24, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -109,7 +109,7 @@
     "href": "posts/T16/index.html#description-of-culture-vessels-and-substrates",
     "title": "Cell Isolation Trial 16",
     "section": "Description of Culture Vessels and Substrates",
-    "text": "Description of Culture Vessels and Substrates\n\nCorning 25 cm^2 Cell Culture Flask, Canted Neck, Tissue Culture Treated, Nonpyrogenic (Cat. No. 430639).\nNo additional coating with substrate."
+    "text": "Description of Culture Vessels and Substrates\n\nCorning 25 cm2 Cell Culture Flask, Canted Neck, Tissue Culture Treated, Nonpyrogenic (Cat. No. 430639).\nNo additional coating with substrate."
   },
   {
     "objectID": "posts/T16/index.html#temperature-and-environment",
@@ -130,7 +130,7 @@
     "href": "posts/T16/index.html#observations-and-growth-monitoring",
     "title": "Cell Isolation Trial 16",
     "section": "Observations and Growth Monitoring",
-    "text": "Observations and Growth Monitoring\n-   Regularly document your observations, including cell morphology, attachment, aggregation, or any changes in appearance.\n-   Include photographs if possible."
+    "text": "Observations and Growth Monitoring\n\n\n\nampullae\n\n\n-   Regularly document your observations, including cell morphology, attachment, aggregation, or any changes in appearance.\n-   Include photographs if possible."
   },
   {
     "objectID": "posts/T16/index.html#viability-and-proliferation",
@@ -180,5 +180,145 @@
     "title": "Cell Isolation Trial 16",
     "section": "References and Resources",
     "text": "References and Resources\nProtocol based on:\n\n\n\n\n\n\nCitation\n\n\n\nRabinowitz, C., & Rinkevich, B. (2004). In vitro delayed senescence of extirpated buds from zooids of the colonial tunicate Botryllus schlosseri. Journal of Experimental Biology, 207(9), 1523-1532. Google Scholar."
+  },
+  {
+    "objectID": "posts/T18/index.html",
+    "href": "posts/T18/index.html",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "",
+    "text": "Here I both describe the procedure that occurred for epithelial tissue isolation from Botryllus schlosseri for trial 18 and maintain this document as a living log for further updates regarding those cultures."
+  },
+  {
+    "objectID": "posts/T18/index.html#date-and-time",
+    "href": "posts/T18/index.html#date-and-time",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Date and Time",
+    "text": "Date and Time\nAugust 30, 2023\n\nPreparation of epithelial isolation began on 08/30/23.\nIndividual S105C002 was subdivided. Using a razor blade, the portion of the colony that was not adhered to the glass slide was removed and tied to slide S105C003.\nGlass slide S105C002 was cleaned thouroughly as described in protocol below.\nIndividual S105C002 was set in 100 mL of Autoclaved Artificial Seawater - Gentamicin (0.05%) (ASW-G) for a 14 hour quarantine period.\n\nAugust 31, 2023: 0 days post seeding (dps)\n\nS105C001 was dissected for zooids on 08/31/23\nDissections began at 2:40 PM and ended at 6 PM\nZooids were transferred to an aliqout of 1 mL tunicate culture media (TCM) in batches of 10.\nZooid tissue was seeded at approximately 7:20 PM. 10 zooids per well.\nS105C002 was dissected for intact ampullae on at about 4 PM as well as blood cells.\nAmpullae and blood cells were added directly to aliquot of media. Ampullae were added by scooping. Blood cells were added by using the syringe plunger on the insulin needle. Once a sufficient amount of material was gathered, material was spun down for 5 seconds with mini centrifuge (2000 x g). Excess media was removed using 1000 uL pipette tip. Media was replaced with fresh 1 mL aliquot.\n500 uL of TCM was added to all wells in 12-well cell culture flasks at x PM."
+  },
+  {
+    "objectID": "posts/T18/index.html#source-and-handling-of-starting-material",
+    "href": "posts/T18/index.html#source-and-handling-of-starting-material",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Source and Handling of Starting Material",
+    "text": "Source and Handling of Starting Material\n\nIntake Procedure\n\nAll tunicates when collected from marina are transported to UWT in 500 mL Nalgene polycarbonate jars filled completely with local marina water. Jars are placed in a cooler to maintain temperature for 30 minute drive back to UWT (from City of De Moines Marina).\nUpon arrival, tunicates are removed from mussel using a razor blade or kept with substrate and tied to 3’’ x 2’’ x 1.2 mm glass slide using cotton thread. Tunicates are immediately placed in UWT recirculating artificial seawater system (16 C, 27 PPT).\nTunicates are fed every other day (MWF) a mix of commercially available phytoplankton and roti-rich.\nColony S105C002 was mechanically subdivided using a razor blade on 08/20/23 directly before submersion in ASW-G overnight.\n\n\n\nDefining Health Score\n\n0-dead (no bloodflow)\n2-very bad w heartbeat\n4- poor (amp retract, high pigm, tunic puffy)\n6-fair (part poor)\n8- good (most amp extended, normal tunic & pigm)\n10- great (all amp extended, tunic flat, clear, normal pigm)\n\n\n\nColony Information At Dissection (08/31/23)\n\n\n\n\n\n\n\n\n\n\n\ncolony_id\nestablishment_date\nsampling_location\nstage\nzooid_num\nhealth_score\n\n\n\n\nS105C002\n08/25/23\nDe Moines Marina (47.44, -122.34)\nA1\n49\n6\n\n\n\nAnimal health score was 10 prior to ASW-G period but the mechanichal subdivison prior to an ethanol wash and dip disrupted the normal zooid architecture"
+  },
+  {
+    "objectID": "posts/T18/index.html#cell-isolation-technique",
+    "href": "posts/T18/index.html#cell-isolation-technique",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Cell Isolation Technique",
+    "text": "Cell Isolation Technique\n\nEpithelial cell isolation occurred mechanically with the use of a pair of 28 G insulin needles."
+  },
+  {
+    "objectID": "posts/T18/index.html#culture-medium-composition",
+    "href": "posts/T18/index.html#culture-medium-composition",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Culture Medium Composition",
+    "text": "Culture Medium Composition\nTunicate Culture Media:\n\n24.5 mL Basal L-15 Media (formulated and initially filtered on 06/12/23, re-filtered after cracking container on 08/21/23)\n\n\n5 % FBS\n2% Penicillin-Streptomycin (stock = 100 U)\n\n\n11 mL concentrated, filtered artificial seawater (stock = 75 PPT)\n500 uL HEPES buffer (stock = 20 mM/L)\n50 uL Amphotericin B (stock = 250 ug/mL)"
+  },
+  {
+    "objectID": "posts/T18/index.html#description-of-culture-vessels-and-substrates",
+    "href": "posts/T18/index.html#description-of-culture-vessels-and-substrates",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Description of Culture Vessels and Substrates",
+    "text": "Description of Culture Vessels and Substrates\nVessel: Corning Incorporated 12 well cell culture plate, surface area per well 3.82 (Cat. No. 3513) - Justification: To use various substrate types for the same genotype/individual.\nSubstrates:\n\nThin Layer, Cultrex Basement Membrane Extract, PathClear (Cat. No. 3432-001-01)\nThin Layer, Cultrex Reduced Growth Factor Basement Membrane Extract, PathClear (Cat. No. 3433-001-01)\nPlastic"
+  },
+  {
+    "objectID": "posts/T18/index.html#temperature-and-environment",
+    "href": "posts/T18/index.html#temperature-and-environment",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Temperature and Environment",
+    "text": "Temperature and Environment\n\n08/31/23: UW Tacoma, Science Building (SCI) incubator, room 232.\n\nTemperature:\nLight: 0\nHumidity:\n\n09/01/23:\n\nTemperature:\nLight: 0\nHumidity:\n\n09/02/23: UW Tacoma, Science Building (SCI) incubator, room 232.\n\nTemperature:\nLight: 0\nHumidity:"
+  },
+  {
+    "objectID": "posts/T18/index.html#tissue-seeding-density",
+    "href": "posts/T18/index.html#tissue-seeding-density",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Tissue Seeding Density",
+    "text": "Tissue Seeding Density\n\n10 zooids per well (surface area = 3.82)\n\n2.6 zooids per cm2\n\nDocument the number of cells seeded in each culture vessel.\nConsider testing different seeding densities to observe their effects."
+  },
+  {
+    "objectID": "posts/T18/index.html#observations-and-growth-monitoring",
+    "href": "posts/T18/index.html#observations-and-growth-monitoring",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Observations and Growth Monitoring",
+    "text": "Observations and Growth Monitoring\n-   Regularly document your observations, including cell morphology, attachment, aggregation, or any changes in appearance.\n-   Include photographs if possible."
+  },
+  {
+    "objectID": "posts/T18/index.html#viability-and-proliferation",
+    "href": "posts/T18/index.html#viability-and-proliferation",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Viability and Proliferation",
+    "text": "Viability and Proliferation\n-   Note any signs of cell viability (e.g., cell membrane integrity, absence of debris).\n-   Monitor cell proliferation by documenting changes in cell density over time."
+  },
+  {
+    "objectID": "posts/T18/index.html#ph-and-nutrient-levels",
+    "href": "posts/T18/index.html#ph-and-nutrient-levels",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "pH and Nutrient Levels",
+    "text": "pH and Nutrient Levels\n-   If possible, measure and record the pH of the medium during the culture.\n-   Monitor nutrient consumption by measuring glucose or other nutrients if relevant."
+  },
+  {
+    "objectID": "posts/T18/index.html#media-changes-and-additions",
+    "href": "posts/T18/index.html#media-changes-and-additions",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Media Changes and Additions",
+    "text": "Media Changes and Additions\n\n08/31/23: Added 1 mL of media at 0 dps"
+  },
+  {
+    "objectID": "posts/T18/index.html#summary-of-results-and-outcomes",
+    "href": "posts/T18/index.html#summary-of-results-and-outcomes",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Summary of Results and Outcomes",
+    "text": "Summary of Results and Outcomes\n-   Summarize the overall outcome of the experiment, including whether you observed growth, viability, or any other changes."
+  },
+  {
+    "objectID": "posts/T18/index.html#notes-and-anomalies",
+    "href": "posts/T18/index.html#notes-and-anomalies",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Notes and Anomalies",
+    "text": "Notes and Anomalies\n\nRinsing animal with ethanol and setting in ASW-G immediately after subdivision disrupts zooid architecture."
+  },
+  {
+    "objectID": "posts/T18/index.html#next-steps-and-modifications",
+    "href": "posts/T18/index.html#next-steps-and-modifications",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Next Steps and Modifications",
+    "text": "Next Steps and Modifications\nAs animal was not at least at a health score of 7, need to redo this set up with a healthier animal. Will not subdivide animal again and immediately try to cultue. Give animal at least 2 days to recover from subdivision."
+  },
+  {
+    "objectID": "posts/T18/index.html#references-and-resources",
+    "href": "posts/T18/index.html#references-and-resources",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "References and Resources",
+    "text": "References and Resources\nProtocol based on:\n\n\n\n\n\n\nCitation\n\n\n\nRabinowitz, C., & Rinkevich, B. (2004). In vitro delayed senescence of extirpated buds from zooids of the colonial tunicate Botryllus schlosseri. Journal of Experimental Biology, 207(9), 1523-1532. Google Scholar."
+  },
+  {
+    "objectID": "posts/T18/index.html#materials",
+    "href": "posts/T18/index.html#materials",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Materials",
+    "text": "Materials\n\nEquipment\n\nBiosaftey cabinet\nNikon SMZ745T Stereoscopic Microscope with Excelis camera\nEvos XL Core inverted microscope\nAspirator\nSpray bottle\nTwo 15 cm diameter glass culture dish\nSmall shallow dish (size not important)\nCurved forceps\nPipette wand\n1000 mL waste beaker\n1000 uL pipette\n100 uL pipette\n\n\n\nConsumables\nSolution preparation: - 0.22 um filter units - Penicillin-Streptomycin (100x stock) - Amphotericin-B (250 ug/mL stock) - Gentamicin (50 mg/mL stock) - 75 ppt filtered seawater (FSW) - Refractometer\nDuring dissection: - BH Supplies Insulin Syringes U-100 28G 1ml/cc 5/16” (8mm) - 100 um cell strainers - 1.5 mL tubes (number dependent on how many samples) - 30% ethanol - Autoclaved 27 ppt artificial seawater (ASW)\nDuring tissue seeding: - Corning 6 well plates or T25 culture flasks - 60 mm petri dishes - 50 mL, 10 mL, and 5 mL serological pipettes - 1000 uL pipette tips - 70% ethanol\n\n\nSolutions\nFor all solutions below you will need about 1 L of artificial seawater.\nFor the culture media itself, you will require 0.6 mL of filtered seawater per 35 mM well you intend to seed.\n\n\nFiltered Seawater\n\n\n\nOption A: Mix together the below two solutions:\n\nTo 500 mL of MilliQ water\n\n54.68 g NaCl\n1.648 g KCl\n2.884 g CaCl2·2H2O\n\nTo 500 mL of MilliQ water\n\n22.28 g MgSO4·7H2O\n12.2 g MgCl2·6H2O\n\n\nOption B: Formulate 500 mL of concentrated salt water (75 ppt) solution from Red Sea Salt.\n\nVerify salinity using refractometer prior to filtering.\n\n\nFilter solution through 0.22 um filter unit.\n\n\n\nArtificial Seawater\n36.6 grams (g) of Red Sea Salt per liter to make solution at ~30 ppt.\n\nArtificial Seawater - 0.05% Gentamicin (ASW-G)\nThis solution is essential for the isolation of tunicate individuals 24 hours prior to dissection and during dissections.\nIn the biosaftey cabinet add together the following:\n\n500 mL of artificial seawater (~850 mOsmo/kg)\n\nDoes not have to be autoclaved or filtered\n\n238.8 uL gentamicin (50 mg/mL stock)\n\n\n\nArtificial Seawater - 1% Pen/Strep & 0.01% Amp B (ASW-PSA)\nThis solution is used as the media in which the tunicate is submerged during dissection.\nIn the biosafety cabinet add together the following:\n\n494.5 mL filtered seawater (~850 mOsmo/kg)\n500 uL Amphotericin B (250ug/mL stock solution)\n5 mL of Penicillin-Streptomycin (100x)\n\n\n\nTunicate Culture Medium (TCM) with 1.4% Pen-Strep and 0.1% Amp B\nIn the biosafety cabinet add together:\n\n45.6 mL of L-15 media\n21.7 mL of FSW (to adjust media milli-osmolality from ~300 mOsmo/kg to ~850 mOsmo/kg)\n2.4 mL fetal bovine serum (FBS)\n1 mL HEPES (20 mMol/L)\n1 mL Pen/Strep (100x)\n100 uL Amphotericin B (250 ug/mL)"
+  },
+  {
+    "objectID": "posts/T18/index.html#epithelial-cell-isolation",
+    "href": "posts/T18/index.html#epithelial-cell-isolation",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Epithelial Cell Isolation",
+    "text": "Epithelial Cell Isolation\nBe sure to have sufficient stocks of the above three solutions prior to following the below procedures.\n\n1. The day prior to bud isolation\n\nSelect an individual (one glass slide) with at least 30 zooids completely adhered to the slide. Health score must be 7 and above. Stage does not matter but document the day of dissection.\nRemove individuals from recirculating seawater system\nIndividual subdivided to retain only attached portion of colony.\nUse a razor blade to clean the glass slide\nSpray animal over sink with 70 % ethanol for 5 seconds or until glass slide is completely coated with ethanol\nRinse animal with autocalved artificial seawater until no ethanol is observable.\nPlace animal in 15 cm glass petri dish containing 100 mL of ASW-G.\nParafilm and perforate petri dish\nLeave overnight for starvation on lab bench at room temperature.\n\n\n\n2. Tissue Dissection\n\nRemove colony from ASW-G.\nWash colony and substrate for 10 seconds with 30% ethanol.\nRinse colony with autoclaved artificial seawater\nImmerse colony in 15 cm diameter, glass dish filled with ~60 mL of ASW-PSA. For each new colony microdissection, rinse the 15 mL glass plate with 70% ethanol in triplicate, followed by triplicate rinse of ASW-PSA prior to refilling plate with more ASW-PSA.\nUnder stereomicroscope on lab bench take picture of entire colony (all zooids to be dissected with Excelis camera.\nRecord blastogenic stage, zooid number, and health score.\nUsing a pair of 31G syringe needles, peel open the tunic and remove buds. Buds in earlier stages of development (stage A) are more embedded in the tunic than degrading ones (TO). Be sure to not tear the bud itself, this can be done by gently carving the tunic around the bud and then using a blunt portion of the needle to roll the bud out.\nEvery time a bud is removed, place it in cell strainer that itself is also immersed in the same 20 mL of ASW-G. Use a clicker to keep track of the number of buds you collected.\nOnce you have collected a group of 10 buds in the cell strainer, rinse all buds for 5 seconds with 30% ethanol followed by a 5 second rinse with ASW-PSA.\nUsing sterile curved forceps, transfer the group of 5 or 10 buds to a labeled, 1.5 mL tube containing 1 mL of TCM.\nTransfer all tubes containing bud tissue to the biosaftey cabinet in TPS for cell seeding.\n\n\n\n3. Coat well plates\n\nCultrex Basement Membrane Extract Coating Procedure:\n\n\n\nThaw Cultrex BME overnight at 2-8 °C. Refrigerator temperatures may vary, therefore it is recommended to keep BME on ice in a refrigerator during the thawing process. Thawed BME solidifies quickly at temperatures above 15 °C; when working with BME, keep it on ice to prevent untimely gelling.\nMix Cultrex BME by slowly pipetting solution up and down; be careful not to introduce air bubbles.\nDilute Cultrex BME to desired concentration in cold serum-free medium. A 1:100 dilution is recommended for the propagation of primary cells. Empirical determination of the optimal coating concentration for your application may be required.\nAdd a sufficient amount of solution to cover the entire growth surface area. A volume of 300 μL per cm2 is recommended.\nIncubate coated object at room temperature for one hour.\nAspirate coating solution and immediately plate cells. Do not allow coated surface to dry out.\n\n\n\nCultrex Reduced Growth Factor Basement Membrane Extract Coating Procedure:\n\n\n\nThaw Cultrex RGF BME overnight at 2-8 °C. Refrigerator temperatures may vary, therefore it is recommended to keep BME on ice in a refrigerator during the thawing process. Thawed BME solidifies quickly at the temperatures above 15 °C; when working with extract, keep it on ice to prevent untimely gelling.\nMix Cultrex RGF BME by slowly pipetting solution up and down; be careful not to introduce air bubbles.\nDilute Cultrex RGF BME to desired concentration in cold serum-free medium. A 1:100 dilution is recommended for the propagation of primary cells. Empirical determination of the optimal coating concentration for your application may be required.\nAdd a sufficient amount of solution to cover the entire growth surface area. A volume of 300 μL per cm2 is recommended.\nIncubate coated object at room temperature for one hour.\nAspirate coating solution and immediately plate cells. Do not allow coated surface to dry out.\n\n\n\n4. Seeding tissue and cell maintenance\n\nIn the biosaftey cabinet, use a 1000 uL pipette tip aspirate into the solution to get the buds back into suspension and transfer to plastic 60 mm petri dish.\nUsing the same 1000 uL pipette tip transfer buds one at a time to a fresh culturing dish. Make sure to transfer only a small amount of liquid (about a drop) per bud.\nDo not allow wells to dry out\nAdd 0.5-1 mL of TCM to each well. Be sure to not touch the tip of the pipette to the wells and to have the lowest flow possible when adding in media to not agitate the tissue and have it unadhere from plate.\nIncubate cells at 20 C\nReplace 100% of the TCM every 2-3 days."
+  },
+  {
+    "objectID": "posts/T18/index.html#schematic",
+    "href": "posts/T18/index.html#schematic",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Schematic",
+    "text": "Schematic\n\n\n\ndesign"
+  },
+  {
+    "objectID": "posts/T18/index.html#cell-isolation",
+    "href": "posts/T18/index.html#cell-isolation",
+    "title": "Cell Isolation Trial 18: Cultrex Substrates",
+    "section": "Cell Isolation",
+    "text": "Cell Isolation\nBe sure to have sufficient stocks of the above three solutions prior to following the below procedures.\n\n1. The day prior to bud isolation\n\nSelect an individual (one glass slide) with at least 30 zooids completely adhered to the slide. Health score must be 7 and above. Stage does not matter but document the day of dissection.\nRemove individuals from recirculating seawater system\nIndividual subdivided to retain only attached portion of colony.\nUse a razor blade to clean the glass slide\nSpray animal over sink with 70 % ethanol for 5 seconds or until glass slide is completely coated with ethanol\nRinse animal with autocalved artificial seawater until no ethanol is observable.\nPlace animal in 15 cm glass petri dish containing 100 mL of ASW-G.\nParafilm and perforate petri dish\nLeave overnight for starvation on lab bench at room temperature.\n\n\n\n2. Tissue Dissection\n\nRemove colony from ASW-G.\nWash colony and substrate for 10 seconds with 30% ethanol.\nRinse colony with autoclaved artificial seawater\nImmerse colony in 15 cm diameter, glass dish filled with ~60 mL of ASW-PSA. For each new colony microdissection, rinse the 15 mL glass plate with 70% ethanol in triplicate, followed by triplicate rinse of ASW-PSA prior to refilling plate with more ASW-PSA.\nUnder stereomicroscope on lab bench take picture of entire colony (all zooids to be dissected with Excelis camera.\nRecord blastogenic stage, zooid number, and health score.\nUsing a pair of 31G syringe needles, peel open the tunic and remove zooids.\nEvery time a zooid is removed, place it in cell strainer that itself is also immersed in the same 20 mL of ASW-G. Use a clicker to keep track of the number of zooud you collected.\nOnce you have collected a group of 10 zooids in the cell strainer, rinse all zooids for 5 seconds with 30% ethanol followed by a 5 second rinse with autoclaved artificial seawater.\nUse same pair of insulin needles to transfer over the zooids to the 1.5 mL tube containing 1 mL of TCM. This can be done by placing the cell strainer in ASW-PSA under the stereomicroscope and carefully rolling the zooids onto one of the needles. Make sure not to burst them.\nTransfer all tubes containing bud tissue to the biosaftey cabinet in TPS for cell seeding.\n\n\n\n3. Coat well plates\nCultrex Basement Membrane Extract (BME) and Reduced Growth Factor Basement Membrane Extract (RFG BME) Coating Procedure:Cultrex Coating Procedure:\n\n\nThaw Cultrex RGF BME and Cultrex BME overnight at 2-8 °C. Refrigerator temperatures may vary, therefore it is recommended to keep BME on ice in a refrigerator during the thawing process. Thawed BME solidifies quickly at the temperatures above 15 °C; when working with extract, keep it on ice to prevent untimely gelling.\nMix Cultrex RGF BME by slowly pipetting solution up and down; be careful not to introduce air bubbles.\nDilute Cultrex RGF BME and Cultrex BME to desired concentration in cold serum-free medium. A 1:100 dilution is recommended for the propagation of primary cells. Empirical determination of the optimal coating concentration for your application may be required.\nAdd a sufficient amount of solution to cover the entire growth surface area. A volume of 300 μL per cm2 is recommended.\nIncubate coated object at room temperature for one hour.\nAspirate coating solution and immediately plate cells. Do not allow coated surface to dry out.\n\nFor both Cultrex BME and RGF BME we will be coating two 3.8 cm2 wells (and accounting for 10% volume loss):\n\\[ 300 uL/cm^2 * 3.8 cm^2 / well * 2wells * 0.1 = 2,508 uL\\]\nTherefore need:\n25.1 uL of cultrex and 2,482 uL of serum-free media.\nSerum-free media:\n\n65.71% L-15 = 1,630.9 uL\n31.27% FSW = 776.1 uL\n1.44% HEPES Buffer = 35.7 uL\n1.44% Pen-Strep = 35.7 uL\n0.14% Amphotericin B = 3.6 uL\n\nThen to each well add 1,140 uL of the diluted substrate solution.\n\n\n4. Seeding tissue and cell maintenance\n\nIn the biosaftey cabinet, use a 1000 uL pipette tip aspirate into the solution to get the buds back into suspension and transfer to plastic 60 mm petri dish.\nUsing the same 1000 uL pipette tip transfer buds one at a time to a fresh culturing dish. Make sure to transfer only a small amount of liquid (about a drop) per bud.\nDo not allow wells to dry out\nAdd 0.5-1 mL of TCM to each well. Be sure to not touch the tip of the pipette to the wells and to have the lowest flow possible when adding in media to not agitate the tissue and have it unadhere from plate.\nIncubate cells at 20 C\nReplace 100% of the TCM every 2-3 days."
   }
 ]
