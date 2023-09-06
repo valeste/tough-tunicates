@@ -6,7 +6,10 @@ categories: [study plans, nickel chloride]
 image: "drawing.jpeg"
 ---
 # Initial Schematic
+![test](drawing.jpeg)
+
 ![initial design](init_prelim.jpeg)
+
 
 # Suggestions
 Dr. Gardell's suggested modifications to design:
