@@ -74,9 +74,9 @@ August 31, 2023: 0 days post seeding (dps)
 
 | colony_id | establishment_date | sampling_location                 | stage | zooid_num | health_score |
 |-----------|----------:|-----------|----------:|-----------|-----------|
-| S105C002  |           08/25/23 | De Moines Marina (47.44, -122.34) |    A1 | 49        | 6            |
+| S105C002  |           08/25/23 | De Moines Marina (47.44, -122.34) |    TO | 49        | 6            |
 
-Animal health score was 10 prior to ASW-G period but  the mechanichal subdivison prior to an ethanol wash and dip disrupted the normal zooid architecture
+Animal health score was 10 prior to ASW-G period but  the mechanical subdivision prior to an ethanol wash and dip disrupted the normal zooid architecture
 
 ![S105C001 Cumulative System 1](t18_S105C002-230831_1.jpg)
 ![S105C001 Cumulative System 2](t18_S105C002-230831_2.jpg)

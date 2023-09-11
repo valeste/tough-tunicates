@@ -9,7 +9,7 @@ Here I both describe the procedure that occurred for epithelial tissue isolation
 
 # General Information
 
-## *Date and Time*
+## Date and Time
 
 August 21, 2023
 
@@ -35,7 +35,7 @@ August 23, 2023: 1 dps
 
 -   Fungal and bacterial contamination were observed in both flasks. 100% of the media removed. Duplicate rinse with 2 mL of TCM. Replaced media with a final third dose of 2m mL TCM
 
-## *Source and Handling of Starting Material*
+## Source and Handling of Starting Material
 
 -   All tunicates when collected from marina are transported to UWT in 500 mL Nalgene polycarbonate jars filled completely with local marina water. Jars are placed in a cooler to maintain temperature for 30 minute drive back to UWT (from City of De Moines Marina).
 -   Upon arrival, tunicates are removed from mussel using a razor blade or kept with substrate and tied to 3'' x 2'' x 1.2 mm glass slide using cotton thread. Tunicates are immediately placed in UWT recirculating artificial seawater system (16 C, 27 PPT).
@@ -47,15 +47,19 @@ Colony Information At Dissection 08/22/23
 |---------|--------:|---------|--------:|---------|---------|---------|
 | S081C001  |         07/26/2023 | De Moines Marina (47.44, -122.34) |          26 | A1-A2 | 7/10         |
 
-## *Cell Isolation Technique*
+## Cell Isolation Technique
 
 -   Epithelial cell isolation occurred mechanically with the use of a pair of 28 G insulin needles.
 
-## *Culture Medium Composition*
+## Culture Medium Composition
 
 Tunicate Culture Media: 
 
-a.  24.5 mL Basal L-15 Media (formulated and initially filtered on 06/12/23, re-filtered after cracking container on 08/21/23) - 5 % FBS - 2% Penicillin-Streptomycin (stock = 100 U)
+a.  24.5 mL Basal L-15 Media (formulated and initially filtered on 06/12/23, re-filtered after cracking container on 08/21/23) 
+
+- 5 % FBS 
+
+- 2% Penicillin-Streptomycin (stock = 100 U)
 
 b.  11 mL concentrated, filtered artificial seawater (stock = 75 PPT)
 
@@ -64,12 +68,12 @@ c.  500 uL HEPES buffer (stock = 20 mM/L)
 d.  50 uL Amphotericin B (stock = 250 ug/mL)
 
 
-## *Description of Culture Vessels and Substrates*
+## Description of Culture Vessels and Substrates
 
 -   Corning 25 cm^2^ Cell Culture Flask, Canted Neck, Tissue Culture Treated, Nonpyrogenic (Cat. No. 430639).
 -   No additional coating with substrate.
 
-## *Temperature and Environment*
+## Temperature and Environment
 
 -   08/22/23: Flasks kept overnight in biosaftey cabinet in UW Tacoma, Tacoma Paper and Stationary (TPS), room 232.
 
@@ -89,40 +93,40 @@ d.  50 uL Amphotericin B (stock = 250 ug/mL)
     b.  Light: 0
     c.  Humidity: 91%
 
-## *Tissue Seeding Density*
+## Tissue Seeding Density
 
     -   Document the number of cells seeded in each culture vessel.
     -   Consider testing different seeding densities to observe their effects.
 
-## *Observations and Growth Monitoring*
+## Observations and Growth Monitoring
 
 ![ampullae](amp.jpeg)
 
     -   Regularly document your observations, including cell morphology, attachment, aggregation, or any changes in appearance.
     -   Include photographs if possible.
 
-## *Viability and Proliferation*
+## Viability and Proliferation
 
     -   Note any signs of cell viability (e.g., cell membrane integrity, absence of debris).
     -   Monitor cell proliferation by documenting changes in cell density over time.
 
-## *pH and Nutrient Levels*
+## pH and Nutrient Levels
 
     -   If possible, measure and record the pH of the medium during the culture.
     -   Monitor nutrient consumption by measuring glucose or other nutrients if relevant.
 
-## *Media Changes and Additions*
+## Media Changes and Additions
 
 -   08/22/23: Added 1 mL of media at 0 dps
 -   08/23/23: Removed 100% of media and replaced with 2 mL of TCM.
 -   08/25/23: Addition of 1 mL of TCM. No media replacement.
 -   08/29/23: Removed 100% of media and replaced with 2 mL of TCM.
 
-## *Summary of Results and Outcomes*
+## Summary of Results and Outcomes
 
     -   Summarize the overall outcome of the experiment, including whether you observed growth, viability, or any other changes.
 
-## *Notes and Anomalies*
+## Notes and Anomalies
 
 Document any unexpected events, anomalies, or deviations from your initial plan.
 
@@ -134,7 +138,7 @@ Document any unexpected events, anomalies, or deviations from your initial plan.
 
 - 08/29/23 (7 dps): Morphology of cells that are adhered has not changed. High quality images not taken due to issues with EVOS microscope. 
 
-## Next Steps and Modifications*
+## Next Steps and Modifications
 
 -   Due to observation of contamination at 1 dps, no modifications will be made to the protocol for Trial 17.
 -   Biosaftey cabinet to be cleaned:
@@ -145,7 +149,7 @@ Document any unexpected events, anomalies, or deviations from your initial plan.
     a.  Thoroughly wash hands and upper arms for at least 20 seconds.
     b.  Avoid using lab coat until it can be laundered.
 
-## *References and Resources*
+## References and Resources
 
 Protocol based on:
 
@@ -158,7 +162,7 @@ Rabinowitz, C., & Rinkevich, B. (2004). In vitro delayed senescence of extirpate
 
 # Protocol
 
-## *Materials*
+## Materials
 
 #### Equipment
 
@@ -259,7 +263,7 @@ In the biosafety cabinet add together:
 - 1 mL Pen/Strep (100x)
 - 100 uL Amphotericin B (250 ug/mL) 
 
-## *Epithelial Cell Isolation*
+## Epithelial Cell Isolation
 
 Be sure to have sufficient stocks of the above three solutions prior to
 following the below procedures.
