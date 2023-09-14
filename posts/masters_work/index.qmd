@@ -3,7 +3,7 @@ title: "Masters Thesis Progress"
 author: "Celeste Valdivia"
 date: "2023-09-14"
 categories: [thesis, study plans] 
-image: "(botryllus_anatomy.jpeg"
+image: "botryllus_anatomy.jpeg"
 ---
 This page is intended to act as a living document recording the progression of my thesis work. 
 
