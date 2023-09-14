@@ -11,7 +11,9 @@ Here I both describe the procedure that occurred for epithelial tissue isolation
 
 # Schematic
 
-![design](schematic.jpeg) Empty represents blank wells.
+![design](schematic.jpeg)
+
+Empty represents blank wells.
 
 
 # General Information
@@ -77,11 +79,18 @@ August 31, 2023: 0 days post seeding (dps)
 |-----------|----------:|-----------|----------:|-----------|-----------|
 | S105C002  |           08/25/23 | De Moines Marina (47.44, -122.34) |    TO | 49        | 6            |
 
-Animal health score was 10 prior to ASW-G period but  the mechanical subdivision prior to an ethanol wash and dip disrupted the normal zooid architecture
 
-![S105C001 Cumulative System 1](t18_S105C002-230831_1.jpg)
-![S105C001 Cumulative System 2](t18_S105C002-230831_2.jpg)
-![S105C001 Cumulative System 3](t18_S105C002-230831_3.jpg)
+::: {#fig-S105C002-whole-animal layout-ncol=1}
+
+
+![S105C002 Cumulative System 1](t18_S105C002-230831_1.jpg)
+
+![S105C002 Cumulative System 2](t18_S105C002-230831_2.jpg)
+
+![S105C002 Cumulative System 3](t18_S105C002-230831_3.jpg)
+
+All cumulative systems that were dissected from individual S105C001. Animal health score was 10 prior to ASW-G period but health declined over washes and overnight quarentine period, disrupting the zooid architecture.
+:::
 
 
 ## Cell Isolation Technique
@@ -161,32 +170,47 @@ c.  Plastic
 
 ::: {#fig-Cultrex-reaborbing-B1-B2 layout-ncol=2}
 
-![Example from B1, 40x](t18_b1_2dps_5_0475.jpg)
+![Resorbing zooid decay on Cultrex BME](t18_b1_2dps_5_0475.jpg)
           
-![Example from B2, 40x](t18_b2_2dps_1_0476.jpg)
+![Resorbing zooid decay on Cultrex RGF BME](t18_b2_2dps_1_0476.jpg)
 
-B1 and B2 wells seeded with reabsorbing parental zooids appear to be decaying. Tissue is forming spheres around the edges. 40x magnification at 2 days post seeding.
+Parental reabsoribing zooid tissue at 2 days post seeding (dps) at 40x magnification B1 and B2 wells, Cultrex BME and Cultrex RGF BME, respectively. Tissue is decaying as evicdenced by spheres forming around the edges and the presence of redish tissue pieces.
 :::
 
 ::: {#fig-Cultrex-TO-A2 layout-ncol=1}
 
-A1 and A2 wells seeded with take over zooids has not put out growth but does not appear to be decaying.
-  
-![Example from A2, 40x](t18_a2_2dps_4_0458 Large.jpeg)
+![Take over primary bud or zooid on Cultrex RGF BME](t18_a2_2dps_4_0458.jpg)
+
+Example image of primary bud - take over zooid seeded on Cultrex RGF BMEat 40x magnification. Tissue seeded from the take over zooid stage not decaying relative to that of tissue seeded from the same individual's resorbing parental zooids. 
 
 :::
 
 
 **09/13/23 (13 dps)**:
 
+ 
 ::: {#fig-Cultrex-TO-BME-A2 layout-ncol=2}
 
-![Tissue 3](t18_a2_13dps_3_0697.jpg){#fig-monolayer-1}
+![Monolayer island on Cultrex BME with orginally seeded tissue located proximal to primary growth.](t18_a2_13dps_4_0693.jpg){#fig-monolayer-1}
 
-![Tissue 4](t18_a2_13dps_4_0693.jpg){#fig-monolyaer-2}
+![Monolayer island on Cultrex BME original tissue removed.](t18_a2_13dps_3_0697.jpg){#fig-monolyaer-2}
 
-Monolayer islands at 20x magnification in well A2, substrate Cultrex Basement Membrane, tissue from takeover zooid, 13 days post seeding..
+Monolayer islands at 20x magnification in well A2, substrate Cultrex Basement Membrane, tissue from takeover zooid, 13 days post seeding.
 :::
+
+::: {#fig-plastic-TO layout-ncol=2}
+
+![](t18_a3_13dps_6_0721.jpg)
+
+![](t18_a3_13dps_5_0716.jpg)
+
+![](t18_a3_13dps_3_0709.jpg)
+
+![](t18_a3_13dps_1_0706.jpg)
+
+Four monolayer islands occuring from four different tissue pieces at 13 days post seeding on no substrate, 40x magnification. Tissue derived from take over zooids. However, much of this growth was observable 1 day post seeding and has not changed in morphology or size since. Much of the
+:::
+
 
 ## Viability and Proliferation
 
@@ -202,7 +226,11 @@ Monolayer islands at 20x magnification in well A2, substrate Cultrex Basement Me
 
 -   09/01/23 (1 dps): Removed all media from wells A1, A2, B1, B2 due to contamination and lack of tissue adherence. Duplicate 1 mL TCM wash to those wells. Addition of 200 uL of media to those wells. 1 mL addition to well A3. Termination of well B3.
 
-- 09/02/23 (2 dps): For wells A1, A2, B1, B2, 100-90 uL evaporated per well. 
+-   09/02/23 (2 dps): For wells A1, A2, B1, B2, 100-90 uL evaporated per well. 100% media replacement (1 mL) for all wells.
+
+-   09/06/23 (6 dps): For all wells, varying volumes left in media, 620-760 uL left in each well. 100% media replacement (1mL) for all wells.
+
+-   09/13/23 (13 dps): 100% media replacement (1 mL) for wells A1-A3. B1 and B2 terminated due to lack of growth and decay.
 
 ## Summary of Results and Outcomes
 
@@ -222,7 +250,15 @@ Monolayer islands at 20x magnification in well A2, substrate Cultrex Basement Me
 
   -   Accidentally added waste media to ampullae well (A3) so terminated the well.
   
+- 09/8/23: 
 
+  -   Wells B1 and B2 have a lot of decay of tissue. Resorbing zooids.
+  
+  -   For take over zooids that put out monolayers in A1 and A2 at 2 dps, tissue pieces that put out some growth floated away and tissue edges floating away as well.
+  
+-   09/10/23:
+
+  -   No contamination observed whatsover especially compared to what was observed at 1 dps. Washing well and replacing the media worked well for reducing microbial growth.
 
 ## Next Steps and Modifications
 
