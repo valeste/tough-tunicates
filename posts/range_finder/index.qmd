@@ -1,12 +1,11 @@
 ---
-title: "Preliminary in vivo NiCl2 Range Finder"
+title: "Preliminary *in vivo* NiCl2 Range Finder"
 author: "Celeste Valdivia"
 date: "2023-09-01"
 categories: [study plans, nickel chloride]
 image: "init_prelim.jpeg"
 ---
 # Initial Schematic
-![test](drawing.jpeg)
 
 ![initial design](init_prelim.jpeg)
 

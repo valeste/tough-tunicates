@@ -2,7 +2,7 @@
 title: " Cell Isolation Trial 18: Cultrex Substrates"
 author: "Celeste Valdivia"
 date: "2023-08-30"
-categories: [epithelial, ampullae, primaries, substrate]
+categories: [epithelial, ampullae, zooids, primary buds, primaries, substrate]
 image: "schematic.jpeg"
 ---
 
@@ -12,6 +12,7 @@ Here I both describe the procedure that occurred for epithelial tissue isolation
 # Schematic
 
 ![design](schematic.jpeg) Empty represents blank wells.
+
 
 # General Information
 
@@ -40,7 +41,7 @@ August 31, 2023: 0 days post seeding (dps)
 -   S105C002 was dissected for intact ampullae on at about 4 PM as well as blood cells.
   -   Ampullae and blood cells were added directly to aliquot of media. Ampullae were added by scooping. Blood cells were added by using the syringe plunger on the insulin needle. Once a sufficient amount of material was gathered, material was spun down for 5 seconds with mini centrifuge (2000 x g). Excess media was removed using 1000 uL pipette tip. Media was replaced with fresh 1 mL aliquot.
 
--   500 uL of TCM was added to all wells in 12-well cell culture flasks at x PM.
+-   1 mL of TCM was added to all wells in 12-well cell culture flasks.
 
 ## Source and Handling of Starting Material
 
@@ -137,49 +138,95 @@ c.  Plastic
 
 ## Tissue Seeding Density
 
--   10 zooids per well (surface area = 3.8^2^)
+*Document the number of cells seeded in each culture vessel.*
+
+-   08/31/23: 10 zooids per well (surface area = 3.8^2^)
     -   2.6 zooids per cm^2^
-        -   Document the number of cells seeded in each culture vessel.
-        -   Consider testing different seeding densities to observe their effects.
+
+-   09/02/23: Some zooids lost in aspiration as they were unadhered.
+  
+|    Date  | Well     | Tissue Total  | Attached Tissue | tissue/cm^2^ | 
+|----------|----------|---------------|-----------------|--------------|
+| 09/02/23 |    A1    | 5             | 3               | 1.3          |
+| 09/02/23 |    A2    | 5             | 4               | 1.3          |
+| 09/02/23 |    A3    | 5             | 3               | 1.3          |
+| 09/02/23 |    B1    | 8             | 6               | 2.1          |
+| 09/02/23 |    B2    | 9             | 7               | 3.3          |
 
 ## Observations and Growth Monitoring
 
-```         
--   Regularly document your observations, including cell morphology, attachment, aggregation, or any changes in appearance.
--   Include photographs if possible.
-```
+*Regularly document your observations, including cell morphology, attachment, aggregation, or any changes in appearance. Include photographs if possible.*
+
+**09/02/23 (2 dps)**:
+
+::: {#fig-Cultrex-reaborbing-B1-B2 layout-ncol=2}
+
+![Example from B1, 40x](t18_b1_2dps_5_0475 Large.jpeg)
+          
+![Example from B2, 40x](t18_b2_2dps_1_0476 Large.jpeg)
+
+B1 and B2 wells seeded with reabsorbing parental zooids appear to be decaying. Tissue is forming spheres around the edges. 40x magnification at 2 days post seeding.
+:::
+
+::: {#fig-Cultrex-TO-A2 layout-ncol=1}
+
+A1 and A2 wells seeded with take over zooids has not put out growth but does not appear to be decaying.
+  
+![Example from A2, 40x](t18_a2_2dps_4_0458 Large.jpeg)
+
+:::
+
+
+**09/13/23 (13 dps)**:
+
+::: {#fig-Cultrex-TO-BME-A2 layout-ncol=2}
+
+![Tissue 3](t18_a2_13dps_3_0697.jpg){#fig-monolayer-1}
+
+![Tissue 4](t18_a2_13dps_4_0693.jpg){#fig-monolyaer-2}
+
+Monolayer islands at 20x magnification in well A2, substrate Cultrex Basement Membrane, tissue from takeover zooid, 13 days post seeding..
+:::
 
 ## Viability and Proliferation
 
-```         
--   Note any signs of cell viability (e.g., cell membrane integrity, absence of debris).
--   Monitor cell proliferation by documenting changes in cell density over time.
-```
+*Note any signs of cell viability (e.g., cell membrane integrity, absence of debris). Monitor cell proliferation by documenting changes in cell density over time.*
 
 ## pH and Nutrient Levels
 
-```         
--   If possible, measure and record the pH of the medium during the culture.
--   Monitor nutrient consumption by measuring glucose or other nutrients if relevant.
-```
+*If possible, measure and record the pH of the medium during the culture. Monitor nutrient consumption by measuring glucose or other nutrients if relevant.*
 
 ## Media Changes and Additions
 
--   08/31/23: Added 1 mL of media at 0 dps
+-   08/31/23 (0 dps): Added 1 mL of media at 0 dps to all wells (A1-A3 and B1-B3).
+
+-   09/01/23 (1 dps): Removed all media from wells A1, A2, B1, B2 due to contamination and lack of tissue adherence. Duplicate 1 mL TCM wash to those wells. Addition of 200 uL of media to those wells. 1 mL addition to well A3. Termination of well B3.
+
+- 09/02/23 (2 dps): For wells A1, A2, B1, B2, 100-90 uL evaporated per well. 
 
 ## Summary of Results and Outcomes
 
-```         
--   Summarize the overall outcome of the experiment, including whether you observed growth, viability, or any other changes.
-```
+*Summarize the overall outcome of the experiment, including whether you observed growth, viability, or any other changes.*
 
 ## Notes and Anomalies
 
 - Rinsing animal with ethanol and setting in ASW-G immediately after subdivision disrupts zooid architecture.
 
+- 09/01/23: 
+  
+  -   No adherence of any of the tissue pieces in Cultrex substrate wells overnight. 
+  
+  -   A lot of contamination in Cultrex wells.
+    -   Removed 100% media and did duplicate washes with 1 mL TCM.
+    -   Re-added 1 mL of media but observed tissue coming back up, decided to add only 200 uL to each cultrex well.
+
+  -   Accidentally added waste media to ampullae well (A3) so terminated the well.
+  
+
+
 ## Next Steps and Modifications
 
-As animal was not at least at a health score of 7, need to redo this set up with a healthier animal. Will not subdivide animal again and immediately try to cultue. Give animal at least 2 days to recover from subdivision.
+As animal was not at least at a health score of 7, need to redo this set up with a healthier animal. Will not subdivide animal again and immediately try to culture. Give animal at least 2 days to recover from subdivision.
 
 ## References and Resources
 
