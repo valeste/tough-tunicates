@@ -161,9 +161,9 @@ c.  Plastic
 
 ::: {#fig-Cultrex-reaborbing-B1-B2 layout-ncol=2}
 
-![Example from B1, 40x](t18_b1_2dps_5_0475 Large.jpeg)
+![Example from B1, 40x](t18_b1_2dps_5_0475.jpg)
           
-![Example from B2, 40x](t18_b2_2dps_1_0476 Large.jpeg)
+![Example from B2, 40x](t18_b2_2dps_1_0476.jpg)
 
 B1 and B2 wells seeded with reabsorbing parental zooids appear to be decaying. Tissue is forming spheres around the edges. 40x magnification at 2 days post seeding.
 :::
