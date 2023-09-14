@@ -3,7 +3,7 @@ title: "Cell Isolation Trial 17"
 author: "Celeste Valdivia"
 date: "2023-08-22"
 categories: [epithelial, zooids, primaries]
-image: "IMG_0334.jpeg"
+image: "T17_S085C001-230823170033197.jpg"
 ---
 Here I both describe the procedure that occurred for epithelial tissue isolation from *Botryllus schlosseri* for trial 16 and maintain this document as a living log for further updates regarding those cultures.
 
