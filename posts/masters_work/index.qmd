@@ -1,12 +1,18 @@
 ---
 title: "Masters Thesis Progress"
 author: "Celeste Valdivia"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "2023-09-14"
+categories: [thesis, study plans] 
+image: "(botryllus_anatomy.jpeg"
 ---
-## Thesis Comittee Memebers
-Supervisory Committee Chair -  Dr. Alison Gardell, agardell@uw.edu
+This page is intended to act as a living document recording the progression of my thesis work. 
 
-Committee UW SAFS Core Faculty - Dr. Steven B Roberts, sr320@uw.edu 
+## Thesis Comittee Memebers
+Co-Supervisory Committee Chair -  Dr. Alison Gardell, agardell@uw.edu
+
+Co-Supervisory Committee Chair - Dr. Steven B Roberts, sr320@uw.edu 
+
+Committee UW SAFS Core Faculty - Dr. Jacqueline Padilla-Gamiño, jpgamino@uw.edu
 
 Graduate Student, (Master's Thesis) - Celeste Valdivia, cvaldi@uw.edu 
 
