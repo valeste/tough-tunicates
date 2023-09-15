@@ -49,7 +49,8 @@ Colony Information At Dissection 08/22/23
 
 
 ### Whole animal
-Images taken with stereomicroscope Excelis camera just before dissection:
+
+::: {#fig-S085C001-whole-animal layout-ncol=2}
 
 ![](T17_S085C001-230823170048358.jpg)
 
@@ -59,6 +60,8 @@ Images taken with stereomicroscope Excelis camera just before dissection:
 
 ![](T17_S085C001-230823170151023.jpg)
 
+Images taken with stereomicroscope Excelis camera just before dissection.
+:::
 
 ## Cell Isolation Technique
 
@@ -128,6 +131,26 @@ d.  50 uL Amphotericin B (stock = 250 ug/mL)
 - No growth observed at 22 dps
 
   - Tissue decay observed across most tissue pieces
+  
+::: {#fig-compare-2-v-22-dps layout-ncol=2}
+
+![2 days post seeding](t17_6_2dps0384.jpg)
+
+![22 days post seeding](t17_22dps_6_0667.jpg)
+
+Same seeded tissue piece at 2 dps and at 22 dps at 4 x magnification. Notice a decrease in pigmentation in tissue and peeling up of edges of tissue.
+
+:::
+  
+::: {#fig-22-dps layout-ncol=2}
+
+![](t17_22dps_15_0686.jpg)
+
+![](t17_22dps_7_0673.jpg)
+
+Different seeded tissue at 22 dps at 40x magnification. Notice the cellular debris accumulating in the second image. Tissue unlikely to proliferate. No monolayers documented at 22 dps.
+:::
+
 
 ## Viability and Proliferation
 
