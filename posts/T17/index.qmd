@@ -45,7 +45,7 @@ Colony Information At Dissection 08/22/23
 
 | colony_id | establishment_date | sampling_location    | stage | zooid_num | health_score |
 |---------|--------:|---------|--------:|---------|---------|---------|
-| S085C001  |         07/26/2023 | De Moines Marina (47.44, -122.34) |          35 | B2 | 10/10         |
+| S085C001  |         07/26/2023 | De Moines Marina (47.44, -122.34) |          B2 | 35 | 10/10         |
 
 
 ### Whole animal
