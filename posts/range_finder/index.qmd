@@ -1,7 +1,7 @@
 ---
 title: "Preliminary *in vivo* NiCl~2~ Range Finder"
 author: "Celeste Valdivia"
-date: "2023-09-01"
+date: "2023-09-15"
 categories: [study plans, nickel chloride]
 image: "init_prelim.jpeg"
 ---
@@ -12,35 +12,44 @@ image: "init_prelim.jpeg"
 
 # Suggestions
 
-Dr. Gardell's suggested modifications to design:
+Dr. Gardell's suggested modifications to design 09/01/23:
 
-1.  Log distribution of the concentrations.
+  1.  Log distribution of the concentrations.
 
-```{=html}
-<!-- -->
-```
-a.  i.e. 0, 0.1, 1, 100.
+  2.  qPCR should be left for follow up experiment with better defined (targeted) concentrations and time points. Do not snap freeze tissue for qPCR, alternatively use tissue for:
 
-```{=html}
-<!-- -->
-```
-2.  qPCR should be left for follow up experiment with better defined (targeted) concentrations and time points. Do not snap freeze tissue for qPCR, alternatively use tissue for:
+   a.  Primary epithelial cell culturing to address question regarding stress-induced evolution
 
-```{=html}
-<!-- -->
-```
-a.  Primary epithelial cell culturing to address question regarding stress-induced evolution
+   b.  Use for comet assay
 
-b.  Use for comet assay
+  3.  Maintain a traditional LC50 design.
 
-```{=html}
-<!-- -->
-```
-3.  Maintain a traditional LC50 design.
+   a.  More concentrations at one time point.
 
-```{=html}
-<!-- -->
-```
-a.  More concentrations at one time point.
+   b.  Time point defined by research goals.
 
-b.  Time point defined by research goals.
+## Modified Design based on suggestions
+
+![secondary design](v2_design.jpeg)
+
+## Notes and considerations
+
+Not going to be controlling for blastogenic stages
+
+  -   If system is in C2 - D blastogenic stages, seed the primary buds
+  
+  -   If system is in A1-C1 stages, seed the parental zooids
+  
+What would the seeding density be?
+
+  -   5-9 zooids (the whole system) in one well -> two 12 well-plates
+  
+Using well plates, however, we will need to control for evaporation more effectively, currently randomly lose anywhere from 30-50% of the media, drastically causing differences in the osmolarity of the wells.
+
+  -   Improve humidity conditions
+  
+  -   Add a lot of media from initiation. 3 mL in each well.
+  
+        -   Ideal to measure media quality.
+        
+Could be interesting to incorporate in future design, freezing tissue at the end of the exposure and then freezing after seeding. Evaluating differences in gene expression across those time points.
