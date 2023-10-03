@@ -6,7 +6,14 @@ categories: [epithelial, ampullae, zooids, primary buds, primaries, substrate]
 image: "schematic.jpeg"
 ---
 
-Here I both describe the procedure that occurred for epithelial tissue isolation from *Botryllus schlosseri* for trial 18 and maintain this document as a living log for further updates regarding those cultures.
+# Summary
+
+In this small scale experiment, resorbing zooids and take over zooids, two distinct asexual developmental stages sourced from the same *Botryllus* individual, were seeded separately onto 3.8 cm^2^ wells. 
+
+Of the seeded take over zooid tissue, the Cultrex RGF BME or Cultrex BME resulted in lower a lower instances of epithelial monolayer output relative to tissue seeded directly on the cell culture treated plastic plate despite similar frequencies of tissue adherence and stocking densities. 
+
+On October 3rd, 34 days post seeding, all tissue continues to persist in culture with no sign of contamination or degradation but no further addition to the initially observed monolayers.
+
 
 # Schematic
 
@@ -73,7 +80,7 @@ August 31, 2023: 0 days post seeding (dps)
 #### Colony Information At Dissection (08/31/23)
 
 | colony_id | establishment_date | sampling_location                 | stage | zooid_num | health_score |
-|------------|-----------:|------------|-----------:|------------|------------|
+|-----------|----------:|------------------|----------:|-----------|-----------|
 | S105C002  |           08/25/23 | De Moines Marina (47.44, -122.34) |    TO | 49        | 6            |
 
 ::: {#fig-S105C002-whole-animal layout-ncol="1"}
@@ -108,7 +115,7 @@ d.  50 uL Amphotericin B (stock = 250 ug/mL)
 
 ## Description of Culture Vessels and Substrates
 
-**Vessel**: Corning Incorporated 12 well cell culture plate, surface area per well 3.8^2^ (Cat. No. 3513) - Justification: To use various substrate types for the same genotype/individual.
+**Vessel**: Corning Incorporated 12 well cell culture plate, surface area per well 3.8 cm^2^ (Cat. No. 3513) - Justification: To use various substrate types for the same genotype/individual.
 
 **Substrates**:
 
@@ -122,27 +129,34 @@ c.  Plastic
 
 -   08/31/23: UW Tacoma, Science Building (SCI) incubator, room 232.
 
-    a.  Temperature:
+    a.  Temperature: 18 C
     b.  Light: 0
-    c.  Humidity:
+    c.  Humidity: 90%
 
 -   09/01/23:
 
-    a.  Temperature:
+    a.  Temperature: 18 C
     b.  Light: 0
-    c.  Humidity:
+    c.  Humidity: 90%
 
 -   09/02/23: UW Tacoma, Science Building (SCI) incubator, room 232.
 
-    a.  Temperature:
+    a.  Temperature: 18 C
     b.  Light: 0
-    c.  Humidity:
+    c.  Humidity: 90%
+    
+-   10/01/23: UW Tacoma, Science Building (SCI) incubator, room 232.
+
+    a.  Temperature: 18 C
+    b.  Light: 0
+    c.  Humidity: 99%
+    
 
 ## Tissue Seeding Density
 
 *Document the number of cells seeded in each culture vessel.*
 
--   08/31/23: 10 zooids per well (surface area = 3.8^2^)
+-   08/31/23: 10 zooids per well (surface area = 3.8 cm^2^)
     -   2.6 zooids per cm^2^
 -   09/02/23: Some zooids lost in aspiration as they were unadhered.
 
@@ -165,7 +179,7 @@ c.  Plastic
 
 ![Resorbing zooid decay on Cultrex RGF BME](t18_b2_2dps_1_0476.jpg)
 
-Parental reabsoribing zooid tissue at 2 days post seeding (dps) at 40x magnification B1 and B2 wells, Cultrex BME and Cultrex RGF BME, respectively. Tissue is decaying as evicdenced by spheres forming around the edges and the presence of redish tissue pieces.
+Parental reabsorbing zooid tissue at 2 days post seeding (dps) at 40x magnification B1 and B2 wells, Cultrex BME and Cultrex RGF BME, respectively. Tissue is decaying as evidenced by spheres forming around the edges and the presence of red-ish tissue pieces.  
 :::
 
 ::: {#fig-Cultrex-TO-A2 layout-ncol="1"}
@@ -193,7 +207,7 @@ Monolayer islands at 20x magnification in well A2, substrate Cultrex Basement Me
 
 ![](t18_a3_13dps_1_0706.jpg)
 
-Four monolayer islands occuring from four different tissue pieces at 13 days post seeding on no substrate, 40x magnification. Tissue derived from take over zooids. However, much of this growth was observable 1 day post seeding and has not changed in morphology or size since. Much of the
+Four monolayer islands occuring from four different tissue pieces at 13 days post seeding on no substrate, 40x magnification. Tissue derived from take over zooids. However, much of this growth was observable 1 day post seeding and has not changed in morphology or size since.
 :::
 
 ## Viability and Proliferation
@@ -215,6 +229,8 @@ Four monolayer islands occuring from four different tissue pieces at 13 days pos
 -   09/06/23 (6 dps): For all wells, varying volumes left in media, 620-760 uL left in each well. 100% media replacement (1mL) for all wells.
 
 -   09/13/23 (13 dps): 100% media replacement (1 mL) for wells A1-A3. B1 and B2 terminated due to lack of growth and decay.
+
+- 100% of media replaced Monday, Wednesday, and Friday of every week. 1 mL removal and addition.
 
 ## Summary of Results and Outcomes
 
