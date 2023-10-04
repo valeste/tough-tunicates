@@ -224,3 +224,5 @@ You may now work outside the chemical fumehood. Note there may be residual NiCl~
 20. Once tissue has been removed, take cell strainer and rinse it with 30 mL ASW-PSA. 
 
 21. Place tissue in aliquot of TCM and immediately go to seed tissue in biosaftey cabinet. Mark time of seeding.
+
+22. No replacement of media over course of trial.
