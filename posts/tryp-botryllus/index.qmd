@@ -5,4 +5,12 @@ date: "2023-09-26"
 categories: [protocol] 
 image: "hemo_T18.jpeg"
 ---
+# Introduction
 
+Trypsinization of cell cultures is a common method use in cell biology to disassociate adherent cells *in vitro* from the vessel in which they are being cultured for the purpose of passaging the cells, meaning division of the cell population and reseeding into new vessels. 
+
+The process of cell disassociation for primary epithelial cells of *Botryllus schlosseri* must continue to be refined. 
+
+# Protcol
+
+# Results

@@ -1,0 +1,57 @@
+---
+title: "Substrate Options for the *in vitro* Culture of *Botryllus schlosseri* Epithelial Cells"
+author: "Celeste Valdivia"
+image: "Tang 2020 Medium.jpeg"
+categories: [cool paper, discussion]
+---
+
+# Summary
+Exploring of the physiology of the extra cellular matrix (ECM) of the marine invertebrate, ascidian, *Botryllus schlosseri* as to identify potential substrates for *in vitro* primary epithelial cell culturing of the same species.
+
+
+::: callout-note
+## Citations
+Rabinowitz, C., and B. Rinkevich. 2004. Epithelial cell cultures from Botryllus schlosseri palleal buds: accomplishments and challenges. Methods in Cell Science 25:137–148.
+
+Wei, J., G. Wang, X. Li, P. Ren, H. Yu, and B. Dong. 2017. Architectural delineation and molecular identification of extracellular matrix in ascidian embryos and larvae. Biology Open 6:1383–1390.
+
+Rodriguez, D., S. Nourizadeh, and A. W. De Tomaso. 2019. The biology of the extracorporeal vasculature of Botryllus schlosseri. Developmental Biology 448:309–319.
+
+
+Tang, V. W. 2020. Collagen, stiffness, and adhesion: the evolutionary basis of vertebrate mechanobiology. Molecular Biology of the Cell 31:1823–1834.
+:::
+
+# Discussion
+In the previous tunicate joint lab meeting, September 26, 2023, with our UC Davis collaborators Valerie Dong, PhD candidate and Dr. Dietmar Kueltz, we discussed the potential absence of collagen intergin receptors on the *Botryllus schlosseri* epithelial cell surface. Particularly, Tang 2020 was referenced in our discussion, citing the general lack of 
+
+::: {#fig-Tang-2020 layout-ncol="1"}
+![](Tang_2020_2.jpeg)
+
+Sourced from Tang 2020 depicting a simplified view of the non-vertebrate versus vertebrate extracellular matrix experience.
+:::
+
+However, in reviewing Tang's paper, the non-vertebrates referenced as missing collagen 1 in the ECM are primarily Drosophila. Phylogenetically, Drosophila are much more distant relatives to vertebrates than species in the taxa ascidian such as *Botryllus*.
+
+Furthermore, Wei et al. 2017 and Rodriguez et al. 2019 do reference the presence of collagens in the tunics of both solitary and colonial species of ascidians. Particularly in quoting Rodriguez et al. 2019 for *Botryllus*:
+
+>"This tunic has a composition that includes four main macromolecules: collagens, proteoglycans, glycoproteins, and cellulose."
+
+Furthermore, Rabinowitz & Rinkevich 2004 have evidence of epithelial cells from *Botryllus* adhering to and producing monolayers anywhere from 25-50% of the time when using collagen as their substrate.
+
+# Anecdotal Observations
+
+During the refinement of my epithelial cell isolation protocol over the course of Spring - Summer 2023, I have only explored using Cultrex BME, Cultrex BME RGF, and collagen I once for each. However, no conclusions can be fully drawn from these experiences as I was still troubleshooting the protocol and improving my techniques. 
+
+Relative to directly inoculating tissue on the plastic of the cell culture vessels, use of any of the above mentioned substrates increases a level of difficulty in getting the tissue to adhere. I believe the difference in adherence frequency is related to the alternative approaches utilized since with the use of coated substrates, protocols typically highly recommend to not allow the substrate to dry out. Currently my protocol for seeding epithelial tissue of *Botryllus* involves the intense desiccation of the tissue to allow for near 100% adherence. 
+
+An alternative approach to improve adherence of the tissue without the use of desiccation would involve the reduction of media volume between the 0 and 24 hours post inoculation period. 
+
+
+# Selection of Potenital Substrates
+
+1. Collagen 1
+
+2. Cultrex BME
+
+3. Potentially mixing fibronectin with collagen 1?
+
