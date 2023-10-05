@@ -8,12 +8,11 @@ image: "schematic.jpeg"
 
 # Summary
 
-In this small scale experiment, resorbing zooids and take over zooids, two distinct asexual developmental stages sourced from the same *Botryllus* individual, were seeded separately onto 3.8 cm^2^ wells. 
+In this small scale experiment, resorbing zooids and take over zooids, two distinct asexual developmental stages sourced from the same *Botryllus* individual, were seeded separately onto 3.8 cm^2^ wells.
 
-Of the seeded take over zooid tissue, the Cultrex RGF BME or Cultrex BME resulted in lower a lower instances of epithelial monolayer output relative to tissue seeded directly on the cell culture treated plastic plate despite similar frequencies of tissue adherence and stocking densities. 
+Of the seeded take over zooid tissue, the Cultrex RGF BME or Cultrex BME resulted in lower a lower instances of epithelial monolayer output relative to tissue seeded directly on the cell culture treated plastic plate despite similar frequencies of tissue adherence and stocking densities.
 
 On October 3rd, 34 days post seeding, all tissue continues to persist in culture with no sign of contamination or degradation but no further addition to the initially observed monolayers.
-
 
 # Schematic
 
@@ -80,7 +79,7 @@ August 31, 2023: 0 days post seeding (dps)
 #### Colony Information At Dissection (08/31/23)
 
 | colony_id | establishment_date | sampling_location                 | stage | zooid_num | health_score |
-|-----------|----------:|------------------|----------:|-----------|-----------|
+|------------|-----------:|------------|-----------:|------------|------------|
 | S105C002  |           08/25/23 | De Moines Marina (47.44, -122.34) |    TO | 49        | 6            |
 
 ::: {#fig-S105C002-whole-animal layout-ncol="1"}
@@ -144,13 +143,12 @@ c.  Plastic
     a.  Temperature: 18 C
     b.  Light: 0
     c.  Humidity: 90%
-    
+
 -   10/01/23: UW Tacoma, Science Building (SCI) incubator, room 232.
 
     a.  Temperature: 18 C
     b.  Light: 0
     c.  Humidity: 99%
-    
 
 ## Tissue Seeding Density
 
@@ -179,7 +177,7 @@ c.  Plastic
 
 ![Resorbing zooid decay on Cultrex RGF BME](t18_b2_2dps_1_0476.jpg)
 
-Parental reabsorbing zooid tissue at 2 days post seeding (dps) at 40x magnification B1 and B2 wells, Cultrex BME and Cultrex RGF BME, respectively. Tissue is decaying as evidenced by spheres forming around the edges and the presence of red-ish tissue pieces.  
+Parental reabsorbing zooid tissue at 2 days post seeding (dps) at 40x magnification B1 and B2 wells, Cultrex BME and Cultrex RGF BME, respectively. Tissue is decaying as evidenced by spheres forming around the edges and the presence of red-ish tissue pieces.
 :::
 
 ::: {#fig-Cultrex-TO-A2 layout-ncol="1"}
@@ -230,7 +228,7 @@ Four monolayer islands occuring from four different tissue pieces at 13 days pos
 
 -   09/13/23 (13 dps): 100% media replacement (1 mL) for wells A1-A3. B1 and B2 terminated due to lack of growth and decay.
 
-- 100% of media replaced Monday, Wednesday, and Friday of every week. 1 mL removal and addition.
+-   100% of media replaced Monday, Wednesday, and Friday of every week. 1 mL removal and addition.
 
 ## Summary of Results and Outcomes
 

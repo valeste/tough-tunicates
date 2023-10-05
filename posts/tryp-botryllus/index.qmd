@@ -1,9 +1,9 @@
 ---
-title: "Trypsinization"
+title: "Trypsinization of *Botryllus schlosseri* Epithelial Cells"
 author: "Celeste Valdivia"
 date: "2023-09-26"
 categories: [protocol] 
-image: "hemo_T18.jpeg"
+image: "hemo2.jpeg"
 ---
 # Introduction
 
@@ -13,4 +13,102 @@ The process of cell disassociation for primary epithelial cells of *Botryllus sc
 
 # Protcol
 
+## Trypsinization
+
+1. Examine cells to ensure they are healthy and not contaminated.
+
+2. Remove and discard culture media from vessel.
+
+3. Gently rinse cells with filtered PBS and remove the solution. Rinse in triplicate, 500 uL.
+
+4. Add appropriate quantity of trypsin (0.5mL/10cm^2^) of room temperature trypsin solution to the side of the wall of the vessel. Gently swirl contents to cover the cell layer by hand. 
+
+5. While swirling the solution, walk over to the SCI building to use the inverted microscope. After about 2 to 3 minutes detached cells will appear round and refractile under the scope. If 90% of cells are not yet detached continue to incubate the flask for another 2 minutes and observe the cells under the scope every 30 seconds.
+
+::: {.callout-warning}
+
+Do not allow cells to be exposed to the trypsin solution for extended periods (>=10 min).
+:::
+
+6. Once cells appear detached add two volumes of room temperature complete tunicate culture media (TCM). The fetal bovine serum in the media will inactivate trypsin. Gently disperse the medium by pipetting over the cell layer surface at an angle several times to ensure recovery of cells.
+
+7. Transfer the cell suspension to a labeled 1.5 mL tube and gently centrifuge at 100-300g for 5-10 minutes. Remove supernatent and gently resuspend cell pellet in a set volume of (1000 mL) room temperature tunicate culture media.
+
+8. Remove required sample (50 uL) of cell suspension for quantification of cell density of viable cells using hemocytometer and trypan blue exclusion. 
+
+9. Dilute the remaining solution to the seeding density and pipet appropriate volume to new culture vessel and set in cell incubator.
+
+## Counting cells with a hemocytometer
+
+1. Clean glass hemocytometer and coverslip with 70% ethanol prior to use.
+
+2. Take your 50 uL sample of cells and add it to 420 uL of Trypan Blue (0.4%) (10:1 dilution) and mix gently.
+
+3. Using a pipette, take about 100 uL of trypan blue-treated cell suspension and add to both sides of chambers on the hemocytometer. Fill both chambers gently underneath the coverslip and allow the cell suspension solution to be drawn out by capillary action as to not overfill the hemocytometer. Doing so could displace the estimated volume and result in inaccurate cell counts.
+
+4. Use the inverted microscope to focus on the grid lines of the hemocytometer with a 10x objective.
+
+5. Use a clicker to keep track of the number of unstained cells in one set of 16 outer squares. When counting, employ a system in which cells are only counted when they are within a square or on the right hand or bottom boundry line. Using the same guidelines, you may also want to count dead cells (stained dark blue) to estimate cell viability.
+
+4. Move hemocytometer to the next set of 16 corner squares and continue counting all four areas of 16 corner squares.
+
+::: {#fig-hemocytometer-diagram layout-ncol="1"}
+
+![](hemo_dia.jpeg){fig-align="center"}
+
+Blue outline indicates the area in which you should be counting cells on the grid.
+:::
+
+Table for counting cells (example):
+
+|             |               counts |
+|:-----------:|:--------------------:|
+| A           | 4                    |
+| B           | 4                    |
+| C           | 1                    |
+| D           | 6                    |
+| E           | 1                    |
+| Total       | 16                   |
+| Average     | 3.2x10^4^            |
+| Dilution    | 10:1                 |
+| mL(x10^6^)  | 0.32x10^6^           |
+| Total Cells | 0.224x10^6^ cells/mL |
+
 # Results
+
+::: {#fig-hemocytometer layout-ncol="2"}
+
+![](hemo1.jpeg)
+
+![](hemo2.jpeg)
+
+Images of hemocytometer under inverted microscope with epithelial cells of *Botryllus schlosseri*. Live cells of Botryllus have a white halo surrounding them and dark blue marks are dead cells or cellular debris.
+:::
+
+::: {#fig-cells-post-tryp layout-ncol="2"}
+
+![Monolayer island 1 after trypsinization at 4x](t18_a3_21dps_1_post_tryp.jpeg)
+
+![Monolayer island 1 at 13 days post inoculation](t18_a3_13dps_1_0706 copy.jpg)
+
+![Monolayer island 5 after trypsinization](t18_a3_21dps_5_post_tryp.jpeg)
+
+![Monolayer island 5 at 13 days post inoculation](t18_a3_13dps_5_0716 copy.jpg)
+
+![Monolayer island 6 after trypsinization](t18_a3_21dps_6_post_tryp.jpeg)
+
+![Monolayer island 6 13 days post inoculation](t18_a3_13dps_6_0721 copy.jpg)
+
+Comparison of cells pre and post trypsinization.
+:::
+
+::: {#fig-passage-1 layout-ncol="1"}
+
+![](t18_try_21dps_1_new_inoc.jpeg){fig-align="center"}
+
+Newly inoculated cells at 4x magnification. Cells did not appear adherent at inoculation.
+:::
+
+# Future Directinos
+
+Based off of this initial run with trypsinizing *Botryllus* epithelial cells, we concluded that the cells are have a relatively low response to trypsin and further disassociation of the cells may require mechanical scraping to ensure removal of at least 90% of the epithelial layer.
