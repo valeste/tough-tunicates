@@ -1,6 +1,7 @@
 ---
 title: "Substrate Options for the *in vitro* Culture of *Botryllus schlosseri* Epithelial Cells"
 author: "Celeste Valdivia"
+date: "2023-10-05"
 image: "Tang 2020 Medium.jpeg"
 categories: [cool paper, discussion]
 ---
