@@ -23,7 +23,7 @@ Tang, V. W. 2020. Collagen, stiffness, and adhesion: the evolutionary basis of v
 :::
 
 # Discussion
-In the previous tunicate joint lab meeting, September 26, 2023, with our UC Davis collaborators Valerie Dong, PhD candidate and Dr. Dietmar Kueltz, we discussed the potential absence of collagen intergin receptors on the *Botryllus schlosseri* epithelial cell surface. Particularly, Tang 2020 was referenced in our discussion, citing the general lack of 
+In the previous tunicate joint lab meeting, September 26, 2023, with our UC Davis collaborators Valerie Dong, PhD candidate and Dr. Dietmar Kueltz, we discussed the potential absence of collagen intergin receptors on the *Botryllus schlosseri* epithelial cell surface. Particularly, Tang 2020 was referenced in our discussion, where the author references the lack of collagen in the extracellular matrix environment of "non-vertebrates", here they particularly only describing the lack of collagen in the non-vertebrate *Drosophila*.
 
 ::: {#fig-Tang-2020 layout-ncol="1"}
 ![](Tang_2020_2.jpeg)
@@ -31,19 +31,19 @@ In the previous tunicate joint lab meeting, September 26, 2023, with our UC Davi
 Sourced from Tang 2020 depicting a simplified view of the non-vertebrate versus vertebrate extracellular matrix experience.
 :::
 
-However, in reviewing Tang's paper, the non-vertebrates referenced as missing collagen 1 in the ECM are primarily Drosophila. Phylogenetically, Drosophila are much more distant relatives to vertebrates than species in the taxa ascidian such as *Botryllus*.
+ Phylogenetically, *Drosophila* are much more distant relatives to vertebrates than species in the taxa ascidian such as *Botryllus schlosseri*.
 
-Furthermore, Wei et al. 2017 and Rodriguez et al. 2019 do reference the presence of collagens in the tunics of both solitary and colonial species of ascidians. Particularly in quoting Rodriguez et al. 2019 for *Botryllus*:
+Furthermore, Wei et al. 2017 and Rodriguez et al. 2019 do reference the presence of collagen in the tunics of both solitary and colonial species of ascidians. Particularly in quoting Rodriguez et al. 2019 for *Botryllus schlosseri*:
 
 >"This tunic has a composition that includes four main macromolecules: collagens, proteoglycans, glycoproteins, and cellulose."
 
-Furthermore, Rabinowitz & Rinkevich 2004 have evidence of epithelial cells from *Botryllus* adhering to and producing monolayers anywhere from 25-50% of the time when using collagen as their substrate.
+Furthermore, Rabinowitz & Rinkevich 2004 have evidence of epithelial cells from *Botryllus schlosseri* adhering to and producing monolayers anywhere from 25-50% of the time when using collagen as their substrate.
 
 # Anecdotal Observations
 
 During the refinement of my epithelial cell isolation protocol over the course of Spring - Summer 2023, I have only explored using Cultrex BME, Cultrex BME RGF, and collagen I once for each. However, no conclusions can be fully drawn from these experiences as I was still troubleshooting the protocol and improving my techniques. 
 
-Relative to directly inoculating tissue on the plastic of the cell culture vessels, use of any of the above mentioned substrates increases a level of difficulty in getting the tissue to adhere. I believe the difference in adherence frequency is related to the alternative approaches utilized since with the use of coated substrates, protocols typically highly recommend to not allow the substrate to dry out. Currently my protocol for seeding epithelial tissue of *Botryllus* involves the intense desiccation of the tissue to allow for near 100% adherence. 
+Relative to directly inoculating tissue on the plastic of the cell culture vessels, use of any of the above mentioned substrates increases a level of difficulty in getting the tissue to adhere. I believe the difference in adherence frequency is related to the alternative approaches utilized since with the use of coated substrates, protocols typically highly recommend to not allow the substrate to dry out. Currently my protocol for seeding epithelial tissue of *Botryllus schlosseri* involves the intense desiccation of the tissue to allow for near 100% adherence. 
 
 An alternative approach to improve adherence of the tissue without the use of desiccation would involve the reduction of media volume between the 0 and 24 hours post inoculation period. 
 
