@@ -109,6 +109,6 @@ Comparison of cells pre and post trypsinization.
 Newly inoculated cells at 4x magnification. Cells did not appear adherent at inoculation.
 :::
 
-# Future Directinos
+# Future Directions
 
 Based off of this initial run with trypsinizing *Botryllus* epithelial cells, we concluded that the cells are have a relatively low response to trypsin and further disassociation of the cells may require mechanical scraping to ensure removal of at least 90% of the epithelial layer.
