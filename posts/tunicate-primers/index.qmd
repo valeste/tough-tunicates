@@ -1,0 +1,30 @@
+---
+title: "Designing Tunicate Primers"
+author: "Celeste Valdivia"
+date: "2023-10-05"
+categories: [protocol, qPCR, nickel chloride]
+image: "annotatedref.jpeg"
+---
+
+# Overview
+
+I am interested in designing primers for *Botryllus schlosseri* to evaluate differences in expression of apoptosis, stemness, oxidative stress, and senescence related genes after an acute 24 hour exposure to two concentrations of nickel chloride and a control. 
+
+# Projected Gene List
+
+# Two Approaches for Acquiring Primers
+
+1.    Extensive search in the literature for pre-designed *Botryllus* specific primers.
+
+  -   For the purpose of expedience and accuracy. This generally is the preferred approach.
+
+2.    Design primers in-house for *Botryllus*.
+
+  -   To utilize this approach, we can use our previously annotated reference transcriptome for *Botryllus schlosseri* based on all available mRNA sequences for the species on NCBI that we previously created for the course FISH 546 Environmental Bioinformatics. Please refer to this [RPubs Page](https://rpubs.com/cvaldi/1040648) which describes the previous project for which the annotated reference transcriptome was created for. 
+  
+:::{.callout-note}
+  The annotated reference transcriptome is currently incomplete as it was only annotated to include the differentially expressed genes identified within that project's parameters (asexual developmental stage of *Botryllus schlosseri*). Therefore, the code may need to be re-run to develop a fully annotated reference transcriptome. I believe that the reasoning as to why I did not fully annotate it previously is related to efficiency of space. 
+:::
+
+# Confirmed Primers
+
