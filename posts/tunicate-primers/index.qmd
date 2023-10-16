@@ -19,7 +19,7 @@ I am interested in designing primers for *Botryllus schlosseri* to evaluate diff
 # Projected Gene List
 
 | Role                    | Gene ID      | Whole Gene Name                                                                    | botznik contig Sequence Identifier |
-|:----------------|:-------------|:---------------------------|:-------------|
+|:---------------|:---------------|:------------------------|:---------------|
 | Senescence              | TP53 (p53)   | Tumor protein p53                                                                  | \>botctg014768                     |
 | Senescence              | CDKN1A (p21) | Cyclin-dependent kinase inhibitor 1A                                               |                                    |
 | Senescence              | CDKN2A (p16) | Cyclin-dependent kinase inhibitor 2A                                               |                                    |
@@ -50,7 +50,7 @@ I am interested in designing primers for *Botryllus schlosseri* to evaluate diff
 For the purpose of expedience and accuracy. This generally is the preferred approach.
 
 | Gene     | NCBI Accession Number | DOI                                   | Fwd Primer                        | Rev Primer                      |
-|-------------|-------------------|-------------|-------------|-------------|
+|--------------|----------------|--------------|--------------|--------------|
 | Mortalin | KY212120              | doi:10.1016/<br />j.ydbio.2017.10.023 | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
 
 ## Design primers in-house for *Botryllus schlosseri*.
@@ -59,13 +59,19 @@ For the purpose of expedience and accuracy. This generally is the preferred appr
 
 To design primers in-house for *Botryllus schlosseri* we will utilize the [Botryllus Genome Project](http://botryllus.stanford.edu/botryllusgenome/) browser. Here we will use their BLAST tool to search for hits in query sequences as well as use their available sequecnced genome to extract those sequences which will allow us to design primers in IDT's [PrimerQuest](https://www.idtdna.com/pages/tools/primerquest?utm_source=google&utm_medium=cpc&utm_campaign=00583_1a_03&utm_content=search&gclid=CjwKCAjw-KipBhBtEiwAWjgwrEjnuHGjASk4eOYOapQcZynQKdZeAHn36oT-N5doY-ITCkQ6zzQ_KxoCm6AQAvD_BwE).
 
-1.  **Start with Gene of Interest:** Identify your gene of interest from a source such as GeneCards. Note that if using GeneCards you will get gene sequences for *Homo sapiens*.
+1.  **Start with Gene of Interest:** Identify your gene of interest from a source such as GeneCards. Note that if using GeneCards you will get gene sequences for *Homo sapiens*. You might want to instead use annotated genes for more closely related species.
 
-2.  **Retrieve Sequence:** Access the gene's sequence from NCBI Gene, by selecting the FASTA link. Copy the entire sequence starting at "\>".
+::: {#fig-tunicate-phylogeny layout-ncol="1"}
+![](DeBiasse_2020.jpeg)
 
-3.  **Use Sequence in BLAST:** Paste the sequence into the [Botryllus Genome Project's BLAST Tool](http://botryllus.stanford.edu/botryllusgenome/blast/) to identify homologous sequences in the Botryllus genome.
+Genome Biol Evol, Volume 12, Issue 6, June 2020, Pages 948--964, <https://doi.org/10.1093/gbe/evaa060>
+:::
 
-4.  **Select Top Sequence:** You identify the top sequence from the BLAST results, which has a significant alignment to your gene of interest. This is a crucial step in confirming the presence of a similar sequence in *Botryllus*.
+1.  **Retrieve Sequence:** Access the gene's sequence from NCBI Gene, by selecting the FASTA link. Copy the entire sequence starting at "\>".
+
+2.  **Use Sequence in BLAST:** Paste the sequence into the [Botryllus Genome Project's BLAST Tool](http://botryllus.stanford.edu/botryllusgenome/blast/) to identify homologous sequences in the Botryllus genome.
+
+3.  **Select Top Sequence:** You identify the top sequence from the BLAST results, which has a significant alignment to your gene of interest. This is a crucial step in confirming the presence of a similar sequence in *Botryllus*.
 
 ::: callout-tip
 Pay attention to the E value and Score (bits) to determine if your top hit sequence for the subject (Botryllus contig database) is significantly in alignment with the query. A commonly used threshold is E ≤ 0.001, which suggests that you would expect to see a similar match in a random database of the same size less than once by chance. **For more stringent analyses where you want highly reliable matches, you can set a lower E-value threshold, such as E ≤ 1e-5 (0.00001) or even E ≤ 1e-10 (0.0000000001).**
@@ -133,5 +139,5 @@ General Rules for designing good primers:
 # Confirmed Primers
 
 | Gene     | NCBI Accession Number | Fwd Primer                        | Rev Primer                      |     |
-|-------------|-------------------|-------------|-------------|-------------|
+|--------------|----------------|--------------|--------------|--------------|
 | Mortalin | KY212120              | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |     |
