@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Celeste Valdivia">
+<meta name="dcterms.date" content="2023-10-13">
+
+<title>Celeste Valdivia’s Open Lab Notebook - Designing Tunicate Primers</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/Valdivia.JPG" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/thumbnail.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Celeste Valdivia’s Open Lab Notebook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/valeste" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/celestevaldivia/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="malito:cvaldi@uw.edu" rel="" target=""><i class="bi bi-envelope-heart" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Designing Tunicate Primers</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">protocol</div>
+                <div class="quarto-category">qPCR</div>
+                <div class="quarto-category">primers</div>
+                <div class="quarto-category">nickel chloride</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Celeste Valdivia </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 13, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#projected-gene-list" id="toc-projected-gene-list" class="nav-link" data-scroll-target="#projected-gene-list">Projected Gene List</a></li>
+  <li><a href="#two-approaches-for-acquiring-primers" id="toc-two-approaches-for-acquiring-primers" class="nav-link" data-scroll-target="#two-approaches-for-acquiring-primers">Two Approaches for Acquiring Primers</a>
+  <ul class="collapse">
+  <li><a href="#extensive-search-in-the-literature-for-pre-designed-botryllus-specific-primers." id="toc-extensive-search-in-the-literature-for-pre-designed-botryllus-specific-primers." class="nav-link" data-scroll-target="#extensive-search-in-the-literature-for-pre-designed-botryllus-specific-primers.">Extensive search in the literature for pre-designed <em>Botryllus</em> specific primers.</a></li>
+  <li><a href="#design-primers-in-house-for-botryllus-schlosseri." id="toc-design-primers-in-house-for-botryllus-schlosseri." class="nav-link" data-scroll-target="#design-primers-in-house-for-botryllus-schlosseri.">Design primers in-house for <em>Botryllus schlosseri</em>.</a>
+  <ul class="collapse">
+  <li><a href="#protocol" id="toc-protocol" class="nav-link" data-scroll-target="#protocol">Protocol</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#confirmed-primers" id="toc-confirmed-primers" class="nav-link" data-scroll-target="#confirmed-primers">Confirmed Primers</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>I am interested in designing primers for <em>Botryllus schlosseri</em> to evaluate differences in expression of apoptosis, stemness, oxidative stress, and senescence related genes after an acute 24 hour exposure to two concentrations of nickel chloride and a control.</p>
+</section>
+<section id="projected-gene-list" class="level1">
+<h1>Projected Gene List</h1>
+<table class="table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 17%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Role</th>
+<th style="text-align: left;">Gene ID</th>
+<th style="text-align: left;">Whole Gene Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Senescence</td>
+<td style="text-align: left;">TP53 (p53)</td>
+<td style="text-align: left;">Tumor protein p53</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Senescence</td>
+<td style="text-align: left;">CDKN1A (p21)</td>
+<td style="text-align: left;">Cyclin-dependent kinase inhibitor 1A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Senescence</td>
+<td style="text-align: left;">CDKN2A (p16)</td>
+<td style="text-align: left;">Cyclin-dependent kinase inhibitor 2A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Senescence</td>
+<td style="text-align: left;">SIRT1</td>
+<td style="text-align: left;">Sirtuin 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Senescence</td>
+<td style="text-align: left;">FOXO3</td>
+<td style="text-align: left;">Forkhead box O3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Senescence</td>
+<td style="text-align: left;">IGFBP3</td>
+<td style="text-align: left;">Insulin-like growth factor-binding protein 3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Apoptosis</td>
+<td style="text-align: left;">CASP3</td>
+<td style="text-align: left;">Caspase 3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Apoptosis</td>
+<td style="text-align: left;">CASP8</td>
+<td style="text-align: left;">Caspase 8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Apoptosis</td>
+<td style="text-align: left;">BCL2</td>
+<td style="text-align: left;">B-cell lymphoma 2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Apoptosis</td>
+<td style="text-align: left;">BAX</td>
+<td style="text-align: left;">BCL2-associated X protein</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Apoptosis</td>
+<td style="text-align: left;">FAS</td>
+<td style="text-align: left;">Fas cell surface death receptor (CD95)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Apoptosis</td>
+<td style="text-align: left;">TNF</td>
+<td style="text-align: left;">Tumor necrosis factor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oxidative Stress</td>
+<td style="text-align: left;">HSP70</td>
+<td style="text-align: left;">Heat Shock Protein 70</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oxidative Stress</td>
+<td style="text-align: left;">SOD</td>
+<td style="text-align: left;">Superoxide Dismutase. <br>Various isoforms, such as SOD1, SOD2, and SOD3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oxidative Stress</td>
+<td style="text-align: left;">CAT</td>
+<td style="text-align: left;">Catalase enzyme</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oxidative Stress</td>
+<td style="text-align: left;">HMOX1</td>
+<td style="text-align: left;">Heme oxygenase enzyme 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oxidative Stress</td>
+<td style="text-align: left;">NQO1</td>
+<td style="text-align: left;">NADPH quinone dehydrogenase 1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oxidative Stress</td>
+<td style="text-align: left;">GST</td>
+<td style="text-align: left;">Glutathione S-Transferase. <br>Various isoforms, such as GSTM1, GSTP1, and GSTT1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stemness</td>
+<td style="text-align: left;">MYC</td>
+<td style="text-align: left;">Myc proto-oncogene protein</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">stemness</td>
+<td style="text-align: left;">SOXB1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stemness</td>
+<td style="text-align: left;">POU3</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">aging and proliferation</td>
+<td style="text-align: left;">HSPA9</td>
+<td style="text-align: left;">Mortalin</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="two-approaches-for-acquiring-primers" class="level1">
+<h1>Two Approaches for Acquiring Primers</h1>
+<section id="extensive-search-in-the-literature-for-pre-designed-botryllus-specific-primers." class="level2">
+<h2 class="anchored" data-anchor-id="extensive-search-in-the-literature-for-pre-designed-botryllus-specific-primers.">Extensive search in the literature for pre-designed <em>Botryllus</em> specific primers.</h2>
+<p>For the purpose of expedience and accuracy. This generally is the preferred approach.</p>
+<table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 33%">
+<col style="width: 9%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Gene</th>
+<th>NCBI Accession Number</th>
+<th>DOI</th>
+<th>Fwd Primer</th>
+<th>Rev Primer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mortalin</td>
+<td>KY212120</td>
+<td>doi:10.1016/<br>j.ydbio.2017.10.023</td>
+<td>TTCATGATACCGAA<br>ACCAAGATGGACG</td>
+<td>AATTTCCTCCTTG<br>ATGGCATCCACC</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="design-primers-in-house-for-botryllus-schlosseri." class="level2">
+<h2 class="anchored" data-anchor-id="design-primers-in-house-for-botryllus-schlosseri.">Design primers in-house for <em>Botryllus schlosseri</em>.</h2>
+<section id="protocol" class="level3">
+<h3 class="anchored" data-anchor-id="protocol">Protocol</h3>
+<p>To design primers in-house for <em>Botryllus schlosseri</em> we will utilize the <a href="http://botryllus.stanford.edu/botryllusgenome/">Botryllus Genome Project</a> browser. Here we will use their BLAST tool to search for hits in query sequences as well as use their available sequecnced genome to extract those sequences which will allow us to design primers in IDT’s <a href="https://www.idtdna.com/pages/tools/primerquest?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=00583_1a_03&amp;utm_content=search&amp;gclid=CjwKCAjw-KipBhBtEiwAWjgwrEjnuHGjASk4eOYOapQcZynQKdZeAHn36oT-N5doY-ITCkQ6zzQ_KxoCm6AQAvD_BwE">PrimerQuest</a>.</p>
+<ol type="1">
+<li><p><strong>Start with Gene of Interest:</strong> Identify your gene of interest from a source such as GeneCards. Note that if using GeneCards you will get gene sequences for <em>Homo sapiens</em>.</p></li>
+<li><p><strong>Retrieve Sequence:</strong> Access the gene’s sequence from NCBI Gene, by selecting the FASTA link. Copy the entire sequence starting at “&gt;”.</p></li>
+<li><p><strong>Use Sequence in BLAST:</strong> Paste the sequence into the <a href="http://botryllus.stanford.edu/botryllusgenome/blast/">Botryllus Genome Project’s BLAST Tool</a> to identify homologous sequences in the Botryllus genome.</p></li>
+<li><p><strong>Select Top Sequence:</strong> You identify the top sequence from the BLAST results, which has a significant alignment to your gene of interest. This is a crucial step in confirming the presence of a similar sequence in <em>Botryllus</em>.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pay attention to the E value and Score (bits) to determine if your top hit sequence for the subject (Botryllus contig database) is significantly in alignment with the query. A commonly used threshold is E ≤ 0.001, which suggests that you would expect to see a similar match in a random database of the same size less than once by chance. For more stringent analyses where you want highly reliable matches, you can set a lower E-value threshold, such as E ≤ 1e-5 (0.00001) or even E ≤ 1e-10 (0.0000000001).</p>
+</div>
+</div>
+<ol start="5" type="1">
+<li><p><strong>Retrieve Botryllus Sequence:</strong> You locate the matching sequence from the Botryllus genome by searching the “botznik-ctg.fa” file using the contig name you found.</p></li>
+<li><p><strong>Primer Design:</strong> Finally, we will use the extracted Botryllus sequence to design primers. We will design primers using <a href="https://www.idtdna.com/PrimerQuest/Home/Index">IDT’s PrimerQuest Tool</a>.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We will be using SYBR Green for the qPCR we are conducting so when on PrimerQuest select <strong>qPCR Intercalating Dyes (Primers only)</strong></p>
+</div>
+</div>
+<p>This method allows you to leverage well-annotated gene data to find potential homologs in Botryllus, even when the genome may not be fully annotated. Keep in mind that this approach is sensible, especially when working with non-model organisms or less-characterized genomes. Just ensure you validate the primers and carry out experimental verification to confirm the presence and function of the genes in Botryllus schlosseri.</p>
+<section id="pulling-botryllus-schloseri-sequences" class="level4">
+<h4 class="anchored" data-anchor-id="pulling-botryllus-schloseri-sequences">Pulling <em>Botryllus schloseri</em> sequences</h4>
+<p>In order to access the sequences for the genes of interest (GOI) it will be easier for us to curl the complete transcripts fasta file now available on the <a href="http://botryllus.stanford.edu/botryllusgenome/">Botryllus Genome Project</a> website.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-1_582ab30857b91ade5fd95c7700f1a6e8">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-o</span> data/botznik-ctg.fa http://botryllus.stanford.edu/botryllusgenome/download/botznik-ctg.fa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s take a peak at the file we just downloaded.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-2_3c67c80aa646bd07430ba9935fb59160">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> 10 data/botznik-ctg.fa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&gt;botctg000019
+TGACTTGACTTGACTTGACTCGACTTGACTCGAGTCACCTCCAAAAAACGAGTGACTTGA
+CTTGACTCGAGTCACCTTTGAAAATCGATTGACTTGACTTGAGTCGAGTCAAAATCTGCA
+ATGACTCGAGATGACTCGTGACTCGAAGGTAGTGACTTGATCCCAACACTGGTAGAGAGT
+ACCTGACAAGGAAACGATTCTGAATAGGATGAAATGAACATTCGAATCGCGTCGCGAGGC
+CATTCTGAATGGGATGTCAACACAGTCTGCTGGAGATTTACCCGATCTTGATCGATGCGC
+ATTGGGTACCGTAGGTATAAAGCAGTGTTATGATCAAGTCACAGACGGCACGTAAAACGA
+CTTTGGTAAGGAAAGTGAGAGCTCCACAGACGCTGATGTGGGTTGCCACTTCTGCAGGTG
+TGCATAAAGCGCTGGTGAAATGTCTTGTATTTGCAGCTCCATTATTTGATAAACCTCGTT
+TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
+</div>
+</div>
+<p>Create an empty extracted_sequences.fasta file</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> output/extracted_sequences.fasta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now let’s pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.fasta file prior to reprinting it into the file. The code also extracts the sequence as one line which will be useful when we copy and paste it into PrimerQuest Tool.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-4_8b7279643ecb70780f326aa9bb20f95f">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">identifier</span><span class="op">=</span><span class="st">"&gt;botctg014768"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the identifier exists in the output file</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="ot">! </span><span class="fu">grep</span> <span class="at">-q</span> <span class="st">"</span><span class="va">$identifier</span><span class="st">"</span> output/extracted_sequences.fasta<span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">awk</span> <span class="st">'/^&gt;botctg014768/{flag=1; print; next} /^&gt;/{flag=0} flag {printf "%s", $0}'</span> data/botznik-ctg.fa <span class="op">&gt;&gt;</span> output/extracted_sequences.fasta</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s check out the extracted sequence:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-5_1651dd6cbb68789836553fdb55286c99">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> output/extracted_sequences.fasta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&gt;botctg014768
+GTCTCAGGTGAAACCCCATCTCTACTAAAAATACAAAAATTAGCCAGGCCTGATGGCGGGCGCCTGTATTCCCAGCTATTTGGGAGACTGAGGCACAAGAATCACTTGAACCCGGGAGATGGAGGTTGCAGTGAGCCAAGATCGTGCCATTGCACTTTAGCCTGGATGACAGAGTGGGACCCTGTCTCAAAAAAAAAAAAATACTACATCCTCCCTTTTTCTCCCCAAAATTATCATGTGATTTATTAAGACTAGAGGCCAGGCACAGACTCATGCCTGTAATCCCACTCCATGGGAAAGCATGGCTCATCCCTATAATCCCAGCACTTTGGGAGGCCGAGGTGGGTGGATCACCTGAGGTCAGGATTTTGAGACCAGCCTGGCCAACTTTGTGAACCCTGTCTCTACTAAAAATACAAAAAATTAGCTGGGTGTGGTGGCAGGCACCTATAATCCCAGCTACTGAGGAGGCTGAGGCAGGAGAATCACTTGAACTTGAGAGGTGGAGGTTGCAGTGAGCCAAGATTGTGCCACTGCACTCCAGCCTGAGCAACAAGAGTGAGACTCCATCTCAAAAATAAATAAATAAAAATAAAAATAAAATAAAAAAAGTTTAGAAAGGTGTTCTCAAGGCAATGTTTGCAACCTTAGGATGTCTGTTGTGTGTTCCTCATGTGGACGGTTAGGAAGTGGGCATCTCAGGCTGCAGTCACTGCCCCCGATGATTTTGATGTGCTCATTTCCCAGCCCCTCTCCCTGCCTACATTCTCCTCTGTCCCCTAACTCCCAAAAGCCTGTTTCTGATCTGCACCCCTCCTGCCTTTCCATGTCTTTCACACTCCATTTATAGAACTGCTCTCCGCTTCCTTGCCCCATCCCCTGCCAGTTCCAGGCTCCCTGGGCCTGGCCTCATGGATGACAGTGAACCCCTCTGGACTTGGCCACTTAGGTCCCTTTCAGGTGGCCGGAAACAGAGTTAGAGGAGACACAGGGCATTATCCTGACCACTTTCACACCAGAGTCCCTCCCTCTAGAACAGGGCTTGACCCGTGGTACTGCCCCGTTGAGCCTTTCTTTTTCCCTTTCCTCCTTTGGCTTAAGCCTTTGGCAGGACAGATTTTGGGCTGGAGGCCAGCAATTCAACTGGGAGGGCTCTGTGCCAGTTCTTGCCTTTCTGAAGGTTGGTACATTTGCCCAGGGCTCTGCTTGGGTTTGGAGCCTTTACTAACGTGTGTCAATAATGCGGGTCCACCTTCCATACCATCTTGCAACCAATTATCAGAAAGAGAAGGCCTGAGCAGGGGGATGTGCATTTTGCTTTCTTTCGGCGTAGCATCTCATGCTAGATTTTTATCTGGGGGCCTTTGAAGAGCCAGCCGGCACAGAAGCATGGTGGCAACGCTGTGCCTGGAAAACTCATCAGTGTCACTCTGGTTTATTTTCCTCTCCTCTTTGAGCTCTTTCCCATGGTGTGGGGCTCTCAGTGACAACTGGCAAGCGGCGGGGCGGTTGCTCGTTGTCATTCTGGTAGGCGCTGGTTTCCGGAGGGCTCCGAGTGCTTTGTGAGTATTCGCATTTGTTTCTGAGATGCTGGGAGCACGGTTGGCACTGGTCCCAGTTTCTGGATGAAGAAACTGAGGCTCTGGGGATTAAGATCGTGAACTGTGGGGAGTGGAGGAGGCACAGCTGGAGTGAACTTGGGTGTCCAGGGTTCTGTTTCGTCTCACAGAGGATGTGCGAGGGTGTATGTGTGCATTTGAGAATGTGTGAGGTTGTGTGTGTTTAAGAAAATGAGAATGAGGCTGGGCACAGTGGCTCATGCCTGTAATCCCAACACTTTGAGAGGCTGAGCTGGGTGGATGACTTGAGCCCAGGAGTTCAAGACCAGACTGGGGAACATGGTGATGAAACCCTGTCTCTACAAAAAAATACAAAAAATTAGCAGGGCATGGCAATCCATGCCTGTAGTCCCAGCTACTTGGGAGGCTGAGGTGGGAGGATTGCTTGAACCCAGGAGATAAAGGCTGCAGTGAGCCATGATCGCACCACTGCACTCCAGCCTGGGCAACAGAGTGAGACCCTGTCTCCAAAAAAAGAAAGAAAGAAAATAAAAAGGAGAGAGGTTAGAAAAGGGGGCTGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCGAGGCGGGCGGATCACGAGGTCAGGAGATnGAGACCATCCTGGCTAACACGGTGAAACCCCGTCTCTACTAAAAATACAAAAAATTAGCCGGGCGTGGTGGCGGGCGCCTGTAGTCCCAGCTACTCGGGAGGCTGAGGCAGGAGAATGGCGTGAACCCGGGAGGCGGAGCTTGCAGTGAGCCGAGATCGCGCCACTGCACTCCAGCCTGGGCGACAGAGCnAGACTCCGTCTCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGnnAAA</code></pre>
+</div>
+</div>
+</section>
+<section id="designing-primers-with-idt-primerquest" class="level4">
+<h4 class="anchored" data-anchor-id="designing-primers-with-idt-primerquest">Designing Primers with IDT PrimerQuest</h4>
+<p>General Rules for designing good primers:</p>
+<ul>
+<li>20 nucleotides in length, ideally</li>
+<li>50% GC content, ideally</li>
+<li>Tm’s of forward and reverse primers must be similar (2oC differences tolerated).</li>
+<li>Primers cannot form stem-loops upon themselves.</li>
+<li>No primer-dimers greater than 6 bp between each primer and itself and also between the two primers.</li>
+<li>Forward and reverse primers should be about 500 bp apart.</li>
+<li>The 3’ end of the primer should be a G or a C.</li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="confirmed-primers" class="level1">
+<h1>Confirmed Primers</h1>
+<table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 33%">
+<col style="width: 9%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Gene</th>
+<th>NCBI Accession Number</th>
+<th>Fwd Primer</th>
+<th>Rev Primer</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mortalin</td>
+<td>KY212120</td>
+<td>TTCATGATACCGAA<br>ACCAAGATGGACG</td>
+<td>AATTTCCTCCTTG<br>ATGGCATCCACC</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">This page is built using <a href="https://quarto.org/">Quarto</a></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

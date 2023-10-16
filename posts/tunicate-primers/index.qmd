@@ -1,0 +1,138 @@
+---
+title: "Designing Tunicate Primers"
+author: "Celeste Valdivia"
+date: "2023-10-13"
+categories: [protocol, qPCR, primers, nickel chloride]
+image: "annotatedref.jpeg"
+---
+```{r setup, include=FALSE}
+library(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Overview
+
+I am interested in designing primers for *Botryllus schlosseri* to evaluate differences in expression of apoptosis, stemness, oxidative stress, and senescence related genes after an acute 24 hour exposure to two concentrations of nickel chloride and a control.
+
+# Projected Gene List
+| Role                    | Gene ID      | Whole Gene Name                                                              |
+|:-----------------------|:------------|:-------------------------------------|
+| Senescence              | TP53 (p53)   | Tumor protein p53                                                            |
+| Senescence              | CDKN1A (p21) | Cyclin-dependent kinase inhibitor 1A                                         |
+| Senescence              | CDKN2A (p16) | Cyclin-dependent kinase inhibitor 2A                                         |
+| Senescence              | SIRT1        | Sirtuin 1                                                                    |
+| Senescence              | FOXO3        | Forkhead box O3                                                              |
+| Senescence              | IGFBP3       | Insulin-like growth factor-binding protein 3                                 |
+| Apoptosis               | CASP3        | Caspase 3                                                                    |
+| Apoptosis               | CASP8        | Caspase 8                                                                    |
+| Apoptosis               | BCL2         | B-cell lymphoma 2                                                            |
+| Apoptosis               | BAX          | BCL2-associated X protein                                                    |
+| Apoptosis               | FAS          | Fas cell surface death receptor (CD95)                                       |
+| Apoptosis               | TNF          | Tumor necrosis factor                                                        |
+| Oxidative Stress        | HSP70        | Heat Shock Protein 70                                                        |
+| Oxidative Stress        | SOD          | Superoxide Dismutase. <br />Various isoforms, such as SOD1, SOD2, and SOD3         |
+| Oxidative Stress        | CAT          | Catalase enzyme                                                              |
+| Oxidative Stress        | HMOX1        | Heme oxygenase enzyme 1                                                      |
+| Oxidative Stress        | NQO1         | NADPH quinone dehydrogenase 1                                                |
+| Oxidative Stress        | GST          | Glutathione S-Transferase. <br />Various isoforms, such as GSTM1, GSTP1, and GSTT1 |
+| stemness                | MYC          | Myc proto-oncogene protein                                                   |
+| stemness                | SOXB1        |                                                                              |
+| stemness                | POU3         |                                                                              |
+| aging and proliferation | HSPA9        | Mortalin                                                                     |
+
+
+# Two Approaches for Acquiring Primers
+
+## Extensive search in the literature for pre-designed *Botryllus* specific primers.
+
+For the purpose of expedience and accuracy. This generally is the preferred approach.
+
+| Gene | NCBI Accession Number | DOI | Fwd Primer | Rev Primer |
+|------|------------------|-----|------------|------------|
+|Mortalin| KY212120 |doi:10.1016/<br />j.ydbio.2017.10.023| TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC|
+
+
+## Design primers in-house for *Botryllus schlosseri*.
+
+### Protocol
+
+To design primers in-house for *Botryllus schlosseri* we will utilize the [Botryllus Genome Project](http://botryllus.stanford.edu/botryllusgenome/) browser. Here we will use their BLAST tool to search for hits in query sequences as well as use their available sequecnced genome to extract those sequences which will allow us to design primers in IDT's [PrimerQuest](https://www.idtdna.com/pages/tools/primerquest?utm_source=google&utm_medium=cpc&utm_campaign=00583_1a_03&utm_content=search&gclid=CjwKCAjw-KipBhBtEiwAWjgwrEjnuHGjASk4eOYOapQcZynQKdZeAHn36oT-N5doY-ITCkQ6zzQ_KxoCm6AQAvD_BwE).
+
+1. **Start with Gene of Interest:** Identify your gene of interest from a source such as GeneCards. Note that if using GeneCards you will get gene sequences for *Homo sapiens*.
+
+2. **Retrieve Sequence:** Access the gene's sequence from NCBI Gene, by selecting the FASTA link. Copy the entire sequence starting at ">". 
+
+3. **Use Sequence in BLAST:** Paste the sequence into the [Botryllus Genome Project's BLAST Tool](http://botryllus.stanford.edu/botryllusgenome/blast/) to identify homologous sequences in the Botryllus genome. 
+
+4. **Select Top Sequence:** You identify the top sequence from the BLAST results, which has a significant alignment to your gene of interest. This is a crucial step in confirming the presence of a similar sequence in *Botryllus*. 
+
+::: callout-tip
+Pay attention to the E value and Score (bits) to determine if your top hit sequence for the subject (Botryllus contig database) is significantly in alignment with the query. A commonly used threshold is E ≤ 0.001, which suggests that you would expect to see a similar match in a random database of the same size less than once by chance. For more stringent analyses where you want highly reliable matches, you can set a lower E-value threshold, such as E ≤ 1e-5 (0.00001) or even E ≤ 1e-10 (0.0000000001).
+
+:::
+
+
+5. **Retrieve Botryllus Sequence:** You locate the matching sequence from the Botryllus genome by searching the "botznik-ctg.fa" file using the contig name you found.
+
+6. **Primer Design:** Finally, we will use the extracted Botryllus sequence to design primers. We will design primers using [IDT's PrimerQuest Tool](https://www.idtdna.com/PrimerQuest/Home/Index).
+
+::: callout-note
+We will be using SYBR Green for the qPCR we are conducting so when on PrimerQuest select **qPCR Intercalating Dyes (Primers only)**
+
+:::
+
+This method allows you to leverage well-annotated gene data to find potential homologs in Botryllus, even when the genome may not be fully annotated. Keep in mind that this approach is sensible, especially when working with non-model organisms or less-characterized genomes. Just ensure you validate the primers and carry out experimental verification to confirm the presence and function of the genes in Botryllus schlosseri.
+
+#### Pulling *Botryllus schloseri* sequences
+
+In order to access the sequences for the genes of interest (GOI) it will be easier for us to curl the complete transcripts fasta file now available on the [Botryllus Genome Project](http://botryllus.stanford.edu/botryllusgenome/) website.
+
+```{r, engine='bash', cache = TRUE, eval = FALSE}
+curl -o data/botznik-ctg.fa http://botryllus.stanford.edu/botryllusgenome/download/botznik-ctg.fa
+```
+
+Let's take a peak at the file we just downloaded.
+```{r, engine='bash', cache = TRUE}
+head -n 10 data/botznik-ctg.fa
+```
+Create an empty extracted_sequences.fasta file
+```{r, engine ='bash', eval = FALSE}
+touch output/extracted_sequences.fasta
+```
+
+
+Now let's pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.fasta file prior to reprinting it into the file. The code also extracts the sequence as one line which will be useful when we copy and paste it into PrimerQuest Tool. 
+
+```{r, engine='bash', cache = TRUE}
+identifier=">botctg014768"
+
+# Check if the identifier exists in the output file
+if ! grep -q "$identifier" output/extracted_sequences.fasta; then
+    awk '/^>botctg014768/{flag=1; print; next} /^>/{flag=0} flag {printf "%s", $0}' data/botznik-ctg.fa >> output/extracted_sequences.fasta
+fi
+```
+
+Let's check out the extracted sequence:
+```{r, engine ='bash', cache = TRUE}
+head output/extracted_sequences.fasta
+```
+
+#### Designing Primers with IDT PrimerQuest
+
+General Rules for designing good primers:
+
+-   20 nucleotides in length, ideally
+-   50% GC content, ideally
+-   Tm’s of forward and reverse primers must be similar (2oC differences tolerated).
+-   Primers cannot form stem-loops upon themselves.
+-   No primer-dimers greater than 6 bp between each primer and itself and also between the two primers.
+-   Forward and reverse primers should be about 500 bp apart.
+-   The 3’ end of the primer should be a G or a C.
+
+
+# Confirmed Primers
+
+| Gene | NCBI Accession Number | Fwd Primer | Rev Primer |
+|------|------------------|-----|------------|------------|
+|Mortalin| KY212120 | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC|
