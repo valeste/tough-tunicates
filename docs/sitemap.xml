@@ -6,7 +6,11 @@
   </url>
   <url>
     <loc>https://valeste.github.io/tough-tunicates/index.html</loc>
+<<<<<<< HEAD
     <lastmod>2023-10-16T17:04:17.960Z</lastmod>
+=======
+    <lastmod>2023-10-05T23:10:56.799Z</lastmod>
+>>>>>>> f5b9ce93071694f99664fd2e8423a172c0e43aae
   </url>
   <url>
     <loc>https://valeste.github.io/tough-tunicates/about.html</loc>
@@ -67,5 +71,9 @@
   <url>
     <loc>https://valeste.github.io/tough-tunicates/posts/tunicate-primers/index.html</loc>
     <lastmod>2023-10-16T17:04:16.484Z</lastmod>
+  </url>
+  <url>
+    <loc>https://valeste.github.io/tough-tunicates/posts/tunicate-primers/index.html</loc>
+    <lastmod>2023-10-05T23:10:54.846Z</lastmod>
   </url>
 </urlset>
