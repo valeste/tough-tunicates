@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,10 +19,9 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -49,13 +48,43 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
+    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -94,8 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-submit-button-title": "Submit"
   }
 }</script>
 
@@ -117,35 +145,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Celeste Valdivia’s Open Lab Notebook</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/valeste" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/valeste"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/celestevaldivia/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/celestevaldivia/"><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="malito:cvaldi@uw.edu" rel="" target=""><i class="bi bi-envelope-heart" role="img">
+    <a class="nav-link" href="malito:cvaldi@uw.edu"><i class="bi bi-envelope-heart" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -225,15 +253,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Projected Gene List</h1>
 <table class="table">
 <colgroup>
-<col style="width: 32%">
-<col style="width: 17%">
-<col style="width: 50%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 34%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Role</th>
 <th style="text-align: left;">Gene ID</th>
 <th style="text-align: left;">Whole Gene Name</th>
+<th style="text-align: left;">botznik contig Sequence Identifier</th>
 </tr>
 </thead>
 <tbody>
@@ -241,111 +271,133 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Senescence</td>
 <td style="text-align: left;">TP53 (p53)</td>
 <td style="text-align: left;">Tumor protein p53</td>
+<td style="text-align: left;">&gt;botctg014768</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Senescence</td>
 <td style="text-align: left;">CDKN1A (p21)</td>
 <td style="text-align: left;">Cyclin-dependent kinase inhibitor 1A</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Senescence</td>
 <td style="text-align: left;">CDKN2A (p16)</td>
 <td style="text-align: left;">Cyclin-dependent kinase inhibitor 2A</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Senescence</td>
 <td style="text-align: left;">SIRT1</td>
 <td style="text-align: left;">Sirtuin 1</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Senescence</td>
 <td style="text-align: left;">FOXO3</td>
 <td style="text-align: left;">Forkhead box O3</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Senescence</td>
 <td style="text-align: left;">IGFBP3</td>
 <td style="text-align: left;">Insulin-like growth factor-binding protein 3</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Apoptosis</td>
 <td style="text-align: left;">CASP3</td>
 <td style="text-align: left;">Caspase 3</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Apoptosis</td>
 <td style="text-align: left;">CASP8</td>
 <td style="text-align: left;">Caspase 8</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Apoptosis</td>
 <td style="text-align: left;">BCL2</td>
 <td style="text-align: left;">B-cell lymphoma 2</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Apoptosis</td>
 <td style="text-align: left;">BAX</td>
 <td style="text-align: left;">BCL2-associated X protein</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Apoptosis</td>
 <td style="text-align: left;">FAS</td>
 <td style="text-align: left;">Fas cell surface death receptor (CD95)</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Apoptosis</td>
 <td style="text-align: left;">TNF</td>
 <td style="text-align: left;">Tumor necrosis factor</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Oxidative Stress</td>
 <td style="text-align: left;">HSP70</td>
 <td style="text-align: left;">Heat Shock Protein 70</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Oxidative Stress</td>
 <td style="text-align: left;">SOD</td>
 <td style="text-align: left;">Superoxide Dismutase. <br>Various isoforms, such as SOD1, SOD2, and SOD3</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Oxidative Stress</td>
 <td style="text-align: left;">CAT</td>
 <td style="text-align: left;">Catalase enzyme</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Oxidative Stress</td>
 <td style="text-align: left;">HMOX1</td>
 <td style="text-align: left;">Heme oxygenase enzyme 1</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Oxidative Stress</td>
 <td style="text-align: left;">NQO1</td>
 <td style="text-align: left;">NADPH quinone dehydrogenase 1</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Oxidative Stress</td>
 <td style="text-align: left;">GST</td>
 <td style="text-align: left;">Glutathione S-Transferase. <br>Various isoforms, such as GSTM1, GSTP1, and GSTT1</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">stemness</td>
 <td style="text-align: left;">MYC</td>
 <td style="text-align: left;">Myc proto-oncogene protein</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">stemness</td>
 <td style="text-align: left;">SOXB1</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">stemness</td>
 <td style="text-align: left;">POU3</td>
 <td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">aging and proliferation</td>
 <td style="text-align: left;">HSPA9</td>
 <td style="text-align: left;">Mortalin</td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
@@ -357,11 +409,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For the purpose of expedience and accuracy. This generally is the preferred approach.</p>
 <table class="table">
 <colgroup>
-<col style="width: 11%">
-<col style="width: 33%">
-<col style="width: 9%">
+<col style="width: 19%">
 <col style="width: 22%">
-<col style="width: 22%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -389,34 +441,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="protocol">Protocol</h3>
 <p>To design primers in-house for <em>Botryllus schlosseri</em> we will utilize the <a href="http://botryllus.stanford.edu/botryllusgenome/">Botryllus Genome Project</a> browser. Here we will use their BLAST tool to search for hits in query sequences as well as use their available sequecnced genome to extract those sequences which will allow us to design primers in IDT’s <a href="https://www.idtdna.com/pages/tools/primerquest?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=00583_1a_03&amp;utm_content=search&amp;gclid=CjwKCAjw-KipBhBtEiwAWjgwrEjnuHGjASk4eOYOapQcZynQKdZeAHn36oT-N5doY-ITCkQ6zzQ_KxoCm6AQAvD_BwE">PrimerQuest</a>.</p>
 <ol type="1">
-<li><p><strong>Start with Gene of Interest:</strong> Identify your gene of interest from a source such as GeneCards. Note that if using GeneCards you will get gene sequences for <em>Homo sapiens</em>.</p></li>
+<li><strong>Start with Gene of Interest:</strong> Identify your gene of interest from a source such as GeneCards. Note that if using GeneCards you will get gene sequences for <em>Homo sapiens</em>. You might want to instead use annotated genes for more closely related species.</li>
+</ol>
+<div id="fig-tunicate-phylogeny" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="DeBiasse_2020.jpeg" class="img-fluid figure-img"></p>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Genome Biol Evol, Volume 12, Issue 6, June 2020, Pages 948–964, <a href="https://doi.org/10.1093/gbe/evaa060" class="uri">https://doi.org/10.1093/gbe/evaa060</a></figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
 <li><p><strong>Retrieve Sequence:</strong> Access the gene’s sequence from NCBI Gene, by selecting the FASTA link. Copy the entire sequence starting at “&gt;”.</p></li>
 <li><p><strong>Use Sequence in BLAST:</strong> Paste the sequence into the <a href="http://botryllus.stanford.edu/botryllusgenome/blast/">Botryllus Genome Project’s BLAST Tool</a> to identify homologous sequences in the Botryllus genome.</p></li>
 <li><p><strong>Select Top Sequence:</strong> You identify the top sequence from the BLAST results, which has a significant alignment to your gene of interest. This is a crucial step in confirming the presence of a similar sequence in <em>Botryllus</em>.</p></li>
 </ol>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Pay attention to the E value and Score (bits) to determine if your top hit sequence for the subject (Botryllus contig database) is significantly in alignment with the query. A commonly used threshold is E ≤ 0.001, which suggests that you would expect to see a similar match in a random database of the same size less than once by chance. For more stringent analyses where you want highly reliable matches, you can set a lower E-value threshold, such as E ≤ 1e-5 (0.00001) or even E ≤ 1e-10 (0.0000000001).</p>
+<p>Pay attention to the E value and Score (bits) to determine if your top hit sequence for the subject (Botryllus contig database) is significantly in alignment with the query. A commonly used threshold is E ≤ 0.001, which suggests that you would expect to see a similar match in a random database of the same size less than once by chance. <strong>For more stringent analyses where you want highly reliable matches, you can set a lower E-value threshold, such as E ≤ 1e-5 (0.00001) or even E ≤ 1e-10 (0.0000000001).</strong></p>
 </div>
 </div>
 <ol start="5" type="1">
 <li><p><strong>Retrieve Botryllus Sequence:</strong> You locate the matching sequence from the Botryllus genome by searching the “botznik-ctg.fa” file using the contig name you found.</p></li>
 <li><p><strong>Primer Design:</strong> Finally, we will use the extracted Botryllus sequence to design primers. We will design primers using <a href="https://www.idtdna.com/PrimerQuest/Home/Index">IDT’s PrimerQuest Tool</a>.</p></li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Note
 </div>
 </div>
@@ -424,9 +488,9 @@ Note
 <p>We will be using SYBR Green for the qPCR we are conducting so when on PrimerQuest select <strong>qPCR Intercalating Dyes (Primers only)</strong></p>
 </div>
 </div>
-<p>This method allows you to leverage well-annotated gene data to find potential homologs in Botryllus, even when the genome may not be fully annotated. Keep in mind that this approach is sensible, especially when working with non-model organisms or less-characterized genomes. Just ensure you validate the primers and carry out experimental verification to confirm the presence and function of the genes in Botryllus schlosseri.</p>
-<section id="pulling-botryllus-schloseri-sequences" class="level4">
-<h4 class="anchored" data-anchor-id="pulling-botryllus-schloseri-sequences">Pulling <em>Botryllus schloseri</em> sequences</h4>
+<p>This method allows us to leverage well-annotated gene data to find potential homologs in <em>Botryllus</em>, even when the genome may not be fully annotated. We will want to validate the primers and carry out experimental verification to confirm the presence and function of the genes in <em>Botryllus schlosseri</em>.</p>
+<section id="pulling-botryllus-schlosseri-sequences" class="level4">
+<h4 class="anchored" data-anchor-id="pulling-botryllus-schlosseri-sequences">Pulling <em>Botryllus schlosseri</em> sequences</h4>
 <p>In order to access the sequences for the genes of interest (GOI) it will be easier for us to curl the complete transcripts fasta file now available on the <a href="http://botryllus.stanford.edu/botryllusgenome/">Botryllus Genome Project</a> website.</p>
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-1_582ab30857b91ade5fd95c7700f1a6e8">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-o</span> data/botznik-ctg.fa http://botryllus.stanford.edu/botryllusgenome/download/botznik-ctg.fa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -489,11 +553,11 @@ GTCTCAGGTGAAACCCCATCTCTACTAAAAATACAAAAATTAGCCAGGCCTGATGGCGGGCGCCTGTATTCCCAGCTATT
 <h1>Confirmed Primers</h1>
 <table class="table">
 <colgroup>
-<col style="width: 11%">
-<col style="width: 33%">
-<col style="width: 9%">
+<col style="width: 19%">
 <col style="width: 22%">
-<col style="width: 22%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -701,23 +765,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -782,92 +832,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -911,12 +875,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">This page is built using <a href="https://quarto.org/">Quarto</a></div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
   </div>
 </footer>
 
