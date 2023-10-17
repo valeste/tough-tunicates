@@ -18,30 +18,30 @@ I am interested in designing primers for *Botryllus schlosseri* to evaluate diff
 
 # Projected Gene List
 
-| Role                    | Gene ID      | Whole Gene Name                                                                    | botznik contig Sequence Identifier |
-|:---------------|:---------------|:------------------------|:---------------|
-| Senescence              | TP53 (p53)   | Tumor protein p53                                                                  | \>botctg014768                     |
-| Senescence              | CDKN1A (p21) | Cyclin-dependent kinase inhibitor 1A                                               |                                    |
-| Senescence              | CDKN2A (p16) | Cyclin-dependent kinase inhibitor 2A                                               |                                    |
-| Senescence              | SIRT1        | Sirtuin 1                                                                          |                                    |
-| Senescence              | FOXO3        | Forkhead box O3                                                                    |                                    |
-| Senescence              | IGFBP3       | Insulin-like growth factor-binding protein 3                                       |                                    |
-| Apoptosis               | CASP3        | Caspase 3                                                                          |                                    |
-| Apoptosis               | CASP8        | Caspase 8                                                                          |                                    |
-| Apoptosis               | BCL2         | B-cell lymphoma 2                                                                  |                                    |
-| Apoptosis               | BAX          | BCL2-associated X protein                                                          |                                    |
-| Apoptosis               | FAS          | Fas cell surface death receptor (CD95)                                             |                                    |
-| Apoptosis               | TNF          | Tumor necrosis factor                                                              |                                    |
-| Oxidative Stress        | HSP70        | Heat Shock Protein 70                                                              |                                    |
-| Oxidative Stress        | SOD          | Superoxide Dismutase. <br />Various isoforms, such as SOD1, SOD2, and SOD3         |                                    |
-| Oxidative Stress        | CAT          | Catalase enzyme                                                                    |                                    |
-| Oxidative Stress        | HMOX1        | Heme oxygenase enzyme 1                                                            |                                    |
-| Oxidative Stress        | NQO1         | NADPH quinone dehydrogenase 1                                                      |                                    |
-| Oxidative Stress        | GST          | Glutathione S-Transferase. <br />Various isoforms, such as GSTM1, GSTP1, and GSTT1 |                                    |
-| stemness                | MYC          | Myc proto-oncogene protein                                                         |                                    |
-| stemness                | SOXB1        |                                                                                    |                                    |
-| stemness                | POU3         |                                                                                    |                                    |
-| aging and proliferation | HSPA9        | Mortalin                                                                           |                                    |
+| Role                    | Gene ID      | Whole Gene Name                                                                    |
+|:----------------|:----------------|:---------------------|
+| Senescence              | TP53 (p53)   | Tumor protein p53                                                                  |
+| Senescence              | CDKN1A (p21) | Cyclin-dependent kinase inhibitor 1A                                               |
+| Senescence              | CDKN2A (p16) | Cyclin-dependent kinase inhibitor 2A                                               |
+| Senescence              | SIRT1        | Sirtuin 1                                                                          |
+| Senescence              | SIRT6        | Sirtuin6                                                                           |
+| Senescence              | FOXO3        | Forkhead box O3                                                                    |
+| Senescence              | IGFBP3       | Insulin-like growth factor-binding protein 3                                       |
+| Apoptosis               | CASP3        | Caspase 3                                                                          |
+| Apoptosis               | CASP8        | Caspase 8                                                                          |
+| Apoptosis               | BCL2         | B-cell lymphoma 2                                                                  |
+| Apoptosis               | BAX          | BCL2-associated X protein                                                          |
+| Apoptosis               | FAS          | Fas cell surface death receptor (CD95)                                             |
+| Apoptosis               | TNF          | Tumor necrosis factor                                                              |
+| Oxidative Stress        | HSP70        | Heat Shock Protein 70                                                              |
+| Oxidative Stress        | SOD          | Superoxide Dismutase. <br />Various isoforms, such as SOD1, SOD2, and SOD3         |
+| Oxidative Stress        | CAT          | Catalase enzyme                                                                    |
+| Oxidative Stress        | HMOX1        | Heme oxygenase enzyme 1                                                            |
+| Oxidative Stress        | NQO1         | NADPH quinone dehydrogenase 1                                                      |
+| stemness                | MYC          | Myc proto-oncogene protein                                                         |
+| stemness                | SOXB1        | SRY-Box Transcription Factor B1                                                    |
+| stemness                | POU3         | POU Class 3                                                                        |
+| aging and proliferation | HSPA9        | Mortalin                                                                           |
 
 # Two Approaches for Acquiring Primers
 
@@ -50,7 +50,7 @@ I am interested in designing primers for *Botryllus schlosseri* to evaluate diff
 For the purpose of expedience and accuracy. This generally is the preferred approach.
 
 | Gene     | NCBI Accession Number | DOI                                   | Fwd Primer                        | Rev Primer                      |
-|--------------|----------------|--------------|--------------|--------------|
+|---------------|---------------|---------------|---------------|---------------|
 | Mortalin | KY212120              | doi:10.1016/<br />j.ydbio.2017.10.023 | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
 
 ## Design primers in-house for *Botryllus schlosseri*.
@@ -59,7 +59,13 @@ For the purpose of expedience and accuracy. This generally is the preferred appr
 
 To design primers in-house for *Botryllus schlosseri* we will utilize the [Botryllus Genome Project](http://botryllus.stanford.edu/botryllusgenome/) browser. Here we will use their BLAST tool to search for hits in query sequences as well as use their available sequecnced genome to extract those sequences which will allow us to design primers in IDT's [PrimerQuest](https://www.idtdna.com/pages/tools/primerquest?utm_source=google&utm_medium=cpc&utm_campaign=00583_1a_03&utm_content=search&gclid=CjwKCAjw-KipBhBtEiwAWjgwrEjnuHGjASk4eOYOapQcZynQKdZeAHn36oT-N5doY-ITCkQ6zzQ_KxoCm6AQAvD_BwE).
 
-1.  **Start with Gene of Interest:** Identify your gene of interest from a source such as GeneCards. Note that if using GeneCards you will get gene sequences for *Homo sapiens*. You might want to instead use annotated genes for more closely related species.
+1.  **Start with Gene of Interest:** Identify your gene of interest. You might want to use annotated genes for more closely related species.
+
+Go directly to [NCBI](https://www.ncbi.nlm.nih.gov/) select the database to be nucleotide, and paste in the following but replacing *GOI* with your gene of interest:
+
+> "((*GOI*[Botryllus schlosseri]) AND "chordates"[porgn:__txid7711]) AND "tunicates"[porgn:__txid7712]" 
+
+This will pull up any related gene sequences for your gene of interest for *Botryllus schlosseri* and any related tunicate species.
 
 ::: {#fig-tunicate-phylogeny layout-ncol="1"}
 ![](DeBiasse_2020.jpeg)
@@ -67,9 +73,10 @@ To design primers in-house for *Botryllus schlosseri* we will utilize the [Botry
 Genome Biol Evol, Volume 12, Issue 6, June 2020, Pages 948--964, <https://doi.org/10.1093/gbe/evaa060>
 :::
 
-1.  **Retrieve Sequence:** Access the gene's sequence from NCBI Gene, by selecting the FASTA link. Copy the entire sequence starting at "\>".
 
-2.  **Use Sequence in BLAST:** Paste the sequence into the [Botryllus Genome Project's BLAST Tool](http://botryllus.stanford.edu/botryllusgenome/blast/) to identify homologous sequences in the Botryllus genome.
+1.  **Retrieve Sequence:** Access the gene's sequence from NCBI Gene, by selecting the FASTA link. Copy the entire sequence starting at ">".
+
+2.  **Use Sequence in BLAST:** Paste the sequence into the [Botryllus Genome Project's BLAST Tool](http://botryllus.stanford.edu/botryllusgenome/blast/) to identify homologous sequences in the *Botryllus*genome.
 
 3.  **Select Top Sequence:** You identify the top sequence from the BLAST results, which has a significant alignment to your gene of interest. This is a crucial step in confirming the presence of a similar sequence in *Botryllus*.
 
@@ -136,8 +143,17 @@ General Rules for designing good primers:
 -   Forward and reverse primers should be about 500 bp apart.
 -   The 3' end of the primer should be a G or a C.
 
+# Sequences Identified with BLAST
+
+| Role       | Gene ID    | Whole Gene Name   | Top Sequence Producing Significant Alignment | E Value | Score (bits) | Query Organism                 | Query NCBI Accession |
+|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|
+| Senescence | SIRT6      | Sirtuin 6         | botctg109566  | e-124   | 446          | [Polyandrocarpa misakiensis] | BAO57219.1           |
+| Stemness   | MYC |Myc proto-oncogene protein| botctg007779  | 0 | 2857| [Botryllus schlosseri] | OL828248.1 |
+| Stemness   | SOXB1 |SRY-Box Transcription Factor B1 | botctg003503  | 0 | 1173| [Botryllus schlosseri] | OL828250.1 |
+| Stemness   | POU3 |POU Class 3  | botctg006949  | 0 | 1383| [Botryllus schlosseri] | OL828252.1 |
+
 # Confirmed Primers
 
-| Gene     | NCBI Accession Number | Fwd Primer                        | Rev Primer                      |     |
-|--------------|----------------|--------------|--------------|--------------|
-| Mortalin | KY212120              | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |     |
+| Gene     | NCBI Accession Number | Fwd Primer                        | Rev Primer                      |
+|------------------|------------------|------------------|------------------|
+| Mortalin | KY212120              | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
