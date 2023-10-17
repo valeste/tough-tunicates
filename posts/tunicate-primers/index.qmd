@@ -145,15 +145,23 @@ General Rules for designing good primers:
 
 # Sequences Identified with BLAST
 
-| Role       | Gene ID    | Whole Gene Name   | Top Sequence Producing Significant Alignment | E Value | Score (bits) | Query Organism                 | Query NCBI Accession |
-|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|
-| Senescence | SIRT6      | Sirtuin 6         | botctg109566  | e-124   | 446          | [Polyandrocarpa misakiensis] | BAO57219.1           |
-| Stemness   | MYC |Myc proto-oncogene protein| botctg007779  | 0 | 2857| [Botryllus schlosseri] | OL828248.1 |
-| Stemness   | SOXB1 |SRY-Box Transcription Factor B1 | botctg003503  | 0 | 1173| [Botryllus schlosseri] | OL828250.1 |
-| Stemness   | POU3 |POU Class 3  | botctg006949  | 0 | 1383| [Botryllus schlosseri] | OL828252.1 |
+| Role  | Gene ID | NCBI GenBank Accession | Organism | Top Sequence Producing Significant Alignment | Score (bits) | E Value  | 
+|:------|:--------|:-------------|:---------------|:--------------|:---------|:-----|
+| Apoptosis  | TNF    | LR791346.1    | [Phallusia mammillata]   | botctg065850      |     70 | 1.00E-09   |
+| DNA Repair  | PolB  | LR789137.1       | [Phallusia mammillata]  | botctg092056 | 60 | 1.00E-06  |
+| Oxidative Stress | SOD1   | XP_039262007.1         | [Styela clava] | botctg006757 | 199 | 8.00E-51  |
+| Senescence, DNA Damage Repair | SIRT6 | BAO57219.1 | [Polyandrocarpa misakiensis] | botctg109566 | 446 | e-124 |
+| Apoptosis | BAX | KU948200.1 | [Botryllus schlosseri] | botctg061218 | 2260 | 0 |
+| Apoptosis | AIF1  | KU948202 | [Botryllus schlosseri] | botctg003666 | 674 | 0 |
+| Apoptosis | IAP7 | KU948203.1 | [Botryllus schlosseri] | botctg106479 | 1483 | 0 | 
+| DNA repair | PARP1 | KU948201.1 | [Botryllus schlosseri] | botctg019995 | 1191 | 0 |
+| Stemness | MYC | OL828248.1| [Botryllus schlosseri] | botctg007779 | 2857 | 0 | 
+| Stemness | SOXB1 | OL828250.1 | [Botryllus schlosseri] | botctg003503 | 1173 | 0 | 
+| Stemness | POU3 | OL828252.1 | [Botryllus schlosseri] | botctg006949 | 1383 | 0 | 
 
 # Confirmed Primers
 
 | Gene     | NCBI Accession Number | Fwd Primer                        | Rev Primer                      |
 |------------------|------------------|------------------|------------------|
 | Mortalin | KY212120              | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
+| HSP70    |                       |                                   |                                 |
