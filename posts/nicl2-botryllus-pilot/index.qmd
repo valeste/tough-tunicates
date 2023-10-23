@@ -6,6 +6,17 @@ categories: [study plans, nickel chloride]
 image: "v3_design.jpeg"
 ---
 
+
+```{r setup, include=TRUE, warning=FALSE}
+library(knitr)
+library(tidyverse)
+library(tidyr)
+library(dplyr)
+library(hrbrthemes)
+library(ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 # Summary
 
 Pilot study for NiCl~2~ exposures on whole field-sourced *Botryllus schlosseri* colonies.
@@ -100,7 +111,6 @@ write.csv(well_assignments, file = "pilot_random_assignments.csv")
 
 ![plate assignments](12.jpeg)
 
-
 ## Nickel Chloride Dilutions
 
 Review resources prior to handling nickel chloride:
@@ -187,23 +197,22 @@ $$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.045g/L*0.99L$$ $$V_1 = 0.04455 L = 44.
 
 Order of Takedown:
 
-1. 5-R3
-2. 45-R4
-3. 5-R2
-4. 0-R3
-5. 5-R4
-6. 45-R3
-7. 45-R1
-8. 5-R1
-9. 0-R2
+1.  5-R3
+2.  45-R4
+3.  5-R2
+4.  0-R3
+5.  5-R4
+6.  45-R3
+7.  45-R1
+8.  5-R1
+9.  0-R2
 10. 0-R4
 11. 45-R2
 12. 0-R1
 
-
 The following steps should be conducted in a chemical fume hood and iterated through one beaker at a time to avoid desiccation stress:
 
-13. Remove 100% of the exposure water from beaker and dispose of NiCl~2~ dosed artificial seawater in the appropriately marked hazardous waste container. 
+13. Remove 100% of the exposure water from beaker and dispose of NiCl~2~ dosed artificial seawater in the appropriately marked hazardous waste container.
 
 14. With the animal and glass slide still in the beaker, quadruplicate rinse the glass slide and animal with deionized water.
 
@@ -215,16 +224,71 @@ The following steps should be conducted in a chemical fume hood and iterated thr
 
 You may now work outside the chemical fumehood. Note there may be residual NiCl~2~ in animal so continue to wear the appropriate PPE and work carefully.
 
-18. Using a stainless steel razor blade, remove one of the two cumulative systems on the glass slide. Use forceps to transfer cumulative system to appropriately labeled snap cap 1.5 mL eppendorf PCR safe tube containing 500 uL of RNAProtect by Qiagen. 
+18. Using a stainless steel razor blade, remove one of the two cumulative systems on the glass slide. Use forceps to transfer cumulative system to appropriately labeled snap cap 1.5 mL eppendorf PCR safe tube containing 500 uL of RNAProtect by Qiagen.
 
 19. Proceed with dissection of the primary buds or zooids of the second cumulative system on the slide. Refer to [epithelial isolation protocol](https://valeste.github.io/tough-tunicates/posts/epi-isolation-protocol/)
 
-  -   However, avoid using any ethanol in this procedure.
-  
-20. Once tissue has been removed, take cell strainer and rinse it with 30 mL ASW-PSA. 
+-   However, avoid using any ethanol in this procedure.
+
+20. Once tissue has been removed, take cell strainer and rinse it with 30 mL ASW-PSA.
 
 21. Place tissue in aliquot of TCM and immediately go to seed tissue in biosaftey cabinet. Mark time of seeding.
 
 22. No replacement of media over course of trial.
 
 23. Transfer samples containing cumulative system suspended in RNAProtect to -20 C freezer overnight. The following day, transfer samples to -80 C freezer for long term storage.
+
+# Data
+
+## Curling Google Sheet
+
+Make sure you have made your Google sheet publicly available to anyone that has the link. If you make any updates to the sheet just re-curl the data, meaning just re-run the code below.
+
+```{r, engine='bash', eval = FALSE}
+
+curl -L https://docs.google.com/spreadsheets/d/10uM3N3PD9xIP4yUnadfhkcXa8TPMRMD-adOIKbmkYzY/export?exportFormat=csv | tee ~/tough-tunicates/posts/nicl2-botryllus-pilot/data/morph.csv
+```
+Read in the data into your environment:
+
+```{r}
+morph <- read.csv(file = "data/morph.csv")  
+
+```
+Manipulate and clean up data set:
+
+```{r}
+morph$date <- mdy(morph$date) #convert the date column from characters to true date
+
+morph <- morph %>%
+  separate(jar_id, c("treatment_mg_per_L", "replicate"), sep = "-") %>% #create two new columns, treatment and replicate from jar id 
+  mutate(treatment_mg_per_L = as.factor(treatment_mg_per_L)) %>%
+  mutate(stage = as.factor(stage)) %>%
+  mutate(animal_id = as.factor(animal_id)) %>%
+  mutate(date = as.factor(date)) %>%
+  mutate(treatment_order = factor(paste(treatment_mg_per_L, animal_id))) # Create a new variable for ordering by treatment
+
+```
+
+```{r}
+summary(morph)
+```
+
+
+Exploratory plot:
+
+```{r}
+
+# Create the plot
+ggplot(data = morph, aes(x = stage, y = treatment_order, color = date)) +
+  geom_point(size = 3, position = position_jitter(h = 0.1, w = 0)) +
+  geom_line(aes(group = treatment_order), size = 0.5, color = 'grey') +
+  labs(title = "Blastogenic Stage Change Over Two Days",
+       x = "Stage", y = "Treatment Group - Animal ID") +
+  scale_color_brewer(palette = "Set1") +
+  theme_minimal() +
+  theme(legend.position = "top")
+
+```
+
+
+
