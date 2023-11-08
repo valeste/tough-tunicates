@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Summary
 
-Pilot study for NiCl~2~ exposures on whole field-sourced *Botryllus schlosseri* colonies.
+First pilot study for NiCl~2~ exposures on whole field-sourced *Botryllus schlosseri* colonies.
 
 ## Objectives
 
@@ -29,11 +29,11 @@ Pilot study for NiCl~2~ exposures on whole field-sourced *Botryllus schlosseri* 
 
 # Research Questions
 
-1.  Does an in vivo exposure to NiCl~2~ promote in vitro cellular proliferation of epithelial tissue subsequently seeded post exposure?
+1.  Does an *in vivo* exposure to NiCl~2~ promote *in vitro* cellular proliferation of epithelial tissue subsequently seeded post exposure?
 
 2.  What is the rate of cell division that occurs within those first 24 hours?
 
-3.  How does exposure to nickel chloride impact gene expression in epithelial tissue across the different concentrations after 24 hours post exposure in vivo and 76 hours post seeding?
+3.  How does exposure to nickel chloride impact gene expression in epithelial tissue across the different concentrations after 24 hours post exposure *in vivo*?
 
 # Suggestions for Experimental Design
 
