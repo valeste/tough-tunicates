@@ -1,0 +1,99 @@
+---
+title: "Use of Genetic Algorithm in Cell Culture Media Optimization"
+author: "Celeste Valdivia"
+date: "2023-10-28"
+categories: [cool paper, optimization]
+image: "v3_design.jpeg"
+---
+
+# Genetic algorithm for cell culture optimization
+
+```{mermaid}
+flowchart
+  A(start) --> B[create random initial 'population' of experimental conditions]
+  B --> C[perform wet lab experiments]
+  C --> D[evaluate fitness of each conditions (10^6^ cells in monolayer formation)]
+  D --> E{Optimization goal achieved/generation limit reached?}
+  E --> F[No, select better performing conditions proportional to fitness]
+  F --> H[Create next generation of conditions by cross over and mutation]
+  E --> G[Yes, end]
+```
+
+::: callout-note
+## Citations
+
+Munroe, S., K. Sandoval, D. E. Martens, D. Sipkema, and S. A. Pomponi. 2019. Genetic algorithm as an optimization tool for the development of sponge cell culture media. In Vitro Cellular & Developmental Biology - Animal 55:149--158.
+:::
+
+
+
+# R Based Genetic Algorithm
+
+[genalg R package documentation](https://cran.r-project.org/web/packages/genalg/genalg.pdf)
+
+## Example code
+
+```{r, eval = FALSE}
+# Load the genalg package
+library(genalg)
+
+# Define the objective function to minimize
+# The objective function should take a vector representing concentrations as input
+objective_function <- function(concentrations) {
+  # Simulate the effect of concentrations on a specific metric (e.g., cell growth)
+  # You will need to replace this with your own experimental data and evaluation logic
+  metric_value <- simulated_metric(concentrations)
+  return(metric_value)
+}
+
+# Set GA parameters
+population_size <- 50
+generations <- 100
+mutation_rate <- 0.1
+
+# Define the range of concentrations for each component
+# This can be customized based on your specific components
+concentration_range <- matrix(c(0, 1), nrow = 1, ncol = 10)
+
+# Create an initial random population of concentrations within the defined range
+initial_population <- rbga.bin(size = 10, popSize = population_size, iters = 1, 
+                               mutationChance = mutation_rate, levels = concentration_range)
+
+# Run the genetic algorithm
+result <- rbga.bin(size = 10, popSize = population_size, iters = generations,
+                   mutationChance = mutation_rate, evalFunc = objective_function,
+                   levels = concentration_range, pType = "real-valued", initial = initial_population$solutions)
+
+# Print the best solution found (optimized concentrations)
+cat("Best solution (optimized concentrations):", result$solution, "\n")
+cat("Objective value (metric value):", result$evaluations, "\n")
+
+```
+
+### Brainstorming the objective to feed the algorithm
+
+Note that it is possible to have a multi-objective optimization framework, however this can be more challenging than a single-objective optimization. The optimization algorithm will seek a set of solutions that represent trade-offs between these objectives. The solutions are known as the Pareto front.
+
+If you do more than one objective, you will need to assign weights or priorities to each objective function.
+
+1.  Cell density of at least 10^6^, the minimum required amount to conduct gene expression work.
+
+2. Frequency of monolayer formation for epithelial tissue from Botryllus schlosseri.
+
+3. Mitochondrial activity assessed using the 96 well plate reader.
+
+### Brainstorming factors that are present in the media and what would potentially be changed
+
+1. Fetal Bovine Serum
+
+2. L-15 Media Basal
+
+3. HEPES Buffer
+
+4. Penicillin-Streptomycin
+
+5. Amphotericn B
+
+6. Artificial Seawater
+
+7. 
