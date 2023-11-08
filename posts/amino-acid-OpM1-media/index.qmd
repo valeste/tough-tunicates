@@ -1,0 +1,59 @@
+---
+title: "amino acid supplementation to media"
+---
+
+[Table 1 Compositions of M1 and OpM1 Media](https://www.nature.com/articles/s41598-023-32394-x/tables/1)
+
+We would target the OpM1 media that helped produce the first continious sponge cell line.
+
+Questions:
+
+1. Do marine invertebrates like tunicates produce all the amino acids? Would supplementing with amino acids they already produce make them unwell? 
+
+2. What is the current concentration of salt in my media? What are the ratios of salts to amino acids in the media formulation currently in use (TCM)?
+
+|                 | Ingredient                                              | [x] stock | [x] M1* | [x] OpM1* | Unit       | Cat. no     |
+|-----------------|---------------------------------------------------------|-----------|---------|-----------|------------|-------------|
+|                 | M199 powder                                             | –         | 9.1     | 9.1       | g/L        | M3769       |
+| Inorganic salts | NaCl                                                    | 275       | 15.4203 | 15.4203   | g/L        | 488,662     |
+|                 | Tris-HCl                                                | 50        | 3.7688  | 3.7688    | g/L        | T5941       |
+|                 | Tris-base                                               | 50        | 2.7838  | 2.7838    | g/L        | T1503       |
+|                 | MgCl2                                                   | 200       | 10.0400 | 10.0400   | g/L        | M2393       |
+|                 | Na2SO4                                                  | 50        | 0.8170  | 0.8170    | g/L        | 238,597     |
+|                 | CaCl2                                                   | 50        | 0.4000  | 0.4000    | g/L        | C7902       |
+|                 | KCl                                                     | 50        | 0.3021  | 0.3021    | g/L        | P5405       |
+| Amino acids     | L-Alanine                                               | 5         | 0.0281  | 0.0281    | g/L        | A3534       |
+|                 | L-Arginine                                              | 5         | 0.0250  | 0.0250    | g/L        | A6969       |
+|                 | L-Aspartic acid                                         | 5         | 0.0469  | 0.0469    | g/L        | A4534       |
+|                 | L-Asparagine                                            | 5         | 0.1031  | 0.1031    | g/L        | A0884       |
+|                 | L-Cysteine                                              | 5         | 0.0406  | 0.0406    | g/L        | C6852       |
+|                 | L-Glutamic acid                                         | 5         | 0.0469  | 0.0469    | g/L        | G5638       |
+|                 | L-Glutamine                                             | 5         | 0.0625  | 0.0880    | g/L        | G8540       |
+|                 | Glycine                                                 | 5         | 0.0031  | 0.0031    | g/L        | G8790       |
+|                 | L-Histidine                                             | 5         | 0.1094  | 0.1094    | g/L        | H8125       |
+|                 | L-Isoleucine                                            | 5         | 0.0500  | 0.0500    | g/L        | I2752       |
+|                 | L-Leucine                                               | 5         | 0.0531  | 0.0531    | g/L        | L8912       |
+|                 | L-Lysine                                                | 5         | 0.0188  | 0.0188    | g/L        | L5626       |
+|                 | L-Methionine                                            | 5         | 0.0656  | 0.0656    | g/L        | M9625       |
+|                 | L-Phenylalanine                                         | 5         | 0.0938  | 0.0938    | g/L        | P5482       |
+|                 | L-Proline                                               | 5         | 0.0781  | 0.0781    | g/L        | P5607       |
+|                 | L-Serine                                                | 5         | 0.0844  | 0.0844    | g/L        | S5511       |
+|                 | L-Threonine                                             | 5         | 0.0250  | 0.0250    | g/L        | T8441       |
+|                 | L-Tryptophan                                            | 5         | 0.0719  | 0.0719    | g/L        | T0254       |
+|                 | L-Tyrosine                                              | 5         | 0.0469  | 0.0469    | g/L        | T1145       |
+|                 | L-Valine                                                | 5         | 0.1031  | 0.1031    | g/L        | V6504       |
+| AB/M**          | Rifampicin                                              | 30        | 0.0300  | 0.0300    | g/L        | R3501       |
+|                 | Amphotericin B                                          | 0.2500    | 0.0025  | 0.0025    | g/L        | A2411       |
+| Vit1            | Ascorbate · Na                                          | 0.5943    | –       | 0.0015    | g/L        | A4034       |
+|                 | Pyruvate · Na                                           | 0.4400    | –       | 0.0011    | g/L        | P5280       |
+| TE              | Na2SiO3                                                 | 1.4210    | –       | 0.0018    | g/L        | 307,815     |
+|                 | ZnSO4 · 7H2O                                            | 6.46E−02  | –       | 0.0001    | g/L        | Z0251       |
+| GF1             | Lectin from Phaseolus vulgaris (PHA)                    | 4         | –       | 4.72E−02  | g/L        | L1668       |
+|                 | EGF Recombinant Human Protein                           | 1.60E−04  | –       | 1.89E−06  | g/L        | 10605HNAE50 |
+|                 | Insulin-like Growth Factor-1 Protein, Recombinant Human | 8.00E−03  | –       | 9.44E−05  | g/L        | GF-138      |
+| PFT α           | Pifithrin-α                                             | 20        | –       | 1.19E−02  | g/L        | P4359       |
+| PDGF            | PDGF-BB Recombinant Mouse Protein                       | 1.00E−01  | –       | 8.69E−05  | g/L        | PMG0044     |
+| RPMI            | RPMI 1640 Vitamin solution (100x)                       | –         | –       | 3.11      | µl/mL OpM1 | R7256       |
+| FBS             | Fetal Bovine Serum, qualified, One Shot™, US origin     | –         | –       | 4.35      | µl/mL OpM1 | A3160501    |
+| ITS-X           | Insulin Transferrin Selenium Ethanolamine               | –         | –       | 11.18     | µl/mL OpM1 | 51,500,056  |
+| LM-1            | Lipid Mixture-1 (100x)                                  | –         | –       | 11.18     | µl/mL OpM1 | L0288       |
