@@ -1,5 +1,5 @@
 ---
-title: "Pilot *in vivo* NiCl~2~ x *Botryllus schlosseri* Exposure"
+title: "Pilot 1.1 *in vivo* NiCl~2~ x *Botryllus schlosseri* Exposure"
 author: "Celeste Valdivia"
 date: "2023-09-28"
 categories: [study plans, nickel chloride]
@@ -344,21 +344,21 @@ combined_data <- left_join(std_dev, means_data, by = "treatment_mg_per_L")
 
 print(combined_data)
 
-# Create a bar graph with adjusted error bars
-bar_plot2 <- ggplot(combined_data, aes(x = treatment_mg_per_L, y = mean_skips, fill = treatment_mg_per_L)) +
+#A bar with error bars
+bar_plot2 <- ggplot(combined_data, aes(x = factor(treatment_mg_per_L, levels = c("0", "5", "45")), y = mean_skips, fill = treatment_mg_per_L)) +
   geom_bar(stat = "identity", position = "dodge", width = 0.7) +
   geom_errorbar(aes(ymin = pmax(mean_skips - std_dev, 0), ymax = mean_skips + std_dev), 
                 width = 0.2, position = position_dodge(width = 0.7)) +
   labs(title = "Blastogenic Stage Skips by Treatment",
-       x = "Treatment (mg/L)",
+       x = "Nickel Chloride Concentration (mg/L)",
        y = "Mean Skips") +
-  scale_fill_brewer(palette = "Set1") +
+  scale_fill_brewer(palette = "Set1", name = "Nickel Chloride Concentration") +
+  scale_x_discrete(limits = c("0", "5", "45")) + # Set the order of concentrations
   theme_minimal() +
   theme(legend.position = "top")
 
 # Display the bar graph
 print(bar_plot2)
-
 
 ```
 
@@ -370,9 +370,17 @@ kruskal.test(combined_data$mean_skips ~ combined_data$treatment_mg_per_L)
 
 ## Cell culture monitoring
 
-```{r}
-cell_culture <- read.csv(file = "data/pilot_random_assignments.csv")
+```{r, engine='bash', eval = FALSE}
+
+curl -L https://docs.google.com/spreadsheets/d/13o7wsaFG9QAbBtIo31XtbfPtFOcf5HUEEYDksrcqaok/export?exportFormat=csv | tee ~/tough-tunicates/posts/nicl2-botryllus-pilot/data/cell.csv
 ```
 
+
+```{r}
+cell <- read.csv(file = "data/cell.csv")
+
+cell$date <- mdy(cell$date)
+
+```
 
 

@@ -9,7 +9,7 @@
 <meta name="author" content="Celeste Valdivia">
 <meta name="dcterms.date" content="2023-09-28">
 
-<title>Celeste Valdivia’s Open Lab Notebook - Pilot in vivo NiCl2 x Botryllus schlosseri Exposure</title>
+<title>Celeste Valdivia’s Open Lab Notebook - Pilot 1.1 in vivo NiCl2 x Botryllus schlosseri Exposure</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Pilot <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em> Exposure</h1>
+      <h1 class="title">Pilot 1.1 <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em> Exposure</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">study plans</div>
                 <div class="quarto-category">nickel chloride</div>
@@ -216,10 +216,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#protocol" id="toc-protocol" class="nav-link" data-scroll-target="#protocol">Protocol</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a>
   <ul class="collapse">
-  <li><a href="#curling-google-sheet" id="toc-curling-google-sheet" class="nav-link" data-scroll-target="#curling-google-sheet">Curling Google Sheet</a></li>
+  <li><a href="#morphometric-records" id="toc-morphometric-records" class="nav-link" data-scroll-target="#morphometric-records">Morphometric Records</a>
+  <ul class="collapse">
   <li><a href="#data-clean-up" id="toc-data-clean-up" class="nav-link" data-scroll-target="#data-clean-up">Data clean up</a></li>
   <li><a href="#exploratory-plots" id="toc-exploratory-plots" class="nav-link" data-scroll-target="#exploratory-plots">Exploratory plots</a></li>
   <li><a href="#analyzing-differences-in-blastogenic-progression-across-treatments" id="toc-analyzing-differences-in-blastogenic-progression-across-treatments" class="nav-link" data-scroll-target="#analyzing-differences-in-blastogenic-progression-across-treatments">Analyzing differences in blastogenic progression across treatments</a></li>
+  </ul></li>
+  <li><a href="#cell-culture-monitoring" id="toc-cell-culture-monitoring" class="nav-link" data-scroll-target="#cell-culture-monitoring">Cell culture monitoring</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -352,7 +355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 12            1              C3 45 mg/L R2  S162C001</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save assignments in csv for downstream use as metadata</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(well_assignments, <span class="at">file =</span> <span class="st">"pilot_random_assignments.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(well_assignments, <span class="at">file =</span> <span class="st">"data/pilot_random_assignments.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -481,16 +484,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="data" class="level1">
 <h1>Data</h1>
-<section id="curling-google-sheet" class="level2">
-<h2 class="anchored" data-anchor-id="curling-google-sheet">Curling Google Sheet</h2>
+<section id="morphometric-records" class="level2">
+<h2 class="anchored" data-anchor-id="morphometric-records">Morphometric Records</h2>
 <p>Make sure you have made your Google sheet publicly available to anyone that has the link. If you make any updates to the sheet just re-curl the data, meaning just re-run the code below.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://docs.google.com/spreadsheets/d/10uM3N3PD9xIP4yUnadfhkcXa8TPMRMD-adOIKbmkYzY/export<span class="pp">?</span>exportFormat=csv <span class="kw">|</span> <span class="fu">tee</span> ~/tough-tunicates/posts/nicl2-botryllus-pilot/data/morph.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="data-clean-up" class="level2">
-<h2 class="anchored" data-anchor-id="data-clean-up">Data clean up</h2>
+<section id="data-clean-up" class="level3">
+<h3 class="anchored" data-anchor-id="data-clean-up">Data clean up</h3>
 <p>Read in the data into your environment:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>morph <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"data/morph.csv"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -512,35 +514,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(morph_fact)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>         date      initials         stage       hpe     treatment_mg_per_L
- 2023-09-29:12   Length:24          A1:1   Min.   : 0   0 :8              
- 2023-09-30:12   Class :character   A2:1   1st Qu.: 0   45:8              
-                 Mode  :character   B1:4   Median :12   5 :8              
-                                    B2:3   Mean   :12                     
-                                    C1:5   3rd Qu.:24                     
-                                    C2:6   Max.   :24                     
-                                    TO:4                                  
-  replicate            animal_id      no_sys       no_prim_sys1  
- Length:24          S147C001: 2   Min.   :1.000   Min.   : 7.00  
- Class :character   S148C001: 2   1st Qu.:1.000   1st Qu.: 8.00  
- Mode  :character   S149C001: 2   Median :1.000   Median :10.50  
-                    S151C001: 2   Mean   :1.458   Mean   :10.83  
-                    S154C001: 2   3rd Qu.:2.000   3rd Qu.:13.00  
-                    S158C001: 2   Max.   :2.000   Max.   :22.00  
-                    (Other) :12                                  
-  no_prim_sys2       image             comments            treatment_order
- Min.   : 0.000   Length:24          Length:24          0 S148C001 : 2    
- 1st Qu.: 0.000   Class :character   Class :character   0 S149C001 : 2    
- Median : 3.000   Mode  :character   Mode  :character   0 S154C001 : 2    
- Mean   : 4.667                                         0 S177C001 : 2    
- 3rd Qu.: 8.250                                         45 S151C001: 2    
- Max.   :14.000                                         45 S158C001: 2    
-                                                        (Other)    :12    </code></pre>
+<pre><code>   experiment            date      initials         stage        hpe    
+ Min.   :1.100   2023-09-29:12   Length:46          A1: 2   Min.   : 0  
+ 1st Qu.:1.100   2023-09-30:12   Class :character   A2: 2   1st Qu.: 0  
+ Median :1.100   2023-10-24:11   Mode  :character   B1: 7   Median :12  
+ Mean   :1.148   2023-10-25:11                      B2: 6   Mean   :12  
+ 3rd Qu.:1.200                                      C1:10   3rd Qu.:24  
+ Max.   :1.200                                      C2:11   Max.   :24  
+                                                    TO: 8               
+ treatment_mg_per_L  replicate            animal_id      no_sys     
+ 0 :16              Length:46          S147C001: 2   Min.   :1.000  
+ 45:14              Class :character   S148C001: 2   1st Qu.:1.000  
+ 5 :16              Mode  :character   S149C001: 2   Median :1.000  
+                                       S151C001: 2   Mean   :1.478  
+                                       S154C001: 2   3rd Qu.:2.000  
+                                       S158C001: 2   Max.   :2.000  
+                                       (Other) :34                  
+  no_prim_sys1     no_prim_sys2     image             comments        
+ Min.   : 4.000   Min.   : 0.0   Length:46          Length:46         
+ 1st Qu.: 7.250   1st Qu.: 0.0   Class :character   Class :character  
+ Median : 8.000   Median : 7.0   Mode  :character   Mode  :character  
+ Mean   : 9.978   Mean   : 6.2                                        
+ 3rd Qu.:12.000   3rd Qu.: 9.5                                        
+ Max.   :22.000   Max.   :19.0                                        
+                  NA's   :11                                          
+   treatment_order
+ 0 S148C001: 2    
+ 0 S149C001: 2    
+ 0 S154C001: 2    
+ 0 S177C001: 2    
+ 0 S209C001: 2    
+ 0 S212C001: 2    
+ (Other)   :34    </code></pre>
 </div>
 </div>
 </section>
-<section id="exploratory-plots" class="level2">
-<h2 class="anchored" data-anchor-id="exploratory-plots">Exploratory plots</h2>
+<section id="exploratory-plots" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-plots">Exploratory plots</h3>
 <p>Lollipop chart to visualize the jumps or arrests in blastogenic stage progression for each animal.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot</span></span>
@@ -561,8 +571,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="analyzing-differences-in-blastogenic-progression-across-treatments" class="level2">
-<h2 class="anchored" data-anchor-id="analyzing-differences-in-blastogenic-progression-across-treatments">Analyzing differences in blastogenic progression across treatments</h2>
+<section id="analyzing-differences-in-blastogenic-progression-across-treatments" class="level3">
+<h3 class="anchored" data-anchor-id="analyzing-differences-in-blastogenic-progression-across-treatments">Analyzing differences in blastogenic progression across treatments</h3>
 <p>Since all the animals start at different blastogenic stages, we will need to quantify changes in blastogenic rate with a numeric scale</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a numeric scale</span></span>
@@ -576,34 +586,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(morph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      date              initials            stage                hpe    
- Min.   :2023-09-29   Length:24          Length:24          Min.   : 0  
- 1st Qu.:2023-09-29   Class :character   Class :character   1st Qu.: 0  
- Median :2023-09-29   Mode  :character   Mode  :character   Median :12  
- Mean   :2023-09-29                                         Mean   :12  
- 3rd Qu.:2023-09-30                                         3rd Qu.:24  
- Max.   :2023-09-30                                         Max.   :24  
- treatment_mg_per_L  replicate          animal_id             no_sys     
- Length:24          Length:24          Length:24          Min.   :1.000  
- Class :character   Class :character   Class :character   1st Qu.:1.000  
- Mode  :character   Mode  :character   Mode  :character   Median :1.000  
-                                                          Mean   :1.458  
-                                                          3rd Qu.:2.000  
-                                                          Max.   :2.000  
-  no_prim_sys1    no_prim_sys2       image             comments        
- Min.   : 7.00   Min.   : 0.000   Length:24          Length:24         
- 1st Qu.: 8.00   1st Qu.: 0.000   Class :character   Class :character  
- Median :10.50   Median : 3.000   Mode  :character   Mode  :character  
- Mean   :10.83   Mean   : 4.667                                        
- 3rd Qu.:13.00   3rd Qu.: 8.250                                        
- Max.   :22.00   Max.   :14.000                                        
- stage_numeric  
- Min.   :1.000  
- 1st Qu.:3.750  
- Median :5.000  
- Mean   :4.833  
- 3rd Qu.:6.000  
- Max.   :7.000  </code></pre>
+<pre><code>   experiment         date              initials            stage          
+ Min.   :1.100   Min.   :2023-09-29   Length:46          Length:46         
+ 1st Qu.:1.100   1st Qu.:2023-09-29   Class :character   Class :character  
+ Median :1.100   Median :2023-09-30   Mode  :character   Mode  :character  
+ Mean   :1.148   Mean   :2023-10-11                                        
+ 3rd Qu.:1.200   3rd Qu.:2023-10-24                                        
+ Max.   :1.200   Max.   :2023-10-25                                        
+                                                                           
+      hpe     treatment_mg_per_L  replicate          animal_id        
+ Min.   : 0   Length:46          Length:46          Length:46         
+ 1st Qu.: 0   Class :character   Class :character   Class :character  
+ Median :12   Mode  :character   Mode  :character   Mode  :character  
+ Mean   :12                                                           
+ 3rd Qu.:24                                                           
+ Max.   :24                                                           
+                                                                      
+     no_sys       no_prim_sys1     no_prim_sys2     image          
+ Min.   :1.000   Min.   : 4.000   Min.   : 0.0   Length:46         
+ 1st Qu.:1.000   1st Qu.: 7.250   1st Qu.: 0.0   Class :character  
+ Median :1.000   Median : 8.000   Median : 7.0   Mode  :character  
+ Mean   :1.478   Mean   : 9.978   Mean   : 6.2                     
+ 3rd Qu.:2.000   3rd Qu.:12.000   3rd Qu.: 9.5                     
+ Max.   :2.000   Max.   :22.000   Max.   :19.0                     
+                                  NA's   :11                       
+   comments         stage_numeric  
+ Length:46          Min.   :1.000  
+ Class :character   1st Qu.:4.000  
+ Mode  :character   Median :5.000  
+                    Mean   :4.848  
+                    3rd Qu.:6.000  
+                    Max.   :7.000  
+                                   </code></pre>
 </div>
 </div>
 <div class="cell">
@@ -638,24 +652,25 @@ using the `.groups` argument.</code></pre>
 <pre><code># A tibble: 3 × 3
   treatment_mg_per_L std_dev mean_skips
   &lt;chr&gt;                &lt;dbl&gt;      &lt;dbl&gt;
-1 0                     0.5        1.25
-2 45                    1.89       1.25
-3 5                     1.41       2   </code></pre>
+1 0                    0.535       1   
+2 45                   1.51        1.57
+3 5                    1.28        1.75</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a bar graph with adjusted error bars</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>bar_plot2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(combined_data, <span class="fu">aes</span>(<span class="at">x =</span> treatment_mg_per_L, <span class="at">y =</span> mean_skips, <span class="at">fill =</span> treatment_mg_per_L)) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#A bar with error bars</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>bar_plot2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(combined_data, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(treatment_mg_per_L, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"0"</span>, <span class="st">"5"</span>, <span class="st">"45"</span>)), <span class="at">y =</span> mean_skips, <span class="at">fill =</span> treatment_mg_per_L)) <span class="sc">+</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">width =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="fu">pmax</span>(mean_skips <span class="sc">-</span> std_dev, <span class="dv">0</span>), <span class="at">ymax =</span> mean_skips <span class="sc">+</span> std_dev), </span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">width =</span> <span class="fl">0.2</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.7</span>)) <span class="sc">+</span></span>
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Blastogenic Stage Skips by Treatment"</span>,</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Treatment (mg/L)"</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Nickel Chloride Concentration (mg/L)"</span>,</span>
 <span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Mean Skips"</span>) <span class="sc">+</span></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>) <span class="sc">+</span></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>)</span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the bar graph</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(bar_plot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>, <span class="at">name =</span> <span class="st">"Nickel Chloride Concentration"</span>) <span class="sc">+</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="st">"0"</span>, <span class="st">"5"</span>, <span class="st">"45"</span>)) <span class="sc">+</span> <span class="co"># Set the order of concentrations</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>)</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the bar graph</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(bar_plot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -670,6 +685,19 @@ using the `.groups` argument.</code></pre>
 data:  combined_data$mean_skips by combined_data$treatment_mg_per_L
 Kruskal-Wallis chi-squared = 2, df = 2, p-value = 0.3679</code></pre>
 </div>
+</div>
+</section>
+</section>
+<section id="cell-culture-monitoring" class="level2">
+<h2 class="anchored" data-anchor-id="cell-culture-monitoring">Cell culture monitoring</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://docs.google.com/spreadsheets/d/13o7wsaFG9QAbBtIo31XtbfPtFOcf5HUEEYDksrcqaok/export<span class="pp">?</span>exportFormat=csv <span class="kw">|</span> <span class="fu">tee</span> ~/tough-tunicates/posts/nicl2-botryllus-pilot/data/cell.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>cell <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"data/cell.csv"</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>cell<span class="sc">$</span>date <span class="ot">&lt;-</span> <span class="fu">mdy</span>(cell<span class="sc">$</span>date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
