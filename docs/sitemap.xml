@@ -6,7 +6,11 @@
   </url>
   <url>
     <loc>https://valeste.github.io/tough-tunicates/index.html</loc>
+<<<<<<< HEAD
     <lastmod>2023-11-02T22:21:24.726Z</lastmod>
+=======
+    <lastmod>2023-11-08T21:05:58.770Z</lastmod>
+>>>>>>> eec209d5b819a20e8aadc34148e72f388dd6ec62
   </url>
   <url>
     <loc>https://valeste.github.io/tough-tunicates/posts/tunicate-primers/index.html</loc>
@@ -14,6 +18,7 @@
   </url>
   <url>
     <loc>https://valeste.github.io/tough-tunicates/posts/nicl2-botryllus-pilot/index.html</loc>
+<<<<<<< HEAD
     <lastmod>2023-10-29T01:10:43.376Z</lastmod>
   </url>
   <url>
@@ -31,5 +36,16 @@
   <url>
     <loc>https://valeste.github.io/tough-tunicates/posts/masters_work/index.html</loc>
     <lastmod>2023-10-29T01:10:36.731Z</lastmod>
+=======
+    <lastmod>2023-11-08T21:05:57.046Z</lastmod>
+  </url>
+  <url>
+    <loc>https://valeste.github.io/tough-tunicates/posts/nicl2-botryllus-exp1/index.html</loc>
+    <lastmod>2023-11-08T21:06:00.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://valeste.github.io/tough-tunicates/posts/lab-botryllus-care/index.html</loc>
+    <lastmod>2023-11-08T21:05:57.410Z</lastmod>
+>>>>>>> eec209d5b819a20e8aadc34148e72f388dd6ec62
   </url>
 </urlset>
