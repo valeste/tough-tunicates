@@ -21,7 +21,7 @@ Graduate Student, (Master's Thesis) - Celeste Valdivia, cvaldi\@uw.edu
 ## Masters Milestone Progress
 
 | Milestone                                                                                                                     | Expected         | Completed        |
-|--------------------------------------------|--------------|--------------|
+|-------------------------------------------------------------------------------------------------------------------------------|------------------|------------------|
 | [Form Committee](https://docs.google.com/forms/d/e/1FAIpQLSdMCg96RoRiT4yEIAMorzOPT6GqDYFRQcPp0Ttr0D22idJqYg/viewform)         | \[AU23\] 08DEC23 | \[SU23\] 29AUG23 |
 | [Submit Plan of Study](https://forms.gle/15siYRGdHKr5dX2B7)                                                                   | \[AU23\] 08DEC23 |                  |
 | [Submit Thesis Proposal](https://docs.google.com/forms/d/e/1FAIpQLScL5Tp4GOxGUTxV2c1-kXW0orPTZEfuFeGtMF4eoJ9LHC9mcw/viewform) | \[AU22\] 08DEC23 |                  |
@@ -108,5 +108,4 @@ H1: Exposure to nickel chloride will interrupt apoptosis pathways and promote st
 
 ### Meeting Notes
 
-a. 
-
+a.  
