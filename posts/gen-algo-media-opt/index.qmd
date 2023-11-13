@@ -3,7 +3,7 @@ title: "Use of Genetic Algorithm in Cell Culture Media Optimization"
 author: "Celeste Valdivia"
 date: "2023-10-28"
 categories: [cool paper, optimization]
-image: "v3_design.jpeg"
+image: ""
 ---
 
 # Genetic algorithm for cell culture optimization
