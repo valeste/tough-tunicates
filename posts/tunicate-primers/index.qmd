@@ -18,32 +18,32 @@ I am interested in designing primers for *Botryllus schlosseri* to evaluate diff
 
 # Potential Gene List
 
-This list serves as a jumping off point for myself to look into genes that may potentially be differentially expressed in *Botryllus schlosseri* exposed to the clastogen (by oxidative damage to the DNA), nickel chloride. 
+This list serves as a jumping off point for myself to look into genes that may potentially be differentially expressed in *Botryllus schlosseri* exposed to the clastogen (by oxidative damage to the DNA), nickel chloride.
 
-| Role                    | Gene ID      | Whole Gene Name                                                                    |
-|:----------------|:----------------|:---------------------|
-| Senescence              | TP53 (p53)   | Tumor protein p53                                                                  |
-| Senescence              | CDKN1A (p21) | Cyclin-dependent kinase inhibitor 1A                                               |
-| Senescence              | CDKN2A (p16) | Cyclin-dependent kinase inhibitor 2A                                               |
-| Senescence              | SIRT1        | Sirtuin 1                                                                          |
-| Senescence              | SIRT6        | Sirtuin 6                                                                           |
-| Senescence              | FOXO3        | Forkhead box O3                                                                    |
-| Senescence              | IGFBP3       | Insulin-like growth factor-binding protein 3                                       |
-| Apoptosis               | CASP3        | Caspase 3                                                                          |
-| Apoptosis               | CASP8        | Caspase 8                                                                          |
-| Apoptosis               | BCL2         | B-cell lymphoma 2                                                                  |
-| Apoptosis               | BAX          | BCL2-associated X protein                                                          |
-| Apoptosis               | FAS          | Fas cell surface death receptor (CD95)                                             |
-| Apoptosis               | TNF          | Tumor necrosis factor                                                              |
-| Oxidative Stress        | HSP70        | Heat Shock Protein 70                                                              |
-| Oxidative Stress        | SOD          | Superoxide Dismutase. <br />Various isoforms, such as SOD1, SOD2, and SOD3         |
-| Oxidative Stress        | CAT          | Catalase enzyme                                                                    |
-| Oxidative Stress        | HMOX1        | Heme oxygenase enzyme 1                                                            |
-| Oxidative Stress        | NQO1         | NADPH quinone dehydrogenase 1                                                      |
-| stemness                | MYC          | Myc proto-oncogene protein                                                         |
-| stemness                | SOXB1        | SRY-Box Transcription Factor B1                                                    |
-| stemness                | POU3         | POU Class 3                                                                        |
-| aging and proliferation | HSPA9        | Mortalin                                                                           |
+| Role                    | Gene ID      | Whole Gene Name                                                            |
+|:------------------------|:-------------|:---------------------------------------------------------------------------|
+| Senescence              | TP53 (p53)   | Tumor protein p53                                                          |
+| Senescence              | CDKN1A (p21) | Cyclin-dependent kinase inhibitor 1A                                       |
+| Senescence              | CDKN2A (p16) | Cyclin-dependent kinase inhibitor 2A                                       |
+| Senescence              | SIRT1        | Sirtuin 1                                                                  |
+| Senescence              | SIRT6        | Sirtuin 6                                                                  |
+| Senescence              | FOXO3        | Forkhead box O3                                                            |
+| Senescence              | IGFBP3       | Insulin-like growth factor-binding protein 3                               |
+| Apoptosis               | CASP3        | Caspase 3                                                                  |
+| Apoptosis               | CASP8        | Caspase 8                                                                  |
+| Apoptosis               | BCL2         | B-cell lymphoma 2                                                          |
+| Apoptosis               | BAX          | BCL2-associated X protein                                                  |
+| Apoptosis               | FAS          | Fas cell surface death receptor (CD95)                                     |
+| Apoptosis               | TNF          | Tumor necrosis factor                                                      |
+| Oxidative Stress        | HSP70        | Heat Shock Protein 70                                                      |
+| Oxidative Stress        | SOD          | Superoxide Dismutase. <br />Various isoforms, such as SOD1, SOD2, and SOD3 |
+| Oxidative Stress        | CAT          | Catalase enzyme                                                            |
+| Oxidative Stress        | HMOX1        | Heme oxygenase enzyme 1                                                    |
+| Oxidative Stress        | NQO1         | NADPH quinone dehydrogenase 1                                              |
+| stemness                | MYC          | Myc proto-oncogene protein                                                 |
+| stemness                | SOXB1        | SRY-Box Transcription Factor B1                                            |
+| stemness                | POU3         | POU Class 3                                                                |
+| aging and proliferation | HSPA9        | Mortalin                                                                   |
 
 # Two Approaches for Acquiring Primers
 
@@ -52,7 +52,7 @@ This list serves as a jumping off point for myself to look into genes that may p
 For the purpose of expedience and accuracy. This generally is the preferred approach.
 
 | Gene     | NCBI Accession Number | DOI                                   | Fwd Primer                        | Rev Primer                      |
-|---------------|---------------|---------------|---------------|---------------|
+|----------|-----------------------|---------------------------------------|-----------------------------------|---------------------------------|
 | Mortalin | KY212120              | doi:10.1016/<br />j.ydbio.2017.10.023 | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
 
 ## Design primers in-house for *Botryllus schlosseri*.
@@ -65,7 +65,7 @@ To design primers in-house for *Botryllus schlosseri* we will utilize the [Botry
 
 Go directly to [NCBI](https://www.ncbi.nlm.nih.gov/) select the database to be nucleotide, and paste in the following but replacing "**GOI**" with your gene of interest:
 
-> "((**GOI**[Botryllus schlosseri]) AND "chordates"[porgn:__txid7711]) AND "tunicates"[porgn:__txid7712]" 
+> "((**GOI**\[Botryllus schlosseri\]) AND"chordates"\[porgn:\_\_txid7711\]) AND "tunicates"\[porgn:\_\_txid7712\]"
 
 This will pull up any related gene sequences for your gene of interest for *Botryllus schlosseri* and any related tunicate species. You may use mRNA or protein sequences for your query, just be sure to select either blastn or tblastn, respectively.
 
@@ -81,8 +81,7 @@ Try to select FASTA sequences from tunicates more closely related to *Botryllus 
 Genome Biol Evol, Volume 12, Issue 6, June 2020, Pages 948--964, <https://doi.org/10.1093/gbe/evaa060>
 :::
 
-
-2.  **Retrieve Sequence:** Access the gene's sequence from NCBI Gene, by selecting the FASTA link. Copy the entire sequence starting at ">".
+2.  **Retrieve Sequence:** Access the gene's sequence from NCBI Gene, by selecting the FASTA link. Copy the entire sequence starting at "\>".
 
 3.  **Use Sequence in BLAST:** Paste the sequence into the [Botryllus Genome Project's BLAST Tool](http://botryllus.stanford.edu/botryllusgenome/blast/) to identify homologous sequences in the *Botryllus* genome.
 
@@ -104,20 +103,19 @@ This method allows us to leverage well-annotated gene data to find potential hom
 
 #### Sequences Identified with BLAST Tool in the botznik-ctg.fa Database
 
-| Role  | Gene ID | Query NCBI GenBank Accession | Query Organism | Top Sequence Producing Significant Alignment | Score (bits) | E Value  | 
-|:------|:--------|:-------------|:---------------|:--------------|:---------|:-----|
-| Apoptosis  | TNF    | LR791346.1    | [Phallusia mammillata]   | botctg065850      |     70 | 1.00E-09   |
-| DNA Repair  | PolB  | LR789137.1       | [Phallusia mammillata]  | botctg092056 | 60 | 1.00E-06  |
-| Oxidative Stress | SOD1   | XP_039262007.1         | [Styela clava] | botctg006757 | 199 | 8.00E-51  |
-| Senescence, DNA Damage Repair | SIRT6 | BAO57219.1 | [Polyandrocarpa misakiensis] | botctg109566 | 446 | e-124 |
-| Apoptosis | BAX | KU948200.1 | [Botryllus schlosseri] | botctg061218 | 2260 | 0 |
-| Apoptosis | AIF1  | KU948202 | [Botryllus schlosseri] | botctg003666 | 674 | 0 |
-| Apoptosis | IAP7 | KU948203.1 | [Botryllus schlosseri] | botctg106479 | 1483 | 0 | 
-| DNA repair | PARP1 | KU948201.1 | [Botryllus schlosseri] | botctg019995 | 1191 | 0 |
-| Stemness | MYC | OL828248.1| [Botryllus schlosseri] | botctg007779 | 2857 | 0 | 
-| Stemness | SOXB1 | OL828250.1 | [Botryllus schlosseri] | botctg003503 | 1173 | 0 | 
-| Stemness | POU3 | OL828252.1 | [Botryllus schlosseri] | botctg006949 | 1383 | 0 | 
-
+| Role                          | Gene ID | Query NCBI GenBank Accession | Query Organism                 | Top Sequence Producing Significant Alignment | Score (bits) | E Value  |
+|:------------------------------|:--------|:-----------------------------|:-------------------------------|:---------------------------------------------|:-------------|:---------|
+| Apoptosis                     | TNF     | LR791346.1                   | \[Phallusia mammillata\]       | botctg065850                                 | 70           | 1.00E-09 |
+| DNA Repair                    | PolB    | LR789137.1                   | \[Phallusia mammillata\]       | botctg092056                                 | 60           | 1.00E-06 |
+| Oxidative Stress              | SOD1    | XP_039262007.1               | \[Styela clava\]               | botctg006757                                 | 199          | 8.00E-51 |
+| Senescence, DNA Damage Repair | SIRT6   | BAO57219.1                   | \[Polyandrocarpa misakiensis\] | botctg109566                                 | 446          | e-124    |
+| Apoptosis                     | BAX     | KU948200.1                   | \[Botryllus schlosseri\]       | botctg061218                                 | 2260         | 0        |
+| Apoptosis                     | AIF1    | KU948202                     | \[Botryllus schlosseri\]       | botctg003666                                 | 674          | 0        |
+| Apoptosis                     | IAP7    | KU948203.1                   | \[Botryllus schlosseri\]       | botctg106479                                 | 1483         | 0        |
+| DNA repair                    | PARP1   | KU948201.1                   | \[Botryllus schlosseri\]       | botctg019995                                 | 1191         | 0        |
+| Stemness                      | MYC     | OL828248.1                   | \[Botryllus schlosseri\]       | botctg007779                                 | 2857         | 0        |
+| Stemness                      | SOXB1   | OL828250.1                   | \[Botryllus schlosseri\]       | botctg003503                                 | 1173         | 0        |
+| Stemness                      | POU3    | OL828252.1                   | \[Botryllus schlosseri\]       | botctg006949                                 | 1383         | 0        |
 
 #### Pulling *Botryllus schlosseri* Sequences and Placing in New File
 
@@ -141,8 +139,7 @@ touch output/extracted_sequences.fasta
 touch output/extracted_sequences.csv
 ```
 
-Now let's pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.fasta file prior to reprinting it into the file. ]
-
+Now let's pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.fasta file prior to reprinting it into the file. \]
 
 ```{r fasta file for extracted sequences, engine= 'bash', eval = FALSE}
 
@@ -209,13 +206,11 @@ done
 
 ```
 
-
 Let's check out the extracted sequences in the csv file:
 
 ```{r, cache=TRUE}
 read.csv(file = "output/extracted_sequences.csv")
 ```
-
 
 #### Designing Primers with IDT PrimerQuest
 
@@ -229,10 +224,9 @@ General rules for designing good primers:
 -   Forward and reverse primers should be about 500 bp apart.
 -   The 3' end of the primer should be a G or a C.
 
-
 # Confirmed Primers
 
-| Gene     | Designer |NCBI Accession Number | Fwd Primer                        | Rev Primer                      |
-|:------------------|:------------------|:------------------|:------------------|:-----------------|
-| Mortalin | GJ | KY212120              | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
-| HSP70    | GJ | TBD | TBD | TBD |
+| Gene     | Designer | NCBI Accession Number | Fwd Primer                        | Rev Primer                      |
+|:---------|:---------|:----------------------|:----------------------------------|:--------------------------------|
+| Mortalin | GJ       | KY212120              | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
+| HSP70    | GJ       | TBD                   | TBD                               | TBD                             |
