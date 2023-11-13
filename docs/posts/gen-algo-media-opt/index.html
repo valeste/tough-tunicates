@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Celeste Valdivia">
-<meta name="dcterms.date" content="2023-10-30">
+<meta name="dcterms.date" content="2023-10-28">
 
-<title>Celeste Valdivia’s Open Lab Notebook - Pilot 1.2 in vivo NiCl2 x Botryllus schlosseri Exposure</title>
+<title>Celeste Valdivia’s Open Lab Notebook - Use of Genetic Algorithm in Cell Culture Media Optimization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,8 +126,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -183,10 +185,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Pilot 1.2 <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em> Exposure</h1>
+      <h1 class="title">Use of Genetic Algorithm in Cell Culture Media Optimization</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">study plans</div>
-                <div class="quarto-category">nickel chloride</div>
+                <div class="quarto-category">cool paper</div>
+                <div class="quarto-category">optimization</div>
               </div>
                   </div>
   </div>
@@ -204,7 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 30, 2023</p>
+        <p class="date">October 28, 2023</p>
       </div>
     </div>
     
@@ -220,17 +222,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#experimental-planning" id="toc-experimental-planning" class="nav-link active" data-scroll-target="#experimental-planning">Experimental Planning</a>
+  <li><a href="#genetic-algorithm-for-cell-culture-optimization" id="toc-genetic-algorithm-for-cell-culture-optimization" class="nav-link active" data-scroll-target="#genetic-algorithm-for-cell-culture-optimization">Genetic algorithm for cell culture optimization</a></li>
+  <li><a href="#r-based-genetic-algorithm" id="toc-r-based-genetic-algorithm" class="nav-link" data-scroll-target="#r-based-genetic-algorithm">R Based Genetic Algorithm</a>
   <ul class="collapse">
-  <li><a href="#animal-handling-prior-to-exposure" id="toc-animal-handling-prior-to-exposure" class="nav-link" data-scroll-target="#animal-handling-prior-to-exposure">Animal Handling Prior to Exposure</a></li>
-  <li><a href="#randomize-treatment-and-plate-assignments" id="toc-randomize-treatment-and-plate-assignments" class="nav-link" data-scroll-target="#randomize-treatment-and-plate-assignments">Randomize Treatment and Plate Assignments</a></li>
-  <li><a href="#nickel-chloride-dilutions" id="toc-nickel-chloride-dilutions" class="nav-link" data-scroll-target="#nickel-chloride-dilutions">Nickel Chloride Dilutions</a>
+  <li><a href="#example-code" id="toc-example-code" class="nav-link" data-scroll-target="#example-code">Example code</a>
   <ul class="collapse">
-  <li><a href="#required-volume-of-artificial-seawater" id="toc-required-volume-of-artificial-seawater" class="nav-link" data-scroll-target="#required-volume-of-artificial-seawater">Required Volume of Artificial Seawater</a></li>
-  <li><a href="#calculations" id="toc-calculations" class="nav-link" data-scroll-target="#calculations">Calculations</a></li>
+  <li><a href="#brainstorming-the-objective-to-feed-the-algorithm" id="toc-brainstorming-the-objective-to-feed-the-algorithm" class="nav-link" data-scroll-target="#brainstorming-the-objective-to-feed-the-algorithm">Brainstorming the objective to feed the algorithm</a></li>
+  <li><a href="#brainstorming-factors-that-are-present-in-the-media-and-what-would-potentially-be-changed" id="toc-brainstorming-factors-that-are-present-in-the-media-and-what-would-potentially-be-changed" class="nav-link" data-scroll-target="#brainstorming-factors-that-are-present-in-the-media-and-what-would-potentially-be-changed">Brainstorming factors that are present in the media and what would potentially be changed</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#protocol" id="toc-protocol" class="nav-link" data-scroll-target="#protocol">Protocol</a></li>
   </ul>
 </nav>
     </div>
@@ -240,182 +240,129 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<section id="genetic-algorithm-for-cell-culture-optimization" class="level1">
+<h1>Genetic algorithm for cell culture optimization</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.2     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
+  A(start) --&gt; B[create random initial 'population' of experimental conditions]
+  B --&gt; C[perform wet lab experiments]
+  C --&gt; D[evaluate fitness of each conditions (10^6^ cells in monolayer formation)]
+  D --&gt; E{Optimization goal achieved/generation limit reached?}
+  E --&gt; F[No, select better performing conditions proportional to fitness]
+  F --&gt; H[Create next generation of conditions by cross over and mutation]
+  E --&gt; G[Yes, end]
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(hrbrthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>NOTE: Either Arial Narrow or Roboto Condensed fonts are required to use these themes.
-      Please use hrbrthemes::import_roboto_condensed() to install Roboto Condensed and
-      if Arial Narrow is not on your system, please see https://bit.ly/arialnarrow</code></pre>
+<p></p>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="experimental-planning" class="level1">
-<h1>Experimental Planning</h1>
-<section id="animal-handling-prior-to-exposure" class="level2">
-<h2 class="anchored" data-anchor-id="animal-handling-prior-to-exposure">Animal Handling Prior to Exposure</h2>
-<p>Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.</p>
-</section>
-<section id="randomize-treatment-and-plate-assignments" class="level2">
-<h2 class="anchored" data-anchor-id="randomize-treatment-and-plate-assignments">Randomize Treatment and Plate Assignments</h2>
-<p>Here we will have R randomly assign each animal to a treatment and each treatment/animal to a different well on the plate. The idea here is to randomize placements as there may be variations in the well design.</p>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3445</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plate_number_12_well <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="at">times =</span> <span class="dv">12</span>))</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>well_placements <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A1"</span>, <span class="st">"A2"</span>, <span class="st">"A3"</span>, <span class="st">"A4"</span>, <span class="st">"B1"</span>, <span class="st">"B2"</span>, <span class="st">"B3"</span>, <span class="st">"B4"</span>, <span class="st">"C1"</span>, <span class="st">"C3"</span>, <span class="st">"C2"</span>, <span class="st">"C4"</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>conditions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Control R1"</span>, <span class="st">"Control R2"</span>, <span class="st">"Control R3"</span>, <span class="st">"Control R4"</span>, <span class="st">"5 mg/L R1"</span>, <span class="st">"5 mg/L R2"</span>, <span class="st">"5 mg/L R3"</span>, <span class="st">"5 mg/L R4"</span>, <span class="st">"45 mg/L R1"</span>, <span class="st">"45 mg/L R2"</span>, <span class="st">"45 mg/L R3"</span>, <span class="st">"45 mg/L R4"</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>animal_id <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"S246C001"</span>, <span class="st">"S228C001"</span>, <span class="st">"S215C001"</span>, <span class="st">"S247C001"</span>, <span class="st">"S224C001"</span>, <span class="st">"S218C001"</span>, <span class="st">"S248C001"</span>, <span class="st">"S212C001"</span>, <span class="st">"S209C001"</span>, <span class="st">"S207C001"</span>, <span class="st">"S200C001"</span>, <span class="st">"TBD"</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>well_assignments_exp1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Plate_Number =</span> <span class="fu">sample</span>(plate_number_12_well),</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Well_Placements =</span> <span class="fu">sample</span>(well_placements),</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Conditions =</span> <span class="fu">sample</span>(conditions),</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">animal_ID =</span> <span class="fu">sample</span>(animal_id)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(well_assignments_exp1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Plate_Number Well_Placements Conditions animal_ID
-1             1              B4  5 mg/L R4       TBD
-2             1              B2  5 mg/L R3  S246C001
-3             1              A3 Control R1  S209C001
-4             1              A1  5 mg/L R1  S200C001
-5             1              A2 45 mg/L R1  S218C001
-6             1              C3 Control R2  S228C001
-7             1              C4 Control R3  S247C001
-8             1              B3 45 mg/L R2  S215C001
-9             1              C2 45 mg/L R3  S224C001
-10            1              A4 Control R4  S212C001
-11            1              C1  5 mg/L R2  S248C001
-12            1              B1 45 mg/L R4  S207C001</code></pre>
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">sequenceDiagram
+  participant Alice
+  participant Bob
+  Alice-&gt;&gt;John: Hello John, how are you?
+  loop Healthcheck
+    John-&gt;&gt;John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts &lt;br/&gt;prevail!
+  John--&gt;&gt;Alice: Great!
+  John-&gt;&gt;Bob: How about you?
+  Bob--&gt;&gt;John: Jolly good!
+</pre>
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
+
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save assignments in csv for downstream use as metadata</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(well_assignments_exp1, <span class="at">file =</span> <span class="st">"well_assignments.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p></p>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="12.jpeg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">plate assignments</figcaption><p></p>
-</figure>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Citations
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Munroe, S., K. Sandoval, D. E. Martens, D. Sipkema, and S. A. Pomponi. 2019. Genetic algorithm as an optimization tool for the development of sponge cell culture media. In Vitro Cellular &amp; Developmental Biology - Animal 55:149–158.</p>
+</div>
 </div>
 </section>
-<section id="nickel-chloride-dilutions" class="level2">
-<h2 class="anchored" data-anchor-id="nickel-chloride-dilutions">Nickel Chloride Dilutions</h2>
-<p>Review resources prior to handling nickel chloride:</p>
-<ul>
-<li><p>Nickel chloride <a href="https://www.fishersci.com/store/msds?partNumber=AC270510050&amp;productDescription=NICKEL%28II%29+CHLORIDE+HEXA+5KG&amp;vendorId=VN00032119&amp;countryCode=US&amp;language=en">SDS</a>.</p></li>
-<li><p><a href="https://amo-csd.lbl.gov/downloads/Chemical%20Resistance%20of%20Gloves.pdf">Chemical resistance of gloves.</a></p></li>
-</ul>
-<p>All handling of stock solution and treatments to be done in a chemical fume hood. Once spiked water has been distributed, add animals, parafilm jars, place in secondary container, and move to environmental chamber.</p>
-<section id="required-volume-of-artificial-seawater" class="level3">
-<h3 class="anchored" data-anchor-id="required-volume-of-artificial-seawater">Required Volume of Artificial Seawater</h3>
-<p>Calculations for spiking artificial seawater. 225 mL of seawater required to mostly submerge glass slide in wide mouth 16 oz Kerr mason jar.</p>
-<p>Considerations:</p>
-<ul>
-<li><p>4 replicates</p></li>
-<li><p>225 mL per jar</p></li>
-<li><p>3 conditions</p></li>
-<li><p>Account for 10% loss of water during transferring</p></li>
-</ul>
-<p><span class="math display">\[(4*225 * 3) + (0.1*(4*225*3)) = 2,970\]</span></p>
-<p>Need 2,970 mL of artificial seawater total for exposure, particularly, 990 mL of artificial seawater per condition.</p>
-</section>
-<section id="calculations" class="level3">
-<h3 class="anchored" data-anchor-id="calculations">Calculations</h3>
-<p>Stock solution of NiCl<sub>2</sub> made by undergraduate Gina Jones on 02/08/23.</p>
-<ul>
-<li><p>NiCl<sub>2</sub></p></li>
-<li><p>Suspended in MilliQ water (0 PPT)</p></li>
-</ul>
-<section id="low-dose-5-mgl" class="level4">
-<h4 class="anchored" data-anchor-id="low-dose-5-mgl">Low Dose: 5 mg/L</h4>
-<p><span class="math display">\[ C_1*V_1 = C_2*V_2\]</span> <span class="math display">\[ 1 g/L * V_1 = 0.005g/L*0.99L\]</span> <span class="math display">\[V_1 = 0.00495 L = 4.95 mL\]</span> Spike 990 mL of aerated, artificial seawater (16 C) with 4.95 mL of stock NiCl<sub>2</sub> solution. Change in salinity negligible (+/- 1 PPT).</p>
-</section>
-<section id="high-dose-45-mgl" class="level4">
-<h4 class="anchored" data-anchor-id="high-dose-45-mgl">High Dose: 45 mg/L</h4>
-<p><span class="math display">\[ C_1*V_1 = C_2*V_2\]</span> <span class="math display">\[ 1 g/L * V_1 = 0.045g/L*0.99L\]</span> <span class="math display">\[V_1 = 0.04455 L = 44.55 mL\]</span> Spike 990 mL of aerated, artificial seawater (16 C) with 44.55 mL of stock NiCl<sub>2</sub> solution. Change in salinity negligible (+/- 1 PPT).</p>
-</section>
-</section>
-</section>
-</section>
-<section id="protocol" class="level1">
-<h1>Protocol</h1>
+<section id="r-based-genetic-algorithm" class="level1">
+<h1>R Based Genetic Algorithm</h1>
+<p><a href="https://cran.r-project.org/web/packages/genalg/genalg.pdf">genalg R package documentation</a></p>
+<section id="example-code" class="level2">
+<h2 class="anchored" data-anchor-id="example-code">Example code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the genalg package</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(genalg)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the objective function to minimize</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The objective function should take a vector representing concentrations as input</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>objective_function <span class="ot">&lt;-</span> <span class="cf">function</span>(concentrations) {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Simulate the effect of concentrations on a specific metric (e.g., cell growth)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># You will need to replace this with your own experimental data and evaluation logic</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  metric_value <span class="ot">&lt;-</span> <span class="fu">simulated_metric</span>(concentrations)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(metric_value)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Set GA parameters</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>population_size <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>generations <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>mutation_rate <span class="ot">&lt;-</span> <span class="fl">0.1</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the range of concentrations for each component</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># This can be customized based on your specific components</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>concentration_range <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">ncol =</span> <span class="dv">10</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an initial random population of concentrations within the defined range</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>initial_population <span class="ot">&lt;-</span> <span class="fu">rbga.bin</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">popSize =</span> population_size, <span class="at">iters =</span> <span class="dv">1</span>, </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mutationChance =</span> mutation_rate, <span class="at">levels =</span> concentration_range)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the genetic algorithm</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">rbga.bin</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">popSize =</span> population_size, <span class="at">iters =</span> generations,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mutationChance =</span> mutation_rate, <span class="at">evalFunc =</span> objective_function,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>                   <span class="at">levels =</span> concentration_range, <span class="at">pType =</span> <span class="st">"real-valued"</span>, <span class="at">initial =</span> initial_population<span class="sc">$</span>solutions)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the best solution found (optimized concentrations)</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Best solution (optimized concentrations):"</span>, result<span class="sc">$</span>solution, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Objective value (metric value):"</span>, result<span class="sc">$</span>evaluations, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="brainstorming-the-objective-to-feed-the-algorithm" class="level3">
+<h3 class="anchored" data-anchor-id="brainstorming-the-objective-to-feed-the-algorithm">Brainstorming the objective to feed the algorithm</h3>
+<p>Note that it is possible to have a multi-objective optimization framework, however this can be more challenging than a single-objective optimization. The optimization algorithm will seek a set of solutions that represent trade-offs between these objectives. The solutions are known as the Pareto front.</p>
+<p>If you do more than one objective, you will need to assign weights or priorities to each objective function.</p>
 <ol type="1">
-<li><p>Subdivide animals 3 days prior to exposure start.</p></li>
-<li><p>Make sufficient volume of artificial seawater at appropriate salinity, 25 PPT, to match recirculating seawater system parameters. In this case for a 3 x 4 exposure at 250 mL, will require about 7 L of artificial seawater.</p></li>
-</ol>
-<ul>
-<li>30.8 g / L of Red Sea Salt</li>
-</ul>
-<ol start="3" type="1">
-<li>Rinse all glassware to be used during exposure as follows:</li>
-</ol>
-<ul>
-<li><p>Triplicate rinse with lab detergent</p></li>
-<li><p>Triplicate rinse with tap water</p></li>
-<li><p>Triplicate rinse with DI water</p></li>
-</ul>
-<ol start="4" type="1">
-<li><p>Add lab bench paper to environmental chambers top rack to reduce light intensity. Include 4 slits in bench paper to allow for air flow.</p></li>
-<li><p>Add 1000 mL of artificial seawater to three 1 L beakers and place in environmental chamber (set to ambient 23 C to achieve 16 C for water) with gentle aeration (targeting ~ 67 % DO) in preparation the night before exposure.</p></li>
-</ol>
-<section id="day-of-exposure-commencement" class="level4">
-<h4 class="anchored" data-anchor-id="day-of-exposure-commencement"><em>Day of Exposure Commencement</em></h4>
-<ol start="6" type="1">
-<li><p>Take 10 mL from each 1 L beaker and document temperature, DO, pH, salinity, and ammonia of artificial seawater prior to spiking the water.</p></li>
-<li><p>In a chemical fume hood add the appropriate volume to achieve desired concentration of nickel chloride concentration to each of the 1 L beakers using a 25 mL or 50 mL serological pipette. Be sure to homogenize solution well with the serological pipette. Distribute 225 mL of each stock to the appropriate mason jar or beaker using designated serological pipette.</p></li>
-<li><p>Transfer animals to a portable container with artificial seawater from the recirculating system. Image the animals using the Excelis stereomicroscope. Use a razor blade to clean around the animal and to clean glass slide of excess algae and debris.</p></li>
-</ol>
-<ul>
-<li>Document stage, zooid number, cumulative system number.</li>
-</ul>
-<ol start="9" type="1">
-<li><p>Distribute animals to appropriate jar in fume hood.</p></li>
-<li><p>Parafilm jar and place in secondary container.</p></li>
-<li><p>Transfer secondary container with jars to second rack of environmental chamber.</p></li>
-<li><p>Leave animals for 24 hours.</p></li>
+<li><p>Cell density of at least 10<sup>6</sup>, the minimum required amount to conduct gene expression work.</p></li>
+<li><p>Frequency of monolayer formation for epithelial tissue from Botryllus schlosseri.</p></li>
+<li><p>Mitochondrial activity assessed using the 96 well plate reader.</p></li>
 </ol>
 </section>
-<section id="day-of-dissections" class="level4">
-<h4 class="anchored" data-anchor-id="day-of-dissections"><em>Day of Dissections</em></h4>
-<p>The following steps should be conducted in a chemical fume hood and iterated through one beaker at a time to avoid desiccation stress:</p>
-<ol start="13" type="1">
-<li><p>Remove 100% of the exposure water from beaker and dispose of NiCl<sub>2</sub> dosed artificial seawater in the appropriately marked hazardous waste container.</p></li>
-<li><p>With the animal and glass slide still in the beaker, quadruplicate rinse the glass slide and animal with deionized water.</p></li>
-<li><p>Glass slide may now be handled with nitrile gloves and should be quadruplicate rinsed with artificial seawater over exposure beaker.</p></li>
-<li><p>Transfer glass slide and animal to a fresh 16 oz mason jar containing 200 mL of 15 C artificial seawater.</p></li>
-<li><p>Dispose of excess liquid in exposure beaker in appropriately labeled hazardous waste container.</p></li>
-</ol>
-<p>You may now work outside the chemical fumehood. Note there may be residual NiCl<sub>2</sub> in animal so continue to wear the appropriate PPE and work carefully.</p>
-<ol start="18" type="1">
-<li><p>Using a stainless steel razor blade, remove one of the two cumulative systems on the glass slide. Use forceps to transfer cumulative system to appropriately labeled snap cap 1.5 mL eppendorf PCR safe tube containing 500 uL of RNAProtect by Qiagen.</p></li>
-<li><p>Proceed with dissection of the primary buds or zooids of the second cumulative system on the slide. Refer to <a href="https://valeste.github.io/tough-tunicates/posts/epi-isolation-protocol/">epithelial isolation protocol</a></p></li>
-</ol>
-<ul>
-<li>However, avoid using any ethanol in this procedure.</li>
-</ul>
-<ol start="20" type="1">
-<li><p>Once tissue has been removed, take cell strainer and rinse it with 30 mL ASW-PSA.</p></li>
-<li><p>Place tissue in aliquot of TCM and immediately go to seed tissue in biosaftey cabinet. Mark time of seeding.</p></li>
-<li><p>No replacement of media over course of trial.</p></li>
-<li><p>Transfer samples containing cumulative system suspended in RNAProtect to -20 C freezer overnight. The following day, transfer samples to -80 C freezer for long term storage.</p></li>
+<section id="brainstorming-factors-that-are-present-in-the-media-and-what-would-potentially-be-changed" class="level3">
+<h3 class="anchored" data-anchor-id="brainstorming-factors-that-are-present-in-the-media-and-what-would-potentially-be-changed">Brainstorming factors that are present in the media and what would potentially be changed</h3>
+<ol type="1">
+<li><p>Fetal Bovine Serum</p></li>
+<li><p>L-15 Media Basal</p></li>
+<li><p>HEPES Buffer</p></li>
+<li><p>Penicillin-Streptomycin</p></li>
+<li><p>Amphotericn B</p></li>
+<li><p>Artificial Seawater</p></li>
+<li></li>
 </ol>
 
 
+</section>
 </section>
 </section>
 
