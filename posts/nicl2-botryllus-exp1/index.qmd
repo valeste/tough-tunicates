@@ -3,7 +3,7 @@ title: "Pilot 1.2 *in vivo* NiCl~2~ x *Botryllus schlosseri* Exposure"
 author: "Celeste Valdivia"
 date: "2023-10-30"
 categories: [study plans, nickel chloride]
-image: "bot_genome_proj.jpeg"
+image: ""
 ---
 
 ```{r setup, include=TRUE, warning=FALSE}
@@ -130,7 +130,6 @@ $$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.045g/L*0.99L$$ $$V_1 = 0.04455 L = 44.
 
 #### *Day of Dissections*
 
-
 The following steps should be conducted in a chemical fume hood and iterated through one beaker at a time to avoid desiccation stress:
 
 13. Remove 100% of the exposure water from beaker and dispose of NiCl~2~ dosed artificial seawater in the appropriately marked hazardous waste container.
@@ -158,4 +157,3 @@ You may now work outside the chemical fumehood. Note there may be residual NiCl~
 22. No replacement of media over course of trial.
 
 23. Transfer samples containing cumulative system suspended in RNAProtect to -20 C freezer overnight. The following day, transfer samples to -80 C freezer for long term storage.
-
