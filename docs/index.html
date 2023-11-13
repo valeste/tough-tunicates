@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -60,7 +60,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -93,6 +94,7 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
@@ -112,35 +114,35 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Celeste Valdivia’s Open Lab Notebook</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/valeste"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/valeste" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/celestevaldivia/"><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/celestevaldivia/" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="malito:cvaldi@uw.edu"><i class="bi bi-envelope-heart" role="img">
+    <a class="nav-link" href="malito:cvaldi@uw.edu" rel="" target=""><i class="bi bi-envelope-heart" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -167,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(14)</span></div><div class="category" data-category="ampullae">ampullae <span class="quarto-category-count">(2)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cool paper">cool paper <span class="quarto-category-count">(3)</span></div><div class="category" data-category="discussion">discussion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="epithelial">epithelial <span class="quarto-category-count">(4)</span></div><div class="category" data-category="nickel chloride">nickel chloride <span class="quarto-category-count">(2)</span></div><div class="category" data-category="optimization">optimization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="primaries">primaries <span class="quarto-category-count">(3)</span></div><div class="category" data-category="primary buds">primary buds <span class="quarto-category-count">(1)</span></div><div class="category" data-category="primers">primers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="protocol">protocol <span class="quarto-category-count">(3)</span></div><div class="category" data-category="qPCR">qPCR <span class="quarto-category-count">(1)</span></div><div class="category" data-category="study plans">study plans <span class="quarto-category-count">(2)</span></div><div class="category" data-category="substrate">substrate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="thesis">thesis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="zooids">zooids <span class="quarto-category-count">(3)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="ampullae">ampullae <span class="quarto-category-count">(2)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cool paper">cool paper <span class="quarto-category-count">(2)</span></div><div class="category" data-category="discussion">discussion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="epithelial">epithelial <span class="quarto-category-count">(4)</span></div><div class="category" data-category="nickel chloride">nickel chloride <span class="quarto-category-count">(2)</span></div><div class="category" data-category="primaries">primaries <span class="quarto-category-count">(3)</span></div><div class="category" data-category="primary buds">primary buds <span class="quarto-category-count">(1)</span></div><div class="category" data-category="primers">primers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="protocol">protocol <span class="quarto-category-count">(3)</span></div><div class="category" data-category="qPCR">qPCR <span class="quarto-category-count">(1)</span></div><div class="category" data-category="study plans">study plans <span class="quarto-category-count">(2)</span></div><div class="category" data-category="substrate">substrate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="thesis">thesis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="zooids">zooids <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -180,34 +182,10 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1698430436059" data-listing-reading-time-sort="20.675">
-<a href="./posts/amino-acid-OpM1-media/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-img-bg" style="height: 150px;">
-&nbsp;
-</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-amino acid supplementation to media
-</h5>
-<div class="card-text listing-description">
-Table 1 Compositions of M1 and OpM1 Media
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1698423972233" data-listing-reading-time-sort="5.05">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1699901160270" data-listing-reading-time-sort="6">
 <a href="./posts/nicl2-botryllus-exp1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/nicl2-botryllus-exp1/12.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="posts/nicl2-botryllus-exp1/12.jpeg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Exposure 1
@@ -224,41 +202,7 @@ Divided animals into separate system, 3 days prior to start of exposure, 8 days 
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="cool paper,optimization" data-listing-date-sort="1698476400000" data-listing-file-modified-sort="1698963679416" data-listing-reading-time-sort="2.65">
-<a href="./posts/gen-algo-media-opt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/gen-algo-media-opt/v3_design.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Use of Genetic Algorithm in Cell Culture Media Optimization
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('cool paper'); return false;">
-cool paper
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('optimization'); return false;">
-optimization
-</div>
-</div>
-<div class="card-text listing-description">
-
-
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Celeste Valdivia
-</div>
-<div class="listing-date">
-Oct 28, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="protocol,qPCR,primers,nickel chloride" data-listing-date-sort="1697612400000" data-listing-file-modified-sort="1697740185781" data-listing-reading-time-sort="18.05">
+<div class="g-col-1" data-index="1" data-categories="protocol,qPCR,primers,nickel chloride" data-listing-date-sort="1697612400000" data-listing-file-modified-sort="1699901380489" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23">
 <a href="./posts/tunicate-primers/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -297,7 +241,7 @@ Oct 18, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="cool paper,discussion" data-listing-date-sort="1696489200000" data-listing-file-modified-sort="1696534738059" data-listing-reading-time-sort="2.515">
+<div class="g-col-1" data-index="2" data-categories="cool paper,discussion" data-listing-date-sort="1696489200000" data-listing-file-modified-sort="1697220448038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <a href="./posts/exploring-botryllus-ECM/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -330,7 +274,7 @@ Oct 5, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="study plans,nickel chloride" data-listing-date-sort="1695884400000" data-listing-file-modified-sort="1698423972235" data-listing-reading-time-sort="9.425">
+<div class="g-col-1" data-index="3" data-categories="study plans,nickel chloride" data-listing-date-sort="1695884400000" data-listing-file-modified-sort="1699901160270" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
 <a href="./posts/nicl2-botryllus-pilot/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -363,37 +307,7 @@ Sep 28, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="protocol" data-listing-date-sort="1695711600000" data-listing-file-modified-sort="1696534463682" data-listing-reading-time-sort="4.865">
-<a href="./posts/tryp-botryllus/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/tryp-botryllus/hemo2.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Trypsinization of <em>Botryllus schlosseri</em> Epithelial Cells
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('protocol'); return false;">
-protocol
-</div>
-</div>
-<div class="card-text listing-description">
-Trypsinization of cell cultures is a common method use in cell biology to disassociate adherent cells <em>in vitro</em> from the vessel in which they are being cultured for the purpose of passaging the cells…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Celeste Valdivia
-</div>
-<div class="listing-date">
-Sep 26, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="thesis,study plans" data-listing-date-sort="1695711600000" data-listing-file-modified-sort="1698540866751" data-listing-reading-time-sort="12.68">
+<div class="g-col-1" data-index="4" data-categories="thesis,study plans" data-listing-date-sort="1695711600000" data-listing-file-modified-sort="1699901160270" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
 <a href="./posts/masters_work/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -426,7 +340,37 @@ Sep 26, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="epithelial,protocol" data-listing-date-sort="1695625200000" data-listing-file-modified-sort="1695706309752" data-listing-reading-time-sort="5.36">
+<div class="g-col-1" data-index="5" data-categories="protocol" data-listing-date-sort="1695711600000" data-listing-file-modified-sort="1697220448054" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<a href="./posts/tryp-botryllus/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/tryp-botryllus/hemo2.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Trypsinization of <em>Botryllus schlosseri</em> Epithelial Cells
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('protocol'); return false;">
+protocol
+</div>
+</div>
+<div class="card-text listing-description">
+Trypsinization of cell cultures is a common method use in cell biology to disassociate adherent cells <em>in vitro</em> from the vessel in which they are being cultured for the purpose of passaging the cells…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Celeste Valdivia
+</div>
+<div class="listing-date">
+Sep 26, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="epithelial,protocol" data-listing-date-sort="1695625200000" data-listing-file-modified-sort="1697220448034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
 <a href="./posts/epi-isolation-protocol/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -459,7 +403,7 @@ Sep 25, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="epithelial,ampullae,zooids,primary buds,primaries,substrate" data-listing-date-sort="1693378800000" data-listing-file-modified-sort="1696532074285" data-listing-reading-time-sort="16.645">
+<div class="g-col-1" data-index="7" data-categories="epithelial,ampullae,zooids,primary buds,primaries,substrate" data-listing-date-sort="1693378800000" data-listing-file-modified-sort="1697220447974" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17">
 <a href="./posts/T18/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -504,7 +448,7 @@ Aug 30, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="epithelial,zooids,primaries" data-listing-date-sort="1692687600000" data-listing-file-modified-sort="1694801900124" data-listing-reading-time-sort="9.565">
+<div class="g-col-1" data-index="8" data-categories="epithelial,zooids,primaries" data-listing-date-sort="1692687600000" data-listing-file-modified-sort="1697220447970" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
 <a href="./posts/T17/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -540,7 +484,7 @@ Aug 22, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="epithelial,ampullae,zooids,primaries" data-listing-date-sort="1692601200000" data-listing-file-modified-sort="1694729838718" data-listing-reading-time-sort="10.96">
+<div class="g-col-1" data-index="9" data-categories="epithelial,ampullae,zooids,primaries" data-listing-date-sort="1692601200000" data-listing-file-modified-sort="1697220447806" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
 <a href="./posts/T16/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -579,7 +523,7 @@ Aug 21, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="cool paper" data-listing-date-sort="1677484800000" data-listing-file-modified-sort="1693441796661" data-listing-reading-time-sort="2.24">
+<div class="g-col-1" data-index="10" data-categories="cool paper" data-listing-date-sort="1677484800000" data-listing-file-modified-sort="1697220448042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <a href="./posts/homework-7-FISH-521/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -609,7 +553,7 @@ Feb 27, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="13" data-categories="code,analysis" data-listing-date-sort="1677225600000" data-listing-file-modified-sort="1677539879636" data-listing-reading-time-sort="1.595">
+<div class="g-col-1" data-index="11" data-categories="code,analysis" data-listing-date-sort="1677225600000" data-listing-file-modified-sort="1697220448054" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <a href="./posts/post-with-code/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -789,9 +733,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -856,6 +814,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -899,6 +943,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">This page is built using <a href="https://quarto.org/">Quarto</a></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
 
