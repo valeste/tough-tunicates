@@ -3,7 +3,7 @@ title: "Pilot 1.2 *in vivo* NiCl~2~ x *Botryllus schlosseri* Exposure"
 author: "Celeste Valdivia"
 date: "2023-10-30"
 categories: [study plans, nickel chloride]
-image: ""
+image: "exp1_0dps_a4_3_0961 Medium.jpeg"
 ---
 
 ```{r setup, include=TRUE, warning=FALSE}
