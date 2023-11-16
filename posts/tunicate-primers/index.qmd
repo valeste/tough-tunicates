@@ -21,7 +21,7 @@ I am interested in designing primers for *Botryllus schlosseri* to evaluate diff
 This list serves as a jumping off point for myself to look into genes that may potentially be differentially expressed in *Botryllus schlosseri* exposed to the clastogen (by oxidative damage to the DNA), nickel chloride.
 
 | Role                    | Gene ID      | Whole Gene Name                                                            |
-|:------------------------|:-------------|:---------------------------------------------------------------------------|
+|:--------------|:--------------|:------------------------------------------|
 | Senescence              | TP53 (p53)   | Tumor protein p53                                                          |
 | Senescence              | CDKN1A (p21) | Cyclin-dependent kinase inhibitor 1A                                       |
 | Senescence              | CDKN2A (p16) | Cyclin-dependent kinase inhibitor 2A                                       |
@@ -52,7 +52,7 @@ This list serves as a jumping off point for myself to look into genes that may p
 For the purpose of expedience and accuracy. This generally is the preferred approach.
 
 | Gene     | NCBI Accession Number | DOI                                   | Fwd Primer                        | Rev Primer                      |
-|----------|-----------------------|---------------------------------------|-----------------------------------|---------------------------------|
+|--------------|--------------|----------------|--------------|--------------|
 | Mortalin | KY212120              | doi:10.1016/<br />j.ydbio.2017.10.023 | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
 
 ## Design primers in-house for *Botryllus schlosseri*.
@@ -104,7 +104,7 @@ This method allows us to leverage well-annotated gene data to find potential hom
 #### Sequences Identified with BLAST Tool in the botznik-ctg.fa Database
 
 | Role                          | Gene ID | Query NCBI GenBank Accession | Query Organism                 | Top Sequence Producing Significant Alignment | Score (bits) | E Value  |
-|:------------------------------|:--------|:-----------------------------|:-------------------------------|:---------------------------------------------|:-------------|:---------|
+|:---------|:---------|:---------|:---------|:-----------|:---------|:---------|
 | Apoptosis                     | TNF     | LR791346.1                   | \[Phallusia mammillata\]       | botctg065850                                 | 70           | 1.00E-09 |
 | DNA Repair                    | PolB    | LR789137.1                   | \[Phallusia mammillata\]       | botctg092056                                 | 60           | 1.00E-06 |
 | Oxidative Stress              | SOD1    | XP_039262007.1               | \[Styela clava\]               | botctg006757                                 | 199          | 8.00E-51 |
@@ -134,43 +134,11 @@ head -n 10 data/botznik-ctg.fa
 Create an empty extracted_sequences.csv file. We will upload this csv file to PrimerQuest directly.
 
 ```{r creates empty fasta and csv files, engine ='bash', eval = FALSE}
-touch output/extracted_sequences.fasta
 
 touch output/extracted_sequences.csv
 ```
 
-Now let's pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.fasta file prior to reprinting it into the file. \]
-
-```{r fasta file for extracted sequences, engine= 'bash', eval = FALSE}
-
-# Define a mapping of identifiers to gene names
-declare -A gene_map
-gene_map[">botctg065850"]="TNF"
-gene_map[">botctg092056"]="PolB"
-gene_map[">botctg006757"]="SOD1"
-gene_map[">botctg109566"]="SIRT6"
-gene_map[">botctg061218"]="BAX"
-gene_map[">botctg003666"]="AIF1"
-gene_map[">botctg106479"]="IAP7"
-gene_map[">botctg019995"]="PARP1"
-gene_map[">botctg007779"]="MYC"
-gene_map[">botctg003503"]="SOXB1"
-gene_map[">botctg006949"]="POU3"
-
-# Output file
-output_file="output/extracted_sequences.fasta"
-
-# Loop through the identifiers
-for identifier in "${!gene_map[@]}"; do
-    gene_name="${gene_map[$identifier]}"
-    # Check if the identifier exists in the output file
-    if ! grep -q "$identifier $gene_name" "$output_file"; then
-        # Extract the sequence and append it to the output file
-        awk -v id="$identifier" -v gene="$gene_name" '$0 ~ id {flag=1; print id,gene; next} /^>/{flag=0} flag {printf "%s", $0}' data/botznik-ctg.fa >> "$output_file"
-    fi
-done
-
-```
+Now let's pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.csv file prior to reprinting it into the file. \]
 
 This will make us a csv file that we can upload to PrimerQuest directly.
 
@@ -227,6 +195,6 @@ General rules for designing good primers:
 # Confirmed Primers
 
 | Gene     | Designer | NCBI Accession Number | Fwd Primer                        | Rev Primer                      |
-|:---------|:---------|:----------------------|:----------------------------------|:--------------------------------|
+|:------------|:------------|:------------|:-----------------|:---------------|
 | Mortalin | GJ       | KY212120              | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
 | HSP70    | GJ       | TBD                   | TBD                               | TBD                             |

@@ -250,9 +250,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This list serves as a jumping off point for myself to look into genes that may potentially be differentially expressed in <em>Botryllus schlosseri</em> exposed to the clastogen (by oxidative damage to the DNA), nickel chloride.</p>
 <table class="table">
 <colgroup>
-<col style="width: 21%">
-<col style="width: 12%">
-<col style="width: 66%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 58%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -382,11 +382,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>For the purpose of expedience and accuracy. This generally is the preferred approach.</p>
 <table class="table">
 <colgroup>
-<col style="width: 7%">
-<col style="width: 16%">
-<col style="width: 27%">
-<col style="width: 25%">
-<col style="width: 23%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 22%">
+<col style="width: 19%">
+<col style="width: 19%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -485,13 +485,13 @@ Note
 <h4 class="anchored" data-anchor-id="sequences-identified-with-blast-tool-in-the-botznik-ctg.fa-database">Sequences Identified with BLAST Tool in the botznik-ctg.fa Database</h4>
 <table class="table">
 <colgroup>
-<col style="width: 18%">
-<col style="width: 5%">
-<col style="width: 17%">
-<col style="width: 18%">
-<col style="width: 26%">
-<col style="width: 8%">
-<col style="width: 5%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -631,74 +631,44 @@ TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
 </div>
 <p>Create an empty extracted_sequences.csv file. We will upload this csv file to PrimerQuest directly.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> output/extracted_sequences.fasta</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> output/extracted_sequences.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> output/extracted_sequences.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Now let’s pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.fasta file prior to reprinting it into the file. ]</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a mapping of identifiers to gene names</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">declare</span> <span class="at">-A</span> <span class="va">gene_map</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg065850"</span><span class="op">]=</span><span class="st">"TNF"</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg092056"</span><span class="op">]=</span><span class="st">"PolB"</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg006757"</span><span class="op">]=</span><span class="st">"SOD1"</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg109566"</span><span class="op">]=</span><span class="st">"SIRT6"</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg061218"</span><span class="op">]=</span><span class="st">"BAX"</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg003666"</span><span class="op">]=</span><span class="st">"AIF1"</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg106479"</span><span class="op">]=</span><span class="st">"IAP7"</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg019995"</span><span class="op">]=</span><span class="st">"PARP1"</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg007779"</span><span class="op">]=</span><span class="st">"MYC"</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg003503"</span><span class="op">]=</span><span class="st">"SOXB1"</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg006949"</span><span class="op">]=</span><span class="st">"POU3"</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Output file</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="va">output_file</span><span class="op">=</span><span class="st">"output/extracted_sequences.fasta"</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through the identifiers</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> identifier <span class="kw">in</span> <span class="st">"</span><span class="va">${</span><span class="op">!</span><span class="va">gene_map</span><span class="op">[@]</span><span class="va">}</span><span class="st">"</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="va">gene_name</span><span class="op">=</span><span class="st">"</span><span class="va">${gene_map</span><span class="op">[</span><span class="va">$identifier</span><span class="op">]</span><span class="va">}</span><span class="st">"</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if the identifier exists in the output file</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="ot">! </span><span class="fu">grep</span> <span class="at">-q</span> <span class="st">"</span><span class="va">$identifier</span><span class="st"> </span><span class="va">$gene_name</span><span class="st">"</span> <span class="st">"</span><span class="va">$output_file</span><span class="st">"</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Extract the sequence and append it to the output file</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        <span class="fu">awk</span> <span class="at">-v</span> id=<span class="st">"</span><span class="va">$identifier</span><span class="st">"</span> <span class="at">-v</span> gene=<span class="st">"</span><span class="va">$gene_name</span><span class="st">"</span> <span class="st">'$0 ~ id {flag=1; print id,gene; next} /^&gt;/{flag=0} flag {printf "%s", $0}'</span> data/botznik-ctg.fa <span class="op">&gt;&gt;</span> <span class="st">"</span><span class="va">$output_file</span><span class="st">"</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>Now let’s pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.csv file prior to reprinting it into the file. ]</p>
 <p>This will make us a csv file that we can upload to PrimerQuest directly.</p>
 <div class="cell" data-hash="index_cache/html/csv file for extracted sequences_7ba7eff8909b187abdeda97277502cbc">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a mapping of identifiers to gene names</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">declare</span> <span class="at">-A</span> <span class="va">gene_map</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg065850"</span><span class="op">]=</span><span class="st">"TNF"</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg092056"</span><span class="op">]=</span><span class="st">"PolB"</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg006757"</span><span class="op">]=</span><span class="st">"SOD1"</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg109566"</span><span class="op">]=</span><span class="st">"SIRT6"</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg061218"</span><span class="op">]=</span><span class="st">"BAX"</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg003666"</span><span class="op">]=</span><span class="st">"AIF1"</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg106479"</span><span class="op">]=</span><span class="st">"IAP7"</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg019995"</span><span class="op">]=</span><span class="st">"PARP1"</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg007779"</span><span class="op">]=</span><span class="st">"MYC"</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg003503"</span><span class="op">]=</span><span class="st">"SOXB1"</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg006949"</span><span class="op">]=</span><span class="st">"POU3"</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Output CSV file</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="va">output_file</span><span class="op">=</span><span class="st">"output/extracted_sequences.csv"</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Add column headers</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"SequenceName,Sequence"</span> <span class="op">&gt;</span> <span class="st">"</span><span class="va">$output_file</span><span class="st">"</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through the identifiers</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> identifier <span class="kw">in</span> <span class="st">"</span><span class="va">${</span><span class="op">!</span><span class="va">gene_map</span><span class="op">[@]</span><span class="va">}</span><span class="st">"</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="va">gene_name</span><span class="op">=</span><span class="st">"</span><span class="va">${gene_map</span><span class="op">[</span><span class="va">$identifier</span><span class="op">]</span><span class="va">}</span><span class="st">"</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract the sequence and append it to the CSV file</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">awk</span> <span class="at">-v</span> id=<span class="st">"</span><span class="va">$identifier</span><span class="st">"</span> <span class="at">-v</span> gene=<span class="st">"</span><span class="va">$gene_name</span><span class="st">"</span> <span class="st">'$0 ~ id {flag=1; id_and_gene = gene; next} /^&gt;/{if (flag) print id_and_gene "," seq; flag=0} flag {seq = seq $0}'</span> data/botznik-ctg.fa <span class="op">&gt;&gt;</span> <span class="st">"</span><span class="va">$output_file</span><span class="st">"</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a mapping of identifiers to gene names</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">declare</span> <span class="at">-A</span> <span class="va">gene_map</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg065850"</span><span class="op">]=</span><span class="st">"TNF"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg092056"</span><span class="op">]=</span><span class="st">"PolB"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg006757"</span><span class="op">]=</span><span class="st">"SOD1"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg109566"</span><span class="op">]=</span><span class="st">"SIRT6"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg061218"</span><span class="op">]=</span><span class="st">"BAX"</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg003666"</span><span class="op">]=</span><span class="st">"AIF1"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg106479"</span><span class="op">]=</span><span class="st">"IAP7"</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg019995"</span><span class="op">]=</span><span class="st">"PARP1"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg007779"</span><span class="op">]=</span><span class="st">"MYC"</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg003503"</span><span class="op">]=</span><span class="st">"SOXB1"</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg006949"</span><span class="op">]=</span><span class="st">"POU3"</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Output CSV file</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="va">output_file</span><span class="op">=</span><span class="st">"output/extracted_sequences.csv"</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Add column headers</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"SequenceName,Sequence"</span> <span class="op">&gt;</span> <span class="st">"</span><span class="va">$output_file</span><span class="st">"</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through the identifiers</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> identifier <span class="kw">in</span> <span class="st">"</span><span class="va">${</span><span class="op">!</span><span class="va">gene_map</span><span class="op">[@]</span><span class="va">}</span><span class="st">"</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="va">gene_name</span><span class="op">=</span><span class="st">"</span><span class="va">${gene_map</span><span class="op">[</span><span class="va">$identifier</span><span class="op">]</span><span class="va">}</span><span class="st">"</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract the sequence and append it to the CSV file</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">awk</span> <span class="at">-v</span> id=<span class="st">"</span><span class="va">$identifier</span><span class="st">"</span> <span class="at">-v</span> gene=<span class="st">"</span><span class="va">$gene_name</span><span class="st">"</span> <span class="st">'$0 ~ id {flag=1; id_and_gene = gene; next} /^&gt;/{if (flag) print id_and_gene "," seq; flag=0} flag {seq = seq $0}'</span> data/botznik-ctg.fa <span class="op">&gt;&gt;</span> <span class="st">"</span><span class="va">$output_file</span><span class="st">"</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s check out the extracted sequences in the csv file:</p>
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-1_f0557b367165087e1fde1ff1bd974dff">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"output/extracted_sequences.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"output/extracted_sequences.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   SequenceName
 1          PolB
@@ -747,11 +717,11 @@ TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
 <h1>Confirmed Primers</h1>
 <table class="table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 20%">
-<col style="width: 31%">
-<col style="width: 29%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 24%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
