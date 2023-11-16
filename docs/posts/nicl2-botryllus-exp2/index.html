@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Celeste Valdivia">
-<meta name="dcterms.date" content="2023-10-30">
+<meta name="dcterms.date" content="2023-11-13">
 
-<title>Celeste Valdivia’s Open Lab Notebook - Pilot 1.2 in vivo NiCl2 x Botryllus schlosseri Exposure</title>
+<title>Celeste Valdivia’s Open Lab Notebook - Exposure 2 in vivo NiCl2 x Botryllus schlosseri</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -183,7 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Pilot 1.2 <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em> Exposure</h1>
+      <h1 class="title">Exposure 2 <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em></h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">study plans</div>
                 <div class="quarto-category">nickel chloride</div>
@@ -204,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 30, 2023</p>
+        <p class="date">November 13, 2023</p>
       </div>
     </div>
     
@@ -223,7 +223,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#experimental-planning" id="toc-experimental-planning" class="nav-link active" data-scroll-target="#experimental-planning">Experimental Planning</a>
   <ul class="collapse">
   <li><a href="#animal-handling-prior-to-exposure" id="toc-animal-handling-prior-to-exposure" class="nav-link" data-scroll-target="#animal-handling-prior-to-exposure">Animal Handling Prior to Exposure</a></li>
-  <li><a href="#randomize-treatment-and-plate-assignments" id="toc-randomize-treatment-and-plate-assignments" class="nav-link" data-scroll-target="#randomize-treatment-and-plate-assignments">Randomize Treatment and Plate Assignments</a></li>
+  <li><a href="#randomize-treatment" id="toc-randomize-treatment" class="nav-link" data-scroll-target="#randomize-treatment">Randomize Treatment</a></li>
   <li><a href="#nickel-chloride-dilutions" id="toc-nickel-chloride-dilutions" class="nav-link" data-scroll-target="#nickel-chloride-dilutions">Nickel Chloride Dilutions</a>
   <ul class="collapse">
   <li><a href="#required-volume-of-artificial-seawater" id="toc-required-volume-of-artificial-seawater" class="nav-link" data-scroll-target="#required-volume-of-artificial-seawater">Required Volume of Artificial Seawater</a></li>
@@ -266,46 +266,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="animal-handling-prior-to-exposure" class="level2">
 <h2 class="anchored" data-anchor-id="animal-handling-prior-to-exposure">Animal Handling Prior to Exposure</h2>
 <p>Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.</p>
+<p>Only 9 individuals had properly adhered systems. Will reduce the number of replicates.</p>
 </section>
-<section id="randomize-treatment-and-plate-assignments" class="level2">
-<h2 class="anchored" data-anchor-id="randomize-treatment-and-plate-assignments">Randomize Treatment and Plate Assignments</h2>
-<p>Here we will have R randomly assign each animal to a treatment and each treatment/animal to a different well on the plate. The idea here is to randomize placements as there may be variations in the well design.</p>
+<section id="randomize-treatment" class="level2">
+<h2 class="anchored" data-anchor-id="randomize-treatment">Randomize Treatment</h2>
+<p>Here we will have R randomly assign each animal to a treatment.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3445</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>plate_number_12_well <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="at">times =</span> <span class="dv">12</span>))</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>well_placements <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A1"</span>, <span class="st">"A2"</span>, <span class="st">"A3"</span>, <span class="st">"A4"</span>, <span class="st">"B1"</span>, <span class="st">"B2"</span>, <span class="st">"B3"</span>, <span class="st">"B4"</span>, <span class="st">"C1"</span>, <span class="st">"C3"</span>, <span class="st">"C2"</span>, <span class="st">"C4"</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>conditions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Control R1"</span>, <span class="st">"Control R2"</span>, <span class="st">"Control R3"</span>, <span class="st">"Control R4"</span>, <span class="st">"5 mg/L R1"</span>, <span class="st">"5 mg/L R2"</span>, <span class="st">"5 mg/L R3"</span>, <span class="st">"5 mg/L R4"</span>, <span class="st">"45 mg/L R1"</span>, <span class="st">"45 mg/L R2"</span>, <span class="st">"45 mg/L R3"</span>, <span class="st">"45 mg/L R4"</span>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>animal_id <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"S246C001"</span>, <span class="st">"S228C001"</span>, <span class="st">"S215C001"</span>, <span class="st">"S247C001"</span>, <span class="st">"S224C001"</span>, <span class="st">"S218C001"</span>, <span class="st">"S248C001"</span>, <span class="st">"S212C001"</span>, <span class="st">"S209C001"</span>, <span class="st">"S207C001"</span>, <span class="st">"S200C001"</span>, <span class="st">"TBD"</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>well_assignments_exp1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Plate_Number =</span> <span class="fu">sample</span>(plate_number_12_well),</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Well_Placements =</span> <span class="fu">sample</span>(well_placements),</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Conditions =</span> <span class="fu">sample</span>(conditions),</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">animal_ID =</span> <span class="fu">sample</span>(animal_id)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(well_assignments_exp1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3789</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>conditions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Control R1"</span>, <span class="st">"Control R2"</span>, <span class="st">"Control R3"</span>, <span class="st">"5 mg/L R1"</span>, <span class="st">"5 mg/L R2"</span>, <span class="st">"5 mg/L R3"</span>, <span class="st">"45 mg/L R1"</span>, <span class="st">"45 mg/L R2"</span>, <span class="st">"45 mg/L R3"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>animal_id <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"S266C001"</span>, <span class="st">"S259C001"</span>, <span class="st">"S271C001"</span>, <span class="st">"S263C002"</span>, <span class="st">"S251C001"</span>, <span class="st">"S272C001"</span>, <span class="st">"S256C001"</span>, <span class="st">"S270C001"</span>, <span class="st">"S267C001"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>treatment_assignments_exp2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Conditions =</span> <span class="fu">sample</span>(conditions),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">animal_ID =</span> <span class="fu">sample</span>(animal_id)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(treatment_assignments_exp2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   Plate_Number Well_Placements Conditions animal_ID
-1             1              B4  5 mg/L R4       TBD
-2             1              B2  5 mg/L R3  S246C001
-3             1              A3 Control R1  S209C001
-4             1              A1  5 mg/L R1  S200C001
-5             1              A2 45 mg/L R1  S218C001
-6             1              C3 Control R2  S228C001
-7             1              C4 Control R3  S247C001
-8             1              B3 45 mg/L R2  S215C001
-9             1              C2 45 mg/L R3  S224C001
-10            1              A4 Control R4  S212C001
-11            1              C1  5 mg/L R2  S248C001
-12            1              B1 45 mg/L R4  S207C001</code></pre>
+<pre><code>  Conditions animal_ID
+1 45 mg/L R3  S263C002
+2 45 mg/L R1  S251C001
+3 Control R3  S266C001
+4 Control R1  S271C001
+5 45 mg/L R2  S259C001
+6  5 mg/L R2  S256C001
+7  5 mg/L R3  S267C001
+8 Control R2  S270C001
+9  5 mg/L R1  S272C001</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save assignments in csv for downstream use as metadata</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(well_assignments_exp1, <span class="at">file =</span> <span class="st">"well_assignments.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="12.jpeg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">plate assignments</figcaption><p></p>
-</figure>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(treatment_assignments_exp2, <span class="at">file =</span> <span class="st">"treatment_assignments.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="nickel-chloride-dilutions" class="level2">
@@ -321,13 +310,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Calculations for spiking artificial seawater. 225 mL of seawater required to mostly submerge glass slide in wide mouth 16 oz Kerr mason jar.</p>
 <p>Considerations:</p>
 <ul>
-<li><p>4 replicates</p></li>
+<li><p>3 replicates</p></li>
 <li><p>225 mL per jar</p></li>
 <li><p>3 conditions</p></li>
 <li><p>Account for 10% loss of water during transferring</p></li>
 </ul>
-<p><span class="math display">\[(4*225 * 3) + (0.1*(4*225*3)) = 2,970\]</span></p>
-<p>Need 2,970 mL of artificial seawater total for exposure, particularly, 990 mL of artificial seawater per condition.</p>
+<p><span class="math display">\[(3* 220 * 3) + (0.1*(3*220*3)) = 2,178\]</span></p>
+<p>Need 2,178 mL of artificial seawater total for exposure, particularly, 726 mL of artificial seawater per condition.</p>
 </section>
 <section id="calculations" class="level3">
 <h3 class="anchored" data-anchor-id="calculations">Calculations</h3>
@@ -338,11 +327,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <section id="low-dose-5-mgl" class="level4">
 <h4 class="anchored" data-anchor-id="low-dose-5-mgl">Low Dose: 5 mg/L</h4>
-<p><span class="math display">\[ C_1*V_1 = C_2*V_2\]</span> <span class="math display">\[ 1 g/L * V_1 = 0.005g/L*0.99L\]</span> <span class="math display">\[V_1 = 0.00495 L = 4.95 mL\]</span> Spike 990 mL of aerated, artificial seawater (16 C) with 4.95 mL of stock NiCl<sub>2</sub> solution. Change in salinity negligible (+/- 1 PPT).</p>
+<p><span class="math display">\[ C_1*V_1 = C_2*V_2\]</span> <span class="math display">\[ 1 g/L * V_1 = 0.005g/L*0.726L\]</span> <span class="math display">\[V_1 = 0.00363 L = 3.63 mL\]</span> Spike 726 mL of aerated, artificial seawater (16 C) with 4.95 mL of stock NiCl<sub>2</sub> solution. Change in salinity negligible (+/- 1 PPT).</p>
 </section>
 <section id="high-dose-45-mgl" class="level4">
 <h4 class="anchored" data-anchor-id="high-dose-45-mgl">High Dose: 45 mg/L</h4>
-<p><span class="math display">\[ C_1*V_1 = C_2*V_2\]</span> <span class="math display">\[ 1 g/L * V_1 = 0.045g/L*0.99L\]</span> <span class="math display">\[V_1 = 0.04455 L = 44.55 mL\]</span> Spike 990 mL of aerated, artificial seawater (16 C) with 44.55 mL of stock NiCl<sub>2</sub> solution. Change in salinity negligible (+/- 1 PPT).</p>
+<p><span class="math display">\[ C_1*V_1 = C_2*V_2\]</span> <span class="math display">\[ 1 g/L * V_1 = 0.045g/L*0.726L\]</span> <span class="math display">\[V_1 = 0.03267 L = 32.67 mL\]</span> Spike 726 mL of aerated, artificial seawater (16 C) with 44.55 mL of stock NiCl<sub>2</sub> solution. Change in salinity negligible (+/- 1 PPT).</p>
 </section>
 </section>
 </section>
@@ -385,29 +374,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Leave animals for 24 hours.</p></li>
 </ol>
 </section>
-<section id="day-of-dissections" class="level4">
-<h4 class="anchored" data-anchor-id="day-of-dissections"><em>Day of Dissections</em></h4>
+<section id="takedown" class="level4">
+<h4 class="anchored" data-anchor-id="takedown"><em>Takedown</em></h4>
 <p>The following steps should be conducted in a chemical fume hood and iterated through one beaker at a time to avoid desiccation stress:</p>
 <ol start="13" type="1">
-<li><p>Remove 100% of the exposure water from beaker and dispose of NiCl<sub>2</sub> dosed artificial seawater in the appropriately marked hazardous waste container.</p></li>
-<li><p>With the animal and glass slide still in the beaker, quadruplicate rinse the glass slide and animal with deionized water.</p></li>
-<li><p>Glass slide may now be handled with nitrile gloves and should be quadruplicate rinsed with artificial seawater over exposure beaker.</p></li>
-<li><p>Transfer glass slide and animal to a fresh 16 oz mason jar containing 200 mL of 15 C artificial seawater.</p></li>
-<li><p>Dispose of excess liquid in exposure beaker in appropriately labeled hazardous waste container.</p></li>
-</ol>
-<p>You may now work outside the chemical fumehood. Note there may be residual NiCl<sub>2</sub> in animal so continue to wear the appropriate PPE and work carefully.</p>
-<ol start="18" type="1">
-<li><p>Using a stainless steel razor blade, remove one of the two cumulative systems on the glass slide. Use forceps to transfer cumulative system to appropriately labeled snap cap 1.5 mL eppendorf PCR safe tube containing 500 uL of RNAProtect by Qiagen.</p></li>
-<li><p>Proceed with dissection of the primary buds or zooids of the second cumulative system on the slide. Refer to <a href="https://valeste.github.io/tough-tunicates/posts/epi-isolation-protocol/">epithelial isolation protocol</a></p></li>
-</ol>
-<ul>
-<li>However, avoid using any ethanol in this procedure.</li>
-</ul>
-<ol start="20" type="1">
-<li><p>Once tissue has been removed, take cell strainer and rinse it with 30 mL ASW-PSA.</p></li>
-<li><p>Place tissue in aliquot of TCM and immediately go to seed tissue in biosaftey cabinet. Mark time of seeding.</p></li>
-<li><p>No replacement of media over course of trial.</p></li>
-<li><p>Transfer samples containing cumulative system suspended in RNAProtect to -20 C freezer overnight. The following day, transfer samples to -80 C freezer for long term storage.</p></li>
+<li><p>Rinse the entirety of the slide and animals with artificial seawter thorougly in quadruplicates to knock off any excess nickel chloride on the animal before transfering to save the tissue.</p></li>
+<li><p>Using a stainless steel razor blade, remove one of the two cumulative systems on the glass slide. Use forceps to transfer cumulative system to appropriately labeled <em>piereced</em> snap cap 1.5 mL eppendorf PCR safe tube and snap freeze in liquid nitrogen for gene expression.</p></li>
+<li><p>Using the same stainless steel razor blade, remove the other cumulative system from the slide and transfer it to tube for SOD assay. Snap freeze</p></li>
+<li><p>Transfer samples containing cumulative system samples to -80 C freezer for long term storage.</p></li>
 </ol>
 
 
