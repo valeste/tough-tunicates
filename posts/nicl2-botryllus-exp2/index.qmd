@@ -1,9 +1,9 @@
 ---
-title: "Pilot 1.2 *in vivo* NiCl~2~ x *Botryllus schlosseri* Exposure"
+title: "Exposure 2 *in vivo* NiCl~2~ x *Botryllus schlosseri*"
 author: "Celeste Valdivia"
-date: "2023-10-30"
+date: "2023-11-13"
 categories: [study plans, nickel chloride]
-image: "exp1_0dps_a4_3_0961 Medium.jpeg"
+image: ""
 ---
 
 ```{r setup, include=TRUE, warning=FALSE}
@@ -22,29 +22,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.
 
-## Randomize Treatment and Plate Assignments
+Only 9 individuals had properly adhered systems. Will reduce the number of replicates.
 
-Here we will have R randomly assign each animal to a treatment and each treatment/animal to a different well on the plate. The idea here is to randomize placements as there may be variations in the well design.
+## Randomize Treatment 
+
+Here we will have R randomly assign each animal to a treatment. 
 
 ```{r}
-set.seed(3445)
-plate_number_12_well <- c(rep(1, times = 12))
-well_placements <- c("A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4", "C1", "C3", "C2", "C4")
-conditions <- c("Control R1", "Control R2", "Control R3", "Control R4", "5 mg/L R1", "5 mg/L R2", "5 mg/L R3", "5 mg/L R4", "45 mg/L R1", "45 mg/L R2", "45 mg/L R3", "45 mg/L R4")
-animal_id <- c("S246C001", "S228C001", "S215C001", "S247C001", "S224C001", "S218C001", "S248C001", "S212C001", "S209C001", "S207C001", "S200C001", "TBD")
-well_assignments_exp1 <- data.frame(
-  Plate_Number = sample(plate_number_12_well),
-  Well_Placements = sample(well_placements),
+set.seed(3789)
+
+conditions <- c("Control R1", "Control R2", "Control R3", "5 mg/L R1", "5 mg/L R2", "5 mg/L R3", "45 mg/L R1", "45 mg/L R2", "45 mg/L R3")
+animal_id <- c("S266C001", "S259C001", "S271C001", "S263C002", "S251C001", "S272C001", "S256C001", "S270C001", "S267C001")
+treatment_assignments_exp2 <- data.frame(
   Conditions = sample(conditions),
   animal_ID = sample(animal_id)
 )
-print(well_assignments_exp1)
+print(treatment_assignments_exp2)
 
 #save assignments in csv for downstream use as metadata
-write.csv(well_assignments_exp1, file = "well_assignments.csv")
+write.csv(treatment_assignments_exp2, file = "treatment_assignments.csv")
 ```
-
-![plate assignments](12.jpeg)
 
 ## Nickel Chloride Dilutions
 
@@ -62,7 +59,7 @@ Calculations for spiking artificial seawater. 225 mL of seawater required to mos
 
 Considerations:
 
--   4 replicates
+-   3 replicates
 
 -   225 mL per jar
 
@@ -70,9 +67,9 @@ Considerations:
 
 -   Account for 10% loss of water during transferring
 
-$$(4*225 * 3) + (0.1*(4*225*3)) = 2,970$$
+$$(3* 220 * 3) + (0.1*(3*220*3)) = 2,178$$
 
-Need 2,970 mL of artificial seawater total for exposure, particularly, 990 mL of artificial seawater per condition.
+Need 2,178 mL of artificial seawater total for exposure, particularly, 726 mL of artificial seawater per condition.
 
 ### Calculations
 
@@ -84,11 +81,13 @@ Stock solution of NiCl~2~ made by undergraduate Gina Jones on 02/08/23.
 
 #### Low Dose: 5 mg/L
 
-$$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.005g/L*0.99L$$ $$V_1 = 0.00495 L = 4.95 mL$$ Spike 990 mL of aerated, artificial seawater (16 C) with 4.95 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+$$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.005g/L*0.726L$$ $$V_1 = 0.00363 L = 3.63 mL$$ Spike 726 mL of aerated, artificial seawater (16 C) with 4.95 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
 
 #### High Dose: 45 mg/L
 
-$$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.045g/L*0.99L$$ $$V_1 = 0.04455 L = 44.55 mL$$ Spike 990 mL of aerated, artificial seawater (16 C) with 44.55 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+$$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.045g/L*0.726L$$ $$V_1 = 0.03267 L = 32.67 mL$$ Spike 726 mL of aerated, artificial seawater (16 C) with 44.55 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+
+
 
 # Protocol
 
@@ -128,32 +127,14 @@ $$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.045g/L*0.99L$$ $$V_1 = 0.04455 L = 44.
 
 12. Leave animals for 24 hours.
 
-#### *Day of Dissections*
+#### *Takedown*
 
 The following steps should be conducted in a chemical fume hood and iterated through one beaker at a time to avoid desiccation stress:
 
-13. Remove 100% of the exposure water from beaker and dispose of NiCl~2~ dosed artificial seawater in the appropriately marked hazardous waste container.
+13. Rinse the entirety of the slide and animals with artificial seawter thorougly in quadruplicates to knock off any excess nickel chloride on the animal before transfering to save the tissue.
 
-14. With the animal and glass slide still in the beaker, quadruplicate rinse the glass slide and animal with deionized water.
+14. Using a stainless steel razor blade, remove one of the two cumulative systems on the glass slide. Use forceps to transfer cumulative system to appropriately labeled *piereced* snap cap 1.5 mL eppendorf PCR safe tube and snap freeze in liquid nitrogen for gene expression.
 
-15. Glass slide may now be handled with nitrile gloves and should be quadruplicate rinsed with artificial seawater over exposure beaker.
+15. Using the same stainless steel razor blade, remove the other cumulative system from the slide and transfer it to tube for SOD assay. Snap freeze
 
-16. Transfer glass slide and animal to a fresh 16 oz mason jar containing 200 mL of 15 C artificial seawater.
-
-17. Dispose of excess liquid in exposure beaker in appropriately labeled hazardous waste container.
-
-You may now work outside the chemical fumehood. Note there may be residual NiCl~2~ in animal so continue to wear the appropriate PPE and work carefully.
-
-18. Using a stainless steel razor blade, remove one of the two cumulative systems on the glass slide. Use forceps to transfer cumulative system to appropriately labeled snap cap 1.5 mL eppendorf PCR safe tube containing 500 uL of RNAProtect by Qiagen.
-
-19. Proceed with dissection of the primary buds or zooids of the second cumulative system on the slide. Refer to [epithelial isolation protocol](https://valeste.github.io/tough-tunicates/posts/epi-isolation-protocol/)
-
--   However, avoid using any ethanol in this procedure.
-
-20. Once tissue has been removed, take cell strainer and rinse it with 30 mL ASW-PSA.
-
-21. Place tissue in aliquot of TCM and immediately go to seed tissue in biosaftey cabinet. Mark time of seeding.
-
-22. No replacement of media over course of trial.
-
-23. Transfer samples containing cumulative system suspended in RNAProtect to -20 C freezer overnight. The following day, transfer samples to -80 C freezer for long term storage.
+16. Transfer samples containing cumulative system samples to -80 C freezer for long term storage.

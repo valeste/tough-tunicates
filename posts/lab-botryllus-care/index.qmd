@@ -1,12 +1,16 @@
 ---
-title: "Lab Reared Botryllus schlosseri Care and Maintenance"
+title: "Lab Reared *Botryllus schlosseri* Care and Maintenance"
 author: "Celeste Valdivia"
 date: "2023-11-8"
 categories: [protocol]
-image: "bot_genome_proj.jpeg"
+image: "oozooid_1 (1).jpg"
 ---
 
-#**Materials**:
+This protocol is for weekly care of lab born *Botryllus schlosseri*. Field sourced tunicates are brought in during the months of May-October and allowed to release oozooids on glass slides. Eventually, you want to aim to only have one genotype per container since the presence of different individuals in one static container of artificial seawater impedes the growth of all juveniles.
+
+
+# Materials
+
 
 -   Small paint brush
 
@@ -24,11 +28,11 @@ image: "bot_genome_proj.jpeg"
 
 -   1 mL disposable pipette
 
-#**Protocol**:
+# Protocol
 
 Cleaning of containers and oozooids / juveniles occurs weekly.
 
-Feeding occurs MWF
+Feeding occurs Monday, Wednesday, and Fridays
 
 1.  Remove rack and oozooid from container.
 
@@ -44,17 +48,23 @@ Feeding occurs MWF
 
 7.  Under microscope, assess the health condition of the oozooid or juvenile Botryllus, if animal is below 6, use a razor blade to remove the animal from the glass slide and set aside slide for cleaning.
 
-    1.  0-dead (no bloodflow)
+    a.  0-dead (no bloodflow)
+    
 
-    2.  2-very bad w heartbeat
+    b.  2-very bad w heartbeat
 
-    3.  4- poor (amp retract, high pigm, tunic puffy)
 
-    4.  6-fair (part poor)
+    c.  4- poor (amp retract, high pigm, tunic puffy)
+    
 
-    5.  8- good (most amp extended, normal tunic & pigm)
+    d.  6-fair (part poor)
+    
 
-    6.  10- great (all amp extended, tunic flat, clear, normal pigm)
+    e.  8- good (most ampullae extended, normal tunic & pigment)
+    
+
+    f.  10- great (all ampullae extended, tunic flat, clear, normal pigment)
+    
 
 8.  For healthy animals, use a small paint brush to very gently clean around the animals ampullae. **It is critical to be careful during this portion to avoid accidentally damaging the ampullae. Do not brush the animal itself.**
 
@@ -64,14 +74,14 @@ Feeding occurs MWF
 
 11. Walk back to the animal cold room and dump most of the remaining amount of water into the dirty water portion of tanks 4 or 7. Retain about 2 inches of water.
 
-12. Direct a hose from the recirculating system into the the container\'s side wall. Open the valve gently to allow a very gentle flow of water to refill the container to just near the junction where water could exit the container. **Be sure to not allow any bubbling to occur as to not overly aerate the water.** 
+12. Direct a hose from the recirculating system into the the container's side wall. Open the valve gently to allow a very gentle flow of water to refill the container to just near the junction where water could exit the container. **Be sure to not allow any bubbling to occur as to not overly aerate the water.** 
 
     1.  Tip for reducing aeration:
 
         1.  Always fill the container with the water hitting the side wall or below the water line.
 
-13.  Once container is refilled and back on the bench add one drop of food using a disposable 1mL pipette (Roti Rich = Wednesdays, PhytoPlankton = Mondays and Fridays) per oozooid number into container.
+13. Once container is refilled and back on the bench add one drop of food using a disposable 1mL pipette (Roti Rich = Wednesdays, PhytoPlankton = Mondays and Fridays) per oozooid number into container.
 
-14.  Using the back of of the disposable 1 mL pipette, swirl around the food to distribute it evenly throughout the container.
+14. Using the back of of the disposable 1 mL pipette, swirl around the food to distribute it evenly throughout the container.
 
 15. Between animals, dump water previously used in 15 cm petri dish and replace with fresh water from container of next oozooid.
