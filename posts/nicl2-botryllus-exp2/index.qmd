@@ -22,6 +22,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.
 
+Only 9 individuals had properly adhered systems. Will reduce the number of replicates.
+
 ## Randomize Treatment 
 
 Here we will have R randomly assign each animal to a treatment. 
@@ -29,8 +31,8 @@ Here we will have R randomly assign each animal to a treatment.
 ```{r}
 set.seed(3789)
 
-conditions <- c("Control R1", "Control R2", "Control R3", "Control R4", "5 mg/L R1", "5 mg/L R2", "5 mg/L R3", "5 mg/L R4", "45 mg/L R1", "45 mg/L R2", "45 mg/L R3", "45 mg/L R4")
-animal_id <- c("", "", "", "", "", "", "", "", "", "", "", "")
+conditions <- c("Control R1", "Control R2", "Control R3", "5 mg/L R1", "5 mg/L R2", "5 mg/L R3", "45 mg/L R1", "45 mg/L R2", "45 mg/L R3")
+animal_id <- c("S266C001", "S259C001", "S271C001", "S263C002", "S251C001", "S272C001", "S256C001", "S270C001", "S267C001")
 treatment_assignments_exp2 <- data.frame(
   Conditions = sample(conditions),
   animal_ID = sample(animal_id)
@@ -57,7 +59,7 @@ Calculations for spiking artificial seawater. 225 mL of seawater required to mos
 
 Considerations:
 
--   4 replicates
+-   3 replicates
 
 -   225 mL per jar
 
@@ -65,25 +67,26 @@ Considerations:
 
 -   Account for 10% loss of water during transferring
 
-$$(4*225 * 3) + (0.1*(4*225*3)) = 2,970$$
+$$(3* 220 * 3) + (0.1*(3*220*3)) = 2,178$$
 
-Need 2,970 mL of artificial seawater total for exposure, particularly, 990 mL of artificial seawater per condition.
+Need 2,178 mL of artificial seawater total for exposure, particularly, 726 mL of artificial seawater per condition.
 
 ### Calculations
 
-Stock solution of NiCl~2~ (1 g/L) made by undergraduate Gina Jones on 02/08/23.
+Stock solution of NiCl~2~ made by undergraduate Gina Jones on 02/08/23.
 
--   1 gram of NiCl~2~
+-   NiCl~2~
 
--   Suspended in 1 liter of MilliQ water (0 PPT)
+-   Suspended in MilliQ water (0 PPT)
 
 #### Low Dose: 5 mg/L
 
-$$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.005g/L*0.99L$$ $$V_1 = 0.00495 L = 4.95 mL$$ Spike 990 mL of aerated, artificial seawater (16 C) with 4.95 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+$$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.005g/L*0.726L$$ $$V_1 = 0.00363 L = 3.63 mL$$ Spike 726 mL of aerated, artificial seawater (16 C) with 4.95 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
 
 #### High Dose: 45 mg/L
 
-$$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.045g/L*0.99L$$ $$V_1 = 0.04455 L = 44.55 mL$$ Spike 990 mL of aerated, artificial seawater (16 C) with 44.55 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+$$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.045g/L*0.726L$$ $$V_1 = 0.03267 L = 32.67 mL$$ Spike 726 mL of aerated, artificial seawater (16 C) with 44.55 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+
 
 
 # Protocol
