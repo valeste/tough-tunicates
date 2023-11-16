@@ -3,9 +3,8 @@ title: "Pilot 1.1 *in vivo* NiCl~2~ x *Botryllus schlosseri* Exposure"
 author: "Celeste Valdivia"
 date: "2023-09-28"
 categories: [study plans, nickel chloride]
-image: "v3_design.jpeg"
+image: "S151C001_24hpe_45-R4-230930140353639.jpg"
 ---
-
 
 ```{r setup, include=TRUE, warning=FALSE}
 library(knitr)
@@ -257,6 +256,7 @@ Read in the data into your environment:
 morph <- read.csv(file = "data/morph.csv")  
 
 ```
+
 Manipulate and clean up data set:
 
 ```{r}
@@ -277,6 +277,7 @@ morph_fact <- morph %>%
 ```{r}
 summary(morph_fact)
 ```
+
 ### Exploratory plots
 
 Lollipop chart to visualize the jumps or arrests in blastogenic stage progression for each animal.
@@ -315,7 +316,6 @@ morph <- morph %>%
 summary(morph)
 ```
 
-
 ```{r}
 library(dplyr)
 
@@ -325,7 +325,6 @@ skips_data <- morph %>%
   summarize(skips = max(stage_numeric) - min(stage_numeric))
 
 ```
-
 
 ```{r}
 library(ggplot2)
@@ -375,12 +374,9 @@ kruskal.test(combined_data$mean_skips ~ combined_data$treatment_mg_per_L)
 curl -L https://docs.google.com/spreadsheets/d/13o7wsaFG9QAbBtIo31XtbfPtFOcf5HUEEYDksrcqaok/export?exportFormat=csv | tee ~/tough-tunicates/posts/nicl2-botryllus-pilot/data/cell.csv
 ```
 
-
 ```{r}
 cell <- read.csv(file = "data/cell.csv")
 
 cell$date <- mdy(cell$date)
 
 ```
-
-
