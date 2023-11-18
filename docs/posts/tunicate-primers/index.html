@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Celeste Valdivia">
-<meta name="dcterms.date" content="2023-10-18">
+<meta name="dcterms.date" content="2023-11-17">
 
 <title>Celeste Valdivia’s Open Lab Notebook - Designing Tunicate Primers</title>
 <style>
@@ -205,7 +205,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 18, 2023</p>
+        <p class="date">November 17, 2023</p>
       </div>
     </div>
     
@@ -231,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#protocol" id="toc-protocol" class="nav-link" data-scroll-target="#protocol">Protocol</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#confirmed-primers" id="toc-confirmed-primers" class="nav-link" data-scroll-target="#confirmed-primers">Confirmed Primers</a></li>
+  <li><a href="#primers" id="toc-primers" class="nav-link" data-scroll-target="#primers">Primers</a></li>
   </ul>
 </nav>
     </div>
@@ -243,7 +243,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="overview" class="level1">
 <h1>Overview</h1>
-<p>I am interested in designing primers for <em>Botryllus schlosseri</em> to evaluate differences in expression of apoptosis, stemness, oxidative stress, and senescence related genes after an acute 24 hour exposure to two concentrations of nickel chloride, 5 mg/mL and 45 mg/mL, and a control.</p>
+<p>I am interested in designing primers for <em>Botryllus schlosseri</em> to evaluate differences in expression of apoptosis, stemness, oxidative stress, and senescence related genes after an acute 24 hour exposure to two concentrations of nickel chloride, 5 mg/L and 45 mg/L, and a control.</p>
 </section>
 <section id="potential-gene-list" class="level1">
 <h1>Potential Gene List</h1>
@@ -384,7 +384,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <colgroup>
 <col style="width: 19%">
 <col style="width: 19%">
-<col style="width: 22%">
+<col style="width: 21%">
 <col style="width: 19%">
 <col style="width: 19%">
 </colgroup>
@@ -467,31 +467,18 @@ Tip
 <li><p><strong>Retrieve Botryllus Sequence:</strong> You locate the matching sequence from the <em>Botryllus</em> genome by searching the “botznik-ctg.fa” file using the contig name you found.</p></li>
 <li><p><strong>Primer Design:</strong> Finally, we will use the extracted <em>Botryllus</em> sequence to design primers. We will design primers using <a href="https://www.idtdna.com/PrimerQuest/Home/Index">IDT’s PrimerQuest Tool</a>.</p></li>
 </ol>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>We will be using SYBR Green for the qPCR we are conducting so when on PrimerQuest select <strong>qPCR Intercalating Dyes (Primers only)</strong></p>
-</div>
-</div>
 <p>This method allows us to leverage well-annotated gene data to find potential homologs in <em>Botryllus schlosseri</em>, even when the genome may not be fully annotated. We will want to validate the primers and ideally carry out experimental verification to confirm the presence and function of the genes in <em>Botryllus schlosseri</em>.</p>
 <section id="sequences-identified-with-blast-tool-in-the-botznik-ctg.fa-database" class="level4">
 <h4 class="anchored" data-anchor-id="sequences-identified-with-blast-tool-in-the-botznik-ctg.fa-database">Sequences Identified with BLAST Tool in the botznik-ctg.fa Database</h4>
 <table class="table">
 <colgroup>
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 16%">
-<col style="width: 13%">
-<col style="width: 13%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -535,11 +522,11 @@ Note
 <tr class="even">
 <td style="text-align: left;">Senescence, DNA Damage Repair</td>
 <td style="text-align: left;">SIRT6</td>
-<td style="text-align: left;">BAO57219.1</td>
+<td style="text-align: left;">AB920558.1</td>
 <td style="text-align: left;">[Polyandrocarpa misakiensis]</td>
 <td style="text-align: left;">botctg109566</td>
-<td style="text-align: left;">446</td>
-<td style="text-align: left;">e-124</td>
+<td style="text-align: left;">66</td>
+<td style="text-align: left;">5e-09</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Apoptosis</td>
@@ -631,11 +618,9 @@ TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
 </div>
 <p>Create an empty extracted_sequences.csv file. We will upload this csv file to PrimerQuest directly.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> output/extracted_sequences.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> output/extracted_sequences.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Now let’s pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.csv file prior to reprinting it into the file. ]</p>
-<p>This will make us a csv file that we can upload to PrimerQuest directly.</p>
+<p>Now let’s pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.csv file prior to reprinting it into the file.</p>
 <div class="cell" data-hash="index_cache/html/csv file for extracted sequences_7ba7eff8909b187abdeda97277502cbc">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a mapping of identifiers to gene names</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">declare</span> <span class="at">-A</span> <span class="va">gene_map</span></span>
@@ -667,8 +652,10 @@ TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s check out the extracted sequences in the csv file:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-1_f0557b367165087e1fde1ff1bd974dff">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"output/extracted_sequences.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-1_8735b4c811f4a0d3da7d6ad0c9fff4d4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>extracted_sequences <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"output/extracted_sequences.csv"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(extracted_sequences)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   SequenceName
 1          PolB
@@ -696,15 +683,47 @@ TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
 11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      TATTGTCCATTCTCGGTAATGTCCATTCTCGGTATTGTCCGTTCTCGGTAATGTCCACTCTCGGTAATAGCATTCTCGGTAATGTCCATCTCGGTAATAGCATTCTCGGTAATAGTAGGGAACCAGCTACTCGGCGTCTCAAAACTGTAGCCGCCAAACGCCATCTAGCGTCACCAGTTCAGCCGCCAAACGCCGTGTAGACATTCGGCCGCCGCGCGGCGTTTGGCGTCTGGCGTTTGGCCTCTGAGCGGGTTTAACCCCTGTTGATGATTTGGTTGACTACCATGTCACGTGGTGGCGTATTGTTTTGATTACTGCGGCTGCATTGAGTAACCGAAAACGTCCGCCTTTCACTATGTCTTGCGCAGCGTCGCTAACAAAGTAGCTCAATTCAAGGTGTTTTCTGCCGACGTTGCATAAGACATATTGTGGAAATAAGAAACTCGCAGTTGAGATCTGATTGTTCCATCGGTGAGATCGAATTTGTCGATTAGAATATATTGTGTCACGAAATTGAGAGGCAGATGAAATGATCAACCCTTCACCCACCCAATTCGCCATCGCCTACGGTGTTAGTGTTTTTCTGTCATTCTTTATTCTTATACCCGCAAGCATCGACTCGCACAATATGCGTGGAAATTGTTTGCTTACTGCAAAAGGTGAGAATAATGTAACCTGTGTGTTCGCTTTGTGCTTATGCTTTGAATATGGTTTTGATTCCTTTGAAACACGCTACGGTAATCCATGAGTACCAAGTTCGGTAGTATATGGCAGTGCGAAATCTTTTGGTGCTGTGTGTTGTGTCTTAATATTAACAAAGAACGTAATCCTATTTCTTTTTTGCAGGTTATTGGAATGAAACAAATGAACTGGTTGTGACATGGGGTCATCGATCAGCCTGCAATTTCATAGTGTTCATGGGTGTAGCATGCTTGCTATCCTCTCTATACTTCTTCTGGAACAGCATCTACTCTGTATGCAAGGGCTATGACGGGTAAGATGGGATGTACCGGTACTAAATCAGCTGACTAAAACTGAATGTAATTTCCATTAACAGCTCACCATTATTTTGTTTTGTTTCTCTTTTGCTGGGGGCATTTATGACAATTTCATTACTTTCTTCGTCGTTTATTGTTTCACTTGGTTACTCGTCTTGGTGTGACATTGTGACAGGAAAAAAAGATAATAGCCAAGTGTAAGTACATATTGCAAATATGATAGACTTGCATGCTATTTTAATGTAATGATGATGAATATGCAATTCTCAGGTGCTGGAAAGTTGACCTTGGAAATTTTAATAAAGAGTATCATGTGAACAGTGATGATTTTAGTTCAGACTTGGAAATTATTGAGGTATGTAATTTTATGACTTGTCTGGTAGATTCTCATATAGGCCAGTCTGCTTTTACTGGTTCCAACAGGCAACATTTACAGTATTTCCGTAATTTTGGTGGGTTGAAACTTATCCCTTGAATCCTTAAATCCCTTGAAAGAGCCTTCATGTTGACTATAAATTGTAACTTTTACATGACGTTAAATCGGACATGAAAGCTTTTTAATTTTGCTAGTGTGGGGGGTTGCCACAGCAGATCAGTGATTTGCATTGTGATCCGTCCTAAGCTGCACCCGTCCTTGGTGCCGGCTGGTACTAGTCTTGCTGACCATTGGTGTGTGAGACATCGAAGATATTTTGTCCCCATAATTCCTGTTGGTTGAACAAGGACTTGCCATGATCGGATTTTGCTTGTATTGTGTGTTGCTTGTCTAGCCATGCCGATACCATCTACATGACCAAGTTTCTACATCAATCAGCTTTGCTATTATCATCATATTATAATTTTTCAGTTTGGTTCATGGAGTTCTACTCTATCGTGGGTTGCCGCGACGGTCCTATCCTTCTTCAAAGTAAGATACTACCATAAAAATGAAGAACTCATTCAAGGACTGGCTTTGGAAAAGGATTCTCTCATTCCGTATCGGTTGCGTTATCAGAAAATCGACGAGGGTTCCTCATATACCTAATGTTGCATCCATCAATTCCTTATCCGTTCCTCTACTGCAGTTATTTTTGCCTCGCCATCAATATACACCGTGCTTACTGAGTATTATATACACACCTATACTACGTGGTTATTTCTGATATTATGTGGAGTATATCAATTAGCAGTTAATGGGAGTGGTTATATATGGATTCTAGAGAGCGCCTGTCATGATTCATCAGTGAGGTTGCAAGCTAGTTATGGCAGCGAATTTAAACTACCTGTCTAATGAGCTAATGGAGGGAATTTCGACCTCACCCTTACAAATGTTTGGCATGCTTGGGTTTATAGTCAAATTCGCTGCTATTAATCAACTCGTGGCTAGTAGACCATAATCCAGGGTTGTCACGACTCGTCTCGCAATTTTCTGATGACTGGAGTCATTTCCTCAAAATACGGAACAACTCGAGACTCAGATGGCCAAGATCGACATGTCATTGTAATTACGAAGAATAGTAAAAGTAACCACACTATTGCGATTTCATCTATTGGTACTGGAGAATGCTAAAAGTGTGGAAAATTAGTAGAATATAAATGTGAACCATTCGATATCACTCTACAGTGCAATCAACACGATGACTTGGACTCAACCTACTGCTCGCTGACTTGGACATAATACGGTGTTGAATTGAAAATGACTCGAGTCAAAACTATAACAGTGAAATTGGTTTGTGACTCGGAGCTGTGTGACTTGGTCACAACCCTGCCATGATTCTCCAGTTAACAATAGCAGCGAACTTGACCTGTCTAATGCTGATCTAATGGAGTGAATTTTGACCCCTTCCTTACAAAAAGTATGCAATATGGTCTGTTAGCCATGATTCTCCAGTTGGGGTAACTCGATCATACATCATGCAATAGCAGTATATTCACACAATGACTAAGATAACAGCGGTAACATGAAGGCAGTAACGCGAAAATGATCGCTGACACATGCTTACAATTGCGAATTCAGCAGTTTATTTACACGATGAGAAAAAGAAACAGCGGTAACATGAAGTCAAAAAGGCAGCAAAGCGAAAATGATGGTCAACAGATGCTTACTATTGCGAACTTGGCAATGAAATCACCACAACAGATAGCACAAAATGTCATCAGCACTACACTGCGTAATGCTTTTAGTAACAACCACAACAGATGATGGCACTTACCATTGACTTTGCATATTGAATTTAGTCTTCACTAAATATCTCAAGTTCACTTGCGCTACATCGTACACTATGTATTCATTGTAGAGTAACGACGTTCCTTCACAGCCAGACTCCTTCCCGGACCCTACATGGGCTATGGTGCCATCTTTCATCGTGTAGTCGCTCGATTCGTCCGGGCATGTGGACCCCATACCCTTGACGCTGTGCTTTCCTTTCGGTAGCTTCCGTACGTCCATGGCATTCTTCAACTCGCGCCTAAAAAAAGGTGGCACGTCGATATCACTGTACAAACAAGTGCACACTCAGTAATGAACTCACATATTTCCCAGCGCTACTTCAGCGAGCAATAACAGTCCGTATGGATTCCCATGCGACGCATGGCAGTAATTCGCACTTTTCGAAACCATATCGGCAAAGTACAACCCCTTGCCGAACATATATCCCGTCTGTAATGCAAGAGTCATAATTTTCCAATGCAGTAGCAGGTGAATATAGAGGTTTTTGCAAGCAATTTTTGAATGCAGGGAAGTGACGATAAAGCATTTTTCAAACTGGACCGTTCAGTGTTTGTGACAGGGTGACTAATAATGAAGTTTATACAGATTAACCTGTGCGGATCACCTCGATAAGATACACTCGCCATATCCAAGTTGTTTCGACCGCTTGCTATCTTTTTATTTTATCACAATTTTGTGGTACTGTCAATTGATAAATTCATCATTAAACTGAACGGAACCGACATGAAACCAGCGGGGTCAATCAAATGTGCAAAGGCCTCTTCCATAGGCTAATGCAAACATGGAATATGTTTATAAACCATTTCCAGCGGAGGACGCACCTTTGTTCTTGCATGGTCTCAGAACAAACGCCTGGGCGAGTTTTGGGTGGGAATGGGTGATTCAGTGCCCTAGATGTCAACAAGTGGATACTAAAATCAGGCAGAAAGAATCTATTTACATTAGCGCACATCAGGAACCAAAAGGCGATAAGTGCCGAAATTCGAGCGAACAACATTTCATGACGTACCACAGGCGCTTCGGGCGGCGCAATCCTCAAGCCCTGTGACAAAATGCCGGCGTAGTTGGTCACACGAGAGCCATGCCACAGCAAACGACGGTTGTGCAGCTTCTTGAACGGCCGGTAGCGGCTTTTTTCACCTTAAAAACTGACGAGGTCAGCCGTCGCCACGTCAGACGATTACGAGTTCATTCAGCCTACCTTTACGGTCCAACTCAAATATTTCTTCGACTTCGAGACTGTATGCGGAATGGGTCTTGGCGTGAGTGTTTTGCACCATGTCGCCGATCACGTTACGCATTTCGTCGTTGGCATCGAGTGGCTGCGGAGAAAAATTTATTTTCCGACCGTGAATACCAGAGGCGGTCAGTAACAAAGTGCTTCTACTTTTCATACCAAACTCCAGTGAAAACATGTATTTGATGTCTTCTACGCTACTTTCTTCCAAGTAGTTTTCTGTCTACTTGCAATAGTTGATCAAGTGGTTACGATTTTAAACTGCTACTTCTACCTAACAAAAAAGTTCTAGAATTACTAGAAAGTCGCTACTTCTATTTGTGCTCAAGTAGATGAGATAGTCAGTAAGGAAGTACTCGTCTTCAAGAGGTATTCAATACTTACTCAAGTGGTTTTAATTTTCAACTACTGCCACTCACCAGTTTCGAGTGTTAGGCAAAACTAGGCCTAGAATACTTTTACGTAATTGGAAACCGTTACTTCTACTTGCATTTGAGTATCAACAATGACTACTTTGACAACATCTGGTGAAAATGCTCCGGACAAGTTGGGAAACACGGAGAAAGCAAGGTAACCTCTATTCGGCATTGCAGTTTCTTGTACTGAGTGTCGATGGGGTCTTCCTCCTTTACGTTGGCGTAGTCGCCTTGGAGCAGATTGTACGCGACCTCTATATCCAGCAGGCTGTCGATCATCTCGACCTGTCGTGCAAATTCGGAGAATTAGAAAGAAAGAACATTGTATATAAAAATCGCATCACAGAATCCGACGATTGTTAATATAAAATGTTCTTTCCAATCCTCACTAATTGCTGACGATCAACCCATACGAGGGTTAGCCGAAAATACACGGATTCATTCCAATATGAACATACAATTCAAATGCAATTGCAGTTCTGTACCTTAAAGAAGCTCTTCAAATACTTATAATTCAGTAGAGATTTACAACGTTACTTATACTCGAATAGCAACAATGGTTACTTTAGACACCTCTGTTGAACACCGGCGATCACGGTTAGCTGTGTAGCAACACATGACGATAGTTCGGGGCCACTGATTATGACCTAAGCACAGCATTCCTTTATTATTCTCCACACAAACCACACCAACACGGACACCGTGTTATACGCAACAACAACGTTAAACATAACCAGTTATCTACCTTGGACTTGACCAACTCTATGTTGTTCAGCATCGGCGGCTGTTTCATTCCGAAGTCATGCGGGATCAAAGTGTAAAATCTGTTTGAGCAATCCAGTATTTTGGGAGCGCTTGGTGTTTCGCTTTCAATAATCTGAACGGGAAGACATACTATTATGAGAAGCATCCGCAGATTCTTATGAATGTGGGAAACATTCGCTTCAGTCTGTACATGATTTATATTTCTATGGATTCAAACTCCATATTCTTTGGTTAATCGTCGATCATCGAGACAAATTTTTGACATTTCAACAAAGCAGAAGTTTTGTATTAATACATCATGTTAAAATAGTTCTTTGAAGTGTTTTACCTAAAAATGCGTTCACAATCTTGTCATAACTCTAATTCTCAGTTCCTAAAGAGTAACATCCAGCACATCCTATATTGTTTCACAACACATTTGTACGGATAGAATTCGCTTGAAAGCGGAAATTCAAGTCACGAGCGACTAAACGTGGTTGTCTACAGCTAAAAGAGAATCAATCAATTGACCCAATGTAATGTTAACGATCGATGCGAGAGACATTGCAGAACAAAGCCCACTTACCCCGGTCACTTCGGACAGTACCCCGTACGCTCTCTGCAGCTGCTTCTTACTTAACTTACCGAGAGGCATCTTTTTCATATCCAGCTGCAAAACAAACGTTGCTAGGAGGACCGTAGCCCTTCAACGCAGAAGCGATAACGACCAGTCGCCAACCAACCTCGAATTCCACCATCGCCTTCTTCATGCTTTCCACGTCAAATATCATCTTGATGATCTTTTGCACTTCTTCATGTAGCTTCGAATTGCTACCGGCAGATTGCAAGCCCTTCAGCTTCTCATCGTTTTCACCGTAATCGATGTCGAGAGGATAAAATTTTCTGGGCATCTTCACGAAATGAGCGGTGCCAAATTCGTTGCCTGAAATGTCAGAAACATTGAAATGACCCCTGAATATTTCTCATATAGCTGGCATTAGGTAGACATACTTTTGAACTTAGTTCATGTCATGCGCGGATGCGATGAAAATTTGGTTTTAATTCGACACCACACATTAGCTCGCACATTGATATCTTCGTTGCTCACCAGTTTTATCTAAATAAATTTCTTCAAAATTTCTCAGTGCCGCATCAACGGAATAGAAGTCCTCGACTTTATCTCCCCCTATCGTCGTCCCAACTCGACCCCAGGCCCGGAACACATAATATTTCTTCTTCGAGTCATGCTCCAGAAGCTAGAGATTCGATAAGATGCGGGCACAAATTAACAAAACCTGTCACTTACAACAATACCAGAACGCGGTACCTGCAATTTATAATAGGAATTTGCGCCCGTATTCATGTCCACCAAGGATAGGGTTGCTGTGTACTTCGAGCCGTTCTTGACCTAAAACAATTGAGACATTCGAATCACGTAAAAGTGTTATGGCACAAGACACAAAAACATGTGAAAATATACAGCGGTGCAGGAATCAACACAATTTCATAGACAGTAATTATCTGACCAAGAAATATAATGAAATACAGGAAAGAAAATACCACGTTTTTGATAGAATACCGTATGTAAAACTTTTAAAAAATAACAACGCATAGGAGCAAAATAAACCAATTATACATAGAGGTAAACACATGAAACGAAGATAAGCTGAAAATTAGGTCCTGATAATACTTCGGCAGGGACACAAGTTCAATATTAGAGATTAAATTCAGAACAGAACCAACTGCTGAGTGTTGATATTTTAAAAATTTCGTCAAGACGCATCATAATATATCTGACTCCATCAACCGGCTTTCTCAGCAATGCATCACCGATCGAAACGAGGCTTACACACGGTCAAATTACATTAGCAAGTAGCAACTTAGGCGAAACACTCACCAGAACATGAGTTTTGTGCTCCAACCCAGACTGCTGATCAACTGCAGCGCCCGCTTTGACCACCATCTTCATTTTTTTCTCTGGCACGTTACCACTAACCTCCTCGAGAGCTCTTTTATAACCCAAGCCTCGATCCTGTTGCTCCGATCCCCAATCGCACACGCTGTGCTTTTTGAGCAAAGGCAACATCGGCTGTGGCTCCGACACGGCCTCGAGATCTTTCAAAATATCTTCAGAAACGACAAAAACATCTTGTAGCTGAGCCGAATGCATTTTTTTGCTCATTTTAGCAACTCCCTCCTTAGTGCTGATGCAAAAGTACGCCAGATGCACGGACGTAGTGATCGAACCGCCGAGCTTTTCGACAGACGCCTTGATGTCAGCCTTTGGTGAAAGCGTTTTTGTAAGAACGATAACCTTCATTTTTTTCAACGGCTTGAAAGGCGCTTTCGGCGGAAAAACGCGCTCCATTTTTTTATACTTATATTTCTCAAGAAACGGGTCTGATTCTCGGACGGATTTCGGGAACGACCAGGGTTGTCTCTCGACGACGGCCGTCCTATACGTGCACCGGGTCCATTCCGATATCTGTCCGGTGCATTTATATCCGTCGCTGCAGACCACCAGCGGTCCCGCTTTGCATTCCGGACACCAGGGCAAAGCCCCGAACGTCATGCCGTCACCGATGGCGAGATACAATGCGTCGTAGCCGATGGGTATTTTCTGATGATTTTCTTCCAGTATGCCTTCGAGAACGTCTTTGCGAAGTTCGATACTTTTGAGTCTGTCGATGTTCCTCCACATCAAGGTTGACTGCGATTTGATTTTTTTCATGATCAGGTCCTCTTCCGTTCGAACTGAAGGCAAATTCTACATAAGAACCGGTGCCTTGAATGATTTATACAGACGAAACAAATCTCTTTTGCCCAAGGAGTGCCCGAGTGGTTCTCAATCTTTTTCTACCCAAGGGCACCCTCTGAAAATGATGATAGTTTGCGCAGCCAAGCCATTCAGGACTATGAAAGCGAGATTTGTGAAGCTGATGACTAGGACATCAACCCATACCTAGATCACTTCACTGGTCAGCTGAAGATGTTGATGCTGGGCGACTAAAAAAGGTCATTCTCATTAATCATGGACTCATTGAGAATTGGAGATTTAGTCATCAGCTGCCAAAATGCTACTCATATGGATGTCCTTAATTTTTGTTAGCGCCTACTTGACAATGAATTTTACATAGAAGCTTTGCAAGTGCCATAAAACCAGTCCCACCAATTTCAGAAGCGGCTACTTTGACATAATGATATGCATATTATAGTGTGGCGACACATTGCAACATTTGACACGTTAGAGAAATGGACGTGTTAAGGCGATTGATGCAAATAAGGCATCATATTCAACGCGTTGTCACGTTAGAAGTGAAGAAAAGACGAAGAGCTACCCGACAACATCCACCAGTGGTACAGAATCTTACTTTCAGAAGTTGAAGGCTGTTCCGCAATCTTTTTTGCCTTTCCTTTAGGCTTCAGTAGTTTCCTCATCTGCGCTTTGTCGTCCGCGTCCAGCCCTTGGAACCCGGAGAGCATGTCCGCACTGAAGTGATCTTCCCAGCCCATTTCGGCCTTGTGTTTCAAGAAACATCCGACATGATGCCAACGATCAACAAGGCCGAGCTATCAAACAACACCAAATGCATATTAGACGGGTGAAATCATGGGAGGATGATGCGCCTTTGGCCCTGGGTCAGTGGTTTTCAACCTGTGGGTTGTCTGCCTTTTTTTTCTGGTGGTCGTGATCATGAAGGTACAGTCCTTTTTACATATGCAATAAGCTTCCAAAATAAGCCGTGAGCAGGTTAGGCGAGTAGCACACCAAATTTAGATTTCCAACTGGAAATTGGGCCGCAACCATAAAAAGGTTGGGAGCCACTGCCCTAGGGCTTTTCGACTGACGAAAAATGCGCCATCAACACACAAATCTTAAACGCTAAAATCGCTGAACACTTGAAAACATCGACATCAACAATAGGCTACCACTACCTCCCCAGCAGCACTTATTAGCTTAAAAATCAGCATGCAAGTGCTACCACCGCTGGTAGTAGCAATGCTCACCTGCGGCTTTTCGGGATGCTTCTCTTTGTGCGACAGCCGAATTTCGTCCTTCTCAATTTTATCCTCACATTGGCGGCATTTGCTCCTGTTAGACGCCGCGTATTGAACTACAAAGTCTCGCAGCGTCGTCGATATGATCTGACCGCAATGTTGGAAAAAATTGAGGAATTTGTAAGTCGGTGAAATTACTGTGGCAACATACAAGAAATCTATCAAATCAGGCGTATCACCGAATTCATAGTTAAATATAATTTAGCCTTGAATTTGCTTGGAGTTGCAATATCTGTATTGAAATTCAGAACATGAACAGTTAACTCAACCTTGCACCTACTTTCATCTTCACATGACTCTGAAAGTCTTTGCATATCTAGCAAATATCAACTGTAGTGAATCCCCCTCCTACCCCCAATCAATGGGGCAGTGACACAATGAATAATGCAAATAACCTGCCCTGCCCGGGCTTATAGAGCATCGTTACCTTTGTTCCACCTTTTGCAGACTTGGAACTATTTGCAAAGCCATCGATTTGCGTTCGAATTTTTTCTTGGTCTGGAAATCGGAGATTGTTGAAGCCCTTTATGTCATCGGAACAGGTAGGTCGATATTTTCGGAAGAAACAAGTGTAATGGTACCAATTTGGTTGCTGGAAATGAATAAAACATATTGGGTAAAAATTCTCAAGTATTGACTAGCCTATAAAGACAAAGAGGTCTATTTACTAGCTAATTTGAAAAATAACACTGAAACATATATACACAGTAAAGCGATGCGATCAATAACTAAATTAACGTAGTAGCTCACAAAATAGCCTACATTGTACAGGTATGCGGTTTCAATTCAAATTAGATTAAAAATGAACATTACAGGTACAGCTGCCAAGTATAAAATACCCACATACCTTGCCATCAAAAAATCGTGACTGTACCATGTAAGCAATTCTCAGACTTTCCTTGGCTATCAAGGCTTTGCAATCACGGCACATAGCCTTGTTACTCTTCGCATATTCTGCGACATAGTCATAATCATTACTACGCCCATCCATTTCGATCAAGTATCAATTTCAATTGCACCCAAGGAATCTATAGAAAATTCATTACAAGTTGCTATCCAAATCCAAACAAATGTACTGATAGAATATTTCTTATATTTAATAAAATTATTTCCAGACATATCGCAACCAATCATCAGCGGAAACCACATCGATGGATGAAAATTATTGCAAGTAAGAGTAATAGACTGCTATCATCGTAGCACGATTTTCATATAAACGGAAATAAAAAATGAGTCACCATGAACATGAAAATACAAAATGTGATAAATCTAGAATAGTAGGACTATTATAGGTAGTTTCTCGACTAAGATATAGCTGAATAAACTAGCACTGTCGTTTTAAGTCAACATAAATCACATCCATATCGATAAAAAAAAAGTCATCTATGAATTGCGCTGATGAGTAGCGCGTCTACATATTTTTCCAATTTCAAATATAAAATCATCCAGGATCGTTTTCCAAGGACCACTCAGATTCTAATATACTCATCTAATTATATACTCTAAGATAAAAGTAAATTAGGACATTTTTAGGTCCGACACGATGTCCAATTATCACTTTGAATATGTCCTATTAATACGGGTAAATTGCAATCATCAGCCGCGCCTATGTACCATTTTCAAAGTTCATTTAGCAATACCCCGGACAGTTTCCCGAGGACAAATATGGTTTTAATATACTCCAATGATCATAAACGTTGATATAAAAGTAAATTCAAACAATTCTA</code></pre>
 </div>
 </div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Although we were able to identify sequences from the contig database that match really well with our selected genes, there will be cases where we may not utilize them anyways. Particularly, if there already exists sequences on NCBI that are labeled as the complete CDS for our GOI for <em>Botryllus schlosseri</em>, then just use this directly in PrimerQuest. For GOI’s that do not have this, proceed with the sequence extracted from the contig data base and plug it into ORF Finder before taking the sequence to PrimerQuest.</p>
+</div>
+</div>
+</section>
+<section id="locating-protein-coding-regions-cds" class="level4">
+<h4 class="anchored" data-anchor-id="locating-protein-coding-regions-cds">Locating Protein Coding Regions (CDS)</h4>
+<p>Before we use PrimerQuest, we want to identify the open reading frames of the GOI sequences <strong>if</strong> the sequence has not already been identified as the complete CDS on NCBI. An open reading frame (ORF) is a portion of a DNA molecule that, when translated into amino acids, contains no stop codons. Doing this step will improve the specificity of our primers as to make sure we are targeting the protein coding region of the gene.</p>
+<p>Go to <a href="https://www.ncbi.nlm.nih.gov/orffinder/">ORF Finder</a> and plug in one of the gene sequences from our extracted_sequences csv file.</p>
+<p>From here you can take the sequence produced and plug it into PrimerQuest. Make note of which ORF you will use in your primer design excel sheet.</p>
 </section>
 <section id="designing-primers-with-idt-primerquest" class="level4">
 <h4 class="anchored" data-anchor-id="designing-primers-with-idt-primerquest">Designing Primers with IDT PrimerQuest</h4>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We will be using SYBR Green for the qPCR we are conducting so when on PrimerQuest select <strong>qPCR Intercalating Dyes (Primers only)</strong></p>
+</div>
+</div>
 <p>General rules for designing good primers:</p>
 <ul>
 <li>20 nucleotides in length, ideally</li>
 <li>50% GC content, ideally</li>
 <li>Tm’s of forward and reverse primers must be similar (2oC differences tolerated).</li>
-<li>Primers cannot form stem-loops upon themselves.</li>
+<li>Primers cannot form stem-loops (hairpins) upon themselves. On PrimerQuest, it will show you the probable hairpins that may form and associated values relevant to stability, melting temperature, etc. You will want to select primers that have the fewest number of hairpin possibilities and have the lowest absolute delta G value (free energy) which would indicate lowest stability. Additionally, you want primers with hairpins at lower Tm’s (melting temperature) since it indicates that that secondary structure will more likely unwind even at the lower temperatures during the PCR reaction.</li>
 <li>No primer-dimers greater than 6 bp between each primer and itself and also between the two primers.</li>
 <li>Forward and reverse primers should be about 500 bp apart.</li>
 <li>The 3’ end of the primer should be a G or a C.</li>
@@ -713,21 +732,21 @@ TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
 </section>
 </section>
 </section>
-<section id="confirmed-primers" class="level1">
-<h1>Confirmed Primers</h1>
+<section id="primers" class="level1">
+<h1>Primers</h1>
 <table class="table">
 <colgroup>
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 24%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
 <col style="width: 21%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Gene</th>
 <th style="text-align: left;">Designer</th>
-<th style="text-align: left;">NCBI Accession Number</th>
+<th style="text-align: left;">NCBI Accession Number for Complete CDS</th>
 <th style="text-align: left;">Fwd Primer</th>
 <th style="text-align: left;">Rev Primer</th>
 </tr>
@@ -736,7 +755,7 @@ TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
 <tr class="odd">
 <td style="text-align: left;">Mortalin</td>
 <td style="text-align: left;">GJ</td>
-<td style="text-align: left;">KY212120</td>
+<td style="text-align: left;">KY212120.1</td>
 <td style="text-align: left;">TTCATGATACCGAA<br>ACCAAGATGGACG</td>
 <td style="text-align: left;">AATTTCCTCCTTG<br>ATGGCATCCACC</td>
 </tr>
@@ -744,8 +763,29 @@ TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
 <td style="text-align: left;">HSP70</td>
 <td style="text-align: left;">GJ</td>
 <td style="text-align: left;">TBD</td>
-<td style="text-align: left;">TBD</td>
-<td style="text-align: left;">TBD</td>
+<td style="text-align: left;">CGAGAAGTTGAA<br>GGACAAGATCTCCG</td>
+<td style="text-align: left;">TCTCTGCAGTCTGGT<br>TGTTGTCGAGC</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SIRT6</td>
+<td style="text-align: left;">CV</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">ATTAGTACCG<br>CGTCTGGAATAC</td>
+<td style="text-align: left;">GGATGGAATCGCT<br>TCTTCAAATC</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BAX</td>
+<td style="text-align: left;">CV</td>
+<td style="text-align: left;">KU948200.1</td>
+<td style="text-align: left;">CATTGACCT<br>TGCGTGTTATTGG</td>
+<td style="text-align: left;">AAGATGTCCTT<br>GGTGGGTTG</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AIF1</td>
+<td style="text-align: left;">CV</td>
+<td style="text-align: left;">KU948202.1</td>
+<td style="text-align: left;">GGATTCTCTCACC<br>GATGGAATAG</td>
+<td style="text-align: left;">CCTGACTTGG<br>AGCCTTTATGG</td>
 </tr>
 </tbody>
 </table>

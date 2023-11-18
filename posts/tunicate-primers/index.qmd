@@ -1,7 +1,7 @@
 ---
 title: "Designing Tunicate Primers"
 author: "Celeste Valdivia"
-date: "2023-10-18"
+date: "2023-11-17"
 categories: [protocol, qPCR, primers, nickel chloride]
 image: "bot_genome_proj.jpeg"
 ---
@@ -14,14 +14,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Overview
 
-I am interested in designing primers for *Botryllus schlosseri* to evaluate differences in expression of apoptosis, stemness, oxidative stress, and senescence related genes after an acute 24 hour exposure to two concentrations of nickel chloride, 5 mg/mL and 45 mg/mL, and a control.
+I am interested in designing primers for *Botryllus schlosseri* to evaluate differences in expression of apoptosis, stemness, oxidative stress, and senescence related genes after an acute 24 hour exposure to two concentrations of nickel chloride, 5 mg/L and 45 mg/L, and a control.
 
 # Potential Gene List
 
 This list serves as a jumping off point for myself to look into genes that may potentially be differentially expressed in *Botryllus schlosseri* exposed to the clastogen (by oxidative damage to the DNA), nickel chloride.
 
 | Role                    | Gene ID      | Whole Gene Name                                                            |
-|:--------------|:--------------|:------------------------------------------|
+|:--------------|:--------------|:-----------------------------------------|
 | Senescence              | TP53 (p53)   | Tumor protein p53                                                          |
 | Senescence              | CDKN1A (p21) | Cyclin-dependent kinase inhibitor 1A                                       |
 | Senescence              | CDKN2A (p16) | Cyclin-dependent kinase inhibitor 2A                                       |
@@ -52,7 +52,7 @@ This list serves as a jumping off point for myself to look into genes that may p
 For the purpose of expedience and accuracy. This generally is the preferred approach.
 
 | Gene     | NCBI Accession Number | DOI                                   | Fwd Primer                        | Rev Primer                      |
-|--------------|--------------|----------------|--------------|--------------|
+|--------------|--------------|---------------|--------------|--------------|
 | Mortalin | KY212120              | doi:10.1016/<br />j.ydbio.2017.10.023 | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
 
 ## Design primers in-house for *Botryllus schlosseri*.
@@ -95,20 +95,17 @@ Pay attention to the E value and Score (bits) to determine if your top hit seque
 
 6.  **Primer Design:** Finally, we will use the extracted *Botryllus* sequence to design primers. We will design primers using [IDT's PrimerQuest Tool](https://www.idtdna.com/PrimerQuest/Home/Index).
 
-::: callout-note
-We will be using SYBR Green for the qPCR we are conducting so when on PrimerQuest select **qPCR Intercalating Dyes (Primers only)**
-:::
 
 This method allows us to leverage well-annotated gene data to find potential homologs in *Botryllus schlosseri*, even when the genome may not be fully annotated. We will want to validate the primers and ideally carry out experimental verification to confirm the presence and function of the genes in *Botryllus schlosseri*.
 
 #### Sequences Identified with BLAST Tool in the botznik-ctg.fa Database
 
 | Role                          | Gene ID | Query NCBI GenBank Accession | Query Organism                 | Top Sequence Producing Significant Alignment | Score (bits) | E Value  |
-|:---------|:---------|:---------|:---------|:-----------|:---------|:---------|
+|:---------|:---------|:---------|:---------|:---------|:---------|:---------|
 | Apoptosis                     | TNF     | LR791346.1                   | \[Phallusia mammillata\]       | botctg065850                                 | 70           | 1.00E-09 |
 | DNA Repair                    | PolB    | LR789137.1                   | \[Phallusia mammillata\]       | botctg092056                                 | 60           | 1.00E-06 |
 | Oxidative Stress              | SOD1    | XP_039262007.1               | \[Styela clava\]               | botctg006757                                 | 199          | 8.00E-51 |
-| Senescence, DNA Damage Repair | SIRT6   | BAO57219.1                   | \[Polyandrocarpa misakiensis\] | botctg109566                                 | 446          | e-124    |
+| Senescence, DNA Damage Repair | SIRT6   | AB920558.1                   | \[Polyandrocarpa misakiensis\] | botctg109566                                 | 66           | 5e-09    |
 | Apoptosis                     | BAX     | KU948200.1                   | \[Botryllus schlosseri\]       | botctg061218                                 | 2260         | 0        |
 | Apoptosis                     | AIF1    | KU948202                     | \[Botryllus schlosseri\]       | botctg003666                                 | 674          | 0        |
 | Apoptosis                     | IAP7    | KU948203.1                   | \[Botryllus schlosseri\]       | botctg106479                                 | 1483         | 0        |
@@ -134,13 +131,11 @@ head -n 10 data/botznik-ctg.fa
 Create an empty extracted_sequences.csv file. We will upload this csv file to PrimerQuest directly.
 
 ```{r creates empty fasta and csv files, engine ='bash', eval = FALSE}
-
 touch output/extracted_sequences.csv
 ```
 
-Now let's pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.csv file prior to reprinting it into the file. \]
+Now let's pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.csv file prior to reprinting it into the file.
 
-This will make us a csv file that we can upload to PrimerQuest directly.
 
 ```{r csv file for extracted sequences, engine = 'bash', cache = TRUE, eval = FALSE}
 # Define a mapping of identifiers to gene names
@@ -177,24 +172,48 @@ done
 Let's check out the extracted sequences in the csv file:
 
 ```{r, cache=TRUE}
-read.csv(file = "output/extracted_sequences.csv")
+extracted_sequences <- read.csv(file = "output/extracted_sequences.csv")
+
+print(extracted_sequences)
 ```
 
+::: callout-warning
+Although we were able to identify sequences from the contig database that match really well with our selected genes, there will be cases where we may not utilize them anyways. Particularly, if there already exists sequences on NCBI that are labeled as the complete CDS for our GOI for *Botryllus schlosseri*, then just use this directly in PrimerQuest. For GOI's that do not have this, proceed with the sequence extracted from the contig data base and plug it into ORF Finder before taking the sequence to PrimerQuest.
+
+:::
+
+#### Locating Protein Coding Regions (CDS)
+
+Before we use PrimerQuest, we want to identify the open reading frames of the GOI sequences **if** the sequence has not already been identified as the complete CDS on NCBI. An open reading frame (ORF) is a portion of a DNA molecule that, when translated into amino acids, contains no stop codons. Doing this step will improve the specificity of our primers as to make sure we are targeting the protein coding region of the gene.
+
+Go to [ORF Finder](https://www.ncbi.nlm.nih.gov/orffinder/) and plug in one of the gene sequences from our extracted_sequences csv file.
+
+From here you can take the sequence produced and plug it into PrimerQuest. Make note of which ORF you will use in your primer design excel sheet.
+
 #### Designing Primers with IDT PrimerQuest
+
+::: callout-note
+We will be using SYBR Green for the qPCR we are conducting so when on PrimerQuest select **qPCR Intercalating Dyes (Primers only)**
+:::
 
 General rules for designing good primers:
 
 -   20 nucleotides in length, ideally
 -   50% GC content, ideally
 -   Tm's of forward and reverse primers must be similar (2oC differences tolerated).
--   Primers cannot form stem-loops upon themselves.
+-   Primers cannot form stem-loops (hairpins) upon themselves. On PrimerQuest, it will show you the probable hairpins that may form and associated values relevant to stability, melting temperature, etc. You will want to select primers that have the fewest number of hairpin possibilities and have the lowest absolute delta G value (free energy) which would indicate lowest stability. Additionally, you  want primers with hairpins at lower Tm's (melting temperature) since it indicates that that secondary structure will more likely unwind even at the lower temperatures during the PCR reaction.
 -   No primer-dimers greater than 6 bp between each primer and itself and also between the two primers.
 -   Forward and reverse primers should be about 500 bp apart.
 -   The 3' end of the primer should be a G or a C.
 
-# Confirmed Primers
+# Primers
 
-| Gene     | Designer | NCBI Accession Number | Fwd Primer                        | Rev Primer                      |
-|:------------|:------------|:------------|:-----------------|:---------------|
-| Mortalin | GJ       | KY212120              | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
-| HSP70    | GJ       | TBD                   | TBD                               | TBD                             |
+| Gene     | Designer | NCBI Accession Number for Complete CDS | Fwd Primer                        | Rev Primer                      |
+|:-------------|:-------------|:-------------|:---------------|:--------------|
+| Mortalin | GJ       | KY212120.1              | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
+| HSP70    | GJ       | TBD                   | CGAGAAGTTGAA<br />GGACAAGATCTCCG   | TCTCTGCAGTCTGGT<br />TGTTGTCGAGC |
+| SIRT6    | CV       | None                   | ATTAGTACCG<br />CGTCTGGAATAC     | GGATGGAATCGCT<br />TCTTCAAATC   |
+| BAX    | CV       | KU948200.1                   | CATTGACCT<br />TGCGTGTTATTGG    | AAGATGTCCTT<br />GGTGGGTTG  |
+| AIF1    | CV       | KU948202.1                    | GGATTCTCTCACC<br />GATGGAATAG    | CCTGACTTGG<br />AGCCTTTATGG   |
+
+
