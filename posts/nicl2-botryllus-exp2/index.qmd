@@ -24,9 +24,9 @@ Divided animals into separate system, 3 days prior to start of exposure, 8 days 
 
 Only 9 individuals had properly adhered systems. Will reduce the number of replicates.
 
-## Randomize Treatment 
+## Randomize Treatment
 
-Here we will have R randomly assign each animal to a treatment. 
+Here we will have R randomly assign each animal to a treatment.
 
 ```{r}
 set.seed(3789)
@@ -86,8 +86,6 @@ $$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.005g/L*0.726L$$ $$V_1 = 0.00363 L = 3.
 #### High Dose: 45 mg/L
 
 $$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.045g/L*0.726L$$ $$V_1 = 0.03267 L = 32.67 mL$$ Spike 726 mL of aerated, artificial seawater (16 C) with 44.55 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
-
-
 
 # Protocol
 
