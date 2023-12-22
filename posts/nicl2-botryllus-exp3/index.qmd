@@ -1,0 +1,78 @@
+---
+title: "Exposure 3"
+author: "Celeste Valdivia"
+date: "2023-11-28"
+categories: [study plans, nickel chloride]
+image: ""
+---
+
+# Experimental Planning
+
+## Animal Handling Prior to Exposure
+
+Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.
+
+Only 9 individuals had properly adhered systems. Will reduce the number of replicates.
+
+## Randomize Treatment
+
+Here we will have R randomly assign each animal to a treatment.
+
+```{r}
+set.seed(3349)
+
+conditions <- c("Control R1", "Control R2", "Control R3", "5 mg/L R1", "5 mg/L R2", "5 mg/L R3", "45 mg/L R1", "45 mg/L R2", "45 mg/L R3")
+animal_id <- c("S295C001", "S290C001", "S291C001", "S287C001", "S275C001", "S277C001", "S283C001", "S301C001", "S286C001")
+treatment_assignments_exp3 <- data.frame(
+  Conditions = sample(conditions),
+  animal_ID = sample(animal_id)
+)
+print(treatment_assignments_exp3)
+
+#save assignments in csv for downstream use as metadata
+write.csv(treatment_assignments_exp3, file = "treatment_assignments.csv")
+```
+
+## Nickel Chloride Dilutions
+
+Review resources prior to handling nickel chloride:
+
+-   Nickel chloride [SDS](https://www.fishersci.com/store/msds?partNumber=AC270510050&productDescription=NICKEL%28II%29+CHLORIDE+HEXA+5KG&vendorId=VN00032119&countryCode=US&language=en).
+
+-   [Chemical resistance of gloves.](https://amo-csd.lbl.gov/downloads/Chemical%20Resistance%20of%20Gloves.pdf)
+
+All handling of stock solution and treatments to be done in a chemical fume hood. Once spiked water has been distributed, add animals, parafilm jars, place in secondary container, and move to environmental chamber.
+
+### Required Volume of Artificial Seawater
+
+Calculations for spiking artificial seawater. 225 mL of seawater required to mostly submerge glass slide in wide mouth 16 oz Kerr mason jar.
+
+Considerations:
+
+-   4 replicates
+
+-   225 mL per jar
+
+-   3 conditions
+
+-   Account for 10% loss of water during transferring
+
+$$(4*225 * 3) + (0.1*(4*225*3)) = 2,970$$
+
+Need 2,970 mL of artificial seawater total for exposure, particularly, 990 mL of artificial seawater per condition.
+
+### Calculations
+
+Stock solution of NiCl~2~ made by undergraduate Gina Jones on 02/08/23.
+
+-   NiCl~2~
+
+-   Suspended in MilliQ water (0 PPT)
+
+#### Low Dose: 5 mg/L
+
+$$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.005g/L*0.99L$$ $$V_1 = 0.00495 L = 4.95 mL$$ Spike 990 mL of aerated, artificial seawater (16 C) with 4.95 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+
+#### High Dose: 45 mg/L
+
+$$ C_1*V_1 = C_2*V_2$$ $$ 1 g/L * V_1 = 0.045g/L*0.99L$$ $$V_1 = 0.04455 L = 44.55 mL$$ Spike 990 mL of aerated, artificial seawater (16 C) with 44.55 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
