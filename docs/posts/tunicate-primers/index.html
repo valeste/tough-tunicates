@@ -250,9 +250,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This list serves as a jumping off point for myself to look into genes that may potentially be differentially expressed in <em>Botryllus schlosseri</em> exposed to the clastogen (by oxidative damage to the DNA), nickel chloride.</p>
 <table class="table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 58%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 53%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -382,11 +382,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>For the purpose of expedience and accuracy. This generally is the preferred approach.</p>
 <table class="table">
 <colgroup>
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 21%">
-<col style="width: 19%">
-<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -513,11 +513,11 @@ Tip
 <tr class="odd">
 <td style="text-align: left;">Oxidative Stress</td>
 <td style="text-align: left;">SOD1</td>
-<td style="text-align: left;">XP_039262007.1</td>
-<td style="text-align: left;">[Styela clava]</td>
+<td style="text-align: left;">EE743567.1</td>
+<td style="text-align: left;">[Botryllus schlosseri]</td>
 <td style="text-align: left;">botctg006757</td>
-<td style="text-align: left;">199</td>
-<td style="text-align: left;">8.00E-51</td>
+<td style="text-align: left;">319</td>
+<td style="text-align: left;">5e-86</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Senescence, DNA Damage Repair</td>
@@ -547,7 +547,7 @@ Tip
 <td style="text-align: left;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Apoptosis</td>
+<td style="text-align: left;">Anti-Apoptotic</td>
 <td style="text-align: left;">IAP7</td>
 <td style="text-align: left;">KU948203.1</td>
 <td style="text-align: left;">[Botryllus schlosseri]</td>
@@ -556,7 +556,7 @@ Tip
 <td style="text-align: left;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DNA repair</td>
+<td style="text-align: left;">Apoptosis, DNA repair</td>
 <td style="text-align: left;">PARP1</td>
 <td style="text-align: left;">KU948201.1</td>
 <td style="text-align: left;">[Botryllus schlosseri]</td>
@@ -593,6 +593,7 @@ Tip
 </tr>
 </tbody>
 </table>
+<p>Note that for SOD1 I pulled the sequence botctg006757 twice, once for a different species of tunicates <em>Styela clava</em>, and again when I found the estimated SOD1 sequence for <em>Botryllus schlosseri</em> on NCBI. Although I am having issues with re-blasting this sequence and having it match</p>
 </section>
 <section id="pulling-botryllus-schlosseri-sequences-and-placing-in-new-file" class="level4">
 <h4 class="anchored" data-anchor-id="pulling-botryllus-schlosseri-sequences-and-placing-in-new-file">Pulling <em>Botryllus schlosseri</em> Sequences and Placing in New File</h4>
@@ -618,10 +619,10 @@ TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
 </div>
 <p>Create an empty extracted_sequences.csv file. We will upload this csv file to PrimerQuest directly.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> output/extracted_sequences.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> output/extracted_sequences2.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now let’s pull the sequence for the top hit contig. Below the code will check if the sequence identifier already exists in the extracted_sequenences.csv file prior to reprinting it into the file.</p>
-<div class="cell" data-hash="index_cache/html/csv file for extracted sequences_7ba7eff8909b187abdeda97277502cbc">
+<div class="cell" data-hash="index_cache/html/csv file for extracted sequences_c509942096b3409cafa7dc05543a7c7e">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a mapping of identifiers to gene names</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">declare</span> <span class="at">-A</span> <span class="va">gene_map</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg065850"</span><span class="op">]=</span><span class="st">"TNF"</span></span>
@@ -637,7 +638,7 @@ TTAGTCCAATCGCTTCTTAATGAACATTTTGAGCTTTATGACCTAACCAGGAAAATGTGA</code></pre>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="va">gene_map</span><span class="op">[</span><span class="st">"&gt;botctg006949"</span><span class="op">]=</span><span class="st">"POU3"</span></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Output CSV file</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="va">output_file</span><span class="op">=</span><span class="st">"output/extracted_sequences.csv"</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="va">output_file</span><span class="op">=</span><span class="st">"output/extracted_sequences2.csv"</span></span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Add column headers</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"SequenceName,Sequence"</span> <span class="op">&gt;</span> <span class="st">"</span><span class="va">$output_file</span><span class="st">"</span></span>
@@ -699,8 +700,9 @@ Warning
 </section>
 <section id="locating-protein-coding-regions-cds" class="level4">
 <h4 class="anchored" data-anchor-id="locating-protein-coding-regions-cds">Locating Protein Coding Regions (CDS)</h4>
-<p>Before we use PrimerQuest, we want to identify the open reading frames of the GOI sequences <strong>if</strong> the sequence has not already been identified as the complete CDS on NCBI. An open reading frame (ORF) is a portion of a DNA molecule that, when translated into amino acids, contains no stop codons. Doing this step will improve the specificity of our primers as to make sure we are targeting the protein coding region of the gene.</p>
+<p>Before we use PrimerQuest, we want to identify the open reading frames of the GOI sequences <strong>if</strong> the sequence has not already been identified as the <strong>complete CDS</strong> on NCBI for <em>Botryllus schlosseri</em>. An open reading frame (ORF) is a portion of a DNA molecule that, when translated into amino acids, contains no stop codons. Doing this step will improve the specificity of our primers as to make sure we are targeting the protein coding region of the gene.</p>
 <p>Go to <a href="https://www.ncbi.nlm.nih.gov/orffinder/">ORF Finder</a> and plug in one of the gene sequences from our extracted_sequences csv file.</p>
+<p>This means you will use ORF Finder for sequences that are labeled as partial CDS and for gene sequences that were identified for <em>Botryllus schlosseri</em> through a closely related query organism’s labeled gene sequence.</p>
 <p>From here you can take the sequence produced and plug it into PrimerQuest. Make note of which ORF you will use in your primer design excel sheet.</p>
 </section>
 <section id="designing-primers-with-idt-primerquest" class="level4">
@@ -736,10 +738,10 @@ Note
 <h1>Primers</h1>
 <table class="table">
 <colgroup>
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 21%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
 <col style="width: 20%">
 </colgroup>
 <thead>
