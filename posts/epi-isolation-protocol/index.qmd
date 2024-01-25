@@ -1,12 +1,12 @@
 ---
 title: "*Botryllus schlosseri* Epithelial Tissue Isolation Protocol"
 author: "Celeste Valdivia"
-date: "2023-09-25"
+date: "2024-01-25"
 categories: [epithelial, protocol]
 image: "IMG_0597.jpeg"
 ---
 
-This protocol is version 08.21.23
+This protocol is version 01.25.24
 
 # Protocol
 
@@ -37,10 +37,9 @@ During tissue seeding: - Corning 6 well plates or T25 culture flasks - 60 mm pet
 
 ### Solutions
 
+#### Concentrated Filtered Seawater (for media formulation)
 
-#### Concentrated Filtered Seawater
-
-1.  
+1.  Make concentrated saltwater
 
 Option A: Mix together the below two solutions:
 
@@ -82,7 +81,7 @@ In the biosafety cabinet add together the following:
 -   500 uL Amphotericin B (250ug/mL stock solution)
 -   5 mL of Penicillin-Streptomycin (100x)
 
-##### **Tunicate Culture Medium (TCM) with 1.4% Pen-Strep and 0.1% Amp B**
+#### **Tunicate Culture Medium (TCM) with 1.4% Pen-Strep and 0.1% Amp B**
 
 In the biosafety cabinet add together:
 
@@ -99,7 +98,7 @@ Be sure to have sufficient stocks of the above three solutions prior to followin
 
 ##### 1. The day prior to bud isolation
 
--   Select an individual (one glass slide) with at least 30 zooids completely adhered to the slide. Health score must be 7 and above. Stage does not matter but document the day of dissection. Ideally it is either at stage C2 or D. If in earlier stages, will need to dissect parental zooid instead of primary bud.
+-   Select an individual (one glass slide) with at least 30 zooids completely adhered to the slide. Health score must be 7 and above. Target stages C1-D. Earlier stages do not produce monolayers as frequently.
 
 -   Remove individuals from recirculating seawater system
 
@@ -129,16 +128,15 @@ Be sure to have sufficient stocks of the above three solutions prior to followin
 
 -   Record blastogenic stage, zooid or primary bud number, and health score.
 
--   Using a pair of 28G syringe needles, peel open the tunic and remove zooids.
+-   Using a pair of 28G syringe needles, peel open the tunic and remove primary buds.
 
--   Every time a zooid is removed, place it in cell strainer that itself is also immersed in the same 20 mL of ASW-G. Use a clicker to keep track of the number of zooids/buds you collected.
+-   Every time a primary bud is removed, place it in cell strainer that itself is also immersed in the same 20 mL of ASW-G. Use a clicker to keep track of the number of primary bud you collected.
 
--   Once you have collected a group of 10 zooids in the cell strainer, rinse all zooids for 5 seconds with 30% ethanol followed by a 5 second rinse with autoclaved artificial seawater.
+-   Once you have collected a group of 10 primary buds in the cell strainer, rinse all primary buds for 5 seconds with 30% ethanol followed by a 5 second rinse with autoclaved artificial seawater.
 
--   Use same pair of insulin needles to transfer over the zooids to the 1.5 mL tube containing 1 mL of TCM. This can be done by placing the cell strainer in ASW-PSA under the stereomicroscope and carefully rolling the zooids onto one of the needles. Make sure not to burst them.
+-   Use same pair of insulin needles to transfer over the primary buds to the 1.5 mL tube containing 1 mL of TCM. This can be done by placing the cell strainer in ASW-PSA under the stereomicroscope and carefully rolling the primary buds onto one of the needles. Make sure not to burst them.
 
 -   Transfer all tubes containing bud tissue to the biosaftey cabinet in TPS for cell seeding.
-
 
 ##### 3. Seeding tissue and cell maintenance
 
@@ -148,8 +146,8 @@ Be sure to have sufficient stocks of the above three solutions prior to followin
 
 -   Desiccate tissue slightly to ensure adherence to the substrate.
 
--  Add 0.5-1 mL of TCM to each well. Be sure to not touch the tip of the pipette to the wells and to have the lowest flow possible when adding in media to not agitate the tissue and have it unadhere from plate.
+-   Add 0.5-1 mL of TCM to each well. Be sure to not touch the tip of the pipette to the wells and to have the lowest flow possible when adding in media to not agitate the tissue and have it unadhere from plate.
 
--   Incubate cells at 18 C, 91% humidity. 
+-   Incubate cells at 18 C, 91% humidity.
 
 -   Replace 100% of the TCM every 2-3 days for plates and once a week for flasks.
