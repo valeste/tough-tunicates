@@ -1,0 +1,423 @@
+---
+title: "Cell culture monitoring Pilot"
+author: "Celeste Valdivia"
+---
+
+```{r}
+library(knitr)
+library(tidyverse)
+library(tidyr)
+library(dplyr)
+library(hrbrthemes)
+library(ggplot2)
+library(car)
+library(RColorBrewer)
+library(ggpubr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, engine='bash', eval= FALSE}
+curl -L https://docs.google.com/spreadsheets/d/13o7wsaFG9QAbBtIo31XtbfPtFOcf5HUEEYDksrcqaok/export?exportFormat=csv | tee ~/Documents/GitHub/Git/bestblogever/posts/cell-nicl2-botryllus-AU23/data/cell.csv
+```
+
+```{r}
+cell <- read.csv(file = "data/cell.csv")  
+```
+
+# Cleaning up Data
+
+New simplified staging (4 stages instead of 7)
+```{r}
+# Create a new column 'simple_stage' based on conditions
+cell <- cell %>%
+  mutate(simple_stage = case_when(
+    stage_at_dissection %in% c("A1", "A2") ~ "A",
+    stage_at_dissection %in% c("B1", "B2") ~ "B",
+    stage_at_dissection %in% c("C1", "C2") ~ "C",
+    stage_at_dissection == "TO" ~ "TO",
+    TRUE ~ NA_character_  # This will handle any other cases or return NA if none match
+  ))
+```
+
+
+```{r}
+cell$date <- mdy(cell$date) #convert the date column from characters to true date
+
+cell_pilot <- cell[cell$experiment == 0, ] # only want the pilot experiment, experiment 1 failed in poor dissecting technique
+
+# Subset the 'cell_pilot' data frame to include rows with hps values of 18, 38, and 70
+cell_pilot2 <- cell_pilot[cell_pilot$hps %in% c(0, 18, 38, 70), ]
+
+
+cell_fact <- cell_pilot2 %>%
+  mutate(treatment_mg_per_L = as.factor(treatment_mg_per_L)) %>%
+  mutate(animal_ID = as.factor(animal_ID)) %>%
+  mutate(date = as.factor(date))
+
+
+
+summary(cell_fact)
+```
+
+```{r}
+# Calculate the percent of monolayer output per seeded tissue piece based on the first 12 rows of 'attached_tissue'
+#if using this, make sure the data frame is in order from A1-C4 wells otherwise it's miscalculaated
+
+percent_output <- ((cell_fact$no_mono_out) / head(cell_fact$no_attached_tissue, 12)) * 100
+```
+
+```{r}
+cell_fact <- cbind(cell_fact,percent_output)
+
+# Create a new data frame 'cell_fact_filtered' excluding rows with 'C2' and 'C4' in 'stage_at_dissection'
+cell_fact_filtered <- cell_fact[!(cell_fact$well_Placements %in% c("C2")), ]
+```
+
+
+# Summary Stats
+
+Tissue attached:
+```{r}
+# Calculate the mean attached tissue
+mean_tissue_attached <- cell_fact_filtered %>%
+  group_by(hps, treatment_mg_per_L, simple_stage) %>%
+  summarise(mean_attached = round(mean(no_attached_tissue, na.rm = TRUE)),
+            num_points = n())
+
+
+# Calculate SD
+SD_tissue_attached <- cell_fact_filtered %>%
+  group_by(hps, treatment_mg_per_L, simple_stage) %>%
+  summarise(SD_attached = round(sd(no_attached_tissue, na.rm = TRUE)))
+
+n <- 4
+
+SE_tissue_attached <- SD_tissue_attached$SD_attached/ sqrt(n)
+# Print the calculated mean health scores
+print(mean_tissue_attached)
+print(SE_tissue_attached)
+```
+
+Monolayer output raw
+```{r}
+# Calculate the mean 
+mean_mono_out <- cell_fact_filtered %>%
+  group_by(hps, treatment_mg_per_L, simple_stage) %>%
+  summarise(no_mono = mean(no_mono_out, na.rm = TRUE),
+            num_points = n())
+
+
+# Calculate SD and filter out groups with fewer than 2 observations
+SD_mono_out <- cell_fact_filtered %>%
+  group_by(hps, treatment_mg_per_L, simple_stage) %>%  
+  summarise(SD_mono = sd(no_mono_out, na.rm = TRUE),
+            num_points = n())
+
+
+n <- 4
+
+SE_mono <- SD_mono_out$SD_mono/ sqrt(n)
+# Print the calculated mean health scores
+print(mean_mono_out)
+print(SE_mono)
+```
+
+
+Monolayer output percent:
+```{r}
+# Calculate the mean 
+mean_ratio_mono_out <- cell_fact_filtered %>%
+  group_by(hps, treatment_mg_per_L, simple_stage) %>%
+  summarise(percent_mean_mono = mean(percent_output, na.rm = TRUE),
+            num_points = n())
+
+
+# Calculate SD and filter out groups with fewer than 2 observations
+SD_ratio_mono_out <- cell_fact_filtered %>%
+  group_by(hps, treatment_mg_per_L, simple_stage) %>%  
+  summarise(SD_ratio_mono = sd(percent_output, na.rm = TRUE),
+            num_points = n())
+
+
+n <- 4
+
+SE_mono_ratio <- SD_ratio_mono_out$SD_ratio_mono/ sqrt(n)
+# Print the calculated mean health scores
+print(mean_ratio_mono_out)
+print(SE_mono_ratio)
+```
+
+
+```{r}
+#png(filename = "line_percnet_output.png", width = 1100, height = 700) # good for making a 7x5 in image for printing ~150 dpi
+
+ggplot(data = mean_ratio_mono_out, aes(x = hps, y = percent_mean_mono, 
+                                       color = simple_stage, linetype = treatment_mg_per_L)) +
+  theme_minimal() +
+  labs(x = "Hours Post-Seeding", y = "Percent Monolayer Outputs") +
+  geom_point() +
+  geom_line(size = 3) +  # Adjusted line thickness to 2
+  scale_color_manual(name = "Stage",
+                     values = c("#FFD92F", "#E78AC3",  "#8DA0CB", "#A6D854"),  # Specify the colors
+                     labels = c("A", "B", "C", "TO")) +  # Use fill instead of color in the legend
+  scale_linetype_manual(name = "Treatment",
+                        values = c("dotted", "dotdash", "solid"),  # Example linetypes
+                        labels = c("Control", "5 mg/L", "45 mg/L")) +
+  scale_x_continuous(breaks = seq(0, max(mean_ratio_mono_out$hps), by = 10), expand = c(0, 0)) +  # Adjust x-axis to start at 0
+  scale_y_continuous(expand = c(0, 0), breaks = c(0, 5, 10, 15, 20, 25), limits = c(0, 25)) +  # Adjust y-axis to start at 0
+  theme(legend.position = "right",
+        legend.margin = margin(1, 1, 1, 50),  # Adjusting the margin around the legend
+        axis.text = element_text(size = 30),
+        axis.title = element_text(size = 40),
+        legend.text = element_text(size = 30),
+        legend.title = element_text(size = 40),
+        plot.margin = margin(t = 2, r = 1, b = 1, l = 1, unit = "cm"),  # Adjust the top margin
+        legend.key.size = unit(4, "lines"),
+        panel.grid.major.x = element_line(color = "darkgrey", size = 0.5),  # Remove major vertical gridlines
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.y = element_line(color = "darkgrey", size = 0.5),
+        panel.grid.minor.y = element_blank())  # Adjust the size of legend keys for linetypes
+
+#dev.off()
+```
+
+
+```{r}
+#png(filename = "mult_bar_plot_cell.png", width = 1000, height = 900) # good for making a 3x3 in image for printing ~150 dpi
+
+# Create the ggplot with renamed hps values in facet_wrap
+ggplot(mean_ratio_mono_out, aes(x = treatment_mg_per_L, y = percent_mean_mono, fill = stage_at_dissection)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.9) +
+  scale_fill_brewer(palette = "Set2", name = "Stage") +
+  labs(x = "Treatment (Nickel Chloride mg/L)",
+       y = "Percent Monolayer Output") +
+  facet_wrap(~ hps, labeller = as_labeller(c("18" = "18 hps", "38" = "38 hps", "70" = "70 hps"))) +
+  theme(axis.text=element_text(size=24),
+        axis.title=element_text(size=30),
+        legend.text = element_text(size = 30),
+        legend.title = element_text(size = 30),
+        strip.text = element_text(size = 30))  # Adjusted facet label font size
+
+#dev.off()
+
+```
+```{r}
+#png(filename = "mult_bar_plot_cell_simple_stage.png", width = 1000, height = 700) # good for making a 3x3 in image for printing ~150 dpi
+
+# Create the ggplot with renamed hps values in facet_wrap
+ggplot(mean_ratio_mono_out, aes(x = treatment_mg_per_L, y = percent_mean_mono, fill = simple_stage)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.9) +
+  scale_fill_manual(name = "Stage",
+                     values = c("#FFD92F", "#E78AC3",  "#8DA0CB", "#A6D854"),  # Specify the colors
+                     labels = c("A", "B", "C", "TO")) +
+  labs(x = "Treatment (Nickel Chloride mg/L)",
+       y = "Percent Monolayer Output") +
+  facet_wrap(~ hps, labeller = as_labeller(c("0" = "0 hps", "18" = "18 hps", "38" = "38 hps", "70" = "70 hps"))) +
+  theme(axis.text=element_text(size=30),
+        axis.title=element_text(size=40),
+        legend.text = element_text(size = 40),
+        legend.title = element_text(size = 40),
+        strip.text = element_text(size = 40))  # Adjusted facet label font size
+
+#dev.off()
+
+```
+
+```{r}
+mean_tissue_attached_18hps <-mean_tissue_attached[mean_tissue_attached$hps == "18", ]
+```
+
+
+```{r}
+
+# would need to modify mean_ratio_tissue at top to include stage_at_dissection with the full range of stages if you need to modify this plot, currently color codes do noth match with other plots avaialble regarding stage.
+
+#png(filename = "cell_attached.png", width = 1000, height = 900)
+
+ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached, fill = stage_at_dissection)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.9) +
+  scale_fill_brewer(palette = "Set2", name = "Stage") +
+  labs(x = "Treatment (Nickel Chloride mg/L)",
+       y = "Number of Attached Tissue") +
+  theme_minimal() +
+  scale_y_continuous(breaks = c(0, 5, 10), limits = c(0, 10)) +
+  theme(panel.grid.major.x = element_blank(),  # Remove major vertical gridlines
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.y = element_line(color = "darkgrey", size = 1),
+        panel.grid.minor.y = element_line(color = "darkgrey", size = 0.5), 
+        axis.text = element_text(size = 30),
+        axis.title = element_text(size = 40),
+        legend.text = element_text(size = 40),
+        legend.title = element_text(size = 40))
+
+ #dev.off()  # Close the PNG device
+
+
+```
+
+
+```{r}
+#png(filename = "cell_attached_simple_stage.png", width = 1000, height = 900)
+
+ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached, fill = simple_stage)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.9) +
+   scale_fill_manual(name = "Stage",
+                     values = c("#FFD92F", "#E78AC3",  "#8DA0CB", "#A6D854"),  # Specify the colors
+                     labels = c("A", "B", "C", "TO")) +
+    labs(x = "Treatment (Nickel Chloride mg/L)",
+       y = "Number of Attached Tissue") +
+  theme_minimal() +
+  scale_y_continuous(breaks = c(0, 5, 10), limits = c(0, 10)) +
+  theme(panel.grid.major.x = element_blank(),  # Remove major vertical gridlines
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.y = element_line(color = "darkgrey", size = 1),
+        panel.grid.minor.y = element_line(color = "darkgrey", size = 0.5), 
+        axis.text = element_text(size = 30),
+        axis.title = element_text(size = 40),
+        legend.text = element_text(size = 40),
+        legend.title = element_text(size = 40))
+
+#dev.off() 
+
+
+```
+
+
+```{r}
+#currently color scheme for stage is not consistent with other graphs
+
+# scale_fill_manual(name = "Stage",
+#                     values = c("#FFD92F", "#E78AC3",  "#8DA0CB", "#A6D854"),  # Specify the colors
+#                     labels = c("A", "B", "C", "TO")) +
+
+
+#png(filename = "cell_attached_stacked_all.png", width = 1000, height = 900)
+
+ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached, fill = stage_at_dissection)) +
+  geom_bar(stat = "identity", width = 0.9) +  # Remove position = "dodge" to make it stacked
+  scale_fill_brewer(palette = "Set2", name = "Stage") +
+  labs(x = "Treatment (Nickel Chloride mg/L)",
+       y = "Number of Attached Tissue") +
+  theme_minimal() +
+  scale_y_continuous(breaks = c(0, 5, 10, 15, 20, 25, 30), limits = c(0, 30)) +
+  theme(panel.grid.major.x = element_blank(),  # Remove major vertical gridlines
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.y = element_line(color = "darkgrey", size = 1),
+        panel.grid.minor.y = element_line(color = "darkgrey", size = 0.5), 
+        axis.text = element_text(size = 30),
+        axis.title = element_text(size = 40),
+        legend.text = element_text(size = 40),
+        legend.title = element_text(size = 40))
+
+#dev.off()
+
+```
+
+```{r}
+#png(filename = "cell_attached_stacked_all_simple_stage.png", width = 1000, height = 900)
+
+ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached, fill = simple_stage)) +
+   geom_bar(stat = "identity", width = 0.9) +
+   scale_fill_manual(name = "Stage",
+                     values = c("#FFD92F", "#E78AC3",  "#8DA0CB", "#A6D854"),  # Specify the colors
+                     labels = c("A", "B", "C", "TO")) +
+   labs(x = "Treatment (Nickel Chloride mg/L)",
+        y = "Number of Attached Tissue") +
+   theme_minimal() +
+   scale_y_continuous(breaks = c(0, 5, 10, 15, 20, 25, 30), limits = c(0, 30)) +
+   theme(panel.grid.major.x = element_blank(),
+         panel.grid.minor.x = element_blank(),
+         panel.grid.major.y = element_line(color = "darkgrey", size = 1),
+         panel.grid.minor.y = element_line(color = "darkgrey", size = 0.5), 
+         axis.text = element_text(size = 30),
+         axis.title = element_text(size = 40),
+         legend.text = element_text(size = 40),
+         legend.title = element_text(size = 40))
+#dev.off()
+```
+
+
+
+Average tissue seeding density per well at intiation and SEM. Putting in caption of figure 3 for SICB 
+```{r}
+cell_18hps <- cell_fact_filtered[cell_fact_filtered$hps == 18, ]
+
+mean(cell_18hps$no_attached_tissue)
+
+
+se <- (sd(cell_18hps$no_attached_tissue))/ sqrt(length(cell_18hps$hps))
+sd(cell_18hps$no_attached_tissue)
+```
+
+
+
+
+```{r}
+## Convert Treatment and HoursPostExposure to factors if they are not already factors
+cell_fact$treatment_mg_per_L <- as.factor(cell_fact$treatment_mg_per_L)
+cell_fact$hps <- as.factor(cell_fact$hps)
+
+
+## Perform two-way ANOVA
+anova_result <- aov(percent_output ~ treatment_mg_per_L + stage_at_dissection + treatment_mg_per_L:stage_at_dissection , data = cell_fact)
+
+# Summarize the ANOVA results
+summary(anova_result)
+
+
+## Meeting the ANOVA assumptions
+leveneTest(percent_output ~ stage_at_dissection*treatment_mg_per_L, data = cell_fact_filtered)
+#p-value > 0.05, therefore equal-variances are met
+
+
+# Check normality of residuals using Shapiro-Wilk test
+shapiro_test <- shapiro.test(residuals(anova_result))
+print(shapiro_test)
+#DOES NOT meet assumption of normality
+```
+
+```{r}
+
+#================need to transform data, ===================
+## check for normality and homogenity again after this and rerun anova
+
+p_prime <- log(cell_fact_filtered$percent_output +1)
+
+cell_fact2 <- cbind(cell_fact_filtered, p_prime)
+
+var(cell_fact2$p_prime) # a ratio of less than 4 generally means you can assume equal variances as a rule of thumb
+
+leveneTest(p_prime ~ treatment_mg_per_L*stage_at_dissection, data = cell_fact2)
+#p-value < 0.05, therefore equal-variances are not met again :( may be an issue with sample size
+
+
+
+## Perform two-way ANOVA
+anova_result2 <- aov(p_prime ~ treatment_mg_per_L + stage_at_dissection + treatment_mg_per_L:stage_at_dissection , data = cell_fact2)
+
+# Summarize the ANOVA results
+summary(anova_result2)
+
+# Check normality of residuals using Shapiro-Wilk test
+shapiro_test <- shapiro.test(residuals(anova_result2))
+print(shapiro_test)
+# p less than 0.05, so my data is normally distributed now.
+
+
+## Perform Tukey's HSD test for significant interaction
+
+tukey_result <- TukeyHSD(x= anova_result2, ordered = TRUE, conf.level = 0.95)
+print(tukey_result)
+
+### still fails assumptions of homogenity for an anova so we need to try a non-parametric sttistical test
+
+```
+
+
+```{r}
+# for getting the color codes from the brewer pallets
+brewer.pal(4, "Blues")
+```
+
+
+
