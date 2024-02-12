@@ -3,7 +3,7 @@ title: "Exposure 2 *in vivo* NiCl~2~ x *Botryllus schlosseri*"
 author: "Celeste Valdivia"
 date: "2023-11-13"
 categories: [study plans, nickel chloride]
-image: ""
+image: "thumbnail.png"
 ---
 
 ```{r setup, include=TRUE, warning=FALSE}
