@@ -1,9 +1,9 @@
 ---
-title: "Exposure 3"
+title: "Nickel chloride x *Botryllus schlosseri* Exposure 3"
 author: "Celeste Valdivia"
 date: "2023-11-28"
 categories: [study plans, nickel chloride]
-image: ""
+image: "5mm_S251C001_45-R1_24hpe-231115153616722 copy.png"
 ---
 
 # Experimental Planning
