@@ -1,6 +1,10 @@
 ---
-title: "Cell culture monitoring Pilot"
+title: "Nicekl Impacts on Primary Epithelial Cell Cultures of *Botryllus schlosseri*"
+subtitle: "Analysis of pilot study."
 author: "Celeste Valdivia"
+image: "line_percnet_output.png"
+date: "2023-12-24"
+categories: [nickel chloride, primary cultures, epithelial]
 ---
 
 ```{r}
@@ -16,9 +20,16 @@ library(ggpubr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r, engine='bash', eval= FALSE}
+#Objective and Background
+Data below was collected from a pilot study conducted in Autumn 2023 where field-collected individual *Botryllus schlosseri* were exposed to a low and high treatment of nickel chloride and then were dissected for primary buds. The objective was to evaluate if a pre-nickel exposure in *Botryllus* improved primary epithelial cell monolayer proliferation. Refer to [Pilot 1.1 Nickel Exposure](https://valeste.github.io/tough-tunicates/posts/nicl2-botryllus-pilot/) notebook post for experimental design details.
+
+# Retrieving Data from Google Sheets
+Note, if you do this, make sure your spreadsheet is publicly avaialble to anyone with a link. 
+
+```{r, engine='bash', eval= FALSE, echo=FALSE}
 curl -L https://docs.google.com/spreadsheets/d/13o7wsaFG9QAbBtIo31XtbfPtFOcf5HUEEYDksrcqaok/export?exportFormat=csv | tee ~/Documents/GitHub/Git/bestblogever/posts/cell-nicl2-botryllus-AU23/data/cell.csv
 ```
+Read in the data to your local R environment.
 
 ```{r}
 cell <- read.csv(file = "data/cell.csv")  
@@ -26,7 +37,8 @@ cell <- read.csv(file = "data/cell.csv")
 
 # Cleaning up Data
 
-New simplified staging (4 stages instead of 7)
+During the study, we documented blastogenic stage with the 7 level blastogenic stage scale For simplicity in our graphs and our interpretation, we will be being the stages into a 4 level blastogenic stage scale
+
 ```{r}
 # Create a new column 'simple_stage' based on conditions
 cell <- cell %>%
@@ -40,43 +52,42 @@ cell <- cell %>%
 ```
 
 
+Cleaning up and subsetting data.
 ```{r}
 cell$date <- mdy(cell$date) #convert the date column from characters to true date
 
 cell_pilot <- cell[cell$experiment == 0, ] # only want the pilot experiment, experiment 1 failed in poor dissecting technique
 
-# Subset the 'cell_pilot' data frame to include rows with hps values of 18, 38, and 70
+# Subset the 'cell_pilot' data frame to include rows with hours post seeding (hps) values of 0, 18, 38, and 70 hps.
+
 cell_pilot2 <- cell_pilot[cell_pilot$hps %in% c(0, 18, 38, 70), ]
 
-
+# Set the treatment, animal ID, and date as factors.
 cell_fact <- cell_pilot2 %>%
   mutate(treatment_mg_per_L = as.factor(treatment_mg_per_L)) %>%
   mutate(animal_ID = as.factor(animal_ID)) %>%
   mutate(date = as.factor(date))
 
 
-
 summary(cell_fact)
 ```
 
-```{r}
-# Calculate the percent of monolayer output per seeded tissue piece based on the first 12 rows of 'attached_tissue'
-#if using this, make sure the data frame is in order from A1-C4 wells otherwise it's miscalculaated
+Calculate the percent of monolayer output per seeded tissue piece based on the first 12 rows of 'attached_tissue'. Here we are calculating the amount of monolayers that occurred relative to the amount of originally seeded tissue. Overtime, seeded tissue detaches and is removed from the plate so if you were to calculate this ratio per day it would be off. If using this, make sure the data frame is in order from A1-C4 wells otherwise it's miscalculated. 
 
+```{r}
 percent_output <- ((cell_fact$no_mono_out) / head(cell_fact$no_attached_tissue, 12)) * 100
-```
 
-```{r}
+# Add the newly calculated percent output values to the old data frame
 cell_fact <- cbind(cell_fact,percent_output)
 
 # Create a new data frame 'cell_fact_filtered' excluding rows with 'C2' and 'C4' in 'stage_at_dissection'
 cell_fact_filtered <- cell_fact[!(cell_fact$well_Placements %in% c("C2")), ]
 ```
 
+# Summary Statistics
 
-# Summary Stats
+Number of tissue pieces attached:
 
-Tissue attached:
 ```{r}
 # Calculate the mean attached tissue
 mean_tissue_attached <- cell_fact_filtered %>%
@@ -98,7 +109,8 @@ print(mean_tissue_attached)
 print(SE_tissue_attached)
 ```
 
-Monolayer output raw
+Number of monolayer output:
+
 ```{r}
 # Calculate the mean 
 mean_mono_out <- cell_fact_filtered %>%
@@ -122,8 +134,8 @@ print(mean_mono_out)
 print(SE_mono)
 ```
 
+Monolayer output by relative tissue seeded (percent):
 
-Monolayer output percent:
 ```{r}
 # Calculate the mean 
 mean_ratio_mono_out <- cell_fact_filtered %>%
@@ -147,9 +159,13 @@ print(mean_ratio_mono_out)
 print(SE_mono_ratio)
 ```
 
+# Graphs
 
-```{r}
-#png(filename = "line_percnet_output.png", width = 1100, height = 700) # good for making a 7x5 in image for printing ~150 dpi
+Below are graphs used in the SICB poster generated. Graph settings are set to be really large for printing and don't render well in this format so instead are figures with attached images of the produced graphs.
+
+```{r, eval=FALSE}
+# png(filename = "line_percnet_output.png", width = 1100, height = 700) 
+##good for making a 7x5 in image for printing ~150 dpi
 
 ggplot(data = mean_ratio_mono_out, aes(x = hps, y = percent_mean_mono, 
                                        color = simple_stage, linetype = treatment_mg_per_L)) +
@@ -181,9 +197,11 @@ ggplot(data = mean_ratio_mono_out, aes(x = hps, y = percent_mean_mono,
 #dev.off()
 ```
 
+![](line_percnet_output.png){fig-alt="Percent monolayer output over time." fig-align="center" width=100%}
 
-```{r}
-#png(filename = "mult_bar_plot_cell.png", width = 1000, height = 900) # good for making a 3x3 in image for printing ~150 dpi
+```{r, eval=FALSE}
+#png(filename = "mult_bar_plot_cell.png", width = 1000, height = 900) 
+## good for making a 3x3 in image for printing ~150 dpi
 
 # Create the ggplot with renamed hps values in facet_wrap
 ggplot(mean_ratio_mono_out, aes(x = treatment_mg_per_L, y = percent_mean_mono, fill = stage_at_dissection)) +
@@ -201,7 +219,9 @@ ggplot(mean_ratio_mono_out, aes(x = treatment_mg_per_L, y = percent_mean_mono, f
 #dev.off()
 
 ```
-```{r}
+
+
+```{r, eval=FALSE}
 #png(filename = "mult_bar_plot_cell_simple_stage.png", width = 1000, height = 700) # good for making a 3x3 in image for printing ~150 dpi
 
 # Create the ggplot with renamed hps values in facet_wrap
@@ -222,15 +242,17 @@ ggplot(mean_ratio_mono_out, aes(x = treatment_mg_per_L, y = percent_mean_mono, f
 #dev.off()
 
 ```
+Using facet_wrap you can get multi-panel plots.
+
+![](mult_bar_plot_cell_simple_stage.png){fig-alt="Multipanel plot example." fig-align="center" width=100%}
 
 ```{r}
 mean_tissue_attached_18hps <-mean_tissue_attached[mean_tissue_attached$hps == "18", ]
 ```
 
+```{r, eval=FALSE}
 
-```{r}
-
-# would need to modify mean_ratio_tissue at top to include stage_at_dissection with the full range of stages if you need to modify this plot, currently color codes do noth match with other plots avaialble regarding stage.
+# would need to modify mean_ratio_tissue at top to include stage_at_dissection with the full range of stages if you need to modify this plot, currently color codes do not match with other plots available regarding stage.
 
 #png(filename = "cell_attached.png", width = 1000, height = 900)
 
@@ -256,7 +278,8 @@ ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached
 ```
 
 
-```{r}
+
+```{r, eval=FALSE}
 #png(filename = "cell_attached_simple_stage.png", width = 1000, height = 900)
 
 ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached, fill = simple_stage)) +
@@ -283,7 +306,9 @@ ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached
 ```
 
 
-```{r}
+![](cell_attached_simple_stage.png){fig-alt="Number of tissue pieces adhered to plate at initiation of culturing by treatment and blastogenic stage." fig-align="center" width=100%}
+
+```{r, eval=FALSE}
 #currently color scheme for stage is not consistent with other graphs
 
 # scale_fill_manual(name = "Stage",
@@ -313,7 +338,7 @@ ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached
 
 ```
 
-```{r}
+```{r, eval=FALSE}
 #png(filename = "cell_attached_stacked_all_simple_stage.png", width = 1000, height = 900)
 
 ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached, fill = simple_stage)) +
@@ -337,8 +362,14 @@ ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached
 ```
 
 
+![](cell_attached_stacked_all_simple_stage.png){fig-alt="Number of tissue pieces adhered to plate at initiation of culturing by treatment and blastogenic stage. Stacked bars to get an idea of how much tissue was allotted to each treatment." fig-align="center" width=100%}
 
-Average tissue seeding density per well at intiation and SEM. Putting in caption of figure 3 for SICB 
+Average tissue seeding density per well at intiation of culturing and SEM. Putting in caption of figure 3 for SICB.
+
+# Statistics 
+
+### Determining significance in primary cell output by treatment and blastogenic stage.
+
 ```{r}
 cell_18hps <- cell_fact_filtered[cell_fact_filtered$hps == 18, ]
 
@@ -348,9 +379,6 @@ mean(cell_18hps$no_attached_tissue)
 se <- (sd(cell_18hps$no_attached_tissue))/ sqrt(length(cell_18hps$hps))
 sd(cell_18hps$no_attached_tissue)
 ```
-
-
-
 
 ```{r}
 ## Convert Treatment and HoursPostExposure to factors if they are not already factors
@@ -409,15 +437,8 @@ print(shapiro_test)
 tukey_result <- TukeyHSD(x= anova_result2, ordered = TRUE, conf.level = 0.95)
 print(tukey_result)
 
-### still fails assumptions of homogenity for an anova so we need to try a non-parametric sttistical test
+### still fails assumptions of homogenity for an anova so we need to try a non-parametric statistical test
 
 ```
 
-
-```{r}
-# for getting the color codes from the brewer pallets
-brewer.pal(4, "Blues")
-```
-
-
-
+Note that the sample size is so small that it fails to meet the assumptions of homogenity and a full statistical analysis of the data cannot be complete.
