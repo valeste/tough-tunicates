@@ -1,5 +1,5 @@
 ---
-title: "Nicekl Impacts on Primary Epithelial Cell Cultures of *Botryllus schlosseri*"
+title: "Nickel Impacts on Primary Epithelial Cell Cultures of *Botryllus schlosseri*"
 subtitle: "Analysis of pilot study."
 author: "Celeste Valdivia"
 image: "line_percnet_output.png"
