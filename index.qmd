@@ -1,9 +1,10 @@
 ---
-title: "The Tough Tunicate "
+title: "Lab Notebook"
+subtitle: "by Celeste Valdivia"
 listing:
   contents: posts
   sort: "date desc"
-  type: grid
+  type: default
   categories: true
   sort-ui: false
   filter-ui: false
