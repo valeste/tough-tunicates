@@ -7,7 +7,7 @@ date: "2023-12-24"
 categories: [nickel chloride, primary cultures, epithelial]
 ---
 
-```{r}
+```{r, warning=FALSE}
 library(knitr)
 library(tidyverse)
 library(tidyr)
@@ -20,15 +20,18 @@ library(ggpubr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#Objective and Background
+# Objective and Background 
+
 Data below was collected from a pilot study conducted in Autumn 2023 where field-collected individual *Botryllus schlosseri* were exposed to a low and high treatment of nickel chloride and then were dissected for primary buds. The objective was to evaluate if a pre-nickel exposure in *Botryllus* improved primary epithelial cell monolayer proliferation. Refer to [Pilot 1.1 Nickel Exposure](https://valeste.github.io/tough-tunicates/posts/nicl2-botryllus-pilot/) notebook post for experimental design details.
 
 # Retrieving Data from Google Sheets
-Note, if you do this, make sure your spreadsheet is publicly avaialble to anyone with a link. 
 
-```{r, engine='bash', eval= FALSE, echo=FALSE}
+Note, if you do this, make sure your spreadsheet is publicly available to anyone with a link.
+
+```{r, engine='bash', eval= FALSE, echo=TRUE}
 curl -L https://docs.google.com/spreadsheets/d/13o7wsaFG9QAbBtIo31XtbfPtFOcf5HUEEYDksrcqaok/export?exportFormat=csv | tee ~/Documents/GitHub/Git/bestblogever/posts/cell-nicl2-botryllus-AU23/data/cell.csv
 ```
+
 Read in the data to your local R environment.
 
 ```{r}
@@ -51,8 +54,8 @@ cell <- cell %>%
   ))
 ```
 
-
 Cleaning up and subsetting data.
+
 ```{r}
 cell$date <- mdy(cell$date) #convert the date column from characters to true date
 
@@ -72,7 +75,7 @@ cell_fact <- cell_pilot2 %>%
 summary(cell_fact)
 ```
 
-Calculate the percent of monolayer output per seeded tissue piece based on the first 12 rows of 'attached_tissue'. Here we are calculating the amount of monolayers that occurred relative to the amount of originally seeded tissue. Overtime, seeded tissue detaches and is removed from the plate so if you were to calculate this ratio per day it would be off. If using this, make sure the data frame is in order from A1-C4 wells otherwise it's miscalculated. 
+Calculate the percent of monolayer output per seeded tissue piece based on the first 12 rows of 'attached_tissue'. Here we are calculating the amount of monolayers that occurred relative to the amount of originally seeded tissue. Overtime, seeded tissue detaches and is removed from the plate so if you were to calculate this ratio per day it would be off. If using this, make sure the data frame is in order from A1-C4 wells otherwise it's miscalculated.
 
 ```{r}
 percent_output <- ((cell_fact$no_mono_out) / head(cell_fact$no_attached_tissue, 12)) * 100
@@ -197,7 +200,7 @@ ggplot(data = mean_ratio_mono_out, aes(x = hps, y = percent_mean_mono,
 #dev.off()
 ```
 
-![](line_percnet_output.png){fig-alt="Percent monolayer output over time." fig-align="center" width=100%}
+![](line_percnet_output.png){fig-alt="Percent monolayer output over time." fig-align="center" width="100%"}
 
 ```{r, eval=FALSE}
 #png(filename = "mult_bar_plot_cell.png", width = 1000, height = 900) 
@@ -220,7 +223,6 @@ ggplot(mean_ratio_mono_out, aes(x = treatment_mg_per_L, y = percent_mean_mono, f
 
 ```
 
-
 ```{r, eval=FALSE}
 #png(filename = "mult_bar_plot_cell_simple_stage.png", width = 1000, height = 700) # good for making a 3x3 in image for printing ~150 dpi
 
@@ -242,9 +244,10 @@ ggplot(mean_ratio_mono_out, aes(x = treatment_mg_per_L, y = percent_mean_mono, f
 #dev.off()
 
 ```
+
 Using facet_wrap you can get multi-panel plots.
 
-![](mult_bar_plot_cell_simple_stage.png){fig-alt="Multipanel plot example." fig-align="center" width=100%}
+![](mult_bar_plot_cell_simple_stage.png){fig-alt="Multipanel plot example." fig-align="center" width="100%"}
 
 ```{r}
 mean_tissue_attached_18hps <-mean_tissue_attached[mean_tissue_attached$hps == "18", ]
@@ -277,8 +280,6 @@ ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached
 
 ```
 
-
-
 ```{r, eval=FALSE}
 #png(filename = "cell_attached_simple_stage.png", width = 1000, height = 900)
 
@@ -305,8 +306,7 @@ ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached
 
 ```
 
-
-![](cell_attached_simple_stage.png){fig-alt="Number of tissue pieces adhered to plate at initiation of culturing by treatment and blastogenic stage." fig-align="center" width=100%}
+![](cell_attached_simple_stage.png){fig-alt="Number of tissue pieces adhered to plate at initiation of culturing by treatment and blastogenic stage." fig-align="center" width="100%"}
 
 ```{r, eval=FALSE}
 #currently color scheme for stage is not consistent with other graphs
@@ -361,12 +361,11 @@ ggplot(mean_tissue_attached_18hps, aes(x = treatment_mg_per_L, y = mean_attached
 #dev.off()
 ```
 
+![](cell_attached_stacked_all_simple_stage.png){fig-alt="Number of tissue pieces adhered to plate at initiation of culturing by treatment and blastogenic stage. Stacked bars to get an idea of how much tissue was allotted to each treatment." fig-align="center" width="100%"}
 
-![](cell_attached_stacked_all_simple_stage.png){fig-alt="Number of tissue pieces adhered to plate at initiation of culturing by treatment and blastogenic stage. Stacked bars to get an idea of how much tissue was allotted to each treatment." fig-align="center" width=100%}
+Average tissue seeding density per well at initiation of culturing and SEM. Putting in caption of figure 3 for SICB.
 
-Average tissue seeding density per well at intiation of culturing and SEM. Putting in caption of figure 3 for SICB.
-
-# Statistics 
+# Statistics
 
 ### Determining significance in primary cell output by treatment and blastogenic stage.
 
