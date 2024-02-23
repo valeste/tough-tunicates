@@ -1,0 +1,279 @@
+---
+title: "qPCR for Nickel exposure on *Botryllus schlosseri*"
+subtitle: "Relative standard curves to determine primer effenciencies."
+author: "Celeste Valdivia"
+date: "2024-02-12"
+categories: [nickel chloride, qPCR, primers]
+image: "EP PCR Gel Results 12_18_23 -2.jpg"
+---
+
+# Objective
+
+
+# Background
+
+## End-Point PCR
+
+::: {#fig-ep-pcr layout-ncol="2"}
+![](EP PCR Gel Results 12_18_23 -1.jpg)
+
+![](EP PCR Gel Results 12_18_23 -2.jpg)
+
+EP-PCR conducted to confirm correct size of amplicon products. In this PCR reaction run, primer sets were at a concentration of 5 uM and the reagent used was SYBR PowerTrack. Note this is different than what was used for the 1:10 dilution series relative standard curves. 
+:::
+
+## Primers
+
+## qPCR Reaction Information
+
+| **Component**                                        | **per 1 rxn (uL)** |
+|------------------------------------------------------|--------------------|
+| Applied Biosystems™ Power SYBR™ Green PCR Master Mix | 5                  |
+| Nuclease-free water                                  | 3.5                |
+| Forward Primer                                       | 0.25               |
+| Reverse Primer                                       | 0.25               |
+| cDNA                                                 | 1                  |
+| **Total**                                            | **10**             |
+
+# Relative Standard Curves
+
+## Primer Sets
+| Number | Gene     | Forward Primer (5'-3')      | Reverse Primer (5'-3')     | Source                          |
+|--------|----------|-----------------------------|----------------------------|---------------------------------|
+|      1 | BAX      | CATTGACCTTGCGTGTTATTGG      | AAGATGTCCTTGGTGGGTTG       | in house                        |
+|      2 | POU3     | CAGTAGGTCTTCGCATCCATC       | CGTTTGCATCGTTGGTGTAAG      | in house                        |
+|      3 | PolB     | GGCTTCACAATCAATGAGTATTCC    | AGCAATCTTTCCGCATTCATTC     | in house                        |
+|      4 | TNF      | GTTTCAGTCAACACCTTGTGTC      | AATCTCGACCGCTGACTTATAC     | in house                        |
+|      5 | SOXB1    | GGGAATGTGTTCATCCTCTGG       | TGAATCCAGGAGTTACTCAAGTTC   | in house                        |
+|      6 | MYC      | GAAGTCCTGGCTAAGATGCTAC      | AGCGTCAAGAAGGAAGTACG       | in house                        |
+|      7 | AIF1     | GGATTCTCTCACCGATGGAATAG     | CCTGACTTGGAGCCTTTATGG      | in house                        |
+|      8 | SOD1     | CAATCCATATAACAAGGTTCATGGC   | TGATATCCACACAGGCACAAC      | in house                        |
+|      9 | PARP1    | AATTTGGCACCGCTCATTTC        | TGCAAGACCTTCAGCTTCTC       | in house                        |
+|     10 | SIRT6    | ATTAGTACCGCGTCTGGAATAC      | GGATGGAATCGCTTCTTCAAATC    | in house                        |
+|     11 | IAP7     | GGTCTCTTCACGGACATCTTC       | GCTCAGTATGTTGTGCTTGTTC     | in house                        |
+|     12 | HSP70    | CGAGAAGTTGAAGGACAAGATCTCCG  | TCTCTGCAGTCTGGTTGTTGTCGAGC | doi:10.1016/j.ydbio.2017.10.023 |
+|     13 | Mortalin | TTCATGATACCGAAACCAAGATGGACG | AATTTCCTCCTTGATGGCATCCACC  | doi:10.1016/j.ydbio.2017.10.023 |
+|     14 | ACTb     | GTAGGTAGTCTCGTGAATTC        | CACGCCATCTTGCGTCTGGA       | doi:10.1016/j.dci.2006.12.009   |
+|     15 | 18s      | GGCAGCCTCCGGGAAACCAAAGTC    | CTGGTGGTGCCCTTCCGTCAATTC   | doi:10.1016/j.ydbio.2017.10.023 |
+
+## Good
+
+### Beta actin
+  
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/actb_mc.png)
+
+![](png/actb_sc.png)
+
+![](png/actb_amp.png)
+
+Efficiency for beta actin is 94%
+
+:::
+
+### 18s
+
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/18s_mc.png)
+
+![](png/18s_sc.png)
+
+![](png/18s_amp.png)
+
+Efficiency value for 18s = 89%.
+:::
+
+## Questionable
+
+### BAX
+  
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/bax_mc.png)
+
+![](png/bax_sc.png)
+
+![](png/bax_amp.png)
+
+Efficiency for BAX is 350%
+
+:::
+
+### AIF1
+  
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/aif1_mc.png)
+
+![](png/aif1_sc.png)
+
+![](png/aif1_amp.png)
+
+Efficiency for AIF1 is TBD.
+
+:::
+
+### Mortalin
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/mort_mc.png)
+
+![](png/mort_sc.png)
+
+![](png/mort_amp.png)
+
+Efficiency for Mortalin is TBD.
+
+:::
+
+### SIRT6
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/sirt6_mc.png)
+
+![](png/sirt6_sc.png)
+
+![](png/sirt6_amp.png)
+
+Efficiency for SIRT6 is more than 2 million.
+
+:::
+
+### SOD1
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/sod1_mc.png)
+
+![](png/sod1_sc.png)
+
+![](png/sod1_amp.png)
+
+Efficiency for SOD1 is TBD.
+
+:::
+
+### POU3
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/pou3_mc.png)
+
+![](png/pou3_sc.png)
+
+![](png/pou3_amp.png)
+
+Efficiency for POU3 is 673%.
+
+:::
+
+### SOXB1
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/soxb1_mc.png)
+
+![](png/soxb1_sc.png)
+
+![](png/soxb1_amp.png)
+
+Efficiency for soxb1 is TBD.
+
+:::
+
+### MYC
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/myc_mc.png)
+
+![](png/myc_sc.png)
+
+![](png/myc_amp.png)
+
+Efficiency for MYC is TBD.
+
+:::
+
+### IAP7
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/iap7_mc.png)
+
+![](png/iap7_sc.png)
+
+![](png/iap7_amp.png)
+
+Efficiency for IAP7 is TBD.
+
+:::
+
+## Trash
+
+### PolB
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/polb_mc.png)
+
+![](png/polb_sc.png)
+
+![](png/polb_amp.png)
+
+Basically no amplification.
+
+:::
+
+### TNF
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/tnf_mc.png)
+
+![](png/tnf_sc.png)
+
+![](png/tnf_amp.png)
+
+Basically no amplification.
+
+:::
+
+### HSP70
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/hsp70_mc.png)
+
+![](png/hsp70_sc.png)
+
+![](png/hsp70_amp.png)
+
+Bascially no amp.
+
+:::
+
+### PARP1
+
+::: {#fig-ep-pcr layout-ncol="1"}
+
+![](png/parp1_mc.png)
+
+![](png/parp1_sc.png)
+
+![](png/parp1_amp.png)
+
+Late amp, maybe rare in my samples? 
+
+
+:::
+
+
+
+
+
