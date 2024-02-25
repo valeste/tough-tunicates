@@ -1,0 +1,221 @@
+---
+title: "Primary Epithelial Cell Culture Protocol"
+author: "Celeste Valdivia"
+date: "2024-02-04"
+categories: [epithelial, protocol]
+image: ""
+---
+
+
+This protocol is version 02.04.24
+
+# Protocol
+
+## Materials
+
+### Equipment
+
+-   Biosaftey cabinet
+-   Nikon SMZ745T Stereoscopic Microscope with Excelis camera
+-   Evos XL Core inverted microscope
+-   Aspirator
+-   Spray bottle
+-   Two 15 cm diameter glass culture dish
+-   Small shallow dish (size not important)
+-   Curved forceps
+-   Serological pipetteboy
+-   1000 mL waste beaker
+-   1000 μl pipette
+-   100 μl pipette
+-   Refractometer
+
+
+### Consumables
+
+Solution preparation: 
+
+-   0.22 um filter units 
+-   Penicillin-Streptomycin (100x stock) 
+-   Amphotericin-B (250 ug/mL stock) 
+-   Gentamicin (50 mg/mL stock) 
+-   75 ppt filtered seawater (FSW) 
+
+During dissection: 
+
+-   BH Supplies Insulin Syringes U-100 28G 1ml/cc 5/16" (8mm) 
+-   100 um cell strainers 
+-   Autoclaved 27 ppt artificial seawater (ASW)
+-   70% ethanol
+
+
+During tissue seeding: 
+
+-   Corning 24 well plates
+-   60 mm petri dishes 
+-   10 mL and 5 mL serological pipettes 
+-   1000 μl pipette tips 
+
+### Solutions
+
+#### Concentrated Filtered Seawater (for media formulation)
+
+1.  Make concentrated saltwater
+
+Option A: Mix together the below two solutions:
+
+-   To 500 mL of MilliQ water
+    -   54.68 g NaCl
+    -   1.648 g KCl
+    -   2.884 g CaCl2·2H2O
+-   To 500 mL of MilliQ water
+    -   22.28 g MgSO4·7H2O
+    -   12.2 g MgCl2·6H2O
+
+Option B: Formulate 500 mL of concentrated salt water (75 ppt) solution from [Red Sea Salt](https://www.kwikpets.com/products/red-sea-salt-bucket-55gal?currency=USD&variant=31888159440965&utm_medium=cpc&utm_source=google&utm_campaign=Google%20Shopping).
+
+-   Verify salinity using refractometer prior to filtering.
+
+2.  Filter solution through 0.22 um filter unit.
+
+#### Artificial Seawater
+
+36.6 grams (g) of Red Sea Salt per liter to make solution at \~30 ppt.
+
+##### **Artificial Seawater - 0.05% Gentamicin (ASW-G)**
+
+This solution is essential for the isolation of tunicate individuals 24 hours prior to dissection and during dissections.
+
+In the biosaftey cabinet add together the following:
+
+-   500 mL of artificial seawater (\~850 mOsmo/kg)
+    -   Does not have to be autoclaved or filtered
+-   238.8 μl gentamicin (50 mg/mL stock)
+
+##### **Artificial Seawater - 1% Pen/Strep & 0.01% Amp B (ASW-PSA)**
+
+This solution is used as the media in which the tunicate is submerged during dissection.
+
+In the biosafety cabinet add together the following:
+
+-   494.5 mL filtered seawater (\~850 mOsmo/kg)
+-   500 μl Amphotericin B (250ug/mL stock solution)
+-   5 mL of Penicillin-Streptomycin (100x)
+
+#### **Tunicate Cμlture Medium (TCM) with 1.4% Pen-Strep and 0.1% Amp B**
+
+In the biosafety cabinet add together:
+
+-   45.6 mL of L-15 media
+-   21.7 mL of FSW (to adjust media milli-osmolality from \~300 mOsmo/kg to \~850 mOsmo/kg)
+-   2.4 mL fetal bovine serum (FBS)
+-   1 mL HEPES (20 mMol/L)
+-   1 mL Pen/Strep (100x)
+-   100 μl Amphotericin B (250 ug/mL)
+
+#### ** FSW-Init**
+FSW (30 PPT)
+
+-   8 mL conc. FSW 
+-   12 mL Tissue Grade Molecular Water
+-   600 μl FBS
+-   200 μl Pen/Srep (100x)
+-   20 μl Amp B (250 ug/mL)
+
+200 μl/well FSW supplemented with 3% HIFCS, 2·mmol·l–1 glutamine and 1% PSA solution
+## Cell Isolation Procedure
+
+Be sure to have sufficient stocks of the above three solutions prior to following the below procedures.
+
+##### 1. Prep for Dissections
+
+-   Select an individual (one glass slide) with at least 30 zooids completely adhered to the slide. Health score must be 7 and above. Target stages C1-D. Earlier stages do not produce monolayers as frequently.
+
+-   Remove individuals from recirculating seawater system
+
+-   Use a razor blade to clean the glass slide and a soft brush to remove excess debris
+
+-   Place animal in 15 cm glass petri dish containing 100 mL of ASW-G. Parafilm and perforate petri dish. Incubate for 2 hours at room temperature
+
+-   Immerse animal for 15 seconds in 70% ethanol then rinse off with ASW.
+
+-   Place in ASW-G again and begin dissections
+
+##### 2. Bud Excision
+
+
+-   Under stereomicroscope on lab bench take picture of colony with Excelis camera.
+
+-   Record blastogenic stage, primary bud number, days in RSWS, and health score.
+
+-   Using a pair of 28G syringe needles, peel open the tunic and remove primary buds.
+
+-   Every time a primary bud is removed, place it in cell strainer that itself is also immersed in the same 20 mL of ASW-G. Use a clicker to keep track of the number of primary bud you collected.
+
+-   Once you have collected all the primary buds desired from colony rinse extensively with ASW.
+
+-   Use same pair of insulin needles to transfer over the primary buds to the 1.5 mL tube containing 1 mL of FSW- 10% TCM. This can be done by placing the cell strainer in ASW-PSA under the stereomicroscope and carefully rolling the primary buds onto one of the needles. Make sure not to burst them.
+
+-   Transfer all tubes containing bud tissue to the biosaftey cabinet in TPS for cell seeding.
+
+
+#### 3. Coat well plates
+
+Cultrex Basement Membrane Extract (BME) and Reduced Growth Factor Basement Membrane Extract (RFG BME) Coating Procedure:Cultrex Coating Procedure:
+
+<!-- -->
+
+1.  Thaw Cultrex RGF BME and Cultrex BME overnight at 2-8 °C. Refrigerator temperatures may vary, therefore it is recommended to keep BME on ice in a refrigerator during the thawing process. Thawed BME solidifies quickly at the temperatures above 15 °C; when working with extract, keep it on ice to prevent untimely gelling.
+2.  Mix Cultrex RGF BME by slowly pipetting solution up and down; be careful not to introduce air bubbles.
+3.  Dilute Cultrex RGF BME and Cultrex BME to desired concentration in cold serum-free medium. A 1:100 dilution is recommended for the propagation of primary cells. Empirical determination of the optimal coating concentration for your application may be required.
+4.  Add a sufficient amount of solution to cover the entire growth surface area. A volume of 300 μL per cm^2^ is recommended.
+5.  Incubate coated object at room temperature for one hour.
+6.  Aspirate coating solution and immediately plate cells. Do not allow coated surface to dry out.
+
+For both Cultrex BME and RGF BME we will be coating eight 1.9 cm^2^ wells (and accounting for 10% volume loss):
+
+$$ 300 μl/cm^2 * 1.9 cm^2 / well * 8wells + (300 * 1.9  * 8wells * 0.1)overage = 5,016 μl$$
+
+Therefore need:
+
+1:100 dilution:
+$$ 5,016 μl/100  = 50.2 μl $$
+$$ 5,016 μl - 50.2 μl= 4,965.8 μl $$
+
+50.2 μl of cultrex and 4,965.8 μl of serum-free media.
+
+Serum-free media:
+
+-   65.71% DMEM (Gibco, Cat no. A1443001) = 3,263 μl
+
+-   31.27% FSW = 1,553.8 μl
+
+-   1.44% HEPES Buffer = 71.5 μl
+
+-   1.44% Pen-Strep = 71.5 μl
+
+-   0.14% Amphotericin B = 7 μl
+
+$$300 μl/cm^2 * 1.9 cm^2 / well = 570 μl$$
+
+Then to each well add 570 μl of the diluted substrate solution.
+
+##### 4. Seeding tissue and cell maintenance
+
+
+-   Remove excess media from cultrex substrate wells.
+
+-   For wells with plastic only, dessicate tissue a bit to get them to adhere
+
+-   For Cultrex BME wells, place tissue and immediately add in media
+
+-   Media comprised of 200 μl FSW-Init and 200 μl TCM per well
+
+-   Add 50 μl of TCM per well each week for next two weeks to make media reach final volume of 500 μl
+
+-   Thereafter, only replace 10% of the media every week (50 μl TCM addition). (Graudally increasing TCM conc. overtime.)
+
+-   Add 0.5-1 mL of TCM to each well. Be sure to not touch the tip of the pipette to the wells and to have the lowest flow possible when adding in media to not agitate the tissue and have it unadhere from plate.
+
+-   Incubate cells at 18 C, 91% humidity.
+
+-   Replace 100% of the TCM every 2-3 days for plates and once a week for flasks.

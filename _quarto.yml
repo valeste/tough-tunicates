@@ -10,7 +10,7 @@ website:
   repo-url: https://github.com/valeste/tough-tunicates
   
   navbar:
-    logo: "images/icon.png"
+    logo: "images/Subject.png"
     background: primary
     foreground: light
     search: true

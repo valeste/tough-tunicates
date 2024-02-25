@@ -1,0 +1,34 @@
+---
+title: "Tunicate Hemolymph Extraction for Media Supplementation"
+author: "Celeste Valdivia"
+date: "2024-02-14"
+categories: [epithelial, primaries, paper]
+image: "ciona.jpeg"
+---
+
+Protocol replicated from following paper.
+
+::: callout-note
+## Citations
+
+Raftos DA, Cooper EL, Habicht GS, Beck G. Invertebrate cytokines: tunicate cell proliferation stimulated by an interleukin 1-like molecule. Proc Natl Acad Sci USA. 1991 Nov;88(21):9518–22. 
+
+
+:::
+
+# Objective
+
+# Background
+
+## Organisms
+
+::: {#fig-oranisms layout-ncol="2"}
+
+![](ciona.jpeg)
+*Ciona savignyi*
+
+![](anatomy.png)
+*Botryllus schlosseri*
+
+# Protocol
+

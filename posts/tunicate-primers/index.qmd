@@ -21,7 +21,7 @@ I am interested in designing primers for *Botryllus schlosseri* to evaluate diff
 This list serves as a jumping off point for myself to look into genes that may potentially be differentially expressed in *Botryllus schlosseri* exposed to the clastogen (by oxidative damage to the DNA), nickel chloride.
 
 | Role                    | Gene ID      | Whole Gene Name                                                            |
-|:--------------|:--------------|:------------------------------------------|
+|:------------------------|:-------------|:---------------------------------------------------------------------------|
 | Senescence              | TP53 (p53)   | Tumor protein p53                                                          |
 | Senescence              | CDKN1A (p21) | Cyclin-dependent kinase inhibitor 1A                                       |
 | Senescence              | CDKN2A (p16) | Cyclin-dependent kinase inhibitor 2A                                       |
@@ -52,7 +52,7 @@ This list serves as a jumping off point for myself to look into genes that may p
 For the purpose of expedience and accuracy. This generally is the preferred approach.
 
 | Gene     | NCBI Accession Number | DOI                                   | Fwd Primer                        | Rev Primer                      |
-|--------------|--------------|----------------|--------------|--------------|
+|----------|-----------------------|---------------------------------------|-----------------------------------|---------------------------------|
 | Mortalin | KY212120              | doi:10.1016/<br />j.ydbio.2017.10.023 | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC |
 
 ## Design primers in-house for *Botryllus schlosseri*.
@@ -100,7 +100,7 @@ This method allows us to leverage well-annotated gene data to find potential hom
 #### Sequences Identified with BLAST Tool in the botznik-ctg.fa Database
 
 | Role                          | Gene ID | Query NCBI GenBank Accession | Query Organism                 | Top Sequence Producing Significant Alignment | Score (bits) | E Value  |
-|:---------|:---------|:---------|:---------|:-----------|:---------|:---------|
+|:------------------------------|:--------|:-----------------------------|:-------------------------------|:---------------------------------------------|:-------------|:---------|
 | Apoptosis                     | TNF     | LR791346.1                   | \[Phallusia mammillata\]       | botctg065850                                 | 70           | 1.00E-09 |
 | DNA Repair                    | PolB    | LR789137.1                   | \[Phallusia mammillata\]       | botctg092056                                 | 60           | 1.00E-06 |
 | Oxidative Stress              | SOD1    | EE743567.1                   | \[Botryllus schlosseri\]       | botctg006757                                 | 319          | 5e-86    |
@@ -211,7 +211,7 @@ General rules for designing good primers:
 # Primers
 
 | Gene     | Designer | NCBI Accession Number for Complete CDS | Fwd Primer                        | Rev Primer                       |
-|:------------|:------------|:----------------|:--------------|:-------------|
+|:---------|:---------|:---------------------------------------|:----------------------------------|:---------------------------------|
 | Mortalin | GJ       | KY212120.1                             | TTCATGATACCGAA<br />ACCAAGATGGACG | AATTTCCTCCTTG<br />ATGGCATCCACC  |
 | HSP70    | GJ       | TBD                                    | CGAGAAGTTGAA<br />GGACAAGATCTCCG  | TCTCTGCAGTCTGGT<br />TGTTGTCGAGC |
 | SIRT6    | CV       | None                                   | ATTAGTACCG<br />CGTCTGGAATAC      | GGATGGAATCGCT<br />TCTTCAAATC    |
