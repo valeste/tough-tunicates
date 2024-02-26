@@ -15,6 +15,65 @@ Analysis of gene expression with quantitative Polymerase Chain Reaction (qPCR) w
 
 Refer to [pilot exposure post](https://valeste.github.io/tough-tunicates/posts/nicl2-botryllus-pilot/) for more details regarding procedures and experimental design.
 
+## RNA Extract Information
+
+After gDNA elimination with enzymatic kit.
+
+|    Date    	|       Sample ID      	| RNA Concentration (ng/uL) 	| A260/A280 	| 260(10mm) 	|
+|:----------:	|:--------------------:	|:-------------------------:	|:---------:	|:---------:	|
+| 09/30/2023 	| 9302023 0-R1 pilot   	|                      19.2 	|      1.55 	|      0.48 	|
+| 09/30/2023 	| 9302023 0-R2 pilot   	|                     113.2 	|      1.85 	|      2.83 	|
+| 09/30/2023 	| 9302023 0-R3 pilot   	|                     152.4 	|      1.87 	|     3.809 	|
+| 09/30/2023 	| 9302023 0-R4 pilot   	|                      67.1 	|      1.77 	|     1.676 	|
+| 09/30/2023 	| 9302023 5-R1 pilot   	|                      22.4 	|      1.66 	|      0.56 	|
+| 09/30/2023 	| 9302023 5-R2 pilot   	|                      30.6 	|      1.68 	|     0.764 	|
+| 09/30/2023 	| 9302023 5-R3 pilot   	|                        29 	|      1.67 	|     0.726 	|
+| 09/30/2023 	| 9302023 5-R4 pilot   	|                      45.1 	|      1.77 	|     0.128 	|
+| 09/30/2023 	| 9302023 45-R2 pilot  	|                      87.6 	|      1.82 	|      2.14 	|
+| 09/30/2023 	| 9302023 45-R3 pilot  	|                      13.8 	|      1.47 	|           	|
+| 09/30/2023 	| 9302023 45-R4 pilot  	|                      84.8 	|      1.83 	|      2.12 	|
+| 10/25/2023 	| 10252023 0-R1 E1     	|                      12.1 	|      1.55 	|     0.305 	|
+| 10/25/2023 	| 10252023 0-R2 E1     	|                      45.9 	|      1.83 	|     1.148 	|
+| 10/25/2023 	| 10252023 0-R3 E1     	|                      78.4 	|      1.85 	|     1.959 	|
+| 10/25/2023 	| 10252023 0-R4 E1     	|                      38.5 	|       1.8 	|     0.962 	|
+| 10/25/2023 	| 10252023 5-R1 E1     	|                      83.3 	|      1.82 	|     2.082 	|
+| 10/25/2023 	| 10252023 5-R3 E1     	|                      27.1 	|      1.69 	|     0.676 	|
+| 10/25/2023 	| 10252023 5-R4 E1     	|                      69.5 	|      1.84 	|     1.737 	|
+| 10/25/2023 	| 10252023 45-R1 E1    	|                        50 	|      1.78 	|     1.249 	|
+| 10/25/2023 	| 10252023 45-R2 E1    	|                      57.3 	|      1.84 	|     1.433 	|
+| 10/25/2023 	| 10252023 45-R3 E1    	|                      43.5 	|      1.73 	|     1.087 	|
+| 10/25/2023 	| 10252023 45-R4 E1    	|                      60.1 	|      1.83 	|     1.505 	|
+| 11/15/2023 	| 11152023 0-R1 E2     	|                      86.5 	|      1.86 	|     2.163 	|
+| 11/15/2023 	| 11152023 0-R2 E2     	|                      54.7 	|      1.66 	|     1.367 	|
+| 11/15/2023 	| 11152023 0-R3 E2     	|                      37.4 	|      1.72 	|     0.935 	|
+| 11/15/2023 	| 11152023 5-R1 E2     	|                      58.4 	|      1.66 	|     1.459 	|
+| 11/15/2023 	| 11152023 5-R2 E2     	|                      69.7 	|      1.69 	|     1.743 	|
+| 11/15/2023 	| 11152023 5-R3 E2     	|                      33.7 	|      1.51 	|     0.843 	|
+| 11/15/2023 	| 11152023 45-R2 E2    	|                      34.5 	|      1.44 	|     0.863 	|
+| 11/15/2023 	| 11152023 45-R3 E2    	|                      16.2 	|       1.5 	|     0.405 	|
+| 11/29/2023 	| 11292023 0-R1 E3     	|                      72.4 	|      1.78 	|     1.809 	|
+| 11/29/2023 	| 11292023 0-R2 E3     	|                      60.3 	|      1.78 	|     1.507 	|
+| 11/29/2023 	| 11292023 0-R3 E3     	|                      21.4 	|      1.61 	|     0.534 	|
+| 11/29/2023 	| 11292023 5-R1 E3     	|                      12.7 	|      1.43 	|     0.318 	|
+| 11/29/2023 	| 11292023 5-R2 E3     	|                      15.5 	|      1.57 	|     0.387 	|
+| 11/29/2023 	| 11292023 5-R3 E3     	|                      64.4 	|      1.76 	|     1.609 	|
+| 11/29/2023 	| 11292023 45-R1 E3    	|                      80.6 	|      1.82 	|     2.016 	|
+| 11/29/2023 	| 11292023 45-R2 E3    	|                      49.3 	|      1.77 	|     1.231 	|
+| 11/29/2023 	| 11292023 45-R3 E3    	|                      64.3 	|      1.79 	|     1.607 	|                   	|
+
+
+## cDNA Pool
+
+| Date Made  	| Sample        	| cDNA ng/uL 	| A260/A280 	|
+|------------	|---------------	|------------	|-----------	|
+| 12/18/2023 	| Original Pool 	|     2231.2 	|      1.73 	|
+|  1/14/2024 	|          10^-2^ 	|     223.12 	|      1.73 	|
+|  1/14/2024 	|          10^-3^ 	|     22.312 	|      1.73 	|
+|  1/14/2024 	|          10^-4^ 	|      2.312 	|      1.73 	|
+|  1/14/2024 	|          10^-5^ 	|     0.2312 	|      1.73 	|
+|  1/14/2024 	|          10^-6^ 	|    0.02312 	|      1.73 	|
+
+
 ## Primers
 | Number | Gene     | Forward Primer (5'-3')      | Reverse Primer (5'-3')     | Source                          |
 |--------|----------|-----------------------------|----------------------------|---------------------------------|
@@ -278,12 +337,42 @@ Late amp, maybe rare in my samples?
 
 # Discussion
 
+## cDNA has low purity?
+
+According to online sources DNA purity (260/280) should fall above 1.8. Currently the cDNA is at 1.7. RNA should fal above 2.0 (260/280). The RNA after gDNA elimination fell below that at an **average of 1.71 (SD ± 0.12)**.
+
+When running all the primer sets at a 1:5 dilution series, higher concentrations of cDNA resulted in a 'horseshoe' shape (indicative of failure to fluoresce) and most diluted sample (1:625) had lower Ct values than higher concentrations (1:125). Upon running a 1:10 dilution series, this issue is no longer as apparent. However, online sources mention that an amplification efficiency above 100% (which is what we see for nearly all the primers) or a really flat slope on the standard curve is indicative of polymerase inhibition.
+
+
+::: {#fig-1to5 layout-ncol='1'}
+
+![](png/amp_plot_plate3.png)
+
+18s primer amplification plot at a 1:5 dilution series. Downward parabola shapes are higher concentrations of the cDNA pools.
+
+:::
+
+
+**Common contaminants**:
+
+-   hemoglobin
+
+-   polysaccharides
+
+-   proteinase K
+
+-   ethanol (during the RNA isolation)
+
+However, the purity of my RNA prior to gDNA elimination was on **average 1.89 (SD ± 0.11)** so likely reagents fromt the gDNA elimination step were carried over into my samples.
+
+## Primers are not optimally designed?
+
 Only workable primer sets will be those with a singular peak and appear to fail to have an acceptable efficiency curve due to high standard deviation across replicates.
 
 
 The following primers currently in stock will be utilized moving forward:
 
-## Workable Primers
+### Workable Primers
 
 | Number | Gene     | Forward Primer (5'-3')      | Reverse Primer (5'-3')     | Source                          |
 |--------|----------|-----------------------------|----------------------------|---------------------------------|
@@ -299,7 +388,7 @@ Further literature search regarding previous work conducted with *B. schlosseri*
 
 ::: callout-note
 
-### Citation
+#### Citation
 
 Rosner A, Kravchenko O, Rinkevich B. IAP genes partake weighty roles in the astogeny and whole body regeneration in the colonial urochordate Botryllus schlosseri. Developmental Biology. 2019 Apr;448(2):320–41. [doi.org/10.1016/j.ydbio.2018.10.015](https://doi.org/10.1016/j.ydbio.2018.10.015)
 
@@ -307,7 +396,7 @@ Rosner A, Kravchenko O, Rinkevich B. IAP genes partake weighty roles in the asto
 
 This paper utilizes several primer sets targeting genes in relation to apoptosis. The following primer sets are pulled from this paper:
 
-## Proposed Primers
+### Proposed Primers
 
 | Gene* or Accession** number 	| Gene name 	| Forward primer 	| Reverse primer 	| Source 	|
 |:---:	|:---:	|:---:	|:---:	|---	|
@@ -342,4 +431,6 @@ This paper utilizes several primer sets targeting genes in relation to apoptosis
 
 Of the suite of IAPs reduced from the ones used in the referenced paper to capture those that were most interesting under oxidative stress at stage A and across blastogenic stages. 
 
-In our study we did not target a specific stage for oxidative stress (nickel) exposures so I belive it would be interesting to capture IAPs impacted by both factors.
+In our study we did not target a specific stage for oxidative stress (nickel) exposures so I believe it would be interesting to capture IAPs impacted by both factors.
+
+
