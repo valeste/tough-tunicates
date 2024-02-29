@@ -1,6 +1,10 @@
 ---
-title: "Morphometric NiCl2 Data"
+title: "Nickel Impacts on Morphology of *Botryllus schlosseri*"
+subtitle: "Analysis of pilot study."
 author: "Celeste Valdivia"
+date: "2023-12-27"
+image: "bar_plot.png"
+categories: [nickel chloride]
 ---
 
 ```{r, eval =TRUE}
@@ -17,15 +21,21 @@ knitr::opts_chunk$set(echo = TRUE,
                       eval = FALSE)
 ```
 
-# Reading in Data
+# Objective and Background
+
+Data below was collected from a pilot study conducted in Autumn 2023 where field-collected individual *Botryllus schlosseri* were exposed to a low and high treatment of nickel chloride and then were assessed for changes in morphology. Refer to [Pilot 1.1 Nickel Exposure](https://valeste.github.io/tough-tunicates/posts/nicl2-botryllus-pilot/) notebook post for experimental design details.
+
+# Retrieving Data from Google Sheets
+
 
 Make sure you have made your Google sheet publicly available to anyone that has the link. If you make any updates to the sheet just re-curl the data, meaning just re-run the code below.
 
-```{r, engine='bash' }
+```{r, engine='bash', eval=FALSE}
 curl -L https://docs.google.com/spreadsheets/d/10uM3N3PD9xIP4yUnadfhkcXa8TPMRMD-adOIKbmkYzY/export?exportFormat=csv | tee ~/Documents/GitHub/Git/bestblogever/posts/morph-nicl2-botryllus-AU23/data/morph.csv
 ```
+Read in the data to your local R environment.
 
-```{r}
+```{r, eval=TRUE}
 morph <- read.csv(file = "data/morph.csv")  
 ```
 
@@ -67,6 +77,8 @@ SE_health_score <- SD_health_score$SD_health/ sqrt(n)
 print(mean_health_score)
 print(SE_health_score)
 ```
+
+# Exploratory Plots
 
 ```{r}
 # To visualize the mean health scores using ggplot2
@@ -128,7 +140,9 @@ print(tukey_result)
 
 Printing out a png image of graph. Make sure to adjust pixel dimensions for the ideal DPI and desired printing size.
 
-```{r, eval=TRUE}
+# Expository Graphs 
+
+```{r, eval=FALSE}
 #png(filename = "bar_plot.png", width = 800, height = 800) # good for making a 3x3 in image for printing ~150 dpi
 
 # Add significance bars based on specific comparisons
@@ -161,6 +175,4 @@ scale_fill_brewer(palette = "Dark2", name = "Treatment",
   geom_segment(aes(x = 2, xend = 2, y = 6.5, yend = 8.5), linetype = "dashed", size = 1 )
 ```
 
-```{r}
-morph_fact_24hpe <- morph_fact$
-```
+![](bar_plot.png)

@@ -20,7 +20,7 @@ library(ggpubr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Objective and Background 
+# Objective and Background
 
 Data below was collected from a pilot study conducted in Autumn 2023 where field-collected individual *Botryllus schlosseri* were exposed to a low and high treatment of nickel chloride and then were dissected for primary buds. The objective was to evaluate if a pre-nickel exposure in *Botryllus* improved primary epithelial cell monolayer proliferation. Refer to [Pilot 1.1 Nickel Exposure](https://valeste.github.io/tough-tunicates/posts/nicl2-botryllus-pilot/) notebook post for experimental design details.
 

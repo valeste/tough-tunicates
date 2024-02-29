@@ -339,7 +339,7 @@ Late amp, maybe rare in my samples?
 
 ## cDNA has low purity?
 
-According to online sources DNA purity (260/280) should fall above 1.8. Currently the cDNA is at 1.7. RNA should fal above 2.0 (260/280). The RNA after gDNA elimination fell below that at an **average of 1.71 (SD ± 0.12)**.
+According to online sources DNA purity (260/280) should fall above 1.8. Currently the cDNA is at 1.7. RNA should fall above 2.0 (260/280). The RNA after gDNA elimination fell below that at an **average of 1.71 (SD ± 0.12)**.
 
 When running all the primer sets at a 1:5 dilution series, higher concentrations of cDNA resulted in a 'horseshoe' shape (indicative of failure to fluoresce) and most diluted sample (1:625) had lower Ct values than higher concentrations (1:125). Upon running a 1:10 dilution series, this issue is no longer as apparent. However, online sources mention that an amplification efficiency above 100% (which is what we see for nearly all the primers) or a really flat slope on the standard curve is indicative of polymerase inhibition.
 
