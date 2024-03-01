@@ -2,7 +2,7 @@
 title: "qPCR for Nickel exposure on *Botryllus schlosseri*"
 subtitle: "Relative standard curves to determine primer effenciencies."
 author: "Celeste Valdivia"
-date: "2024-02-12"
+date: "2024-03-01"
 categories: [nickel chloride, qPCR, primers]
 image: "EP PCR Gel Results 12_18_23 -2.jpg"
 ---
@@ -15,9 +15,27 @@ Analysis of gene expression with quantitative Polymerase Chain Reaction (qPCR) w
 
 Refer to [pilot exposure post](https://valeste.github.io/tough-tunicates/posts/nicl2-botryllus-pilot/) for more details regarding procedures and experimental design.
 
-## RNA Extract Information
+Experiment was repeated **three** more times after pilot exposure to increase the number of replicates per treatment.
 
-After gDNA elimination with enzymatic kit.
+
+#### Final experimental set up
+
+|Nickel Concentration (mg/L)  |Exposure Length (hrs)| Number of Replicates	| 
+|:-------------------------:	|:--------------------:	|:--------------------:|
+| 0 	|  24    | 14   	|               
+| 5   |  24    | 13    |
+| 45  |  24    |12    |
+
+
+# Protocol leading to cDNA synthesis
+
+1.    RNA extracted using Qiagen RNeasy Mini Kit with 10% β-mercaptoethanol (β-ME) in RLT buffer and QiaShredder column step supplemented to protocol.
+
+2.    Quantify RNA with NanoDrop.
+
+3.    gDNA elimination with [Invitrogen TURBO DNA-*free* Kit (Cat. No. AM1907)](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/1907M_turbodnafree_UG.pdf).
+
+4. Requantification of gDNA eliminated RNA with Nano Drop:
 
 |    Date    	|       Sample ID      	| RNA Concentration (ng/uL) 	| A260/A280 	| 260(10mm) 	|
 |:----------:	|:--------------------:	|:-------------------------:	|:---------:	|:---------:	|
@@ -59,10 +77,26 @@ After gDNA elimination with enzymatic kit.
 | 11/29/2023 	| 11292023 5-R3 E3     	|                      64.4 	|      1.76 	|     1.609 	|
 | 11/29/2023 	| 11292023 45-R1 E3    	|                      80.6 	|      1.82 	|     2.016 	|
 | 11/29/2023 	| 11292023 45-R2 E3    	|                      49.3 	|      1.77 	|     1.231 	|
-| 11/29/2023 	| 11292023 45-R3 E3    	|                      64.3 	|      1.79 	|     1.607 	|                   	|
+| 11/29/2023 	| 11292023 45-R3 E3    	|                      64.3 	|      1.79 	|     1.607 	|                   	
+
+:::{.callout-warning}
+
+RNA quality drop difference of about 0.2 after gDNA elimination.
+
+:::
+
+5. cDNA synthesis with [SuperScript IV VILO Kit](https://www.thermofisher.com/us/en/home/life-science/pcr/reverse-transcription/superscript-iv-vilo-master-mix.html?gclid=CjwKCAiAloavBhBOEiwAbtAJO4Yr6kXvr4p3vwPte-gGW4FOw10Wz1HSXCRJnTnMytfgruoJwsSPPhoCDIMQAvD_BwE&ef_id=CjwKCAiAloavBhBOEiwAbtAJO4Yr6kXvr4p3vwPte-gGW4FOw10Wz1HSXCRJnTnMytfgruoJwsSPPhoCDIMQAvD_BwE:G:s&s_kwcid=AL!3652!3!496245249019!e!!g!!superscript%20iv%20vilo%20master%20mix!12251764234!116952787803&cid=bid_mol_pch_r01_co_cp1358_pjt0000_bid00000_0se_gaw_bt_pur_con&gad_source=1).
 
 
 ## cDNA Pool
+
+:::{.callout-note}
+
+It is not recommended to NanoDrop cDNA as readings below may be inaccurate due to residual nucleotide and etc. from the synthesis reaction. Assume the reaction is a 1:1 RNA:cDNA. 
+
+:::
+
+cDNA pool spectrometer readings and dilutions:
 
 | Date Made  	| Sample        	| cDNA ng/uL 	| A260/A280 	|
 |------------	|---------------	|------------	|-----------	|
@@ -75,6 +109,10 @@ After gDNA elimination with enzymatic kit.
 
 
 ## Primers
+
+Primers for *Botryllus schlosseri* designed as described in [Tunicate Primers](https://valeste.github.io/tough-tunicates/posts/tunicate-primers/) notebook entry.
+
+
 | Number | Gene     | Forward Primer (5'-3')      | Reverse Primer (5'-3')     | Source                          |
 |--------|----------|-----------------------------|----------------------------|---------------------------------|
 |      1 | BAX      | CATTGACCTTGCGTGTTATTGG      | AAGATGTCCTTGGTGGGTTG       | in house                        |
@@ -104,7 +142,10 @@ EP-PCR conducted to confirm correct size of amplicon products. In this PCR react
 :::
 
 
-# qPCR Reaction Information
+
+# Relative Standard Curves
+
+## qPCR Reaction Information
 
 | **Component**                                        | **per 1 rxn (uL)** |
 |------------------------------------------------------|--------------------|
@@ -115,12 +156,12 @@ EP-PCR conducted to confirm correct size of amplicon products. In this PCR react
 | cDNA                                                 | 1                  |
 | **Total**                                            | **10**             |
 
-# Relative Standard Curves
-
 ## Good
 
 ### Beta actin
   
+The two primer sets with acceptable efficiency values in my qPCR are my housekeeping (HK) genes. I suspect given they are constitutively and highly expressed, issues with inhibitors in the reaction mix are not as much of an issue relative to my genes of interest (GOI).
+
 ::: {#fig-ep-pcr layout-ncol="3"}
 
 ![](png/actb_mc.png)
@@ -173,7 +214,7 @@ Efficiency for BAX is 350%
 
 ![](png/aif1_amp.png)
 
-Efficiency for AIF1 is TBD.
+Efficiency for AIF1 is 148,350.875
 
 :::
 
@@ -187,7 +228,7 @@ Efficiency for AIF1 is TBD.
 
 ![](png/mort_amp.png)
 
-Efficiency for Mortalin is TBD.
+Efficiency for Mortalin is 174.206
 
 :::
 
@@ -201,7 +242,7 @@ Efficiency for Mortalin is TBD.
 
 ![](png/sirt6_amp.png)
 
-Efficiency for SIRT6 is more than 2 million.
+Efficiency for SIRT6 is 176.364.
 
 :::
 
@@ -215,7 +256,7 @@ Efficiency for SIRT6 is more than 2 million.
 
 ![](png/sod1_amp.png)
 
-Efficiency for SOD1 is TBD.
+Efficiency for SOD1 is 2,189,061.750%
 
 :::
 
@@ -243,7 +284,7 @@ Efficiency for POU3 is 673%.
 
 ![](png/soxb1_amp.png)
 
-Efficiency for soxb1 is TBD.
+Efficiency for SOXB1 is 364.444
 
 :::
 
@@ -257,7 +298,7 @@ Efficiency for soxb1 is TBD.
 
 ![](png/myc_amp.png)
 
-Efficiency for MYC is TBD.
+Efficiency for MYC is 405.222
 
 :::
 
@@ -271,7 +312,7 @@ Efficiency for MYC is TBD.
 
 ![](png/iap7_amp.png)
 
-Efficiency for IAP7 is TBD.
+Efficiency for IAP7 is 299.488
 
 :::
 
@@ -287,7 +328,7 @@ Efficiency for IAP7 is TBD.
 
 ![](png/polb_amp.png)
 
-Basically no amplification.
+Basically no amplification, E = 26.604.
 
 :::
 
@@ -301,7 +342,7 @@ Basically no amplification.
 
 ![](png/tnf_amp.png)
 
-Basically no amplification.
+Basically no amplification, E = 918.266.
 
 :::
 
@@ -315,7 +356,7 @@ Basically no amplification.
 
 ![](png/hsp70_amp.png)
 
-Bascially no amp.
+Basically no amp, E = 52.113.
 
 :::
 
@@ -329,7 +370,7 @@ Bascially no amp.
 
 ![](png/parp1_amp.png)
 
-Late amp, maybe rare in my samples? 
+Late amp, E = 117.058%
 
 
 :::
@@ -372,7 +413,7 @@ Only workable primer sets will be those with a singular peak and appear to fail 
 
 The following primers currently in stock will be utilized moving forward:
 
-### Workable Primers
+### Potentially Workable Primers of the Bunch
 
 | Number | Gene     | Forward Primer (5'-3')      | Reverse Primer (5'-3')     | Source                          |
 |--------|----------|-----------------------------|----------------------------|---------------------------------|
@@ -384,6 +425,13 @@ The following primers currently in stock will be utilized moving forward:
 |     15 | **18s**      | GGCAGCCTCCGGGAAACCAAAGTC    | CTGGTGGTGCCCTTCCGTCAATTC   | doi:10.1016/j.ydbio.2017.10.023 |
 
 
+# Work arounds
+
+## Include Clean Up Step
+
+Issue may lie completely with the low quality of the RNA at the moment. Using different primers potentially wouldn't improve outcome since the puritiy falls bellow the acceptable threshold.
+
+## Alternative Primers
 Further literature search regarding previous work conducted with *B. schlosseri* and qPCR resulted in finding the following paper:
 
 ::: callout-note
