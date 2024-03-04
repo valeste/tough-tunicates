@@ -269,8 +269,40 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p>RNA extracted using Qiagen RNeasy Mini Kit with 10% β-mercaptoethanol (β-ME) in RLT buffer and QiaShredder column step supplemented to protocol.</p></li>
 <li><p>Quantify RNA with NanoDrop.</p></li>
-<li><p>gDNA elimination with <a href="https://assets.thermofisher.com/TFS-Assets/LSG/manuals/1907M_turbodnafree_UG.pdf">Invitrogen TURBO DNA-<em>free</em> Kit (Cat. No.&nbsp;AM1907)</a>.</p></li>
-<li><p>Requantification of gDNA eliminated RNA with Nano Drop:</p></li>
+<li><p>gDNA elimination with <strong>routine</strong> DNAse treatment with <a href="https://assets.thermofisher.com/TFS-Assets/LSG/manuals/1907M_turbodnafree_UG.pdf">Invitrogen TURBO DNA-<em>free</em> Kit (Cat. No.&nbsp;AM1907)</a>.</p></li>
+</ol>
+<table class="table">
+<colgroup>
+<col style="width: 72%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>gDNA Elimination Component</strong></th>
+<th><strong>per 1 rxn (uL)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10x DNase Buffer</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Turbo Enzyme</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>RNA sample</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>23</strong></td>
+</tr>
+</tbody>
+</table>
+<ol start="4" type="1">
+<li>Requantification of gDNA eliminated RNA with Nano Drop:</li>
 </ol>
 <table class="table">
 <colgroup>
@@ -581,6 +613,49 @@ Warning
 <ol start="5" type="1">
 <li>cDNA synthesis with <a href="https://www.thermofisher.com/us/en/home/life-science/pcr/reverse-transcription/superscript-iv-vilo-master-mix.html?gclid=CjwKCAiAloavBhBOEiwAbtAJO4Yr6kXvr4p3vwPte-gGW4FOw10Wz1HSXCRJnTnMytfgruoJwsSPPhoCDIMQAvD_BwE&amp;ef_id=CjwKCAiAloavBhBOEiwAbtAJO4Yr6kXvr4p3vwPte-gGW4FOw10Wz1HSXCRJnTnMytfgruoJwsSPPhoCDIMQAvD_BwE:G:s&amp;s_kwcid=AL!3652!3!496245249019!e!!g!!superscript%20iv%20vilo%20master%20mix!12251764234!116952787803&amp;cid=bid_mol_pch_r01_co_cp1358_pjt0000_bid00000_0se_gaw_bt_pur_con&amp;gad_source=1">SuperScript IV VILO Kit</a>.</li>
 </ol>
+<table class="table">
+<colgroup>
+<col style="width: 72%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>cDNA synthesis Component</strong></th>
+<th><strong>per 1 rxn (uL)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SuperScript IV VILO Master Mix</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Nuclease-free water</td>
+<td>variable</td>
+</tr>
+<tr class="odd">
+<td>RNA sample</td>
+<td>variable</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>8</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Final mass of 96.8 ng of RNA in reaction mix for each sample (thus variable water and RNA volumes)</p>
+</div>
+</div>
 <section id="cdna-pool" class="level2">
 <h2 class="anchored" data-anchor-id="cdna-pool">cDNA Pool</h2>
 <div class="callout-note callout callout-style-default callout-captioned">
@@ -651,11 +726,14 @@ Note
 <p>Primers for <em>Botryllus schlosseri</em> designed as described in <a href="https://valeste.github.io/tough-tunicates/posts/tunicate-primers/">Tunicate Primers</a> notebook entry.</p>
 <table class="table">
 <colgroup>
-<col style="width: 7%">
-<col style="width: 9%">
-<col style="width: 26%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 18%">
 <col style="width: 25%">
-<col style="width: 30%">
+<col style="width: 7%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -663,6 +741,9 @@ Note
 <th>Gene</th>
 <th>Forward Primer (5’-3’)</th>
 <th>Reverse Primer (5’-3’)</th>
+<th>NCBI Accession Number (If complete CDS)</th>
+<th>Botryllus Contig Sequence (if no complete CDS was found)</th>
+<th>Amplicon Length</th>
 <th>Source</th>
 </tr>
 </thead>
@@ -672,6 +753,9 @@ Note
 <td>BAX</td>
 <td>CATTGACCTTGCGTGTTATTGG</td>
 <td>AAGATGTCCTTGGTGGGTTG</td>
+<td>KU948200.1</td>
+<td>None</td>
+<td>97</td>
 <td>in house</td>
 </tr>
 <tr class="even">
@@ -679,6 +763,9 @@ Note
 <td>POU3</td>
 <td>CAGTAGGTCTTCGCATCCATC</td>
 <td>CGTTTGCATCGTTGGTGTAAG</td>
+<td>KU948203.1</td>
+<td>None</td>
+<td>80</td>
 <td>in house</td>
 </tr>
 <tr class="odd">
@@ -686,6 +773,9 @@ Note
 <td>PolB</td>
 <td>GGCTTCACAATCAATGAGTATTCC</td>
 <td>AGCAATCTTTCCGCATTCATTC</td>
+<td>None</td>
+<td>botctg092056</td>
+<td>NA</td>
 <td>in house</td>
 </tr>
 <tr class="even">
@@ -693,6 +783,9 @@ Note
 <td>TNF</td>
 <td>GTTTCAGTCAACACCTTGTGTC</td>
 <td>AATCTCGACCGCTGACTTATAC</td>
+<td>None</td>
+<td>botctg065850</td>
+<td>131</td>
 <td>in house</td>
 </tr>
 <tr class="odd">
@@ -700,6 +793,9 @@ Note
 <td>SOXB1</td>
 <td>GGGAATGTGTTCATCCTCTGG</td>
 <td>TGAATCCAGGAGTTACTCAAGTTC</td>
+<td>KU948203.1</td>
+<td>None</td>
+<td>116</td>
 <td>in house</td>
 </tr>
 <tr class="even">
@@ -707,6 +803,9 @@ Note
 <td>MYC</td>
 <td>GAAGTCCTGGCTAAGATGCTAC</td>
 <td>AGCGTCAAGAAGGAAGTACG</td>
+<td>KU948203.1</td>
+<td>None</td>
+<td>119</td>
 <td>in house</td>
 </tr>
 <tr class="odd">
@@ -714,6 +813,9 @@ Note
 <td>AIF1</td>
 <td>GGATTCTCTCACCGATGGAATAG</td>
 <td>CCTGACTTGGAGCCTTTATGG</td>
+<td>KU948202.1</td>
+<td>None</td>
+<td>102</td>
 <td>in house</td>
 </tr>
 <tr class="even">
@@ -721,6 +823,9 @@ Note
 <td>SOD1</td>
 <td>CAATCCATATAACAAGGTTCATGGC</td>
 <td>TGATATCCACACAGGCACAAC</td>
+<td>EE743567.1</td>
+<td>None</td>
+<td>107</td>
 <td>in house</td>
 </tr>
 <tr class="odd">
@@ -728,6 +833,9 @@ Note
 <td>PARP1</td>
 <td>AATTTGGCACCGCTCATTTC</td>
 <td>TGCAAGACCTTCAGCTTCTC</td>
+<td>KU948201.1</td>
+<td>None</td>
+<td>94</td>
 <td>in house</td>
 </tr>
 <tr class="even">
@@ -735,6 +843,9 @@ Note
 <td>SIRT6</td>
 <td>ATTAGTACCGCGTCTGGAATAC</td>
 <td>GGATGGAATCGCTTCTTCAAATC</td>
+<td>None</td>
+<td>botctg109566</td>
+<td>114</td>
 <td>in house</td>
 </tr>
 <tr class="odd">
@@ -742,6 +853,9 @@ Note
 <td>IAP7</td>
 <td>GGTCTCTTCACGGACATCTTC</td>
 <td>GCTCAGTATGTTGTGCTTGTTC</td>
+<td>KU948203.1</td>
+<td>None</td>
+<td>111</td>
 <td>in house</td>
 </tr>
 <tr class="even">
@@ -749,6 +863,9 @@ Note
 <td>HSP70</td>
 <td>CGAGAAGTTGAAGGACAAGATCTCCG</td>
 <td>TCTCTGCAGTCTGGTTGTTGTCGAGC</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
 <td>doi:10.1016/j.ydbio.2017.10.023</td>
 </tr>
 <tr class="odd">
@@ -756,6 +873,9 @@ Note
 <td>Mortalin</td>
 <td>TTCATGATACCGAAACCAAGATGGACG</td>
 <td>AATTTCCTCCTTGATGGCATCCACC</td>
+<td>KY212120.1</td>
+<td>None</td>
+<td>79</td>
 <td>doi:10.1016/j.ydbio.2017.10.023</td>
 </tr>
 <tr class="even">
@@ -763,6 +883,9 @@ Note
 <td>ACTb</td>
 <td>GTAGGTAGTCTCGTGAATTC</td>
 <td>CACGCCATCTTGCGTCTGGA</td>
+<td>NA</td>
+<td>NA</td>
+<td>321</td>
 <td>doi:10.1016/j.dci.2006.12.009</td>
 </tr>
 <tr class="odd">
@@ -770,6 +893,9 @@ Note
 <td>18s</td>
 <td>GGCAGCCTCCGGGAAACCAAAGTC</td>
 <td>CTGGTGGTGCCCTTCCGTCAATTC</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
 <td>doi:10.1016/j.ydbio.2017.10.023</td>
 </tr>
 </tbody>

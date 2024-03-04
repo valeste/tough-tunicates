@@ -33,7 +33,15 @@ Experiment was repeated **three** more times after pilot exposure to increase th
 
 2.    Quantify RNA with NanoDrop.
 
-3.    gDNA elimination with [Invitrogen TURBO DNA-*free* Kit (Cat. No. AM1907)](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/1907M_turbodnafree_UG.pdf).
+3.    gDNA elimination with **routine** DNAse treatment with [Invitrogen TURBO DNA-*free* Kit (Cat. No. AM1907)](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/1907M_turbodnafree_UG.pdf).
+
+| **gDNA Elimination Component**                       | **per 1 rxn (uL)** |
+|------------------------------------------------------|--------------------|
+| 10x DNase Buffer                                     | 2                  |
+| Turbo Enzyme                                         | 1                  |
+| RNA sample                                           | 20                 |
+| **Total**                                            | **23**             |
+
 
 4. Requantification of gDNA eliminated RNA with Nano Drop:
 
@@ -88,6 +96,19 @@ RNA quality drop difference of about 0.2 after gDNA elimination.
 5. cDNA synthesis with [SuperScript IV VILO Kit](https://www.thermofisher.com/us/en/home/life-science/pcr/reverse-transcription/superscript-iv-vilo-master-mix.html?gclid=CjwKCAiAloavBhBOEiwAbtAJO4Yr6kXvr4p3vwPte-gGW4FOw10Wz1HSXCRJnTnMytfgruoJwsSPPhoCDIMQAvD_BwE&ef_id=CjwKCAiAloavBhBOEiwAbtAJO4Yr6kXvr4p3vwPte-gGW4FOw10Wz1HSXCRJnTnMytfgruoJwsSPPhoCDIMQAvD_BwE:G:s&s_kwcid=AL!3652!3!496245249019!e!!g!!superscript%20iv%20vilo%20master%20mix!12251764234!116952787803&cid=bid_mol_pch_r01_co_cp1358_pjt0000_bid00000_0se_gaw_bt_pur_con&gad_source=1).
 
 
+| **cDNA synthesis Component**                         | **per 1 rxn (uL)** |
+|------------------------------------------------------|--------------------|
+| SuperScript IV VILO Master Mix                       | 2                  |
+| Nuclease-free water                                  | variable           |
+| RNA sample                                           | variable           |
+| **Total**                                            | **8**              |
+
+
+:::{.callout-note}
+
+Final mass of 96.8 ng of RNA in reaction mix for each sample (thus variable water and RNA volumes)
+:::
+
 ## cDNA Pool
 
 :::{.callout-note}
@@ -113,23 +134,23 @@ cDNA pool spectrometer readings and dilutions:
 Primers for *Botryllus schlosseri* designed as described in [Tunicate Primers](https://valeste.github.io/tough-tunicates/posts/tunicate-primers/) notebook entry.
 
 
-| Number | Gene     | Forward Primer (5'-3')      | Reverse Primer (5'-3')     | Source                          |
-|--------|----------|-----------------------------|----------------------------|---------------------------------|
-|      1 | BAX      | CATTGACCTTGCGTGTTATTGG      | AAGATGTCCTTGGTGGGTTG       | in house                        |
-|      2 | POU3     | CAGTAGGTCTTCGCATCCATC       | CGTTTGCATCGTTGGTGTAAG      | in house                        |
-|      3 | PolB     | GGCTTCACAATCAATGAGTATTCC    | AGCAATCTTTCCGCATTCATTC     | in house                        |
-|      4 | TNF      | GTTTCAGTCAACACCTTGTGTC      | AATCTCGACCGCTGACTTATAC     | in house                        |
-|      5 | SOXB1    | GGGAATGTGTTCATCCTCTGG       | TGAATCCAGGAGTTACTCAAGTTC   | in house                        |
-|      6 | MYC      | GAAGTCCTGGCTAAGATGCTAC      | AGCGTCAAGAAGGAAGTACG       | in house                        |
-|      7 | AIF1     | GGATTCTCTCACCGATGGAATAG     | CCTGACTTGGAGCCTTTATGG      | in house                        |
-|      8 | SOD1     | CAATCCATATAACAAGGTTCATGGC   | TGATATCCACACAGGCACAAC      | in house                        |
-|      9 | PARP1    | AATTTGGCACCGCTCATTTC        | TGCAAGACCTTCAGCTTCTC       | in house                        |
-|     10 | SIRT6    | ATTAGTACCGCGTCTGGAATAC      | GGATGGAATCGCTTCTTCAAATC    | in house                        |
-|     11 | IAP7     | GGTCTCTTCACGGACATCTTC       | GCTCAGTATGTTGTGCTTGTTC     | in house                        |
-|     12 | HSP70    | CGAGAAGTTGAAGGACAAGATCTCCG  | TCTCTGCAGTCTGGTTGTTGTCGAGC | doi:10.1016/j.ydbio.2017.10.023 |
-|     13 | Mortalin | TTCATGATACCGAAACCAAGATGGACG | AATTTCCTCCTTGATGGCATCCACC  | doi:10.1016/j.ydbio.2017.10.023 |
-|     14 | ACTb     | GTAGGTAGTCTCGTGAATTC        | CACGCCATCTTGCGTCTGGA       | doi:10.1016/j.dci.2006.12.009   |
-|     15 | 18s      | GGCAGCCTCCGGGAAACCAAAGTC    | CTGGTGGTGCCCTTCCGTCAATTC   | doi:10.1016/j.ydbio.2017.10.023 |
+| Number 	| Gene     	| Forward Primer (5'-3')      	| Reverse Primer (5'-3')     	| NCBI Accession Number (If complete CDS) 	| Botryllus Contig Sequence (if no complete CDS was found) 	| Amplicon Length 	| Source                          	|
+|--------	|----------	|-----------------------------	|----------------------------	|-----------------------------------------	|----------------------------------------------------------	|-----------------	|---------------------------------	|
+| 1      	| BAX      	| CATTGACCTTGCGTGTTATTGG      	| AAGATGTCCTTGGTGGGTTG       	| KU948200.1                              	| None                                                     	| 97              	| in house                        	|
+| 2      	| POU3     	| CAGTAGGTCTTCGCATCCATC       	| CGTTTGCATCGTTGGTGTAAG      	| KU948203.1                              	| None                                                     	| 80              	| in house                        	|
+| 3      	| PolB     	| GGCTTCACAATCAATGAGTATTCC    	| AGCAATCTTTCCGCATTCATTC     	| None                                    	| botctg092056                                             	| NA              	| in house                        	|
+| 4      	| TNF      	| GTTTCAGTCAACACCTTGTGTC      	| AATCTCGACCGCTGACTTATAC     	| None                                    	| botctg065850                                             	| 131             	| in house                        	|
+| 5      	| SOXB1    	| GGGAATGTGTTCATCCTCTGG       	| TGAATCCAGGAGTTACTCAAGTTC   	| KU948203.1                              	| None                                                     	| 116             	| in house                        	|
+| 6      	| MYC      	| GAAGTCCTGGCTAAGATGCTAC      	| AGCGTCAAGAAGGAAGTACG       	| KU948203.1                              	| None                                                     	| 119             	| in house                        	|
+| 7      	| AIF1     	| GGATTCTCTCACCGATGGAATAG     	| CCTGACTTGGAGCCTTTATGG      	| KU948202.1                              	| None                                                     	| 102             	| in house                        	|
+| 8      	| SOD1     	| CAATCCATATAACAAGGTTCATGGC   	| TGATATCCACACAGGCACAAC      	| EE743567.1                              	| None                                                     	| 107             	| in house                        	|
+| 9      	| PARP1    	| AATTTGGCACCGCTCATTTC        	| TGCAAGACCTTCAGCTTCTC       	| KU948201.1                              	| None                                                     	| 94              	| in house                        	|
+| 10     	| SIRT6    	| ATTAGTACCGCGTCTGGAATAC      	| GGATGGAATCGCTTCTTCAAATC    	| None                                    	| botctg109566                                             	| 114             	| in house                        	|
+| 11     	| IAP7     	| GGTCTCTTCACGGACATCTTC       	| GCTCAGTATGTTGTGCTTGTTC     	| KU948203.1                              	| None                                                     	| 111             	| in house                        	|
+| 12     	| HSP70    	| CGAGAAGTTGAAGGACAAGATCTCCG  	| TCTCTGCAGTCTGGTTGTTGTCGAGC 	| NA                                      	| NA                                                       	| NA              	| doi:10.1016/j.ydbio.2017.10.023 	|
+| 13     	| Mortalin 	| TTCATGATACCGAAACCAAGATGGACG 	| AATTTCCTCCTTGATGGCATCCACC  	| KY212120.1                              	| None                                                     	| 79              	| doi:10.1016/j.ydbio.2017.10.023 	|
+| 14     	| ACTb     	| GTAGGTAGTCTCGTGAATTC        	| CACGCCATCTTGCGTCTGGA       	| NA                                      	| NA                                                       	| 321             	| doi:10.1016/j.dci.2006.12.009   	|
+| 15     	| 18s      	| GGCAGCCTCCGGGAAACCAAAGTC    	| CTGGTGGTGCCCTTCCGTCAATTC   	| NA                                      	| NA                                                       	| NA              	| doi:10.1016/j.ydbio.2017.10.023 	|
 
 # End-Point PCR
 
