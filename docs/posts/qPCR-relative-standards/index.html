@@ -164,10 +164,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#cdna-pool" id="toc-cdna-pool" class="nav-link" data-scroll-target="#cdna-pool">cDNA Pool</a></li>
   <li><a href="#primers" id="toc-primers" class="nav-link" data-scroll-target="#primers">Primers</a></li>
   </ul></li>
-  <li><a href="#end-point-pcr" id="toc-end-point-pcr" class="nav-link" data-scroll-target="#end-point-pcr">End-Point PCR</a></li>
+  <li><a href="#end-point-pcr" id="toc-end-point-pcr" class="nav-link" data-scroll-target="#end-point-pcr">End-Point PCR</a>
+  <ul class="collapse">
+  <li><a href="#ep-pcr-reaction-info" id="toc-ep-pcr-reaction-info" class="nav-link" data-scroll-target="#ep-pcr-reaction-info">EP-PCR Reaction Info</a></li>
+  <li><a href="#gel-info" id="toc-gel-info" class="nav-link" data-scroll-target="#gel-info">Gel Info</a></li>
+  </ul></li>
   <li><a href="#relative-standard-curves" id="toc-relative-standard-curves" class="nav-link" data-scroll-target="#relative-standard-curves">Relative Standard Curves</a>
   <ul class="collapse">
   <li><a href="#qpcr-reaction-information" id="toc-qpcr-reaction-information" class="nav-link" data-scroll-target="#qpcr-reaction-information">qPCR Reaction Information</a></li>
+  <li><a href="#cycle-information" id="toc-cycle-information" class="nav-link" data-scroll-target="#cycle-information">Cycle Information</a></li>
+  <li><a href="#ntc-results" id="toc-ntc-results" class="nav-link" data-scroll-target="#ntc-results">NTC results</a></li>
   <li><a href="#good" id="toc-good" class="nav-link" data-scroll-target="#good">Good</a>
   <ul class="collapse">
   <li><a href="#beta-actin" id="toc-beta-actin" class="nav-link" data-scroll-target="#beta-actin">Beta actin</a></li>
@@ -914,12 +920,100 @@ Note
 <p><img src="EP PCR Gel Results 12_18_23 -2.jpg" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: EP-PCR conducted to confirm correct size of amplicon products. In this PCR reaction run, primer sets were at a concentration of 5 uM and the reagent used was SYBR PowerTrack. Note this is different than what was used for the 1:10 dilution series relative standard curves.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: EP-PCR conducted to confirm correct size of amplicon products. In this PCR reaction run, primer sets were at a concentration of 5 uM. Note this is different than what was used for the 1:10 dilution series relative standard curves. Also where it says 40s, it should say 18s.</figcaption><p></p>
 </figure>
 </div>
+<section id="ep-pcr-reaction-info" class="level2">
+<h2 class="anchored" data-anchor-id="ep-pcr-reaction-info">EP-PCR Reaction Info</h2>
+<table class="table">
+<colgroup>
+<col style="width: 72%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>EP-PCR Component</strong></th>
+<th><strong>per 1 rxn (uL)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PCR Master Mix (brand TBD)</td>
+<td>12.5</td>
+</tr>
+<tr class="even">
+<td>Nuclease-free water</td>
+<td>9.5</td>
+</tr>
+<tr class="odd">
+<td>Forward Primer (5 uM)</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Reverse Primer (5 uM)</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1:3 dilution of pooled (per treatement) cDNA</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>25</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Final concentration of 200 nM of each primer per 1 rxn.</p>
+</div>
+</div>
+</section>
+<section id="gel-info" class="level2">
+<h2 class="anchored" data-anchor-id="gel-info">Gel Info</h2>
+<p>With 1x TAE buffer on 1% agarose gel:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th><strong>Component</strong></th>
+<th><strong>per 1 rxn (uL)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nuclease-free water</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>cDNA (after EP-PCR)</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Loading Dye</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>12</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="relative-standard-curves" class="level1">
 <h1>Relative Standard Curves</h1>
+<p>To view data and results directly from plate reader view:</p>
+<p><a href="https://docs.google.com/spreadsheets/d/1gweAxPEdAyy4JbZNFsSAqCGk5DQHECbF/edit?usp=sharing&amp;ouid=104764039655117483916&amp;rtpof=true&amp;sd=true">01-15-2024 Plate 1</a></p>
+<p><a href="https://docs.google.com/spreadsheets/d/1iJj9cOFX9WeneiIFArwjfQe0GvyXkiJZ/edit?usp=sharing&amp;ouid=104764039655117483916&amp;rtpof=true&amp;sd=true">01-29-2024 Plate 1</a></p>
+<p><a href="https://docs.google.com/spreadsheets/d/1DkU7YRTlw4ZBsw8u_dMcDlHO4qp8ldpp/edit?usp=sharing&amp;ouid=104764039655117483916&amp;rtpof=true&amp;sd=true">01-29-2024 Plate 2</a></p>
 <section id="qpcr-reaction-information" class="level2">
 <h2 class="anchored" data-anchor-id="qpcr-reaction-information">qPCR Reaction Information</h2>
 <table class="table">
@@ -935,7 +1029,7 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>Applied Biosystems™ Power SYBR™ Green PCR Master Mix</td>
+<td>Applied Biosystems™ PowerSYBR™ Green PCR Master Mix</td>
 <td>5</td>
 </tr>
 <tr class="even">
@@ -943,11 +1037,11 @@ Note
 <td>3.5</td>
 </tr>
 <tr class="odd">
-<td>Forward Primer</td>
+<td>Forward Primer (2.5 uM)</td>
 <td>0.25</td>
 </tr>
 <tr class="even">
-<td>Reverse Primer</td>
+<td>Reverse Primer (2.5 uM)</td>
 <td>0.25</td>
 </tr>
 <tr class="odd">
@@ -957,6 +1051,185 @@ Note
 <tr class="even">
 <td><strong>Total</strong></td>
 <td><strong>10</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Final concentration of 62.5 nM of each primer per 1 rxn (suggested to be within 50-300 nM for this protocol).</p>
+</div>
+</div>
+</section>
+<section id="cycle-information" class="level2">
+<h2 class="anchored" data-anchor-id="cycle-information">Cycle Information</h2>
+<table class="table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 22%">
+<col style="width: 25%">
+<col style="width: 23%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>Step</th>
+<th>Temperature (C)</th>
+<th>Duration (sec)</th>
+<th>Cycles</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hold</td>
+<td>Hold</td>
+<td>50</td>
+<td>120</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Hold</td>
+<td>Hold</td>
+<td>95</td>
+<td>600</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>PCR</td>
+<td>Denature</td>
+<td>95</td>
+<td>15</td>
+<td>40</td>
+</tr>
+<tr class="even">
+<td>PCR</td>
+<td>Anneal/Extend</td>
+<td>60</td>
+<td>60</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td>Melt Curve</td>
+<td>Denature</td>
+<td>95</td>
+<td>15</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Melt Curve</td>
+<td>Anneal/Extend</td>
+<td>60</td>
+<td>60</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Melt Curve</td>
+<td>Dissociation</td>
+<td>95</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div id="fig-cycle-info" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="cycle_powertrack_sybr.jpeg" class="img-fluid figure-img"></p>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: Cycle information for qPCR.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ntc-results" class="level2">
+<h2 class="anchored" data-anchor-id="ntc-results">NTC results</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Target Name</th>
+<th>Task</th>
+<th>CT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BActin</td>
+<td>NTC</td>
+<td>Undetermined</td>
+</tr>
+<tr class="even">
+<td>BAX</td>
+<td>NTC</td>
+<td>32.548</td>
+</tr>
+<tr class="odd">
+<td>SOD1</td>
+<td>NTC</td>
+<td>26.921</td>
+</tr>
+<tr class="even">
+<td>SIRT6</td>
+<td>NTC</td>
+<td>Undetermined</td>
+</tr>
+<tr class="odd">
+<td>IAP7</td>
+<td>NTC</td>
+<td>32.048</td>
+</tr>
+<tr class="even">
+<td>HSP70</td>
+<td>NTC</td>
+<td>Undetermined</td>
+</tr>
+<tr class="odd">
+<td>Mortalin</td>
+<td>NTC</td>
+<td>32.660</td>
+</tr>
+<tr class="even">
+<td>18s</td>
+<td>NTC</td>
+<td>32.623</td>
+</tr>
+<tr class="odd">
+<td>POU3</td>
+<td>NTC</td>
+<td>33.793</td>
+</tr>
+<tr class="even">
+<td>PolB</td>
+<td>NTC</td>
+<td>Undetermined</td>
+</tr>
+<tr class="odd">
+<td>TNF</td>
+<td>NTC</td>
+<td>Undetermined</td>
+</tr>
+<tr class="even">
+<td>MYC</td>
+<td>NTC</td>
+<td>32.153</td>
+</tr>
+<tr class="odd">
+<td>AIF1</td>
+<td>NTC</td>
+<td>27.873</td>
+</tr>
+<tr class="even">
+<td>PARP1</td>
+<td>NTC</td>
+<td>Undetermined</td>
 </tr>
 </tbody>
 </table>
@@ -979,7 +1252,7 @@ Note
 <p><img src="png/actb_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: Efficiency for beta actin is 94%</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: Efficiency for beta actin is 94%</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -998,7 +1271,7 @@ Note
 <p><img src="png/18s_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3: Efficiency value for 18s = 89%.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4: Efficiency value for 18s = 84%.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1020,7 +1293,7 @@ Note
 <p><img src="png/bax_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4: Efficiency for BAX is 350%</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5: Efficiency for BAX is 350%</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1039,7 +1312,7 @@ Note
 <p><img src="png/aif1_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;5: Efficiency for AIF1 is 148,350.875</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6: Efficiency for AIF1 is 148,350.875</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1058,7 +1331,7 @@ Note
 <p><img src="png/mort_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;6: Efficiency for Mortalin is 174.206</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7: Efficiency for Mortalin is 174.206</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1077,7 +1350,7 @@ Note
 <p><img src="png/sirt6_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;7: Efficiency for SIRT6 is 176.364.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;8: Efficiency for SIRT6 is 176.364.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1096,7 +1369,7 @@ Note
 <p><img src="png/sod1_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8: Efficiency for SOD1 is 2,189,061.750%</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9: Efficiency for SOD1 is 2,189,061.750%</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1115,7 +1388,7 @@ Note
 <p><img src="png/pou3_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;9: Efficiency for POU3 is 673%.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;10: Efficiency for POU3 is 673%.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1134,7 +1407,7 @@ Note
 <p><img src="png/soxb1_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;10: Efficiency for SOXB1 is 364.444</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;11: Efficiency for SOXB1 is 364.444</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1153,7 +1426,7 @@ Note
 <p><img src="png/myc_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;11: Efficiency for MYC is 405.222</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;12: Efficiency for MYC is 405.222</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1172,7 +1445,7 @@ Note
 <p><img src="png/iap7_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;12: Efficiency for IAP7 is 299.488</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13: Efficiency for IAP7 is 299.488</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1194,7 +1467,7 @@ Note
 <p><img src="png/polb_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13: Basically no amplification, E = 26.604.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14: Basically no amplification, E = 26.604.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1213,7 +1486,7 @@ Note
 <p><img src="png/tnf_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;14: Basically no amplification, E = 918.266.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;15: Basically no amplification, E = 918.266.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1232,7 +1505,7 @@ Note
 <p><img src="png/hsp70_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;15: Basically no amp, E = 52.113.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;16: Basically no amp, E = 52.113.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1251,7 +1524,7 @@ Note
 <p><img src="png/parp1_amp.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;16: Late amp, E = 117.058%</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;17: Late amp, E = 117.058%</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1270,7 +1543,17 @@ Note
 <p><img src="png/amp_plot_plate3.png" class="img-fluid figure-img"></p>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;17: 18s primer amplification plot at a 1:5 dilution series. Downward parabola shapes are higher concentrations of the cDNA pools.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;18: 18s primer amplification plot at a 1:5 dilution series. Downward parabola shapes are higher concentrations of the cDNA pools.</figcaption><p></p>
+</figure>
+</div>
+<div id="fig-precipitation" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="observation.jpeg" class="img-fluid figure-img"></p>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;19: Notice that in some of the wells, after the qPCR reaction, there appears to be an unknown red precipitate at the bottom of the well. Appears as if there is more “red” in top right quadrant loaded with SOD1 primer. Other plates not fully assessed for this phenomenon.</figcaption><p></p>
 </figure>
 </div>
 <p><strong>Common contaminants</strong>:</p>

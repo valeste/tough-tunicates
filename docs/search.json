@@ -823,7 +823,7 @@
     "href": "posts/qPCR-relative-standards/index.html#qpcr-reaction-information",
     "title": "qPCR for Nickel exposure on Botryllus schlosseri",
     "section": "qPCR Reaction Information",
-    "text": "qPCR Reaction Information\n\n\n\n\n\n\n\nComponent\nper 1 rxn (uL)\n\n\n\n\nApplied Biosystems™ Power SYBR™ Green PCR Master Mix\n5\n\n\nNuclease-free water\n3.5\n\n\nForward Primer\n0.25\n\n\nReverse Primer\n0.25\n\n\ncDNA\n1\n\n\nTotal\n10"
+    "text": "qPCR Reaction Information\n\n\n\n\n\n\n\nComponent\nper 1 rxn (uL)\n\n\n\n\nApplied Biosystems™ PowerSYBR™ Green PCR Master Mix\n5\n\n\nNuclease-free water\n3.5\n\n\nForward Primer (2.5 uM)\n0.25\n\n\nReverse Primer (2.5 uM)\n0.25\n\n\ncDNA\n1\n\n\nTotal\n10\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nFinal concentration of 62.5 nM of each primer per 1 rxn (suggested to be within 50-300 nM for this protocol)."
   },
   {
     "objectID": "posts/qPCR-relative-standards/index.html#amplification-plots",
@@ -879,21 +879,21 @@
     "href": "posts/qPCR-relative-standards/index.html#good",
     "title": "qPCR for Nickel exposure on Botryllus schlosseri",
     "section": "Good",
-    "text": "Good\n\nBeta actin\nThe two primer sets with acceptable efficiency values in my qPCR are my housekeeping (HK) genes. I suspect given they are constitutively and highly expressed, issues with inhibitors in the reaction mix are not as much of an issue relative to my genes of interest (GOI).\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Efficiency for beta actin is 94%\n\n\n\n\n18s\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Efficiency value for 18s = 89%."
+    "text": "Good\n\nBeta actin\nThe two primer sets with acceptable efficiency values in my qPCR are my housekeeping (HK) genes. I suspect given they are constitutively and highly expressed, issues with inhibitors in the reaction mix are not as much of an issue relative to my genes of interest (GOI).\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Efficiency for beta actin is 94%\n\n\n\n\n18s\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Efficiency value for 18s = 84%."
   },
   {
     "objectID": "posts/qPCR-relative-standards/index.html#questionable",
     "href": "posts/qPCR-relative-standards/index.html#questionable",
     "title": "qPCR for Nickel exposure on Botryllus schlosseri",
     "section": "Questionable",
-    "text": "Questionable\n\nBAX\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Efficiency for BAX is 350%\n\n\n\n\nAIF1\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: Efficiency for AIF1 is 148,350.875\n\n\n\n\nMortalin\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: Efficiency for Mortalin is 174.206\n\n\n\n\nSIRT6\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7: Efficiency for SIRT6 is 176.364.\n\n\n\n\nSOD1\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 8: Efficiency for SOD1 is 2,189,061.750%\n\n\n\n\nPOU3\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9: Efficiency for POU3 is 673%.\n\n\n\n\nSOXB1\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 10: Efficiency for SOXB1 is 364.444\n\n\n\n\nMYC\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 11: Efficiency for MYC is 405.222\n\n\n\n\nIAP7\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 12: Efficiency for IAP7 is 299.488"
+    "text": "Questionable\n\nBAX\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: Efficiency for BAX is 350%\n\n\n\n\nAIF1\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: Efficiency for AIF1 is 148,350.875\n\n\n\n\nMortalin\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7: Efficiency for Mortalin is 174.206\n\n\n\n\nSIRT6\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 8: Efficiency for SIRT6 is 176.364.\n\n\n\n\nSOD1\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9: Efficiency for SOD1 is 2,189,061.750%\n\n\n\n\nPOU3\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 10: Efficiency for POU3 is 673%.\n\n\n\n\nSOXB1\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 11: Efficiency for SOXB1 is 364.444\n\n\n\n\nMYC\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 12: Efficiency for MYC is 405.222\n\n\n\n\nIAP7\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13: Efficiency for IAP7 is 299.488"
   },
   {
     "objectID": "posts/qPCR-relative-standards/index.html#trash",
     "href": "posts/qPCR-relative-standards/index.html#trash",
     "title": "qPCR for Nickel exposure on Botryllus schlosseri",
     "section": "Trash",
-    "text": "Trash\n\nPolB\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13: Basically no amplification, E = 26.604.\n\n\n\n\nTNF\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 14: Basically no amplification, E = 918.266.\n\n\n\n\nHSP70\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 15: Basically no amp, E = 52.113.\n\n\n\n\nPARP1\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 16: Late amp, E = 117.058%"
+    "text": "Trash\n\nPolB\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 14: Basically no amplification, E = 26.604.\n\n\n\n\nTNF\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 15: Basically no amplification, E = 918.266.\n\n\n\n\nHSP70\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 16: Basically no amp, E = 52.113.\n\n\n\n\nPARP1\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 17: Late amp, E = 117.058%"
   },
   {
     "objectID": "posts/qPCR-relative-standards/index.html",
@@ -942,7 +942,7 @@
     "href": "posts/qPCR-relative-standards/index.html#cdna-has-low-purity",
     "title": "qPCR for Nickel exposure on Botryllus schlosseri",
     "section": "cDNA has low purity?",
-    "text": "cDNA has low purity?\nAccording to online sources DNA purity (260/280) should fall above 1.8. Currently the cDNA is at 1.7. RNA should fall above 2.0 (260/280). The RNA after gDNA elimination fell below that at an average of 1.71 (SD ± 0.12).\nWhen running all the primer sets at a 1:5 dilution series, higher concentrations of cDNA resulted in a ‘horseshoe’ shape (indicative of failure to fluoresce) and most diluted sample (1:625) had lower Ct values than higher concentrations (1:125). Upon running a 1:10 dilution series, this issue is no longer as apparent. However, online sources mention that an amplification efficiency above 100% (which is what we see for nearly all the primers) or a really flat slope on the standard curve is indicative of polymerase inhibition.\n\n\n\n\n\n\n\nFigure 17: 18s primer amplification plot at a 1:5 dilution series. Downward parabola shapes are higher concentrations of the cDNA pools.\n\n\nCommon contaminants:\n\nhemoglobin\npolysaccharides\nproteinase K\nethanol (during the RNA isolation)\n\nHowever, the purity of my RNA prior to gDNA elimination was on average 1.89 (SD ± 0.11) so likely reagents fromt the gDNA elimination step were carried over into my samples."
+    "text": "cDNA has low purity?\nAccording to online sources DNA purity (260/280) should fall above 1.8. Currently the cDNA is at 1.7. RNA should fall above 2.0 (260/280). The RNA after gDNA elimination fell below that at an average of 1.71 (SD ± 0.12).\nWhen running all the primer sets at a 1:5 dilution series, higher concentrations of cDNA resulted in a ‘horseshoe’ shape (indicative of failure to fluoresce) and most diluted sample (1:625) had lower Ct values than higher concentrations (1:125). Upon running a 1:10 dilution series, this issue is no longer as apparent. However, online sources mention that an amplification efficiency above 100% (which is what we see for nearly all the primers) or a really flat slope on the standard curve is indicative of polymerase inhibition.\n\n\n\n\n\n\n\nFigure 18: 18s primer amplification plot at a 1:5 dilution series. Downward parabola shapes are higher concentrations of the cDNA pools.\n\n\n\n\n\n\n\n\n\nFigure 19: Notice that in some of the wells, after the qPCR reaction, there appears to be an unknown red precipitate at the bottom of the well. Appears as if there is more “red” in top right quadrant loaded with SOD1 primer. Other plates not fully assessed for this phenomenon.\n\n\nCommon contaminants:\n\nhemoglobin\npolysaccharides\nproteinase K\nethanol (during the RNA isolation)\n\nHowever, the purity of my RNA prior to gDNA elimination was on average 1.89 (SD ± 0.11) so likely reagents fromt the gDNA elimination step were carried over into my samples."
   },
   {
     "objectID": "posts/qPCR-relative-standards/index.html#primers-are-not-optimally-designed",
@@ -964,5 +964,33 @@
     "title": "qPCR for Nickel exposure on Botryllus schlosseri",
     "section": "Alternative Primers",
     "text": "Alternative Primers\nFurther literature search regarding previous work conducted with B. schlosseri and qPCR resulted in finding the following paper:\n\n\n\n\n\n\nCitation\n\n\n\nRosner A, Kravchenko O, Rinkevich B. IAP genes partake weighty roles in the astogeny and whole body regeneration in the colonial urochordate Botryllus schlosseri. Developmental Biology. 2019 Apr;448(2):320–41. doi.org/10.1016/j.ydbio.2018.10.015\n\n\nThis paper utilizes several primer sets targeting genes in relation to apoptosis. The following primer sets are pulled from this paper:\n\nProposed Primers\n\n\n\n\n\n\n\n\n\n\nGene* or Accession** number\nGene name\nForward primer\nReverse primer\nSource\n\n\n\n\ng5785\nIAP6\nCTGGTATTGTAACGGCGGCCTGCAA\nGGTGAACGAAATGCTGGCCTTTGGA\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng7904\nIAP8\nATTTACCTCGGACGTTAGCGCAGGAC\nCCCGGAACAAGAGAAGCATTGAACTC\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng7149\nIAP9\nGGATGCGGGATATGCGGAGGATAG\nAGCTTCCGCCGACTGATAGCATG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng27485\nIAP14\nGCGTGACCGTGTGAAATGCTGG\nCCACTTTGCATGCTCGACCCAC\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng44848\nIAP15\nATGGAAGCCACCGACGAGATGAG\nTCGATAACGTTCTGTTGGCAGCTCTTG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng56072\nIAP18\nTAAGCACATTCATGCGGTGGTCG\nGCCCAAATAGAACAATCCGCAGTCTG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng29315\nIAP21\nCGTGAGCCTCTACTGCGCACTTCTC\nGCTTGAGTAGAAGTTGGCGCAGAGC\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\nKU948200.1**\nBax\nATCTAGGCCAACCCGACCGAGAACC\nCAACAGCTCCCTGGACCAAAGACG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\nKU948202.1**\nAIF1\nGGTGAGCAAGGGCATAGAAC\nTGAACGACTCCGTGTTTGG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng8767\ncaspase 2\nTGGTGAAGGTCCTGGCGAAGAAC\nGCCTTTAACGACGCTGTTGACGG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng11647\ncaspase7.1\nGCACAAATTCCGTGGTTGCTTCC\nTTCTCTTGTCTCTGTGCGTCCCGTTTC\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng3334\ncaspase9\nGAAACCGATCTTACCGCCTACAACATG\nACGCATATATCAGATCGTCCTTGTTGC\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng49756\nAKT1\nCTTGAAGACAATGATTACGGCAGGTCC\nAAGCGTCCGCACATCATCTCGTAC\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng1445\nPIK3CA\nCTGATAAGGAAAGTCCACGGCAACGAC\nCTGACCGGTTTGACGTGGAGTAATTG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng42386\nGSK3b2\nGTTTCCGCAAATCAAGGCTCATCC\nTGCTACATAAACCGATGGCGTCCTG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng12744\ncdc25\nGAAATGTTCCCTGCCCACTGTGAC\nCGATGCCGTGTTCTTTCTTCAGAGC\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng41847\nmyc\nGCAGATCAGGGCCGCTCACAATGTC\nTGTCGCGCAGCGTCAAGAAGGAAG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng61081\nsox2\nACGCAGTTAATCATCATCCATCTCACC\nAACCGGGATGTGGGCTACTTGC\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng68340\nhsp90α 3_1\nAAGATCATTTAGCCGTCAAGCACTTCTC\nGGGCACGCTTTGGAACGAAGAG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\ng67511\nhsp90β 2_4\nAAGGCCCAGGCTCTTCGTGACTCTTC\nGAGTGTTCGGGATTGATCTCCAAGTG\ndoi.org/10.1016/j.ydbio.2018.10.015\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n*Gene number assigned by the Botrullus Genome Project (Voskoboynik et al., 2013).\n**Accession number assigned by the NCBI GenBank.\n\n\nOf the suite of IAPs reduced from the ones used in the referenced paper to capture those that were most interesting under oxidative stress at stage A and across blastogenic stages.\nIn our study we did not target a specific stage for oxidative stress (nickel) exposures so I believe it would be interesting to capture IAPs impacted by both factors."
+  },
+  {
+    "objectID": "posts/qPCR-relative-standards/index.html#ep-pcr-reaction-info",
+    "href": "posts/qPCR-relative-standards/index.html#ep-pcr-reaction-info",
+    "title": "qPCR for Nickel exposure on Botryllus schlosseri",
+    "section": "EP-PCR Reaction Info",
+    "text": "EP-PCR Reaction Info\n\n\n\n\n\n\n\nEP-PCR Component\nper 1 rxn (uL)\n\n\n\n\nPCR Master Mix (brand TBD)\n12.5\n\n\nNuclease-free water\n9.5\n\n\nForward Primer (5 uM)\n1\n\n\nReverse Primer (5 uM)\n1\n\n\n1:3 dilution of pooled (per treatement) cDNA\n1\n\n\nTotal\n25\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nFinal concentration of 200 nM of each primer per 1 rxn."
+  },
+  {
+    "objectID": "posts/qPCR-relative-standards/index.html#gel-info",
+    "href": "posts/qPCR-relative-standards/index.html#gel-info",
+    "title": "qPCR for Nickel exposure on Botryllus schlosseri",
+    "section": "Gel Info",
+    "text": "Gel Info\nWith 1x TAE buffer on 1% agarose gel:\n\n\n\nComponent\nper 1 rxn (uL)\n\n\n\n\nNuclease-free water\n5\n\n\ncDNA (after EP-PCR)\n5\n\n\nLoading Dye\n2\n\n\nTotal\n12"
+  },
+  {
+    "objectID": "posts/qPCR-relative-standards/index.html#ntc-results",
+    "href": "posts/qPCR-relative-standards/index.html#ntc-results",
+    "title": "qPCR for Nickel exposure on Botryllus schlosseri",
+    "section": "NTC results",
+    "text": "NTC results\n\n\n\nTarget Name\nTask\nCT\n\n\n\n\nBActin\nNTC\nUndetermined\n\n\nBAX\nNTC\n32.548\n\n\nSOD1\nNTC\n26.921\n\n\nSIRT6\nNTC\nUndetermined\n\n\nIAP7\nNTC\n32.048\n\n\nHSP70\nNTC\nUndetermined\n\n\nMortalin\nNTC\n32.660\n\n\n18s\nNTC\n32.623\n\n\nPOU3\nNTC\n33.793\n\n\nPolB\nNTC\nUndetermined\n\n\nTNF\nNTC\nUndetermined\n\n\nMYC\nNTC\n32.153\n\n\nAIF1\nNTC\n27.873\n\n\nPARP1\nNTC\nUndetermined"
+  },
+  {
+    "objectID": "posts/qPCR-relative-standards/index.html#cycle-information",
+    "href": "posts/qPCR-relative-standards/index.html#cycle-information",
+    "title": "qPCR for Nickel exposure on Botryllus schlosseri",
+    "section": "Cycle Information",
+    "text": "Cycle Information\n\n\n\n\n\n\n\n\n\n\nStage\nStep\nTemperature (C)\nDuration (sec)\nCycles\n\n\n\n\nHold\nHold\n50\n120\n1\n\n\nHold\nHold\n95\n600\n1\n\n\nPCR\nDenature\n95\n15\n40\n\n\nPCR\nAnneal/Extend\n60\n60\n40\n\n\nMelt Curve\nDenature\n95\n15\n1\n\n\nMelt Curve\nAnneal/Extend\n60\n60\n1\n\n\nMelt Curve\nDissociation\n95\n1\n1\n\n\n\n\n\n\n\n\n\n\nFigure 2: Cycle information for qPCR."
   }
 ]

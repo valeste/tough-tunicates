@@ -159,23 +159,100 @@ Primers for *Botryllus schlosseri* designed as described in [Tunicate Primers](h
 
 ![](EP PCR Gel Results 12_18_23 -2.jpg)
 
-EP-PCR conducted to confirm correct size of amplicon products. In this PCR reaction run, primer sets were at a concentration of 5 uM and the reagent used was SYBR PowerTrack. Note this is different than what was used for the 1:10 dilution series relative standard curves. 
+EP-PCR conducted to confirm correct size of amplicon products. In this PCR reaction run, primer sets were at a concentration of 5 uM. Note this is different than what was used for the 1:10 dilution series relative standard curves. Also where it says 40s, it should say 18s.
 :::
 
+## EP-PCR Reaction Info
+| **EP-PCR Component**                                 | **per 1 rxn (uL)** |
+|------------------------------------------------------|--------------------|
+| PCR Master Mix (brand TBD)                           | 12.5               |
+| Nuclease-free water                                  | 9.5                |
+| Forward Primer (5 uM)                                | 1                  |
+| Reverse Primer (5 uM)                                | 1                  |
+| 1:3 dilution of pooled (per treatement) cDNA         | 1                  |
+| **Total**                                            | **25**             |
+
+
+:::{.callout-note}
+Final concentration of 200 nM of each primer per 1 rxn.
+:::
+
+## Gel Info
+With 1x TAE buffer on 1% agarose gel:
+ 
+| **Component**                  | **per 1 rxn (uL)** |
+|--------------------------------|--------------------|
+| Nuclease-free water            | 5                  |
+| cDNA (after EP-PCR)            | 5                  |
+| Loading Dye                    | 2                  |                   
+| **Total**                      | **12**             |
 
 
 # Relative Standard Curves
+
+To view data and results directly from plate reader view:
+
+[01-15-2024 Plate 1](https://docs.google.com/spreadsheets/d/1gweAxPEdAyy4JbZNFsSAqCGk5DQHECbF/edit?usp=sharing&ouid=104764039655117483916&rtpof=true&sd=true)
+
+[01-29-2024 Plate 1](https://docs.google.com/spreadsheets/d/1iJj9cOFX9WeneiIFArwjfQe0GvyXkiJZ/edit?usp=sharing&ouid=104764039655117483916&rtpof=true&sd=true)
+
+[01-29-2024 Plate 2](https://docs.google.com/spreadsheets/d/1DkU7YRTlw4ZBsw8u_dMcDlHO4qp8ldpp/edit?usp=sharing&ouid=104764039655117483916&rtpof=true&sd=true)
 
 ## qPCR Reaction Information
 
 | **Component**                                        | **per 1 rxn (uL)** |
 |------------------------------------------------------|--------------------|
-| Applied Biosystems™ Power SYBR™ Green PCR Master Mix | 5                  |
+| Applied Biosystems™ PowerSYBR™ Green PCR Master Mix  | 5                  |
 | Nuclease-free water                                  | 3.5                |
-| Forward Primer                                       | 0.25               |
-| Reverse Primer                                       | 0.25               |
+| Forward Primer (2.5 uM)                              | 0.25               |
+| Reverse Primer (2.5 uM)                              | 0.25               |
 | cDNA                                                 | 1                  |
 | **Total**                                            | **10**             |
+
+:::{.callout-note}
+Final concentration of 62.5 nM of each primer per 1 rxn (suggested to be within 50-300 nM for this protocol).
+:::
+
+## Cycle Information
+
+| Stage      	| Step          	| Temperature (C) 	| Duration (sec) 	| Cycles 	|
+|------------	|---------------	|-----------------	|----------------	|--------	|
+| Hold       	| Hold          	| 50              	| 120            	| 1      	|
+| Hold       	| Hold          	| 95              	| 600            	| 1      	|
+| PCR        	| Denature      	| 95              	| 15             	| 40     	|
+| PCR        	| Anneal/Extend 	| 60              	| 60             	| 40     	|
+| Melt Curve 	| Denature      	| 95              	| 15             	| 1      	|
+| Melt Curve 	| Anneal/Extend 	| 60              	| 60             	| 1      	|
+| Melt Curve 	| Dissociation  	| 95              	| 1              	| 1      	|
+
+
+::: {#fig-cycle-info layout-ncol="1"}
+
+![](cycle_powertrack_sybr.jpeg)
+
+Cycle information for qPCR.
+
+:::
+
+
+## NTC results
+
+| Target Name 	| Task 	| CT           	|
+|-------------	|------	|--------------	|
+| BActin      	| NTC  	| Undetermined 	|
+| BAX         	| NTC  	|       32.548 	|
+| SOD1        	| NTC  	|       26.921 	|
+| SIRT6       	| NTC  	| Undetermined 	|
+| IAP7        	| NTC  	|       32.048 	|
+| HSP70       	| NTC  	| Undetermined 	|
+| Mortalin    	| NTC  	|       32.660 	|
+| 18s         	| NTC  	|       32.623 	|
+| POU3        	| NTC  	|       33.793 	|
+| PolB        	| NTC  	| Undetermined 	|
+| TNF         	| NTC  	| Undetermined 	|
+| MYC         	| NTC  	|       32.153 	|
+| AIF1        	| NTC  	|       27.873 	|
+| PARP1       	| NTC  	| Undetermined 	|
 
 ## Good
 
@@ -206,7 +283,7 @@ Efficiency for beta actin is 94%
 
 ![](png/18s_amp.png)
 
-Efficiency value for 18s = 89%.
+Efficiency value for 18s = 84%.
 :::
 
 ## Questionable
@@ -414,6 +491,14 @@ When running all the primer sets at a 1:5 dilution series, higher concentrations
 
 :::
 
+
+::: {#fig-precipitation layout-ncol="1"}
+
+![](observation.jpeg)
+
+Notice that in some of the wells, after the qPCR reaction, there appears to be an unknown red precipitate at the bottom of the well. Appears as if there is more "red" in top right quadrant loaded with SOD1 primer. Other plates not fully assessed for this phenomenon.
+
+:::
 
 **Common contaminants**:
 
