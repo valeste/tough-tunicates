@@ -165,7 +165,7 @@ EP-PCR conducted to confirm correct size of amplicon products. In this PCR react
 ## EP-PCR Reaction Info
 | **EP-PCR Component**                                 | **per 1 rxn (uL)** |
 |------------------------------------------------------|--------------------|
-| PCR Master Mix (brand TBD)                           | 12.5               |
+| PCR Master Mix [(ThermoFisher)](https://www.thermofisher.com/order/catalog/product/A31021?gclid=CjwKCAiAxaCvBhBaEiwAvsLmWIp5K4qQLcOzn2gMhA4qatd_HbqZqhanqQ_1m_D-SYBTmTu6pKkzIxoCQH0QAvD_BwE&source=google_shopping&ISO_CODE=us&LANG_CODE=en&ef_idCjwKCAiAxaCvBhBaEiwAvsLmWIp5K4qQLcOzn2gMhA4qatd_HbqZqhanqQ_1m_D-SYBTmTu6pKkzIxoCQH0QAvD_BwE:G:s&ppc_id=PLA_BID_goog_PrivateLabel_20385131408_150159616063_A31021__666353500301_18337998471299722853&ev_chn=shop&cid=0se_gaw_25072023_BWZIOP&ef_id=CjwKCAiAxaCvBhBaEiwAvsLmWIp5K4qQLcOzn2gMhA4qatd_HbqZqhanqQ_1m_D-SYBTmTu6pKkzIxoCQH0QAvD_BwE:G:s&s_kwcid=AL!3652!3!666353500301!!!g!313295803389!!20385131408!150159616063&source=google_shopping&ISO_CODE=us&LANG_CODE=en&gad_source=1)                           | 12.5               |
 | Nuclease-free water                                  | 9.5                |
 | Forward Primer (5 uM)                                | 1                  |
 | Reverse Primer (5 uM)                                | 1                  |
