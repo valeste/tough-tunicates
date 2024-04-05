@@ -42,6 +42,7 @@ Experiment was repeated **three** more times after pilot exposure to increase th
 | RNA sample                                           | 20                 |
 | **Total**                                            | **23**             |
 
+2uL of DNase Inactivation Reagent used towards end of protocol.
 
 4. Requantification of gDNA eliminated RNA with Nano Drop:
 
@@ -101,8 +102,7 @@ RNA quality drop difference of about 0.2 after gDNA elimination.
 | SuperScript IV VILO Master Mix                       | 2                  |
 | Nuclease-free water                                  | variable           |
 | RNA sample                                           | variable           |
-| **Total**                                            | **8**              |
-
+| **Total**                                            | **10**              |
 
 :::{.callout-note}
 
