@@ -6,7 +6,6 @@ categories: [epithelial, protocol]
 image: ""
 ---
 
-
 This protocol is version 02.04.24
 
 # Protocol
@@ -29,31 +28,29 @@ This protocol is version 02.04.24
 -   100 μl pipette
 -   Refractometer
 
-
 ### Consumables
 
-Solution preparation: 
+Solution preparation:
 
--   0.22 um filter units 
--   Penicillin-Streptomycin (100x stock) 
--   Amphotericin-B (250 ug/mL stock) 
--   Gentamicin (50 mg/mL stock) 
--   75 ppt filtered seawater (FSW) 
+-   0.22 um filter units
+-   Penicillin-Streptomycin (100x stock)
+-   Amphotericin-B (250 ug/mL stock)
+-   Gentamicin (50 mg/mL stock)
+-   75 ppt filtered seawater (FSW)
 
-During dissection: 
+During dissection:
 
--   BH Supplies Insulin Syringes U-100 28G 1ml/cc 5/16" (8mm) 
--   100 um cell strainers 
+-   BH Supplies Insulin Syringes U-100 28G 1ml/cc 5/16" (8mm)
+-   100 um cell strainers
 -   Autoclaved 27 ppt artificial seawater (ASW)
 -   70% ethanol
 
-
-During tissue seeding: 
+During tissue seeding:
 
 -   Corning 24 well plates
--   60 mm petri dishes 
--   10 mL and 5 mL serological pipettes 
--   1000 μl pipette tips 
+-   60 mm petri dishes
+-   10 mL and 5 mL serological pipettes
+-   1000 μl pipette tips
 
 ### Solutions
 
@@ -112,17 +109,17 @@ In the biosafety cabinet add together:
 -   1 mL Pen/Strep (100x)
 -   100 μl Amphotericin B (250 ug/mL)
 
-#### ** FSW-Init**
+#### \*\* FSW-Init\*\*
+
 FSW (30 PPT)
 
--   8 mL conc. FSW 
+-   8 mL conc. FSW
 -   12 mL Tissue Grade Molecular Water
 -   600 μl FBS
 -   200 μl Pen/Srep (100x)
 -   20 μl Amp B (250 ug/mL)
 
-200 μl/well FSW supplemented with 3% HIFCS, 2·mmol·l–1 glutamine and 1% PSA solution
-## Cell Isolation Procedure
+200 μl/well FSW supplemented with 3% HIFCS, 2·mmol·l–1 glutamine and 1% PSA solution \## Cell Isolation Procedure
 
 Be sure to have sufficient stocks of the above three solutions prior to following the below procedures.
 
@@ -142,7 +139,6 @@ Be sure to have sufficient stocks of the above three solutions prior to followin
 
 ##### 2. Bud Excision
 
-
 -   Under stereomicroscope on lab bench take picture of colony with Excelis camera.
 
 -   Record blastogenic stage, primary bud number, days in RSWS, and health score.
@@ -156,7 +152,6 @@ Be sure to have sufficient stocks of the above three solutions prior to followin
 -   Use same pair of insulin needles to transfer over the primary buds to the 1.5 mL tube containing 1 mL of FSW- 10% TCM. This can be done by placing the cell strainer in ASW-PSA under the stereomicroscope and carefully rolling the primary buds onto one of the needles. Make sure not to burst them.
 
 -   Transfer all tubes containing bud tissue to the biosaftey cabinet in TPS for cell seeding.
-
 
 #### 3. Coat well plates
 
@@ -177,9 +172,7 @@ $$ 300 μl/cm^2 * 1.9 cm^2 / well * 8wells + (300 * 1.9  * 8wells * 0.1)overage 
 
 Therefore need:
 
-1:100 dilution:
-$$ 5,016 μl/100  = 50.2 μl $$
-$$ 5,016 μl - 50.2 μl= 4,965.8 μl $$
+1:100 dilution: $$ 5,016 μl/100  = 50.2 μl $$ $$ 5,016 μl - 50.2 μl= 4,965.8 μl $$
 
 50.2 μl of cultrex and 4,965.8 μl of serum-free media.
 
@@ -200,7 +193,6 @@ $$300 μl/cm^2 * 1.9 cm^2 / well = 570 μl$$
 Then to each well add 570 μl of the diluted substrate solution.
 
 ##### 4. Seeding tissue and cell maintenance
-
 
 -   Remove excess media from cultrex substrate wells.
 
