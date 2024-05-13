@@ -1,7 +1,7 @@
 ---
-title: "Nickel LC50 Experiment 2"
+title: "Nickel LC50 Experiment 3"
 author: "Celeste Valdivia"
-date: "2024-04-19"
+date: "2024-05-13"
 categories: [study plans, nickel chloride]
 ---
 # Assigning Animals Randomly to different treatments
