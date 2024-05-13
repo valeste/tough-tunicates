@@ -1,0 +1,119 @@
+---
+title: "Nickel LC50 Experiment 2"
+author: "Celeste Valdivia"
+date: "2024-04-19"
+categories: [study plans, nickel chloride]
+---
+# Assigning Animals Randomly to different treatments
+
+```{r}
+set.seed(3349)
+
+conditions <- c("Control R1", 
+                "Control R2", 
+                "0.1 mg/L R1", 
+                "0.1 mg/L R2", 
+                "1 mg/L R1", 
+                "1 mg/L R2", 
+                "10 mg/L R1", 
+                "10 mg/L R2", 
+                "100 mg/L R1", 
+                "100 mg/L R2",
+                "100 mg/L R3",
+                "1000 mg/L R1", 
+                "1000 mg/L R2")
+animal_id <- c("DM032024_C01", 
+               "DM032024_C02", 
+               "DM032024_C03", 
+               "DM032024_C04*", 
+               "DM032024_C05", 
+               "DM032024_C06", 
+               "DM032024_C07", 
+               "DM032024_C08",
+               "DM032024_C09",
+               "DM032024_C10", 
+               "DM032024_C11", 
+               "DM032024_C12",
+               "DM032024_C13")
+
+treatment_assignments <- data.frame(
+  Conditions = sample(conditions),
+  animal_ID = sample(animal_id)
+)
+print(treatment_assignments)
+
+#save assignments in csv for downstream use as metadata
+```
+
+```{r}
+setwd('..')
+write.csv(treatment_assignments, file = "treatment_assignments_LC50_E3.csv")
+```
+
+# Nickel Spiking Calculations
+## Nickel Chloride Dilutions
+
+Review resources prior to handling nickel chloride:
+
+-   Nickel chloride [SDS](https://www.fishersci.com/store/msds?partNumber=AC270510050&productDescription=NICKEL%28II%29+CHLORIDE+HEXA+5KG&vendorId=VN00032119&countryCode=US&language=en).
+
+-   [Chemical resistance of gloves.](https://amo-csd.lbl.gov/downloads/Chemical%20Resistance%20of%20Gloves.pdf)
+
+All handling of stock solution and treatments to be done in a chemical fume hood. Once spiked water has been distributed, add animals, parafilm jars, place in secondary container, and move to environmental chamber.
+
+### Required Volume of Artificial Seawater
+
+Calculations for spiking artificial seawater. 225 mL of seawater required to mostly submerge glass slide in wide mouth 16 oz Kerr mason jar.
+
+Considerations:
+
+-   2 replicates and 3 for 100 treatment
+
+-   225 mL per jar
+
+-   6 conditions
+
+-   Account for 10% loss of water during transferring
+
+-   Additional 15 mL required for analytical chemistry
+
+$$(2 * 225 * 6) + (15*6) + (0.1*(2*225*6)) + (0.1*(15*6)) = 3,069$$
+
+Need 3,069 mL of artificial seawater total for exposure, particularly, 511.5 mL of artificial seawater per condition.
+
+### Calculations
+
+Stock solution of NiCl~2~ (10 g/L) made 04/08/24.
+
+-   NiCl~2~ (5g)
+
+-   Suspended in MilliQ water (500 mL)
+
+#### 0.1 mg/L
+
+$$ C_1*V_1 = C_2*V_2$$ $$ 10 g/L * V_1 = 0.0001g/L*0.5115L$$ $$V_1 = 0.000005115 L = 5.115 uL$$ 
+Spike 511.5 mL of aerated, artificial seawater (18 C) with 5.115 uL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+
+#### 1 mg/L
+
+$$ C_1*V_1 = C_2*V_2$$ $$ 10 g/L * V_1 = 0.001g/L*0.5115L$$ $$V_1 = 0.00005115 L = 51.15 uL$$ 
+
+Spike 511.5 mL of aerated, artificial seawater (18 C) with 51.15 uL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+
+#### 10 mg/L
+
+$$ C_1*V_1 = C_2*V_2$$ $$ 10 g/L * V_1 = 0.01g/L*0.5115L$$ $$V_1 = 0.0005115 L = 511.5 uL$$ 
+
+Spike 511.5 mL of aerated, artificial seawater (18 C) with 511.5 uL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+
+#### 100 mg/L
+
+$$ C_1*V_1 = C_2*V_2$$ $$ 10 g/L * V_1 = 0.1g/L*0.759L$$ $$V_1 = 0.00759 L = 7.59 mL$$ 
+
+Spike 759 mL of aerated, artificial seawater (16 C) with 7.59 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
+
+#### 1000 mg/L
+
+$$ C_1*V_1 = C_2*V_2$$ $$ 10 g/L * V_1 = 1g/L*0.5115L$$ $$V_1 = 0.0759 L = 51.15 mL$$ 
+
+Spike 511.5 mL of aerated, artificial seawater (18 C) with 51.15 mL of stock NiCl~2~ solution. Change in salinity negligible (+/- 1 PPT).
