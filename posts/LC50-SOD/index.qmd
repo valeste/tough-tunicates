@@ -17,6 +17,13 @@ library(ggpubr)
 knitr::opts_chunk$set(echo = TRUE,
                       eval = TRUE)
 ```
+# Background
+An LC50 determination for nickel on *Botryllus schlosseri* was completed in Spring Quarter 2024. Specimens were snap frozen at the 24 and 96 hour mark to assess for accumulation of Superoxide Dismutase 1 (SOD1). SOD1 is an endogenous antioxidant with a primary function involving the removal of reactive oxygen species (ROS). 
+
+Nickel genotoxicity functions indirectly through the resultant intracellular accumulation of ROS in most animal cells. ROS cause double and single stranded breaks to the DNA which inevitably may result in mutations forming at the cellular attempts to repair the DNA.
+
+Here we explore the effects of increasing concentrations of nickel on the accumulation of SOD1 in *B. schlosseri*.
+
 
 # Retrieving Data from Google Sheets
 

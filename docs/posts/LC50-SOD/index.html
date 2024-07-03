@@ -196,7 +196,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#retrieving-data-from-google-sheets" id="toc-retrieving-data-from-google-sheets" class="nav-link active" data-scroll-target="#retrieving-data-from-google-sheets">Retrieving Data from Google Sheets</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#retrieving-data-from-google-sheets" id="toc-retrieving-data-from-google-sheets" class="nav-link" data-scroll-target="#retrieving-data-from-google-sheets">Retrieving Data from Google Sheets</a></li>
   <li><a href="#work-data" id="toc-work-data" class="nav-link" data-scroll-target="#work-data">Work Data</a></li>
   <li><a href="#exploratory-plots" id="toc-exploratory-plots" class="nav-link" data-scroll-target="#exploratory-plots">Exploratory Plots</a></li>
   <li><a href="#stats-analysis" id="toc-stats-analysis" class="nav-link" data-scroll-target="#stats-analysis">Stats Analysis</a></li>
@@ -227,6 +228,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                      <span class="at">eval =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="background" class="level1">
+<h1>Background</h1>
+<p>An LC50 determination for nickel on <em>Botryllus schlosseri</em> was completed in Spring Quarter 2024. Specimens were snap frozen at the 24 and 96 hour mark to assess for accumulation of Superoxide Dismutase 1 (SOD1). SOD1 is an endogenous antioxidant with a primary function involving the removal of reactive oxygen species (ROS).</p>
+<p>Nickel genotoxicity functions indirectly through the resultant intracellular accumulation of ROS in most animal cells. ROS cause double and single stranded breaks to the DNA which inevitably may result in mutations forming at the cellular attempts to repair the DNA.</p>
+<p>Here we explore the effects of increasing concentrations of nickel on the accumulation of SOD1 in <em>B. schlosseri</em>.</p>
+</section>
 <section id="retrieving-data-from-google-sheets" class="level1">
 <h1>Retrieving Data from Google Sheets</h1>
 <p>Make sure you have made your Google sheet publicly available to anyone that has the link. If you make any updates to the sheet just re-curl the data, meaning just re-run the code below.</p>
