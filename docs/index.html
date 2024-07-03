@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -50,7 +50,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -59,8 +65,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -94,7 +102,35 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -102,10 +138,10 @@ ul.task-list li input[type="checkbox"] {
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./images/Subject.png" alt="" class="navbar-logo">
     </a>
@@ -113,36 +149,36 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">The Tough Tunicate</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
- <span class="menu-text">about</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/valeste"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/valeste"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/celestevaldivia/"><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/celestevaldivia/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="malito:cvaldi@uw.edu"><i class="bi bi-envelope-heart" role="img">
+    <a class="nav-link" href="malito:cvaldi@uw.edu"> <i class="bi bi-envelope-heart" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -156,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -167,6 +203,7 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(26)</span></div><div class="category" data-category="ampullae">ampullae <span class="quarto-category-count">(2)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cool paper">cool paper <span class="quarto-category-count">(3)</span></div><div class="category" data-category="discussion">discussion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="epithelial">epithelial <span class="quarto-category-count">(7)</span></div><div class="category" data-category="issues">issues <span class="quarto-category-count">(1)</span></div><div class="category" data-category="nickel chloride">nickel chloride <span class="quarto-category-count">(12)</span></div><div class="category" data-category="optimization">optimization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="paper">paper <span class="quarto-category-count">(2)</span></div><div class="category" data-category="primaries">primaries <span class="quarto-category-count">(4)</span></div><div class="category" data-category="primary buds">primary buds <span class="quarto-category-count">(1)</span></div><div class="category" data-category="primary cultures">primary cultures <span class="quarto-category-count">(1)</span></div><div class="category" data-category="primers">primers <span class="quarto-category-count">(3)</span></div><div class="category" data-category="protocol">protocol <span class="quarto-category-count">(5)</span></div><div class="category" data-category="qPCR">qPCR <span class="quarto-category-count">(3)</span></div><div class="category" data-category="study plans">study plans <span class="quarto-category-count">(8)</span></div><div class="category" data-category="substrate">substrate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="thesis">thesis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="zooids">zooids <span class="quarto-category-count">(3)</span></div></div></div>
@@ -180,25 +217,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="study plans,nickel chloride" data-listing-date-sort="1715583600000" data-listing-file-modified-sort="1715623192333" data-listing-reading-time-sort="4.1">
+<div class="quarto-post image-right" data-index="0" data-categories="study plans,nickel chloride" data-listing-date-sort="1715583600000" data-listing-file-modified-sort="1719547344883" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="820">
 <div class="thumbnail">
-<a href="./posts/LC50-nickel-exp3/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/LC50-nickel-exp3/index.html"></a></p>
+<p><a href="./posts/LC50-nickel-exp3/index.html" class="no-external"></a></p><a href="./posts/LC50-nickel-exp3/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/LC50-nickel-exp3/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/LC50-nickel-exp3/index.html">
 <h3 class="no-anchor listing-title">
-Nickel LC50 Experiment 3
+<a href="./posts/LC50-nickel-exp3/index.html" class="no-external">Nickel LC50 Experiment 3</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/LC50-nickel-exp3/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('study plans'); return false;">
 study plans
@@ -207,14 +241,12 @@ study plans
 nickel chloride
 </div>
 </div>
-<a href="./posts/LC50-nickel-exp3/index.html">
 <div class="listing-description">
-Review resources prior to handling nickel chloride:
+<a href="./posts/LC50-nickel-exp3/index.html" class="no-external">Review resources prior to handling nickel chloride:</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/LC50-nickel-exp3/index.html">
+<a href="./posts/LC50-nickel-exp3/index.html" class="no-external">
 <div class="listing-date">
 May 13, 2024
 </div>
@@ -224,23 +256,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="study plans,nickel chloride" data-listing-date-sort="1713510000000" data-listing-file-modified-sort="1713566283128" data-listing-reading-time-sort="3.915">
+<div class="quarto-post image-right" data-index="1" data-categories="study plans,nickel chloride" data-listing-date-sort="1713510000000" data-listing-file-modified-sort="1719547344883" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="783">
 <div class="thumbnail">
-<a href="./posts/LC50-nickel-exp2/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/LC50-nickel-exp2/index.html"></a></p>
+<p><a href="./posts/LC50-nickel-exp2/index.html" class="no-external"></a></p><a href="./posts/LC50-nickel-exp2/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/LC50-nickel-exp2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/LC50-nickel-exp2/index.html">
 <h3 class="no-anchor listing-title">
-Nickel LC50 Experiment 2
+<a href="./posts/LC50-nickel-exp2/index.html" class="no-external">Nickel LC50 Experiment 2</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/LC50-nickel-exp2/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('study plans'); return false;">
 study plans
@@ -249,14 +277,12 @@ study plans
 nickel chloride
 </div>
 </div>
-<a href="./posts/LC50-nickel-exp2/index.html">
 <div class="listing-description">
-Review resources prior to handling nickel chloride:
+<a href="./posts/LC50-nickel-exp2/index.html" class="no-external">Review resources prior to handling nickel chloride:</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/LC50-nickel-exp2/index.html">
+<a href="./posts/LC50-nickel-exp2/index.html" class="no-external">
 <div class="listing-date">
 Apr 19, 2024
 </div>
@@ -266,23 +292,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="study plans,nickel chloride" data-listing-date-sort="1712473200000" data-listing-file-modified-sort="1712518420839" data-listing-reading-time-sort="5.115">
+<div class="quarto-post image-right" data-index="2" data-categories="study plans,nickel chloride" data-listing-date-sort="1712473200000" data-listing-file-modified-sort="1719547344883" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1023">
 <div class="thumbnail">
-<a href="./posts/LC50-nickel-exp1/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/LC50-nickel-exp1/index.html"></a></p>
+<p><a href="./posts/LC50-nickel-exp1/index.html" class="no-external"></a></p><a href="./posts/LC50-nickel-exp1/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/LC50-nickel-exp1/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/LC50-nickel-exp1/index.html">
 <h3 class="no-anchor listing-title">
-Nickel LC50 Experiment 1
+<a href="./posts/LC50-nickel-exp1/index.html" class="no-external">Nickel LC50 Experiment 1</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/LC50-nickel-exp1/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('study plans'); return false;">
 study plans
@@ -291,14 +313,12 @@ study plans
 nickel chloride
 </div>
 </div>
-<a href="./posts/LC50-nickel-exp1/index.html">
 <div class="listing-description">
-Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.
+<a href="./posts/LC50-nickel-exp1/index.html" class="no-external">Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/LC50-nickel-exp1/index.html">
+<a href="./posts/LC50-nickel-exp1/index.html" class="no-external">
 <div class="listing-date">
 Apr 7, 2024
 </div>
@@ -308,23 +328,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="nickel chloride,qPCR,primers,issues" data-listing-date-sort="1709712000000" data-listing-file-modified-sort="1709756094216" data-listing-reading-time-sort="20.81">
+<div class="quarto-post image-right" data-index="3" data-categories="nickel chloride,qPCR,primers,issues" data-listing-date-sort="1709712000000" data-listing-file-modified-sort="1719547344993" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="21" data-listing-word-count-sort="4162">
 <div class="thumbnail">
-<a href="./posts/issue-1834/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/issue-1834/index.html"></a></p>
+<p><a href="./posts/issue-1834/index.html" class="no-external"></a></p><a href="./posts/issue-1834/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/issue-1834/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/issue-1834/index.html">
 <h3 class="no-anchor listing-title">
-Troubleshoot qPCR for Nickel exposure on <em>Botryllus schlosseri</em>
+<a href="./posts/issue-1834/index.html" class="no-external">Troubleshoot qPCR for Nickel exposure on <em>Botryllus schlosseri</em></a>
 </h3>
 <div class="listing-subtitle">
-re: RobertsLab/resources issue #1834
+<a href="./posts/issue-1834/index.html" class="no-external">re: RobertsLab/resources issue #1834 </a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('nickel chloride'); return false;">
 nickel chloride
@@ -339,14 +355,12 @@ primers
 issues
 </div>
 </div>
-<a href="./posts/issue-1834/index.html">
 <div class="listing-description">
-In response to <span class="citation" data-cites="kubu4">@kubu4</span>’s questions in issue #1834 opened in Roberts Lab resources repo.
+<a href="./posts/issue-1834/index.html" class="no-external">In response to <span class="citation" data-cites="kubu4">@kubu4</span>’s questions in issue #1834 opened in Roberts Lab resources repo.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/issue-1834/index.html">
+<a href="./posts/issue-1834/index.html" class="no-external">
 <div class="listing-date">
 Mar 6, 2024
 </div>
@@ -356,19 +370,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="nickel chloride,qPCR,primers" data-listing-date-sort="1709280000000" data-listing-file-modified-sort="1709832973191" data-listing-reading-time-sort="39.305">
+<div class="quarto-post image-right" data-index="4" data-categories="nickel chloride,qPCR,primers" data-listing-date-sort="1709280000000" data-listing-file-modified-sort="1719547345014" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="40" data-listing-word-count-sort="7861">
 <div class="thumbnail">
-<p><a href="./posts/qPCR-relative-standards/index.html"> <img src="./posts/qPCR-relative-standards/EP PCR Gel Results 12_18_23 -2.jpg" class="thumnail-image"> </a></p>
+<p><a href="./posts/qPCR-relative-standards/index.html" class="no-external"></a></p><a href="./posts/qPCR-relative-standards/index.html" class="no-external">
+<p><img src="./posts/qPCR-relative-standards/EP PCR Gel Results 12_18_23 -2.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/qPCR-relative-standards/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/qPCR-relative-standards/index.html">
 <h3 class="no-anchor listing-title">
-qPCR for Nickel exposure on <em>Botryllus schlosseri</em>
+<a href="./posts/qPCR-relative-standards/index.html" class="no-external">qPCR for Nickel exposure on <em>Botryllus schlosseri</em></a>
 </h3>
 <div class="listing-subtitle">
-Relative standard curves to determine primer effenciencies.
+<a href="./posts/qPCR-relative-standards/index.html" class="no-external">Relative standard curves to determine primer effenciencies.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('nickel chloride'); return false;">
 nickel chloride
@@ -380,14 +394,12 @@ qPCR
 primers
 </div>
 </div>
-<a href="./posts/qPCR-relative-standards/index.html">
 <div class="listing-description">
-Analysis of gene expression with quantitative Polymerase Chain Reaction (qPCR) will be a component of the <em>in vivo</em> nickel exposure work conducted in autumn 2023. Four experiments were…<sup></sup>
+<a href="./posts/qPCR-relative-standards/index.html" class="no-external">Analysis of gene expression with quantitative Polymerase Chain Reaction (qPCR) will be a component of the <em>in vivo</em> nickel exposure work conducted in autumn 2023. Four…<sup></sup></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/qPCR-relative-standards/index.html">
+<a href="./posts/qPCR-relative-standards/index.html" class="no-external">
 <div class="listing-date">
 Mar 1, 2024
 </div>
@@ -397,19 +409,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="epithelial,primaries,paper" data-listing-date-sort="1707897600000" data-listing-file-modified-sort="1708719548598" data-listing-reading-time-sort="0.2">
+<div class="quarto-post image-right" data-index="5" data-categories="epithelial,primaries,paper" data-listing-date-sort="1707897600000" data-listing-file-modified-sort="1719547345038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="40">
 <div class="thumbnail">
-<p><a href="./posts/tunicate-hemolymph/index.html"> <img src="./posts/tunicate-hemolymph/ciona.jpeg" class="thumnail-image"> </a></p>
+<p><a href="./posts/tunicate-hemolymph/index.html" class="no-external"></a></p><a href="./posts/tunicate-hemolymph/index.html" class="no-external">
+<p><img src="./posts/tunicate-hemolymph/ciona.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/tunicate-hemolymph/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/tunicate-hemolymph/index.html">
 <h3 class="no-anchor listing-title">
-Tunicate Hemolymph Extraction for Media Supplementation
+<a href="./posts/tunicate-hemolymph/index.html" class="no-external">Tunicate Hemolymph Extraction for Media Supplementation</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/tunicate-hemolymph/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('epithelial'); return false;">
 epithelial
@@ -421,14 +433,12 @@ primaries
 paper
 </div>
 </div>
-<a href="./posts/tunicate-hemolymph/index.html">
 <div class="listing-description">
-Protocol replicated from following paper.
+<a href="./posts/tunicate-hemolymph/index.html" class="no-external">Protocol replicated from following paper.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/tunicate-hemolymph/index.html">
+<a href="./posts/tunicate-hemolymph/index.html" class="no-external">
 <div class="listing-date">
 Feb 14, 2024
 </div>
@@ -438,32 +448,30 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="paper" data-listing-date-sort="1707897600000" data-listing-file-modified-sort="1707949716422" data-listing-reading-time-sort="22.535">
+<div class="quarto-post image-right" data-index="6" data-categories="paper" data-listing-date-sort="1707897600000" data-listing-file-modified-sort="1719547344986" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4507">
 <div class="thumbnail">
-<p><a href="./posts/amino-acid-OpM1-media/index.html"> <img src="./posts/amino-acid-OpM1-media/fig.png" class="thumnail-image"> </a></p>
+<p><a href="./posts/amino-acid-OpM1-media/index.html" class="no-external"></a></p><a href="./posts/amino-acid-OpM1-media/index.html" class="no-external">
+<p><img src="./posts/amino-acid-OpM1-media/fig.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/amino-acid-OpM1-media/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/amino-acid-OpM1-media/index.html">
 <h3 class="no-anchor listing-title">
-Amino acid supplementation to media in Sea Sponge cell line.
+<a href="./posts/amino-acid-OpM1-media/index.html" class="no-external">Amino acid supplementation to media in Sea Sponge cell line.</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/amino-acid-OpM1-media/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('paper'); return false;">
 paper
 </div>
 </div>
-<a href="./posts/amino-acid-OpM1-media/index.html">
 <div class="listing-description">
-Hesp K, Van Der Heijden JME, Munroe S, Sipkema D, Martens DE, Wijffels RH, et al.&nbsp;First continuous marine sponge cell line established. Sci Rep.&nbsp;2023 Apr 8;13(1):5766.
+<a href="./posts/amino-acid-OpM1-media/index.html" class="no-external">Hesp K, Van Der Heijden JME, Munroe S, Sipkema D, Martens DE, Wijffels RH, et al.&nbsp;First continuous marine sponge cell line established. Sci Rep.&nbsp;2023 Apr 8;13(1):5766.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/amino-acid-OpM1-media/index.html">
+<a href="./posts/amino-acid-OpM1-media/index.html" class="no-external">
 <div class="listing-date">
 Feb 14, 2024
 </div>
@@ -473,23 +481,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="epithelial,protocol" data-listing-date-sort="1707033600000" data-listing-file-modified-sort="1713381960940" data-listing-reading-time-sort="6.67">
+<div class="quarto-post image-right" data-index="7" data-categories="epithelial,protocol" data-listing-date-sort="1707033600000" data-listing-file-modified-sort="1719547345106" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1334">
 <div class="thumbnail">
-<a href="./posts/v2-epi-isolation-protocol/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/v2-epi-isolation-protocol/index.html"></a></p>
+<p><a href="./posts/v2-epi-isolation-protocol/index.html" class="no-external"></a></p><a href="./posts/v2-epi-isolation-protocol/index.html" class="no-external">
+<p><img src="./posts/v2-epi-isolation-protocol" class="thumbnail-image"></p>
+</a><p><a href="./posts/v2-epi-isolation-protocol/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/v2-epi-isolation-protocol/index.html">
 <h3 class="no-anchor listing-title">
-Primary Epithelial Cell Culture Protocol
+<a href="./posts/v2-epi-isolation-protocol/index.html" class="no-external">Primary Epithelial Cell Culture Protocol</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/v2-epi-isolation-protocol/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('epithelial'); return false;">
 epithelial
@@ -498,14 +502,12 @@ epithelial
 protocol
 </div>
 </div>
-<a href="./posts/v2-epi-isolation-protocol/index.html">
 <div class="listing-description">
-This protocol is version 02.04.24
+<a href="./posts/v2-epi-isolation-protocol/index.html" class="no-external">This protocol is version 02.04.24</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/v2-epi-isolation-protocol/index.html">
+<a href="./posts/v2-epi-isolation-protocol/index.html" class="no-external">
 <div class="listing-date">
 Feb 4, 2024
 </div>
@@ -515,19 +517,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="epithelial,protocol" data-listing-date-sort="1706169600000" data-listing-file-modified-sort="1706223340263" data-listing-reading-time-sort="5.31">
+<div class="quarto-post image-right" data-index="8" data-categories="epithelial,protocol" data-listing-date-sort="1706169600000" data-listing-file-modified-sort="1719547344991" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1062">
 <div class="thumbnail">
-<p><a href="./posts/epi-isolation-protocol/index.html"> <img src="./posts/epi-isolation-protocol/IMG_0597.jpeg" class="thumnail-image"> </a></p>
+<p><a href="./posts/epi-isolation-protocol/index.html" class="no-external"></a></p><a href="./posts/epi-isolation-protocol/index.html" class="no-external">
+<p><img src="./posts/epi-isolation-protocol/IMG_0597.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/epi-isolation-protocol/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/epi-isolation-protocol/index.html">
 <h3 class="no-anchor listing-title">
-<em>Botryllus schlosseri</em> Epithelial Tissue Isolation Protocol
+<a href="./posts/epi-isolation-protocol/index.html" class="no-external"><em>Botryllus schlosseri</em> Epithelial Tissue Isolation Protocol</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/epi-isolation-protocol/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('epithelial'); return false;">
 epithelial
@@ -536,14 +538,12 @@ epithelial
 protocol
 </div>
 </div>
-<a href="./posts/epi-isolation-protocol/index.html">
 <div class="listing-description">
-This protocol is version 01.25.24
+<a href="./posts/epi-isolation-protocol/index.html" class="no-external">This protocol is version 01.25.24</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/epi-isolation-protocol/index.html">
+<a href="./posts/epi-isolation-protocol/index.html" class="no-external">
 <div class="listing-date">
 Jan 25, 2024
 </div>
@@ -553,32 +553,30 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="nickel chloride" data-listing-date-sort="1703664000000" data-listing-file-modified-sort="1709231814152" data-listing-reading-time-sort="5.125">
+<div class="quarto-post image-right" data-index="9" data-categories="nickel chloride" data-listing-date-sort="1703664000000" data-listing-file-modified-sort="1719547345002" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1025">
 <div class="thumbnail">
-<p><a href="./posts/morph-nicl2-botryllus-AU23/index.html"> <img src="./posts/morph-nicl2-botryllus-AU23/bar_plot.png" class="thumnail-image"> </a></p>
+<p><a href="./posts/morph-nicl2-botryllus-AU23/index.html" class="no-external"></a></p><a href="./posts/morph-nicl2-botryllus-AU23/index.html" class="no-external">
+<p><img src="./posts/morph-nicl2-botryllus-AU23/bar_plot.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/morph-nicl2-botryllus-AU23/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/morph-nicl2-botryllus-AU23/index.html">
 <h3 class="no-anchor listing-title">
-Nickel Impacts on Morphology of <em>Botryllus schlosseri</em>
+<a href="./posts/morph-nicl2-botryllus-AU23/index.html" class="no-external">Nickel Impacts on Morphology of <em>Botryllus schlosseri</em></a>
 </h3>
 <div class="listing-subtitle">
-Analysis of pilot study.
+<a href="./posts/morph-nicl2-botryllus-AU23/index.html" class="no-external">Analysis of pilot study.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('nickel chloride'); return false;">
 nickel chloride
 </div>
 </div>
-<a href="./posts/morph-nicl2-botryllus-AU23/index.html">
 <div class="listing-description">
-Data below was collected from a pilot study conducted in Autumn 2023 where field-collected individual <em>Botryllus schlosseri</em> were exposed to a low and high treatment of nickel chloride and…
+<a href="./posts/morph-nicl2-botryllus-AU23/index.html" class="no-external">Data below was collected from a pilot study conducted in Autumn 2023 where field-collected individual <em>Botryllus schlosseri</em> were exposed to a low and high treatment of nickel…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/morph-nicl2-botryllus-AU23/index.html">
+<a href="./posts/morph-nicl2-botryllus-AU23/index.html" class="no-external">
 <div class="listing-date">
 Dec 27, 2023
 </div>
@@ -588,19 +586,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="nickel chloride,primary cultures,epithelial" data-listing-date-sort="1703404800000" data-listing-file-modified-sort="1709231661957" data-listing-reading-time-sort="14.01">
+<div class="quarto-post image-right" data-index="10" data-categories="nickel chloride,primary cultures,epithelial" data-listing-date-sort="1703404800000" data-listing-file-modified-sort="1719547344987" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2802">
 <div class="thumbnail">
-<p><a href="./posts/cell-nicl2-botryllus-AU23/index.html"> <img src="./posts/cell-nicl2-botryllus-AU23/line_percnet_output.png" class="thumnail-image"> </a></p>
+<p><a href="./posts/cell-nicl2-botryllus-AU23/index.html" class="no-external"></a></p><a href="./posts/cell-nicl2-botryllus-AU23/index.html" class="no-external">
+<p><img src="./posts/cell-nicl2-botryllus-AU23/line_percnet_output.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/cell-nicl2-botryllus-AU23/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/cell-nicl2-botryllus-AU23/index.html">
 <h3 class="no-anchor listing-title">
-Nickel Impacts on Primary Epithelial Cell Cultures of <em>Botryllus schlosseri</em>
+<a href="./posts/cell-nicl2-botryllus-AU23/index.html" class="no-external">Nickel Impacts on Primary Epithelial Cell Cultures of <em>Botryllus schlosseri</em></a>
 </h3>
 <div class="listing-subtitle">
-Analysis of pilot study.
+<a href="./posts/cell-nicl2-botryllus-AU23/index.html" class="no-external">Analysis of pilot study.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('nickel chloride'); return false;">
 nickel chloride
@@ -612,14 +610,12 @@ primary cultures
 epithelial
 </div>
 </div>
-<a href="./posts/cell-nicl2-botryllus-AU23/index.html">
 <div class="listing-description">
-Data below was collected from a pilot study conducted in Autumn 2023 where field-collected individual <em>Botryllus schlosseri</em> were exposed to a low and high treatment of nickel chloride and then were dissected for primary buds. The…<em></em>
+<a href="./posts/cell-nicl2-botryllus-AU23/index.html" class="no-external">Data below was collected from a pilot study conducted in Autumn 2023 where field-collected individual <em>Botryllus schlosseri</em> were exposed to a low and high treatment of nickel…<em></em></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/cell-nicl2-botryllus-AU23/index.html">
+<a href="./posts/cell-nicl2-botryllus-AU23/index.html" class="no-external">
 <div class="listing-date">
 Dec 24, 2023
 </div>
@@ -629,19 +625,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="study plans,nickel chloride" data-listing-date-sort="1701158400000" data-listing-file-modified-sort="1707773475979" data-listing-reading-time-sort="1.705">
+<div class="quarto-post image-right" data-index="11" data-categories="study plans,nickel chloride" data-listing-date-sort="1701158400000" data-listing-file-modified-sort="1719547345004" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="341">
 <div class="thumbnail">
-<p><a href="./posts/nicl2-botryllus-exp3/index.html"> <img src="./posts/nicl2-botryllus-exp3/5mm_S251C001_45-R1_24hpe-231115153616722 copy.png" class="thumnail-image"> </a></p>
+<p><a href="./posts/nicl2-botryllus-exp3/index.html" class="no-external"></a></p><a href="./posts/nicl2-botryllus-exp3/index.html" class="no-external">
+<p><img src="./posts/nicl2-botryllus-exp3/5mm_S251C001_45-R1_24hpe-231115153616722 copy.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/nicl2-botryllus-exp3/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/nicl2-botryllus-exp3/index.html">
 <h3 class="no-anchor listing-title">
-Nickel chloride x <em>Botryllus schlosseri</em> Exposure 3
+<a href="./posts/nicl2-botryllus-exp3/index.html" class="no-external">Nickel chloride x <em>Botryllus schlosseri</em> Exposure 3</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/nicl2-botryllus-exp3/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('study plans'); return false;">
 study plans
@@ -650,14 +646,12 @@ study plans
 nickel chloride
 </div>
 </div>
-<a href="./posts/nicl2-botryllus-exp3/index.html">
 <div class="listing-description">
-Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.
+<a href="./posts/nicl2-botryllus-exp3/index.html" class="no-external">Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/nicl2-botryllus-exp3/index.html">
+<a href="./posts/nicl2-botryllus-exp3/index.html" class="no-external">
 <div class="listing-date">
 Nov 28, 2023
 </div>
@@ -667,19 +661,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="protocol,qPCR,primers,nickel chloride" data-listing-date-sort="1700208000000" data-listing-file-modified-sort="1709592894261" data-listing-reading-time-sort="34.17">
+<div class="quarto-post image-right" data-index="12" data-categories="protocol,qPCR,primers,nickel chloride" data-listing-date-sort="1700208000000" data-listing-file-modified-sort="1719547345102" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="35" data-listing-word-count-sort="6834">
 <div class="thumbnail">
-<p><a href="./posts/tunicate-primers/index.html"> <img src="./posts/tunicate-primers/bot_genome_proj.jpeg" class="thumnail-image"> </a></p>
+<p><a href="./posts/tunicate-primers/index.html" class="no-external"></a></p><a href="./posts/tunicate-primers/index.html" class="no-external">
+<p><img src="./posts/tunicate-primers/bot_genome_proj.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/tunicate-primers/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/tunicate-primers/index.html">
 <h3 class="no-anchor listing-title">
-Designing Tunicate Primers
+<a href="./posts/tunicate-primers/index.html" class="no-external">Designing Tunicate Primers</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/tunicate-primers/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('protocol'); return false;">
 protocol
@@ -694,14 +688,12 @@ primers
 nickel chloride
 </div>
 </div>
-<a href="./posts/tunicate-primers/index.html">
 <div class="listing-description">
-I am interested in designing primers for <em>Botryllus schlosseri</em> to evaluate differences in expression of apoptosis, stemness, oxidative stress, and senescence…
+<a href="./posts/tunicate-primers/index.html" class="no-external">I am interested in designing primers for <em>Botryllus schlosseri</em> to evaluate differences in expression of apoptosis, stemness, oxidative stress, and senescence related genes…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/tunicate-primers/index.html">
+<a href="./posts/tunicate-primers/index.html" class="no-external">
 <div class="listing-date">
 Nov 17, 2023
 </div>
@@ -711,19 +703,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="study plans,nickel chloride" data-listing-date-sort="1699862400000" data-listing-file-modified-sort="1707776000976" data-listing-reading-time-sort="4.055">
+<div class="quarto-post image-right" data-index="13" data-categories="study plans,nickel chloride" data-listing-date-sort="1699862400000" data-listing-file-modified-sort="1719547345003" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="811">
 <div class="thumbnail">
-<p><a href="./posts/nicl2-botryllus-exp2/index.html"> <img src="./posts/nicl2-botryllus-exp2/thumbnail.png" class="thumnail-image"> </a></p>
+<p><a href="./posts/nicl2-botryllus-exp2/index.html" class="no-external"></a></p><a href="./posts/nicl2-botryllus-exp2/index.html" class="no-external">
+<p><img src="./posts/nicl2-botryllus-exp2/thumbnail.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/nicl2-botryllus-exp2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/nicl2-botryllus-exp2/index.html">
 <h3 class="no-anchor listing-title">
-Exposure 2 <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em>
+<a href="./posts/nicl2-botryllus-exp2/index.html" class="no-external">Exposure 2 <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/nicl2-botryllus-exp2/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('study plans'); return false;">
 study plans
@@ -732,14 +724,12 @@ study plans
 nickel chloride
 </div>
 </div>
-<a href="./posts/nicl2-botryllus-exp2/index.html">
 <div class="listing-description">
-Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.
+<a href="./posts/nicl2-botryllus-exp2/index.html" class="no-external">Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/nicl2-botryllus-exp2/index.html">
+<a href="./posts/nicl2-botryllus-exp2/index.html" class="no-external">
 <div class="listing-date">
 Nov 13, 2023
 </div>
@@ -749,32 +739,30 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="protocol" data-listing-date-sort="1699430400000" data-listing-file-modified-sort="1700174864377" data-listing-reading-time-sort="2.99">
+<div class="quarto-post image-right" data-index="14" data-categories="protocol" data-listing-date-sort="1699430400000" data-listing-file-modified-sort="1719547344993" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="598">
 <div class="thumbnail">
-<p><a href="./posts/lab-botryllus-care/index.html"> <img src="./posts/lab-botryllus-care/oozooid_1 (1).jpg" class="thumnail-image"> </a></p>
+<p><a href="./posts/lab-botryllus-care/index.html" class="no-external"></a></p><a href="./posts/lab-botryllus-care/index.html" class="no-external">
+<p><img src="./posts/lab-botryllus-care/oozooid_1 (1).jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/lab-botryllus-care/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/lab-botryllus-care/index.html">
 <h3 class="no-anchor listing-title">
-Lab Reared <em>Botryllus schlosseri</em> Care and Maintenance
+<a href="./posts/lab-botryllus-care/index.html" class="no-external">Lab Reared <em>Botryllus schlosseri</em> Care and Maintenance</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/lab-botryllus-care/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('protocol'); return false;">
 protocol
 </div>
 </div>
-<a href="./posts/lab-botryllus-care/index.html">
 <div class="listing-description">
-This protocol is for weekly care of lab born <em>Botryllus schlosseri</em>. Field sourced tunicates are brought in during the months of May-October and allowed to release oozooids on glass slides. Eventually, you want to aim to only have one…
+<a href="./posts/lab-botryllus-care/index.html" class="no-external">This protocol is for weekly care of lab born <em>Botryllus schlosseri</em>. Field sourced tunicates are brought in during the months of May-October and allowed to release oozooids on…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/lab-botryllus-care/index.html">
+<a href="./posts/lab-botryllus-care/index.html" class="no-external">
 <div class="listing-date">
 Nov 8, 2023
 </div>
@@ -784,19 +772,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="study plans,nickel chloride" data-listing-date-sort="1698649200000" data-listing-file-modified-sort="1700174864385" data-listing-reading-time-sort="5.075">
+<div class="quarto-post image-right" data-index="15" data-categories="study plans,nickel chloride" data-listing-date-sort="1698649200000" data-listing-file-modified-sort="1719547345003" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1015">
 <div class="thumbnail">
-<p><a href="./posts/nicl2-botryllus-exp1/index.html"> <img src="./posts/nicl2-botryllus-exp1/exp1_0dps_a4_3_0961 Medium.jpeg" class="thumnail-image"> </a></p>
+<p><a href="./posts/nicl2-botryllus-exp1/index.html" class="no-external"></a></p><a href="./posts/nicl2-botryllus-exp1/index.html" class="no-external">
+<p><img src="./posts/nicl2-botryllus-exp1/exp1_0dps_a4_3_0961 Medium.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/nicl2-botryllus-exp1/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/nicl2-botryllus-exp1/index.html">
 <h3 class="no-anchor listing-title">
-Pilot 1.2 <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em> Exposure
+<a href="./posts/nicl2-botryllus-exp1/index.html" class="no-external">Pilot 1.2 <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em> Exposure</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/nicl2-botryllus-exp1/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('study plans'); return false;">
 study plans
@@ -805,14 +793,12 @@ study plans
 nickel chloride
 </div>
 </div>
-<a href="./posts/nicl2-botryllus-exp1/index.html">
 <div class="listing-description">
-Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.
+<a href="./posts/nicl2-botryllus-exp1/index.html" class="no-external">Divided animals into separate system, 3 days prior to start of exposure, 8 days acclimated to the recirculating system.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/nicl2-botryllus-exp1/index.html">
+<a href="./posts/nicl2-botryllus-exp1/index.html" class="no-external">
 <div class="listing-date">
 Oct 30, 2023
 </div>
@@ -822,23 +808,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="cool paper,optimization" data-listing-date-sort="1698476400000" data-listing-file-modified-sort="1700174855422" data-listing-reading-time-sort="2.42">
+<div class="quarto-post image-right" data-index="16" data-categories="cool paper,optimization" data-listing-date-sort="1698476400000" data-listing-file-modified-sort="1719547344991" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="484">
 <div class="thumbnail">
-<a href="./posts/gen-algo-media-opt/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/gen-algo-media-opt/index.html"></a></p>
+<p><a href="./posts/gen-algo-media-opt/index.html" class="no-external"></a></p><a href="./posts/gen-algo-media-opt/index.html" class="no-external">
+<p><img src="./posts/gen-algo-media-opt" class="thumbnail-image"></p>
+</a><p><a href="./posts/gen-algo-media-opt/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/gen-algo-media-opt/index.html">
 <h3 class="no-anchor listing-title">
-Use of Genetic Algorithm in Cell Culture Media Optimization
+<a href="./posts/gen-algo-media-opt/index.html" class="no-external">Use of Genetic Algorithm in Cell Culture Media Optimization</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/gen-algo-media-opt/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('cool paper'); return false;">
 cool paper
@@ -847,15 +829,12 @@ cool paper
 optimization
 </div>
 </div>
-<a href="./posts/gen-algo-media-opt/index.html">
 <div class="listing-description">
-
-
+<a href="./posts/gen-algo-media-opt/index.html" class="no-external">Munroe, S., K. Sandoval, D. E. Martens, D. Sipkema, and S. A. Pomponi. 2019. Genetic algorithm as an optimization tool for the development of sponge cell culture media. In…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/gen-algo-media-opt/index.html">
+<a href="./posts/gen-algo-media-opt/index.html" class="no-external">
 <div class="listing-date">
 Oct 28, 2023
 </div>
@@ -865,19 +844,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="cool paper,discussion" data-listing-date-sort="1696489200000" data-listing-file-modified-sort="1708717171998" data-listing-reading-time-sort="2.515">
+<div class="quarto-post image-right" data-index="17" data-categories="cool paper,discussion" data-listing-date-sort="1696489200000" data-listing-file-modified-sort="1719547344991" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="503">
 <div class="thumbnail">
-<p><a href="./posts/exploring-botryllus-ECM/index.html"> <img src="./posts/exploring-botryllus-ECM/Tang 2020 Medium.jpeg" class="thumnail-image"> </a></p>
+<p><a href="./posts/exploring-botryllus-ECM/index.html" class="no-external"></a></p><a href="./posts/exploring-botryllus-ECM/index.html" class="no-external">
+<p><img src="./posts/exploring-botryllus-ECM/Tang 2020 Medium.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/exploring-botryllus-ECM/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/exploring-botryllus-ECM/index.html">
 <h3 class="no-anchor listing-title">
-Substrate Options for the <em>in vitro</em> Culture of <em>Botryllus schlosseri</em> Epithelial Cells
+<a href="./posts/exploring-botryllus-ECM/index.html" class="no-external">Substrate Options for the <em>in vitro</em> Culture of <em>Botryllus schlosseri</em> Epithelial Cells</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/exploring-botryllus-ECM/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('cool paper'); return false;">
 cool paper
@@ -886,14 +865,12 @@ cool paper
 discussion
 </div>
 </div>
-<a href="./posts/exploring-botryllus-ECM/index.html">
 <div class="listing-description">
-Exploring of the physiology of the extra cellular matrix (ECM) of the marine invertebrate, ascidian, <em>Botryllus schlosseri</em> as to identify potential substrates for <em>in vitro</em> primary epithelial cell culturing of the same…
+<a href="./posts/exploring-botryllus-ECM/index.html" class="no-external">Exploring of the physiology of the extra cellular matrix (ECM) of the marine invertebrate, ascidian, <em>Botryllus schlosseri</em> as to identify potential substrates for <em>in vitro</em> pri…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/exploring-botryllus-ECM/index.html">
+<a href="./posts/exploring-botryllus-ECM/index.html" class="no-external">
 <div class="listing-date">
 Oct 5, 2023
 </div>
@@ -903,19 +880,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="study plans,nickel chloride" data-listing-date-sort="1695884400000" data-listing-file-modified-sort="1700174864391" data-listing-reading-time-sort="9.565">
+<div class="quarto-post image-right" data-index="18" data-categories="study plans,nickel chloride" data-listing-date-sort="1695884400000" data-listing-file-modified-sort="1719547345008" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1913">
 <div class="thumbnail">
-<p><a href="./posts/nicl2-botryllus-pilot/index.html"> <img src="./posts/nicl2-botryllus-pilot/S151C001_24hpe_45-R4-230930140353639.jpg" class="thumnail-image"> </a></p>
+<p><a href="./posts/nicl2-botryllus-pilot/index.html" class="no-external"></a></p><a href="./posts/nicl2-botryllus-pilot/index.html" class="no-external">
+<p><img src="./posts/nicl2-botryllus-pilot/S151C001_24hpe_45-R4-230930140353639.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/nicl2-botryllus-pilot/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/nicl2-botryllus-pilot/index.html">
 <h3 class="no-anchor listing-title">
-Pilot 1.1 <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em> Exposure
+<a href="./posts/nicl2-botryllus-pilot/index.html" class="no-external">Pilot 1.1 <em>in vivo</em> NiCl<sub>2</sub> x <em>Botryllus schlosseri</em> Exposure</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/nicl2-botryllus-pilot/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('study plans'); return false;">
 study plans
@@ -924,14 +901,12 @@ study plans
 nickel chloride
 </div>
 </div>
-<a href="./posts/nicl2-botryllus-pilot/index.html">
 <div class="listing-description">
-First pilot study for NiCl<sub>2</sub> exposures on whole field-sourced <em>Botryllus schlosseri</em> colonies.
+<a href="./posts/nicl2-botryllus-pilot/index.html" class="no-external">First pilot study for NiCl<sub>2</sub> exposures on whole field-sourced <em>Botryllus schlosseri</em> colonies.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/nicl2-botryllus-pilot/index.html">
+<a href="./posts/nicl2-botryllus-pilot/index.html" class="no-external">
 <div class="listing-date">
 Sep 28, 2023
 </div>
@@ -941,32 +916,30 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="protocol" data-listing-date-sort="1695711600000" data-listing-file-modified-sort="1696534463682" data-listing-reading-time-sort="4.865">
+<div class="quarto-post image-right" data-index="19" data-categories="protocol" data-listing-date-sort="1695711600000" data-listing-file-modified-sort="1719547345036" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="973">
 <div class="thumbnail">
-<p><a href="./posts/tryp-botryllus/index.html"> <img src="./posts/tryp-botryllus/hemo2.jpeg" class="thumnail-image"> </a></p>
+<p><a href="./posts/tryp-botryllus/index.html" class="no-external"></a></p><a href="./posts/tryp-botryllus/index.html" class="no-external">
+<p><img src="./posts/tryp-botryllus/hemo2.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/tryp-botryllus/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/tryp-botryllus/index.html">
 <h3 class="no-anchor listing-title">
-Trypsinization of <em>Botryllus schlosseri</em> Epithelial Cells
+<a href="./posts/tryp-botryllus/index.html" class="no-external">Trypsinization of <em>Botryllus schlosseri</em> Epithelial Cells</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/tryp-botryllus/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('protocol'); return false;">
 protocol
 </div>
 </div>
-<a href="./posts/tryp-botryllus/index.html">
 <div class="listing-description">
-Trypsinization of cell cultures is a common method use in cell biology to disassociate adherent cells <em>in vitro</em> from the vessel in which they are being cultured for the purpose of passaging the cells…
+<a href="./posts/tryp-botryllus/index.html" class="no-external">Trypsinization of cell cultures is a common method use in cell biology to disassociate adherent cells <em>in vitro</em> from the vessel in which they are being cultured for the…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/tryp-botryllus/index.html">
+<a href="./posts/tryp-botryllus/index.html" class="no-external">
 <div class="listing-date">
 Sep 26, 2023
 </div>
@@ -976,19 +949,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="thesis,study plans" data-listing-date-sort="1695711600000" data-listing-file-modified-sort="1698540866751" data-listing-reading-time-sort="12.68">
+<div class="quarto-post image-right" data-index="20" data-categories="thesis,study plans" data-listing-date-sort="1695711600000" data-listing-file-modified-sort="1719547345002" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2536">
 <div class="thumbnail">
-<p><a href="./posts/masters_work/index.html"> <img src="./posts/masters_work/botryllus_anatomy.jpeg" class="thumnail-image"> </a></p>
+<p><a href="./posts/masters_work/index.html" class="no-external"></a></p><a href="./posts/masters_work/index.html" class="no-external">
+<p><img src="./posts/masters_work/botryllus_anatomy.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/masters_work/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/masters_work/index.html">
 <h3 class="no-anchor listing-title">
-Masters Thesis Progress
+<a href="./posts/masters_work/index.html" class="no-external">Masters Thesis Progress</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/masters_work/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('thesis'); return false;">
 thesis
@@ -997,14 +970,12 @@ thesis
 study plans
 </div>
 </div>
-<a href="./posts/masters_work/index.html">
 <div class="listing-description">
-This page is intended to act as a living document recording the progression of my thesis work.
+<a href="./posts/masters_work/index.html" class="no-external">This page is intended to act as a living document recording the progression of my thesis work.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/masters_work/index.html">
+<a href="./posts/masters_work/index.html" class="no-external">
 <div class="listing-date">
 Sep 26, 2023
 </div>
@@ -1014,19 +985,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="epithelial,ampullae,zooids,primary buds,primaries,substrate" data-listing-date-sort="1693378800000" data-listing-file-modified-sort="1707519927077" data-listing-reading-time-sort="16.645">
+<div class="quarto-post image-right" data-index="21" data-categories="epithelial,ampullae,zooids,primary buds,primaries,substrate" data-listing-date-sort="1693378800000" data-listing-file-modified-sort="1719547344958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3329">
 <div class="thumbnail">
-<p><a href="./posts/T18/index.html"> <img src="./posts/T18/schematic.jpeg" class="thumnail-image"> </a></p>
+<p><a href="./posts/T18/index.html" class="no-external"></a></p><a href="./posts/T18/index.html" class="no-external">
+<p><img src="./posts/T18/schematic.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/T18/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/T18/index.html">
 <h3 class="no-anchor listing-title">
-Cell Isolation Trial 18: Cultrex Substrates
+<a href="./posts/T18/index.html" class="no-external">Cell Isolation Trial 18: Cultrex Substrates</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/T18/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('epithelial'); return false;">
 epithelial
@@ -1047,14 +1018,12 @@ primaries
 substrate
 </div>
 </div>
-<a href="./posts/T18/index.html">
 <div class="listing-description">
-In this small scale experiment, resorbing zooids and take over zooids, two distinct asexual developmental stages sourced from the same <em>Botryllus</em> individual…<sup></sup>
+<a href="./posts/T18/index.html" class="no-external">In this small scale experiment, resorbing zooids and take over zooids, two distinct asexual developmental stages sourced from the same <em>Botryllus</em> individual, were seeded…<sup></sup></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/T18/index.html">
+<a href="./posts/T18/index.html" class="no-external">
 <div class="listing-date">
 Aug 30, 2023
 </div>
@@ -1064,19 +1033,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="epithelial,zooids,primaries" data-listing-date-sort="1692687600000" data-listing-file-modified-sort="1694801900124" data-listing-reading-time-sort="9.565">
+<div class="quarto-post image-right" data-index="22" data-categories="epithelial,zooids,primaries" data-listing-date-sort="1692687600000" data-listing-file-modified-sort="1719547344955" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1913">
 <div class="thumbnail">
-<p><a href="./posts/T17/index.html"> <img src="./posts/T17/T17_S085C001-230823170033197.jpg" class="thumnail-image"> </a></p>
+<p><a href="./posts/T17/index.html" class="no-external"></a></p><a href="./posts/T17/index.html" class="no-external">
+<p><img src="./posts/T17/T17_S085C001-230823170033197.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/T17/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/T17/index.html">
 <h3 class="no-anchor listing-title">
-Cell Isolation Trial 17
+<a href="./posts/T17/index.html" class="no-external">Cell Isolation Trial 17</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/T17/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('epithelial'); return false;">
 epithelial
@@ -1088,14 +1057,12 @@ zooids
 primaries
 </div>
 </div>
-<a href="./posts/T17/index.html">
 <div class="listing-description">
-Here I both describe the procedure that occurred for epithelial tissue isolation from <em>Botryllus schlosseri</em> for trial 16 and maintain this…
+<a href="./posts/T17/index.html" class="no-external">Here I both describe the procedure that occurred for epithelial tissue isolation from <em>Botryllus schlosseri</em> for trial 16 and maintain this document as a living log for…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/T17/index.html">
+<a href="./posts/T17/index.html" class="no-external">
 <div class="listing-date">
 Aug 22, 2023
 </div>
@@ -1105,19 +1072,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="epithelial,ampullae,zooids,primaries" data-listing-date-sort="1692601200000" data-listing-file-modified-sort="1694729838718" data-listing-reading-time-sort="10.96">
+<div class="quarto-post image-right" data-index="23" data-categories="epithelial,ampullae,zooids,primaries" data-listing-date-sort="1692601200000" data-listing-file-modified-sort="1719547344896" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2192">
 <div class="thumbnail">
-<p><a href="./posts/T16/index.html"> <img src="./posts/T16/IMG_0334.jpeg" class="thumnail-image"> </a></p>
+<p><a href="./posts/T16/index.html" class="no-external"></a></p><a href="./posts/T16/index.html" class="no-external">
+<p><img src="./posts/T16/IMG_0334.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/T16/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/T16/index.html">
 <h3 class="no-anchor listing-title">
-Cell Isolation Trial 16
+<a href="./posts/T16/index.html" class="no-external">Cell Isolation Trial 16</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/T16/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('epithelial'); return false;">
 epithelial
@@ -1132,14 +1099,12 @@ zooids
 primaries
 </div>
 </div>
-<a href="./posts/T16/index.html">
 <div class="listing-description">
-Here I both describe the procedure that occurred for epithelial tissue isolation from <em>Botryllus schlosseri</em> for trial 16 and maintain this…
+<a href="./posts/T16/index.html" class="no-external">Here I both describe the procedure that occurred for epithelial tissue isolation from <em>Botryllus schlosseri</em> for trial 16 and maintain this document as a living log for…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/T16/index.html">
+<a href="./posts/T16/index.html" class="no-external">
 <div class="listing-date">
 Aug 21, 2023
 </div>
@@ -1149,32 +1114,30 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="cool paper" data-listing-date-sort="1677484800000" data-listing-file-modified-sort="1693441796661" data-listing-reading-time-sort="2.24">
+<div class="quarto-post image-right" data-index="24" data-categories="cool paper" data-listing-date-sort="1677484800000" data-listing-file-modified-sort="1719547344993" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="448">
 <div class="thumbnail">
-<p><a href="./posts/homework-7-FISH-521/index.html"> <img src="./posts/homework-7-FISH-521/hansen_1976.jpeg" class="thumnail-image"> </a></p>
+<p><a href="./posts/homework-7-FISH-521/index.html" class="no-external"></a></p><a href="./posts/homework-7-FISH-521/index.html" class="no-external">
+<p><img src="./posts/homework-7-FISH-521/hansen_1976.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/homework-7-FISH-521/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/homework-7-FISH-521/index.html">
 <h3 class="no-anchor listing-title">
-First Aquatic Invertebrate Cell Line
+<a href="./posts/homework-7-FISH-521/index.html" class="no-external">First Aquatic Invertebrate Cell Line</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/homework-7-FISH-521/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('cool paper'); return false;">
 cool paper
 </div>
 </div>
-<a href="./posts/homework-7-FISH-521/index.html">
 <div class="listing-description">
-Here I summarize key takeaways and implications from a paper that describes the establishment of the only aquatic invertebrate cell line. The author is Eder L. Hansen.
+<a href="./posts/homework-7-FISH-521/index.html" class="no-external">Here I summarize key takeaways and implications from a paper that describes the establishment of the only aquatic invertebrate cell line. The author is Eder L. Hansen.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/homework-7-FISH-521/index.html">
+<a href="./posts/homework-7-FISH-521/index.html" class="no-external">
 <div class="listing-date">
 Feb 27, 2023
 </div>
@@ -1184,19 +1147,19 @@ Celeste Valdivia
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="code,analysis" data-listing-date-sort="1677225600000" data-listing-file-modified-sort="1677539879636" data-listing-reading-time-sort="1.595">
+<div class="quarto-post image-right" data-index="25" data-categories="code,analysis" data-listing-date-sort="1677225600000" data-listing-file-modified-sort="1719547345010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="319">
 <div class="thumbnail">
-<p><a href="./posts/post-with-code/index.html"> <img data-src="./posts/post-with-code/Rplot001.png" class="thumnail-image"> </a></p>
+<p><a href="./posts/post-with-code/index.html" class="no-external"></a></p><a href="./posts/post-with-code/index.html" class="no-external">
+<p><img data-src="./posts/post-with-code/Rplot001.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/post-with-code/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/post-with-code/index.html">
 <h3 class="no-anchor listing-title">
-Example of Post With Code
+<a href="./posts/post-with-code/index.html" class="no-external">Example of Post With Code</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/post-with-code/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
 code
@@ -1205,14 +1168,12 @@ code
 analysis
 </div>
 </div>
-<a href="./posts/post-with-code/index.html">
 <div class="listing-description">
-This is an example post of the work I did for Assignment 5 for FISH 549 where I generated an exploratory and expository plot of a data set provided by the class.
+<a href="./posts/post-with-code/index.html" class="no-external">This is an example post of the work I did for Assignment 5 for FISH 549 where I generated an exploratory and expository plot of a data set provided by the class.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/post-with-code/index.html">
+<a href="./posts/post-with-code/index.html" class="no-external">
 <div class="listing-date">
 Feb 24, 2023
 </div>
@@ -1271,6 +1232,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1339,13 +1327,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1372,9 +1362,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1410,10 +1414,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/valeste\.github\.io\/tough-tunicates\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1423,8 +1444,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1436,9 +1466,245 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1481,9 +1747,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">This page is built using <a href="https://quarto.org/">Quarto</a></div>   
+    <div class="nav-footer-left">
+<p>This page is built using <a href="https://quarto.org/">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
+
 
 
 
