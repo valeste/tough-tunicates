@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: Valdivia.JPG
+image: images/Valdivia_2.jpg
 about:
   template: jolla
   links:
@@ -10,16 +10,18 @@ about:
     - icon: github
       text: Github
       href: https://github.com/valeste
+      
+toc: False
 ---
 
 ### **Current Research**
 
 In 2022, I dually joined the [Gardell Lab](https://gardell.ds.lib.uw.edu/) at the University of Washington, Tacoma and the [Roberts Lab](https://faculty.washington.edu/sr320/) housed in the [School of Aquatic and Fishery Sciences](https://fish.uw.edu/) (SAFS) at the University of Washington, Seattle. As a graduate student researcher at SAFS, my current work is focused on identifying the constraints of *in vitro* cellular immortality in the marine invertebrate, *Botryllus schlosseri*. This project involves the implementation of procedures for systematic primary cell culture optimization across various somatic tissue types. Additionally, I am interested in the application of clastogenic stressors as a means of facilitating stress-induced cellular evolution in primary epithelial cell cultures of *B. schlosseri.* With this approach, I aim to both potentially promote spontaneous immortalization and investigate the cellular physiology of this resilient, invasive, colonial ascidian at the morphological and transcriptional levels of organization.
 
-:::{#fig-botryllus-anatomy}
+::: {#fig-botryllus-anatomy}
 ![](images/anatomy.png)
 
-Anatomy of a blastogenic stage D *Botryllus schlosseri*. White bar represents 5 mm. 
+Anatomy of a blastogenic stage D *Botryllus schlosseri*. White bar represents 5 mm.
 :::
 
 ### **Background**
