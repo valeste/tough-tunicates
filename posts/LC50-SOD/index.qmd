@@ -1,0 +1,80 @@
+---
+title: "SOD assay for nickel LC50 samples"
+author: "Celeste Valdivia"
+date: "2024-07-03"
+---
+
+```{r, eval =TRUE, message=FALSE}
+library(knitr)
+library(tidyverse)
+library(tidyr)
+library(dplyr)
+library(hrbrthemes)
+library(ggplot2)
+library(car)
+library(RColorBrewer)
+library(ggpubr)
+knitr::opts_chunk$set(echo = TRUE,
+                      eval = TRUE)
+```
+
+# Retrieving Data from Google Sheets
+
+Make sure you have made your Google sheet publicly available to anyone that has the link. If you make any updates to the sheet just re-curl the data, meaning just re-run the code below.
+
+I apologize for not making a relative path. Just modify what is after "tee" to your own directory path.
+
+```{r, engine='bash', eval=FALSE}
+curl -L https://docs.google.com/spreadsheets/d/1vNxX2tBdEa0Ibyd4mFdru5sAZx0aipv37-y-hkqvJq4/export?exportFormat=csv | tee /Users/valeste/Documents/Git/tough-tunicates/posts/LC50-SOD/SOD.csv
+```
+
+```{r}
+sod <- read.csv("SOD.csv")
+head(sod)
+```
+
+# Work Data
+
+```{r}
+df_clean <- sod %>%
+  filter(!is.na(sod_calc))
+```
+
+
+Average the technical replicates
+```{r}
+df_avg <- df_clean %>%
+  group_by(hom_num, treatment, hpe) %>%
+  summarize(
+    sod_avg = mean(sod_calc, na.rm = TRUE),
+    sod_se = sd(sod_calc, na.rm = TRUE) / sqrt(n())
+  )
+```
+
+# Exploratory Plots
+
+```{r, eval=TRUE}
+
+ggplot(df_avg, aes(x = factor(treatment), y = sod_avg, fill = factor(treatment))) +
+  geom_violin(trim = FALSE) +
+  facet_wrap(~ hpe, scales = "free_y") +
+  labs(title = "Violin Plot of SOD Activity by Treatment and HPE",
+       x = "Treatment",
+       y = "SOD Activity") +
+  theme_minimal()
+```
+
+
+```{r, eval=TRUE}
+ggplot(df_avg, aes(x = factor(treatment), y = sod_avg, fill = factor(treatment))) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  geom_errorbar(aes(ymin = sod_avg - sod_se, ymax = sod_avg + sod_se), width = 0.2, position = position_dodge(0.9)) +
+  facet_wrap(~ hpe, ncol = 1) +
+  labs(title = "SOD Activity by Treatment and HPE",
+       x = "Treatment",
+       y = "Average SOD Activity (with SE)") +
+  theme_minimal()
+```
+
+Note that we have yet to complete the BCA assay for these samples and so the above figures may change.
+
