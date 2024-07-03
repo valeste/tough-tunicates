@@ -199,6 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#retrieving-data-from-google-sheets" id="toc-retrieving-data-from-google-sheets" class="nav-link active" data-scroll-target="#retrieving-data-from-google-sheets">Retrieving Data from Google Sheets</a></li>
   <li><a href="#work-data" id="toc-work-data" class="nav-link" data-scroll-target="#work-data">Work Data</a></li>
   <li><a href="#exploratory-plots" id="toc-exploratory-plots" class="nav-link" data-scroll-target="#exploratory-plots">Exploratory Plots</a></li>
+  <li><a href="#stats-analysis" id="toc-stats-analysis" class="nav-link" data-scroll-target="#stats-analysis">Stats Analysis</a></li>
   </ul>
 </nav>
 </nav>
@@ -246,6 +247,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 6 Hom 3 1:3 R2       R2       3     7/2/24         0  24 1.962912</code></pre>
 </div>
 </div>
+<p>Note that as of July 3, 2024, the data set for the 10 mg/L is incomplete in this data frame and should be taken with a grain of salt.</p>
 </section>
 <section id="work-data" class="level1">
 <h1>Work Data</h1>
@@ -303,6 +305,23 @@ using the `.groups` argument.</code></pre>
 </div>
 </div>
 <p>Note that we have yet to complete the BCA assay for these samples and so the above figures may change.</p>
+</section>
+<section id="stats-analysis" class="level1">
+<h1>Stats Analysis</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform ANOVA</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>anova_result <span class="ot">&lt;-</span> <span class="fu">aov</span>(sod_avg <span class="sc">~</span> hpe <span class="sc">*</span> treatment, <span class="at">data =</span> df_avg)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarize ANOVA results</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              Df Sum Sq Mean Sq F value Pr(&gt;F)
+hpe            1   61.6   61.56   1.144  0.290
+treatment      1   84.8   84.84   1.576  0.215
+hpe:treatment  1    5.8    5.76   0.107  0.745
+Residuals     51 2744.7   53.82               </code></pre>
+</div>
+</div>
 
 
 </section>

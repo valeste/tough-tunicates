@@ -33,6 +33,8 @@ sod <- read.csv("SOD.csv")
 head(sod)
 ```
 
+Note that as of July 3, 2024, the data set for the 10 mg/L is incomplete in this data frame and should be taken with a grain of salt.
+
 # Work Data
 
 ```{r}
@@ -77,4 +79,14 @@ ggplot(df_avg, aes(x = factor(treatment), y = sod_avg, fill = factor(treatment))
 ```
 
 Note that we have yet to complete the BCA assay for these samples and so the above figures may change.
+
+# Stats Analysis
+
+```{r}
+# Perform ANOVA
+anova_result <- aov(sod_avg ~ hpe * treatment, data = df_avg)
+
+# Summarize ANOVA results
+summary(anova_result)
+```
 
