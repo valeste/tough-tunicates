@@ -32,8 +32,8 @@ format:
     grid:
       margin-width: 450px
     theme: 
-      light: [yeti, theme-light.scss]
-      dark: [yeti, theme-dark.scss]
+      light: [lux, theme-light.scss]
+      dark: [lux, theme-dark.scss]
     css: styles.css
     page-layout: full
     code-background: true

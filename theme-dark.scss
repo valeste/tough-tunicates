@@ -1,6 +1,7 @@
+
 /*-- scss:defaults --*/
 // Base document colors
-$body-bg: #49413F;
+$body-bg: #4D4D4F;
 $body-color: #C9DFEC;
 $link-color: #FFB2D0;
 $input-bg: #737CA1;	
@@ -8,3 +9,16 @@ $popover-bg: #313B3B;
 
 // Code blocks
 $code-block-bg-alpha: -.8;
+
+// Header text color
+$header-color: #C9DFEC;  // Change this to your desired color
+
+// Apply header color to header elements
+h1, h2, h3, h4, h5, h6 {
+  color: $header-color !important;
+}
+
+// Adjusting the color for secondary text in headers
+.text-body-secondary {
+  color: $header-color !important;
+}

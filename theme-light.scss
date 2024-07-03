@@ -1,9 +1,29 @@
 /*-- scss:defaults --*/
 // Base document colors
 $body-bg: #F5F5F5;
+$body-color: #000000; // Assuming you want the text color to be black
 $link-color: #FF69B4;
 $input-bg: #737CA1;	
 $popover-bg: #313B3B;
 
 // Code blocks
-$code-block-bg-alpha: -.8;
+$code-block-bg: #E0E0E0; // Set a distinct background color for code blocks
+$code-block-border: 1px solid #CCCCCC; // Optional: Add a border to box in the code blocks
+
+// Apply styles to code blocks
+pre code {
+  background-color: $code-block-bg;
+  padding: 1em; // Add padding for better readability
+  border-radius: 5px; // Optional: Add rounded corners
+  border: $code-block-border;
+  display: block;
+  overflow-x: auto; // Ensure long lines are scrollable
+}
+
+// Inline code style
+code {
+  background-color: $code-block-bg;
+  padding: 0.2em 0.4em; // Smaller padding for inline code
+  border-radius: 3px; // Optional: Add rounded corners
+  border: $code-block-border;
+}
