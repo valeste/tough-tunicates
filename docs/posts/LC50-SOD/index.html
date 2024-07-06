@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Celeste Valdivia">
-<meta name="dcterms.date" content="2024-07-03">
+<meta name="dcterms.date" content="2024-07-06">
 
 <title>The Tough Tunicate - SOD assay for nickel LC50 samples</title>
 <style>
@@ -181,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 3, 2024</p>
+        <p class="date">July 6, 2024</p>
       </div>
     </div>
     
@@ -197,8 +197,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#retrieving-data-from-google-sheets" id="toc-retrieving-data-from-google-sheets" class="nav-link" data-scroll-target="#retrieving-data-from-google-sheets">Retrieving Data from Google Sheets</a></li>
-  <li><a href="#work-data" id="toc-work-data" class="nav-link" data-scroll-target="#work-data">Work Data</a></li>
+  <li><a href="#retrieving-data-from-google-sheets" id="toc-retrieving-data-from-google-sheets" class="nav-link" data-scroll-target="#retrieving-data-from-google-sheets">Retrieving Data from Google Sheets</a>
+  <ul class="collapse">
+  <li><a href="#sod-data" id="toc-sod-data" class="nav-link" data-scroll-target="#sod-data">SOD Data</a></li>
+  <li><a href="#bca-data" id="toc-bca-data" class="nav-link" data-scroll-target="#bca-data">BCA Data</a>
+  <ul class="collapse">
+  <li><a href="#read-in-the-data-to-your-global-environment" id="toc-read-in-the-data-to-your-global-environment" class="nav-link" data-scroll-target="#read-in-the-data-to-your-global-environment">Read in the data to your global environment</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#data-munging" id="toc-data-munging" class="nav-link" data-scroll-target="#data-munging">Data Munging!</a>
+  <ul class="collapse">
+  <li><a href="#filter-data" id="toc-filter-data" class="nav-link" data-scroll-target="#filter-data">Filter Data</a></li>
+  <li><a href="#average-assays-technical-replicates" id="toc-average-assays-technical-replicates" class="nav-link" data-scroll-target="#average-assays-technical-replicates">Average assays’ technical replicates</a></li>
+  </ul></li>
   <li><a href="#exploratory-plots" id="toc-exploratory-plots" class="nav-link" data-scroll-target="#exploratory-plots">Exploratory Plots</a></li>
   <li><a href="#stats-analysis" id="toc-stats-analysis" class="nav-link" data-scroll-target="#stats-analysis">Stats Analysis</a></li>
   </ul>
@@ -236,14 +247,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="retrieving-data-from-google-sheets" class="level1">
 <h1>Retrieving Data from Google Sheets</h1>
+<section id="sod-data" class="level2">
+<h2 class="anchored" data-anchor-id="sod-data">SOD Data</h2>
 <p>Make sure you have made your Google sheet publicly available to anyone that has the link. If you make any updates to the sheet just re-curl the data, meaning just re-run the code below.</p>
 <p>I apologize for not making a relative path. Just modify what is after “tee” to your own directory path.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://docs.google.com/spreadsheets/d/1vNxX2tBdEa0Ibyd4mFdru5sAZx0aipv37-y-hkqvJq4/export<span class="pp">?</span>exportFormat=csv <span class="kw">|</span> <span class="fu">tee</span> /Users/valeste/Documents/Git/tough-tunicates/posts/LC50-SOD/SOD.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="bca-data" class="level2">
+<h2 class="anchored" data-anchor-id="bca-data">BCA Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sod <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"SOD.csv"</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(sod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://docs.google.com/spreadsheets/d/1mKhd95gn_tith8fJbYjX3jGyrO-Y4mWKCoCKdTVZFHY/export<span class="pp">?</span>exportFormat=csv <span class="kw">|</span> <span class="fu">tee</span> /Users/valeste/Documents/Git/tough-tunicates/posts/LC50-SOD/BCA.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="read-in-the-data-to-your-global-environment" class="level3">
+<h3 class="anchored" data-anchor-id="read-in-the-data-to-your-global-environment">Read in the data to your global environment</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sod <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"SOD.csv"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#let's take a peak</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(sod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  well_content tech_rep hom_num date_assay treatment hpe sod_calc
 1 Hom 1 1:3 R1       R1       1     7/2/24         0  24 2.305306
@@ -254,79 +278,175 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 6 Hom 3 1:3 R2       R2       3     7/2/24         0  24 1.962912</code></pre>
 </div>
 </div>
-<p>Note that as of July 3, 2024, the data set for the 10 mg/L is incomplete in this data frame and should be taken with a grain of salt.</p>
-</section>
-<section id="work-data" class="level1">
-<h1>Work Data</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_clean <span class="ot">&lt;-</span> sod <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sod_calc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bca <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"BCA.csv"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#another little peak</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(bca)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  protein_conc.mg.mL well_content hom_num tech_rep well plate assay_date
+1          0.2905277 Hom 1 1:4 R1       1       R1   A1     2     7/4/24
+2          0.2385391 Hom 1 1:4 R2       1       R2   B1     2     7/4/24
+3          0.2388732 Hom 1 1:4 R3       1       R3   C1     2     7/4/24
+4          0.3881566 Hom 2 1:4 R1       2       R1   A2     2     7/4/24
+5          0.3379439 Hom 2 1:4 R2       2       R2   B2     2     7/4/24
+6          0.3473041 Hom 2 1:4 R3       2       R3   C2     2     7/4/24
+  treatment
+1         0
+2         0
+3         0
+4         0
+5         0
+6         0</code></pre>
 </div>
-<p>Average the technical replicates</p>
+</div>
+<p>In the BCA data frame, we are missing the hpe associated with the each sample. We can add this on to a new data frame that also combines it with the SOD data after we take the averages and standard errors of the technical replicates of the BCA assay.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that as of July 3, 2024, the data set for the 10 mg/L is incomplete in this data frame and should be taken with a grain of salt or removed from the data frame below. The 0 mg/L treatment is also incomplete with homogenate 37 needing to be re-evaluated.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="data-munging" class="level1">
+<h1>Data Munging!</h1>
+<section id="filter-data" class="level2">
+<h2 class="anchored" data-anchor-id="filter-data">Filter Data</h2>
+<p>Clean up SOD data</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_avg <span class="ot">&lt;-</span> df_clean <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(hom_num, treatment, hpe) <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">sod_avg =</span> <span class="fu">mean</span>(sod_calc, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">sod_se =</span> <span class="fu">sd</span>(sod_calc, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">n</span>())</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df_clean_sod <span class="ot">&lt;-</span> sod <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sod_calc)) <span class="sc">%&gt;%</span> <span class="co"># remove any rows with NA</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(treatment <span class="sc">!=</span> <span class="dv">10</span>) <span class="co"># remove the 10 mg/L treatment since the reps have not all been processed yet</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Clean up BCA data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df_clean_bca <span class="ot">&lt;-</span> bca <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(protein_conc.mg.mL)) <span class="sc">%&gt;%</span> <span class="co"># remove any rows with NA</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(treatment <span class="sc">!=</span> <span class="dv">10</span>) <span class="co"># remove the 10 mg/L treatment since the reps have not all been processed yet</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="average-assays-technical-replicates" class="level2">
+<h2 class="anchored" data-anchor-id="average-assays-technical-replicates">Average assays’ technical replicates</h2>
+<p>Get the mean and standard error of the technical replicates for SOD:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df_avg_sod <span class="ot">&lt;-</span> df_clean_sod <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(hom_num, treatment, hpe) <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">sod_avg =</span> <span class="fu">mean</span>(sod_calc, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">sod_se =</span> <span class="fu">sd</span>(sod_calc, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">n</span>())</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`summarise()` has grouped output by 'hom_num', 'treatment'. You can override
 using the `.groups` argument.</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_avg_bca <span class="ot">&lt;-</span> df_clean_bca <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(hom_num, treatment) <span class="sc">%&gt;%</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">bca_avg =</span> <span class="fu">mean</span>(protein_conc.mg.mL, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">bca_se =</span> <span class="fu">sd</span>(protein_conc.mg.mL, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">n</span>())</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'hom_num'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>combo <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(df_avg_sod, df_avg_bca, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"hom_num"</span>, <span class="st">"treatment"</span>))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(combo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 7
+# Groups:   hom_num, treatment [6]
+  hom_num treatment   hpe sod_avg sod_se bca_avg  bca_se
+    &lt;int&gt;     &lt;int&gt; &lt;int&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1       1         0    24   2.24  0.0630   0.256 0.0173 
+2       2         0    24   4.38  0.579    0.358 0.0154 
+3       3         0    24   2.73  0.766    0.357 0.00688
+4       7         1    24   8.36  0.513    0.542 0.0430 
+5       8         1    24   0.487 0.100    0.483 0.0125 
+6       9         1    24   2.81  1.05     0.345 0.0184 </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The column sod_avg is in activity units/mL and the column bca_avg is in mg/mL.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>combo <span class="ot">&lt;-</span> combo <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sod_u_mg =</span> sod_avg <span class="sc">/</span> bca_avg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 </section>
 <section id="exploratory-plots" class="level1">
 <h1>Exploratory Plots</h1>
+<p>Note that the plot below is the unormalized data. A BCA was run on the samples as well to quantify total protein content.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_avg, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(treatment), <span class="at">y =</span> sod_avg, <span class="at">fill =</span> <span class="fu">factor</span>(treatment))) <span class="sc">+</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">trim =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> hpe, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Violin Plot of SOD Activity by Treatment and HPE"</span>,</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Treatment"</span>,</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"SOD Activity"</span>) <span class="sc">+</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combo, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(treatment), <span class="at">y =</span> sod_avg, <span class="at">fill =</span> <span class="fu">factor</span>(treatment))) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">trim =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> hpe, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Violin Plot of SOD Activity (u/mL) by Treatment and HPE"</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Nickel Concentration"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Treatment"</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"SOD Activity"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
+<p>SOD1 activity normalized to the protein content per sample:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_avg, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(treatment), <span class="at">y =</span> sod_avg, <span class="at">fill =</span> <span class="fu">factor</span>(treatment))) <span class="sc">+</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>()) <span class="sc">+</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> sod_avg <span class="sc">-</span> sod_se, <span class="at">ymax =</span> sod_avg <span class="sc">+</span> sod_se), <span class="at">width =</span> <span class="fl">0.2</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.9</span>)) <span class="sc">+</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> hpe, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"SOD Activity by Treatment and HPE"</span>,</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Treatment"</span>,</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Average SOD Activity (with SE)"</span>) <span class="sc">+</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combo, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(treatment), <span class="at">y =</span> sod_u_mg, <span class="at">fill =</span> <span class="fu">factor</span>(treatment))) <span class="sc">+</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">trim =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> hpe, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Violin Plot of SOD Activity (u/mg) by Treatment and HPE"</span>,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Nickel Concentration"</span>,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Treatment"</span>,</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"SOD Activity"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Note that we have yet to complete the BCA assay for these samples and so the above figures may change.</p>
 </section>
 <section id="stats-analysis" class="level1">
 <h1>Stats Analysis</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform ANOVA</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>anova_result <span class="ot">&lt;-</span> <span class="fu">aov</span>(sod_avg <span class="sc">~</span> hpe <span class="sc">*</span> treatment, <span class="at">data =</span> df_avg)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarize ANOVA results</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform ANOVA</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>anova_result <span class="ot">&lt;-</span> <span class="fu">aov</span>(sod_u_mg <span class="sc">~</span> hpe <span class="sc">*</span> treatment, <span class="at">data =</span> combo)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarize ANOVA results</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>              Df Sum Sq Mean Sq F value Pr(&gt;F)
-hpe            1   61.6   61.56   1.144  0.290
-treatment      1   84.8   84.84   1.576  0.215
-hpe:treatment  1    5.8    5.76   0.107  0.745
-Residuals     51 2744.7   53.82               </code></pre>
+hpe            1      2    1.58   0.017  0.897
+treatment      1     96   95.96   1.037  0.315
+hpe:treatment  1     42   42.47   0.459  0.502
+Residuals     41   3795   92.56               </code></pre>
 </div>
 </div>
 

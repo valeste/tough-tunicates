@@ -1,7 +1,7 @@
 ---
 title: "SOD assay for nickel LC50 samples"
 author: "Celeste Valdivia"
-date: "2024-07-03"
+date: "2024-07-06"
 ---
 
 ```{r, eval =TRUE, message=FALSE}
@@ -27,6 +27,8 @@ Here we explore the effects of increasing concentrations of nickel on the accumu
 
 # Retrieving Data from Google Sheets
 
+## SOD Data
+
 Make sure you have made your Google sheet publicly available to anyone that has the link. If you make any updates to the sheet just re-curl the data, meaning just re-run the code below.
 
 I apologize for not making a relative path. Just modify what is after "tee" to your own directory path.
@@ -34,25 +36,60 @@ I apologize for not making a relative path. Just modify what is after "tee" to y
 ```{r, engine='bash', eval=FALSE}
 curl -L https://docs.google.com/spreadsheets/d/1vNxX2tBdEa0Ibyd4mFdru5sAZx0aipv37-y-hkqvJq4/export?exportFormat=csv | tee /Users/valeste/Documents/Git/tough-tunicates/posts/LC50-SOD/SOD.csv
 ```
+## BCA Data
+
+```{r, engine='bash', eval = FALSE}
+
+curl -L https://docs.google.com/spreadsheets/d/1mKhd95gn_tith8fJbYjX3jGyrO-Y4mWKCoCKdTVZFHY/export?exportFormat=csv | tee /Users/valeste/Documents/Git/tough-tunicates/posts/LC50-SOD/BCA.csv
+
+```
+
+### Read in the data to your global environment
 
 ```{r}
 sod <- read.csv("SOD.csv")
+
+#let's take a peak
 head(sod)
 ```
 
-Note that as of July 3, 2024, the data set for the 10 mg/L is incomplete in this data frame and should be taken with a grain of salt.
-
-# Work Data
-
 ```{r}
-df_clean <- sod %>%
-  filter(!is.na(sod_calc))
+bca <- read.csv("BCA.csv")
+
+#another little peak
+head(bca)
 ```
 
+In the BCA data frame, we are missing the hpe associated with the each sample. We can add this on to a new data frame that also combines it with the SOD data after we take the averages and standard errors of the technical replicates of the BCA assay.
 
-Average the technical replicates
+::: {.callout-note}
+Note that as of July 3, 2024, the data set for the 10 mg/L is incomplete in this data frame and should be taken with a grain of salt or removed from the data frame below. The 0 mg/L treatment is also incomplete with homogenate 37 needing to be re-evaluated.
+:::
+
+# Data Munging!
+
+## Filter Data
+
+Clean up SOD data
 ```{r}
-df_avg <- df_clean %>%
+df_clean_sod <- sod %>%
+  filter(!is.na(sod_calc)) %>% # remove any rows with NA
+  filter(treatment != 10) # remove the 10 mg/L treatment since the reps have not all been processed yet
+```
+
+Clean up BCA data
+```{r}
+df_clean_bca <- bca %>%
+  filter(!is.na(protein_conc.mg.mL)) %>% # remove any rows with NA
+  filter(treatment != 10) # remove the 10 mg/L treatment since the reps have not all been processed yet
+```
+
+## Average assays' technical replicates
+
+Get the mean and standard error of the technical replicates for SOD:
+
+```{r}
+df_avg_sod <- df_clean_sod %>%
   group_by(hom_num, treatment, hpe) %>%
   summarize(
     sod_avg = mean(sod_calc, na.rm = TRUE),
@@ -60,40 +97,64 @@ df_avg <- df_clean %>%
   )
 ```
 
+```{r}
+df_avg_bca <- df_clean_bca %>%
+  group_by(hom_num, treatment) %>%
+  summarize(
+    bca_avg = mean(protein_conc.mg.mL, na.rm = TRUE),
+    bca_se = sd(protein_conc.mg.mL, na.rm = TRUE) / sqrt(n())
+  )
+```
+
+```{r}
+combo <- inner_join(df_avg_sod, df_avg_bca, by = c("hom_num", "treatment"))
+head(combo)
+```
+
+::: {.callout-note}
+The column sod_avg is in activity units/mL and the column bca_avg is in mg/mL.
+:::
+
+```{r}
+combo <- combo %>%
+  mutate(sod_u_mg = sod_avg / bca_avg)
+```
+
+
 # Exploratory Plots
 
+Note that the plot below is the unormalized data. A BCA was run on the samples as well to quantify total protein content.
 ```{r, eval=TRUE}
 
-ggplot(df_avg, aes(x = factor(treatment), y = sod_avg, fill = factor(treatment))) +
+ggplot(combo, aes(x = factor(treatment), y = sod_avg, fill = factor(treatment))) +
   geom_violin(trim = FALSE) +
   facet_wrap(~ hpe, scales = "free_y") +
-  labs(title = "Violin Plot of SOD Activity by Treatment and HPE",
+  labs(title = "Violin Plot of SOD Activity (u/mL) by Treatment and HPE",
+       fill = "Nickel Concentration",
        x = "Treatment",
-       y = "SOD Activity") +
-  theme_minimal()
+       y = "SOD Activity") 
 ```
 
-
+SOD1 activity normalized to the protein content per sample:
 ```{r, eval=TRUE}
-ggplot(df_avg, aes(x = factor(treatment), y = sod_avg, fill = factor(treatment))) +
-  geom_bar(stat = "identity", position = position_dodge()) +
-  geom_errorbar(aes(ymin = sod_avg - sod_se, ymax = sod_avg + sod_se), width = 0.2, position = position_dodge(0.9)) +
-  facet_wrap(~ hpe, ncol = 1) +
-  labs(title = "SOD Activity by Treatment and HPE",
+
+ggplot(combo, aes(x = factor(treatment), y = sod_u_mg, fill = factor(treatment))) +
+  geom_violin(trim = FALSE) +
+  facet_wrap(~ hpe, scales = "free_y") +
+  labs(title = "Violin Plot of SOD Activity (u/mg) by Treatment and HPE",
+       fill = "Nickel Concentration",
        x = "Treatment",
-       y = "Average SOD Activity (with SE)") +
-  theme_minimal()
+       y = "SOD Activity") 
 ```
 
-Note that we have yet to complete the BCA assay for these samples and so the above figures may change.
+
 
 # Stats Analysis
 
 ```{r}
 # Perform ANOVA
-anova_result <- aov(sod_avg ~ hpe * treatment, data = df_avg)
+anova_result <- aov(sod_u_mg ~ hpe * treatment, data = combo)
 
 # Summarize ANOVA results
 summary(anova_result)
 ```
-
