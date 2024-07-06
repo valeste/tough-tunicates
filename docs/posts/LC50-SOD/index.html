@@ -211,7 +211,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#average-assays-technical-replicates" id="toc-average-assays-technical-replicates" class="nav-link" data-scroll-target="#average-assays-technical-replicates">Average assays’ technical replicates</a></li>
   </ul></li>
   <li><a href="#exploratory-plots" id="toc-exploratory-plots" class="nav-link" data-scroll-target="#exploratory-plots">Exploratory Plots</a></li>
-  <li><a href="#stats-analysis" id="toc-stats-analysis" class="nav-link" data-scroll-target="#stats-analysis">Stats Analysis</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a>
+  <ul class="collapse">
+  <li><a href="#anova-conclusions" id="toc-anova-conclusions" class="nav-link" data-scroll-target="#anova-conclusions">ANOVA Conclusions</a></li>
+  </ul></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps?</a>
+  <ul class="collapse">
+  <li><a href="#power-analysis" id="toc-power-analysis" class="nav-link" data-scroll-target="#power-analysis">Power Analysis</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -433,8 +440,9 @@ Note
 </div>
 </div>
 </section>
-<section id="stats-analysis" class="level1">
-<h1>Stats Analysis</h1>
+<section id="statistical-analysis" class="level1">
+<h1>Statistical Analysis</h1>
+<p>We will run a two-way ANOVA on the data exploring sod1 activity units/mg of protein by hours post exposure and nickel concentration.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform ANOVA</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>anova_result <span class="ot">&lt;-</span> <span class="fu">aov</span>(sod_u_mg <span class="sc">~</span> hpe <span class="sc">*</span> treatment, <span class="at">data =</span> combo)</span>
@@ -449,8 +457,66 @@ hpe:treatment  1     42   42.47   0.459  0.502
 Residuals     41   3795   92.56               </code></pre>
 </div>
 </div>
+<section id="anova-conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="anova-conclusions">ANOVA Conclusions</h2>
+<p>SOD1 activity does not differ across nickel concentration treatment groups or even the control at either the 24 or 96 hours post exposure mark.</p>
+</section>
+</section>
+<section id="next-steps" class="level1">
+<h1>Next Steps?</h1>
+<p>There could be various reasons why we did not observe the expected effect of increased SOD activity with increasing concentrations of nickel.</p>
+<section id="power-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="power-analysis">Power Analysis</h2>
+<p>Currently this will only work below if the groups are of equal sample size. Because I have yet to re-process the homogenate 37 (the final replicate for the control) this analysis cannot work.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pwr)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>anova_result <span class="ot">&lt;-</span> <span class="fu">aov</span>(sod_u_mg <span class="sc">~</span> hpe <span class="sc">*</span> treatment, <span class="at">data =</span> combo)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>summary_result <span class="ot">&lt;-</span> <span class="fu">summary</span>(anova_result)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the sum of squares</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>ss_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(summary_result[[<span class="dv">1</span>]][, <span class="st">"Sum Sq"</span>])</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>ss_residual <span class="ot">&lt;-</span> summary_result[[<span class="dv">1</span>]][<span class="st">"Residuals"</span>, <span class="st">"Sum Sq"</span>]</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate eta squared</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>eta_squared <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> (ss_residual <span class="sc">/</span> ss_total)</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate effect size f</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>effect_size_f <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(eta_squared <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> eta_squared))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of groups in your ANOVA (e.g., hpe * treatment)</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>num_groups <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(combo<span class="sc">$</span>hpe)) <span class="sc">*</span> <span class="fu">length</span>(<span class="fu">unique</span>(combo<span class="sc">$</span>treatment))</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Significance level (commonly set to 0.05)</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample size (total number of observations)</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>sample_size <span class="ot">&lt;-</span> <span class="fu">nrow</span>(combo)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Conduct power analysis</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>power_analysis <span class="ot">&lt;-</span> <span class="fu">pwr.anova.test</span>(<span class="at">k =</span> num_groups, <span class="at">f =</span> effect_size_f, <span class="at">sig.level =</span> alpha, <span class="at">n =</span> sample_size <span class="sc">/</span> num_groups)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the result</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(power_analysis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+     Balanced one-way analysis of variance power calculation 
+
+              k = 6
+              n = 7.5
+              f = 0.1920704
+      sig.level = 0.05
+          power = 0.1238005
+
+NOTE: n is number in each group</code></pre>
+</div>
+</div>
+<p>Note that n = 7.5 is in relation to the unequal sample sizes per group which is in relation to the missing control sample, homogenate 37.</p>
+<p>Power (0.1238005): The power of 0.1238 indicates that this study has a low probability (approximately 12.38%) of detecting the true effect (f = 0.1920704) under the current conditions (sample sizes, effect size, and significance level).</p>
+<p>Considerations: To increase power, we may need to consider increasing the sample size per group, using more sensitive measures, or adjusting your study design to reduce variability.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

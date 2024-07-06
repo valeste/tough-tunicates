@@ -149,7 +149,9 @@ ggplot(combo, aes(x = factor(treatment), y = sod_u_mg, fill = factor(treatment))
 
 
 
-# Stats Analysis
+# Statistical Analysis
+
+We will run a two-way ANOVA on the data exploring sod1 activity units/mg of protein by hours post exposure and nickel concentration.
 
 ```{r}
 # Perform ANOVA
@@ -158,3 +160,52 @@ anova_result <- aov(sod_u_mg ~ hpe * treatment, data = combo)
 # Summarize ANOVA results
 summary(anova_result)
 ```
+## ANOVA Conclusions
+
+SOD1 activity does not differ across nickel concentration treatment groups or even the control at either the 24 or 96 hours post exposure mark.
+
+# Next Steps?
+
+There could be various reasons why we did not observe the expected effect of increased SOD activity with increasing concentrations of nickel.
+
+## Power Analysis
+Currently this will only work below if the groups are of equal sample size. Because I have yet to re-process the homogenate 37 (the final replicate for the control) this analysis cannot work.
+
+```{r}
+library(pwr)
+anova_result <- aov(sod_u_mg ~ hpe * treatment, data = combo)
+summary_result <- summary(anova_result)
+
+# Extract the sum of squares
+ss_total <- sum(summary_result[[1]][, "Sum Sq"])
+ss_residual <- summary_result[[1]]["Residuals", "Sum Sq"]
+
+# Calculate eta squared
+eta_squared <- 1 - (ss_residual / ss_total)
+
+# Calculate effect size f
+effect_size_f <- sqrt(eta_squared / (1 - eta_squared))
+```
+
+```{r}
+# Number of groups in your ANOVA (e.g., hpe * treatment)
+num_groups <- length(unique(combo$hpe)) * length(unique(combo$treatment))
+
+# Significance level (commonly set to 0.05)
+alpha <- 0.05
+
+# Sample size (total number of observations)
+sample_size <- nrow(combo)
+
+# Conduct power analysis
+power_analysis <- pwr.anova.test(k = num_groups, f = effect_size_f, sig.level = alpha, n = sample_size / num_groups)
+
+# Print the result
+print(power_analysis)
+
+```
+Note that n = 7.5 is in relation to the unequal sample sizes per group which is in relation to the missing control sample, homogenate 37.
+
+Power (0.1238005): The power of 0.1238 indicates that this study has a low probability (approximately 12.38%) of detecting the true effect (f = 0.1920704) under the current conditions (sample sizes, effect size, and significance level).
+
+Considerations: To increase power, we may need to consider increasing the sample size per group, using more sensitive measures, or adjusting your study design to reduce variability.
