@@ -1,0 +1,56 @@
+---
+title: "Nickel x Botryllus schlosseri -omics"
+author: "Celeste Valdivia"
+date: "2024-10-16"
+---
+
+# Background
+
+## Intake of Field Sourced Tunciates
+
+Field sourced *Botryllus schlosseri* are brough from the City of De Moines Marina on a weekly basis. *Botryllus schlosseri* colonies are brought back from the field and kept in UW Tacoma's recirculating seawater system (27 PPT, 17 C, 8 pH) until they meet the prerequistes to be entered in the nickel exposure study. Only individuals that are capable of withstanding the transition into the lab setting, have adhered a sufficient number of star-systems to the glass slide, and have entered stage C2 are utilized in the following exposures. 
+
+
+::: {layout-ncol=4}
+![Specimen are found on substrates.](IMG_0780.jpeg)
+
+![A single colony.](IMG_5216.jpeg)
+
+![Wild colony tied to slide with 5 adhered glided out sytems.](IMG_1323.jpeg)
+
+![Systems that succsessfully adhered are seperatd from main colony and are now ready for exposure.](IMG_1355.jpeg)
+
+:::
+
+## Field Collection Dates and Info
+
+6 collections have occurred thus far for the purposes of using whole systems in nickel chloride exposures.
+
+| Collection Date | Collection | Number of Genets Used in Study | Number Collected |
+|:---------------:|:----------:|:--------------:|:----------------:|
+| 08-30-2024      | 12         | 3             | NA               |
+| 09-10-2024      | 13         | 2             | NA               |
+| 09-18-2024        | 14         | 6             | NA               |
+| 09-26-2024        | 15         | 3             | NA               |
+| 10-02-2024         | 16         | 0              | NA               |
+| 10-15-2024        | 17         | TBD              | 9                |
+
+
+### Number of Days in Recirculating System Prior to Preservation
+
+As *Botryllus schlosseri* sourced from the field cannot survive in the recirculating seawater system indefinitely, it is critical that the material is used prior to degradation. Degredation of the specimen typically occurs by the 3rd to 4th week in the lab. However, as we require the colony systems to be fully adhered to the slide prior to exposure start and for them to be the right blastogenic stage, we must wait for those factors to occur. The number of days that animals have spent in the system should be roughly the same for the purposes of this -omics study.
+
+Below's table separates the average days the individuals spent in lab and in the study from the day of collection to the day of tissue preservation. Roughly, animals spend 10 days in the recirculating system and in the exposure prior to freezing of the tissue.
+
+|                   | **Average Days** | **SD** |
+|:-----------------:|:----------------:|:------:|
+| **Control**       | 9                | 3      |
+| **100 mg/L Nickel Treatment** | 12               | 2      |
+| **All Samples**   | 10               | 3      |
+
+
+### Sample Processing
+
+The goal by the end of this study is to have 10 genets saved from the control and 10 genets saved from the 100 mg/L nickel exposure treatment. This would result in a total of 40 samples as tissue from each genet was divided for the fate of transcriptomics and proteomics. 
+
+Samples for the transcriptomics will be extracted for their RNA in-house and will be sent off to collaborators to evaluate quality on their bioanalyzer by mid-November.
