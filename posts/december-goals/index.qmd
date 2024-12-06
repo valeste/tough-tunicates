@@ -1,6 +1,8 @@
 ---
 title: "December Goals"
 author: "Celeste Valdivia"
+date: "2024-12-06"
+categories: [goals]
 ---
 
 1.  Update my CV with new teaching stuff and such and the conferences I presented at this year.
