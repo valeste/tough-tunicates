@@ -1,0 +1,409 @@
+---
+title: "Alkaline Comet Assay For Epithelial Cells of Botryllus schlosseri"
+author: "Celeste Valdivia"
+datre: "2025-01-27"
+toc-depth: 5
+---
+
+### Background
+
+-   Alkaline Comet Assay: Denatures DNA at a high pH (typically around 13), which allows it to detect not only double-strand breaks (DSBs) but also single-strand breaks (SSBs), alkali-labile sites, and incomplete excision repair sites.
+
+    -   This broader detection capability is crucial when studying environmental stressors, such as nickel exposure, that might induce multiple forms of DNA damage.
+
+::: callout-note
+## Citations
+
+Kamer I, Rinkevich B. In vitro application of the comet assay for aquatic genotoxicity: considering a primary culture versus a cell line. Toxicology in Vitro. 2002 Apr;16(2):177–84.
+:::
+
+### Notes
+
+- Optimize making the low melt agarose and normal melt agarose
+
+- Have the 1 M NaOH solution on hand to quickly modify the pH of the in house solutions. The exactness of the pH during the assay is critical to the lysis of cells and protection/movement of the DNA.
+
+
+### Materials List
+
+-   Double distilled water (DDW) (MilliQ)
+
+-   Electrophoresis box
+
+-   Frosted edge 75 x 25 mm glass slides
+
+-   60 x 34 mm coverslips
+
+-   Coplin Staining Jar
+
+-   Fluorescent microscope with UMNG filter
+
+-   CCD camera (e.g., Applitec LIS-700)
+
+-   VisComet image analysis software or ImageJ
+
+-   Eppendorf tubes
+
+-   Erlenmeyer flask (10-20 mL flask and a 100 mL flask)
+
+-   pH meter
+
+-   Centrifuge
+
+-   Ice
+
+-   Ethanol (70% and 100%)
+
+### In-House Solutions List
+
+1.  <div>
+
+    #### 1 M NaOH Solution
+
+    1.  **Storage**:
+
+        1.  Store the NaOH solution in a tightly sealed, labeled container.
+
+        2.  Use a plastic (HDPE or similar) or glass (not as preferable) container compatible with caustic materials.
+
+        3.  Store at room temperature, away from acids and other reactive chemicals.
+
+    2.  **Preparation**:
+
+        1.  Add **about 800 mL of water** to your mixing container
+
+        2.  In a fume hood, slowly add in pre-weighed **40 g of NaOH pellets** while stirring.
+
+        3.  Allow the NaOH to dissolve completely—it is an exothermic reaction, so the solution will heat up.
+
+        4.  Once dissolved, let the solution cool to room temperature.
+
+        5.  Transfer the solution to a volumetric flask and adjust the final volume to 1 L by adding water.
+
+    </div>
+
+2.  <div>
+
+    #### Kenny’s Salt Solution
+
+    1.  **Storage:** Store the solution in a clean container. If not used immediately, it's best to store it at 4°C.
+
+    2.  **Preparation:** 
+
+        1.  Weigh Out Each Component:
+
+            1.  **2.34 g of NaCl** (Sodium Chloride).
+
+            2.  **0.0671 g of KCl** (Potassium Chloride).
+
+            3.  **0.0122 g of K₂HPO**₄ (Potassium Hydrogen Phosphate).
+
+            4.  **0.0168 g of NaHCO**₃ (Sodium Bicarbonate).
+
+        2.  Dissolve each weighed component in a small amount of Milli-Q water.
+
+        3.  Combine the dissolved salts into one container. Adjust the final volume to **100 mL with Milli-Q water**.
+
+        4.  Verify the pH of the solution. If necessary, adjust the pH to 7.5 using a small amount of HCl or NaOH.
+
+    </div>
+
+3.  <div>
+
+    #### Alkaline running buffer 
+
+    1.  **Content Info**: 1.0 mmol L−1 EDTA, 300 mmol L−1 NaOH, pH 13.0
+
+    2.  **Storage:** This buffer can be stored at room temperature, but it’s better to store it at 4°C to prevent any potential degradation of the NaOH over time.
+
+    3.  **Expiration:** The buffer is stable for about 1 month at 4°C. The pH should be checked before each use, as it can shift slightly over time.
+
+    4.  **Preparation:** 
+
+        1.  Dissolve **24.0 g of NaOH** in approximately **1800 mL of Milli-Q** water. Stir until completely dissolved.
+
+        2.  Add **0.744 g of EDTA** to the solution and stir until fully dissolved.
+
+        3.  Adjust the final volume to **2000 mL with Milli-Q water**.
+
+        4.  Check the pH and store in the fridge.
+
+    </div>
+
+4.  <div>
+
+    #### Tris solution 
+
+    1.  **Content Info**: 0.4 mol L−1, pH 7.5
+
+    2.  **Storage:** Store at 4°C to maintain stability and prevent microbial growth.
+
+    3.  **Expiration:** This solution is stable for about 6 months at 4°C. Always check the pH before use, as it may drift over time.
+
+    4.  **Preparation:** 
+
+        1.  Add **5.46 g of Trizma Base**
+
+        2.  Add **6.32 g of Trizma Acid**
+
+        3.  Initial **150 mL Milli-Q water**
+
+        4.  Adjust the final volume to **200 mL with Milli-Q water**
+
+        5.  Fine-tune pH with additional Trizma acid as needed.
+
+    </div>
+
+5.  <div>
+
+    #### Ethidium bromide (20 μg/ml)
+
+    1.  **Storage:** Store the diluted solution at 4°C, protected from light to prevent degradation.
+
+    2.  **Expiration:** Ethidium bromide solutions are stable for at least 6 months at 4°C if kept in the dark. Always handle with care due to its mutagenic properties.
+
+    </div>
+
+6.  <div>
+
+    #### SYBR Green Dilution
+
+    1.  **Information**:
+
+        1.  SYBR Green is significantly more sensitive than ethidium bromide, often requiring much lower concentrations to achieve similar staining intensity.
+
+        2.  **Lower Dilution (e.g., 1:10,000):** Brighter staining, higher signal intensity. Useful for faint signals but may cause saturation, reducing the ability to differentiate small variations.
+
+        3.  **Higher Dilution (e.g., 1:20,000 or more):** Dimmer staining, but with better dynamic range, which can help in visualizing subtle differences between samples.
+
+    2.  **Storage**: Does not store well. Dilute enough for all the slides you are going to use that day.
+
+    3.  **Contents**:
+
+        1.  Standard SYBR Green stock solution (commonly provided as a 10,000× concentrate in DMSO)
+
+        2.  Tris solution (0.4 mol L−1, pH 7.5)
+
+    4.  **Preparation**:
+
+        1.  For 10 slides:
+
+            1.  To 1 mL of Tris solution add 0.1 uL SYBR green dilute solution. 
+
+        2.  For two slides
+
+            1.  0.02 µLof SYBR Green stock diluted in 200 µL of Tris solution.
+
+    </div>
+
+7.  <div>
+
+    #### LM agarose 
+
+    1.  **Content Info**: 0.65% Low Melting Point Agarose, with Kenny’s salt solution 0.4 M NaCl, 9 mM KCl, 0.7 mM K₂HPO₄, and 2 mM NaHCO₃, pH 7.5
+
+    2.  **Storage:** The LM agarose solution can be prepared and stored at 4°C, but it will solidify. You will need to melt it before use (typically by heating in a microwave or water bath). 
+
+    3.  **Expiration:** Stable for 1-2 weeks at 4°C. Repeated melting and cooling may reduce its gelling strength, so it’s best to prepare it fresh when needed.
+
+    4.  **Contents:** 
+
+        1.  **65 mg** **of Low Melt Agarose** and place it in a 50 mL Erlenmeyer flask or a similar small flask.
+
+        2.  Add **10 mL of Kenny’s Salt Solution** to the flask.
+
+        3.  Heat the solution gently in a microwave in short bursts (5–10 seconds), swirling in between to avoid boiling over.
+
+        4.  Immediately transfer the solution to a 15 mL falcon tube and place in 29°C water bath. MAKE SURE IT DOES NOT SOLIDIFY BEFORE USE.
+
+        5.  Cool the solution to about 29°C before using it for your cell suspensions.
+
+    </div>
+
+8.  <div>
+
+    #### NM agarose dipped slides 
+
+    1.  **Content Info**: 0.65% Normal Melting Agarose with Kenny's salt solution: 0.4 M NaCl, 9 mM KCl, 0.7 mM K₂HPO₄, and 2 mM NaHCO₃, pH 7.5
+
+    2.  **Long-term Storage:**
+
+        1.  **At Room Temperature:**
+
+            1.  **Place the dried slides in a dust-free container to prevent contamination or damage.**
+
+            2.  **Store in a glass desiccator.**
+
+        2.  **Refrigeration (Optional):**
+
+            1.  **Alternatively, store the slides in a sealed container at 4°C if the room temperature storage isn't suitable due to high humidity.**
+
+            2.  **Avoid freezing, as this may damage the agarose layer.**
+
+    3.  **Expiration:** At room temperature or 4°C, prepared NMA slides are generally stable for up to 2–4 weeks. Discard slides if contamination or significant drying/cracking is observed.
+
+    4.  **Preparation:** Per 18 slides.
+
+        1.  Weigh **0.2632 g of NM Agarose**.
+
+        2.  Mix the weighed agarose with **40.5 mL pre-prepared Kenny's salt solution** (0.4 M NaCl, 9 mM KCl, 0.7 mM K₂HPO₄, 2 mM NaHCO₃, pH 7.5).
+
+        3.  Heat gently until the agarose is fully dissolved.
+
+        4.  Let the agarose solution cool to about 50-60°C before applying to the slides.
+
+        5.  Carefully dip frosted slide into NM agarose. Wipe one of the sides off and lay flat.
+
+        6.  Let the NM agarose set at room temperature overnight before storing.
+
+    </div>
+
+9.  <div>
+
+    #### Lysis solution 
+
+    1.  Content Info: 2.5 mol L−1 NaCl, 100 mmol L−1 EDTA, 10 mmol L−1 Tris, 1% Triton X-100, 10% DMSO, pH 10.0
+
+    2.  **Storage:** Make fresh before each procedure but if needed store at 4°C.
+
+    3.  **Expiration:** Stable for up to 1 month at 4°C. Due to the presence of Triton X-100 and DMSO, long-term storage might affect the effectiveness of the lysis solution.
+
+    4.  **Preparation:**
+
+        1.  **Weigh 29.22 g of NaCl and dissolve it in about 150 mL of Milli-Q water.**
+
+        2.  **Weigh 7.445 g of EDTA and add it to the NaCl solution. Stir until fully dissolved. You may need to adjust the pH slightly with NaOH to help EDTA dissolve.**
+
+        3.  **Weigh 0.2423 g of Tris and add it to the solution and stir until dissolved.**
+
+        4.  **Measure 2 mL of Triton X-100 and add it to the solution, mixing well.**
+
+        5.  **Measure 20 mL of DMSO and add it to the solution.**
+
+        6.  Adjust the pH to 10.0 using NaOH or HCl.
+
+    </div>
+
+    <!-- -->
+
+### Protocol
+
+#### **Single Cell Suspension Preparation**
+
+##### Dissection and Disassociation
+
+1.  **Zooid and Bud Isolation**
+
+    -   Carefully dissect the Botryllus colony to isolate the zooids and primary buds. Use fine forceps and a microscope for precision, ensuring that you separate the tissues cleanly without causing unnecessary damage.
+
+2.  **Tissue Dissociation**
+
+    -   Gently tease apart the isolated zooids and primary buds to dissociate the tissues into smaller fragments.
+
+3.  **Cell Straining**
+
+    -   Pass the dissociated tissue through a cell strainer (70-100 µm) flushed against a falcon tube. You can use the flat back of a new sterile syringe plunge as the pestle. Grind in circular motions.
+
+    -   Add 1.5 uL of Kenny's salt solution to the cell strainer to get all the cell's to flow through. You can do several passess of this same 
+
+##### Centrifugation
+
+1.  **Centrifuge the Cells**
+
+    -   Transfer the single-cell suspension to Eppendorf tubes.
+
+    -   Centrifuge the tubes at 2500 rpm for 10 minutes at 20 °C to pellet the cells.
+
+2.  **Supernatant Removal**
+
+    -   Carefully remove the supernatant, leaving the cell pellet intact at the bottom of the tube.
+
+##### Resuspension
+
+1.  **Resuspend the Cells**
+
+    -   Resuspend the cell pellet in in 10 uL of Kenny's salt solution. Keep the tubes on ice to maintain cell viability until further processing.
+
+##### Agarose Embedding
+
+1.  **Mix with LM Agarose**
+
+    -   Gently mix the resuspended cells with 90 μl of 0.65% Low Melting Point (LM) agarose, pre-warmed to 29 °C.
+
+2.  **Spread on Slide**
+
+    -   Spread the cell-agarose mixture onto a glass slide that has been pre-coated with a layer of 0.65% Normal Melting (NM) agarose containing Kenny's salt solution (0.4 M NaCl, 9 mM KCl, 0.7 mM K₂HPO₄, 2 mM NaHCO₃, pH 7.5).
+
+3.  **Gel Setting**
+
+    -   Place the slides on ice to allow the agarose gel to set.
+
+    -   Gel should be relatively solid and appear like a square after slipping off cover slip.
+
+##### Additional Agarose Layer
+
+1.  **Add a Second Agarose Layer**
+
+    -   Apply an additional 100 uL layer of LM agarose on top of the set gel to encapsulate the cells further. Place cover slip back on to distribute the agarose evenly.
+
+2.  **Final Gel Setting**
+
+    -   Place the slides back on ice to let the second agarose layer solidify.
+
+#### **Lysis**
+
+1.  **Lysis Solution**
+
+    -   Remove cover slips and immerse the slides in freshly prepared lysis solution
+
+    -   Incubate the slides at 4 °C overnight.
+
+#### **Alkaline Comet Assay**
+
+1.  **Electrophoresis Setup**
+
+    -   Level the electrophoresis box and fill it with 850 ml of cold alkaline running buffer.
+
+    -   Place the electrophoresis box on ice.
+
+2.  **Slide Washing**
+
+    -   Wash the slides three times for 5 minutes each in double distilled water (DDW).
+
+3.  **Electrophoresis**
+
+    -   Place the slides in the electrophoresis box.
+
+    -   Perform electrophoresis for 20 minutes at 300 mA, 20 V, and 5 W.
+
+4.  **Post-Electrophoresis**
+
+    -   Wash the slides three times for 5 minutes each in neutral 0.4 mol l−1 Tris solution (pH 7.5).
+
+    -   Dehydrate the slides in 70% ethanol for 5 minutes, followed by 100% ethanol for 5 minutes.
+
+    -   Dry the slides and store them in darkness.
+
+#### **Slide Staining and Analysis**
+
+#### **Staining**
+
+-   Stain the slides with 60 μl of 20 μg/ml ethidium bromide. Alternatively, add 100 uL of the SYBR Green I dilution to each slide.
+
+-   Mount the slides with cover slips, seal, and keep them in darkness.
+
+2.  **Microscopy**
+
+    -   Observe the slides under a fluorescent microscope with a UMNG filter.
+
+    -   Photograph 50 nuclei per slide at 400× magnification using a CCD camera.
+
+3.  **Data Analysis**
+
+    -   Score the slides using VisComet image analysis software.
+
+    -   Calculate the tail extent moment (MTEX) as MTEX = L × DNA/100, where L = length of tail, and DNA = % of DNA in the tail.
+
+4.  **Repetition**
+
+    -   Perform three separate experiments with duplicates and controls for each time point.
