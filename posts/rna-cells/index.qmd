@@ -5,4 +5,50 @@ datre: "2025-08-07"
 toc-depth: 5
 ---
 
-### Background
+## Background
+
+Have tried extracting RNA from an initial sample set of 6 nickel treated and 6 control cultured epithelial cells and got very low RIN scores and low RNA yield overall. See results below.
+
+::: {#fig-cycle-info layout-ncol="1"}
+![](rna_cells_pt1.png)
+:::
+
+In Brief:
+
+RNA was extracted using the Qiagen RNeasy Mini Kit and as per protocol cells were washed with 2.8x PBS in quadruplicate at the end of the 18 hour exposure period and 350 uL of RLT lysis buffer (supplied by Qiagen) supplemented with Beta-ME was added directly to the plate. Cells were mechanically further disrupted using a cell scraper. Liquid was picked up and placed in a qPCR tube and placed in a -80 until the rest of the RNA extraction.
+
+Samples were transported on wet ice to collaborators in Seattle from UW Tacoma and samples were sent to NovoGene.
+
+## Samples produced for Roberts lab
+
+I produced two samples for the Roberts Lab who has a bead mill to evaluate if their approach for RNA extraction would be better. Two 6 cm plates from the same colony were made and similarly cultured but not treated to nickel. There is an estimated minimum of 50,000 and a maximum of 100,000 epithelial cells per plate/sample.
+
+Cells were quadruplicate rinsed with 2.8x PBS after 4 days in culture. 1 mL of PBS was added to the plates and cells were scraped off the plate using a cell scraper. The liquid was placed in a chilled qPCR tube that had previously been sitting on dry ice and cells were pelleted at 5,000 G for 10 minutes. The liquid was then aspirated off and the cell pellet was snap frozen on dry ice.
+
+::: {layout-ncol="2"}
+![](sr.test.1.4dps1.jpg) ![](sr.test.1.4dps2.jpg)
+
+Monolayers from test sample 1
+:::
+
+::: {layout-ncol="2"}
+![](sr.test.2.4dps1.jpg) ![](sr.test.2.4dps2.jpg)
+
+Monolayers from test sample 2
+:::
+
+### Other recent findings
+
+Aside from making those two samples, I produced another 10 RNA samples following the similar method I described in the background. However, after checking on the cells after adding in the lysis buffer and scraping, I found that many of the cells were still intact.
+
+::: {layout-ncol="2"}
+![](lysed0731.jpg) ![](lysed0732.jpg)
+
+![](lysed0735.jpg) ![](lysed0733.jpg)
+
+Cells that are suspended in the liquid of the RLT lysis buffer but remaining intact.
+:::
+
+After checking out the RLT buffer, I found that the kit was purchased in 2022 but Qiagen only guarantees efficacy of there kits up to 9 months after purchase. At the moment not sure if *B. schlosser*i cells are resistant to the lysis buffer or if the RLT buffer is just really expired. Either way, I saw similar RIN scores and RNA yield with whole tunicates that I did not successfully break down using the liquid nitrogen and mortar and pestle method of 'breaking open' the cells.
+
+Contacted Qiagen to see if the ten samples I recently produced that are in lysis buffer but likely has intact cells are salvageable and if there is a way to still break open the cells in these samples despite the presence of the lysis buffer.
