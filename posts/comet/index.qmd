@@ -1,7 +1,7 @@
 ---
 title: "Alkaline Comet Assay For Epithelial Cells of Botryllus schlosseri"
 author: "Celeste Valdivia"
-datre: "2025-01-27"
+date: "2025-01-27"
 toc-depth: 5
 ---
 
@@ -19,10 +19,9 @@ Kamer I, Rinkevich B. In vitro application of the comet assay for aquatic genoto
 
 ### Notes
 
-- Optimize making the low melt agarose and normal melt agarose
+-   Optimize making the low melt agarose and normal melt agarose
 
-- Have the 1 M NaOH solution on hand to quickly modify the pH of the in house solutions. The exactness of the pH during the assay is critical to the lysis of cells and protection/movement of the DNA.
-
+-   Have the 1 M NaOH solution on hand to quickly modify the pH of the in house solutions. The exactness of the pH during the assay is critical to the lysis of cells and protection/movement of the DNA.
 
 ### Materials List
 
